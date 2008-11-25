@@ -14,8 +14,16 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 	
 	<style type="text/css">
+		.header h1 { 
+			font-size: 3.5em; color: #666;
+			background: #fff url('wherex.gif') no-repeat fixed center; 
+		}
+		.section h2 { padding-left: 5px; background-color: #eee; cursor: pointer;}
+		.section { margin-bottom: 20px; }
+		.contents { padding: 0 10px; }
+		.args { float:right; }
 		.lang { padding: 3px; font-weight: bold;}
-		.cvs { color: hsl(100,57%,24%); background: hsl(100,57%,83%) }
+		.section .lang { font-size: 0.8em; padding: 2px; font-weight: normal;}
 		.svn { color: hsl(260,57%,24%); background: hsl(260,57%,83%) }
 		.perforce { color: hsl(0,57%,24%); background: hsl(0,57%,83%) }
 		.bzr { color: hsl(60,57%,24%); background: hsl(60,57%,83%) }
@@ -30,32 +38,66 @@
 
 			<br/>
 			
-	    <div class="span-24">
-	        <h1>Why Git is Better than X</h1>
+	    <div class="span-24 header">
+				<table>
+					<tr><td>
+        		<h1>Why Git is Better than X</h1>
+					</td><td align="right">
+						<div id="menu">
+							<span class="lang svn">svn</span>
+							<span class="lang perforce">perforce</span>
+							<span class="lang hg">hg</span>
+							<span class="lang bzr">bzr</span>
+						</div>
+						<img style="float: right" src="wherex.gif">
+					</td></tr>
+					</table>
 	    </div>
 
 	    <div class="span-24">
-	        This is an explaination about this site and why it exists.  I don't
-					want it to be too long, I just want it to work.
+	        This site is here because I evangelize Git quite a bit and I seem to
+					be spending a lot of time lately explaining why people are switching
+					to Git (defending Gitsters against charges of fanboyism, bandwagonism
+					and koolaid-thirst).  So, here is why people are switching to Git from
+					X, and why you should too.  Just click on a reason to view it.
 	    </div>
 
-			<div class="span-24 tools">
-				<span class="lang cvs">cvs</span>
-				<span class="lang svn">svn</span>
-				<span class="lang perforce">perforce</span>
-				<span class="lang hg">hg</span>
-				<span class="lang bzr">bzr</span>
-			</div>
+			<br/>
+
+	    <div class="span-24 section">
+					<div class="args">
+						<span class="lang svn">svn</span>
+						<span class="lang perforce">perforce</span>
+						<span class="lang hg">hg</span>						
+						<span class="lang bzr">bzr</span>
+					</div>
+
+	        <h2>Cheap Local Branching</h2>
+					<div class="contents">
+						<img alt='jamis twitter' src="http://twictur.es/i/1022811017.gif">
+						<div>(diagram of several parallel branches vs hg)</div>
+						<div>the branches have seperate histories</div>
+					</div>
+	    </div>
 				
 	    <div class="span-24 section">
+					<div class="args">
+						<span class="lang svn">svn</span>
+						<span class="lang perforce">perforce</span>
+					</div>
 	        <h2>Everything is Local</h2>
 					<div class="contents">	
 						works with multiple branches easily
-						<div>arg: CVS, SVN, PER  some: HG</div> 
 					</div>
 	    </div>
 		
 		  <div class="span-24 section">
+					<div class="args">
+						<span class="lang svn">svn</span>
+						<span class="lang perforce">perforce</span>
+						<span class="lang bzr">bzr</span>
+					</div>
+			
 	        <h2>Speed</h2>
 					<div class="contents">
 						because everything is local and the git devs are speed freaks and 
@@ -64,33 +106,77 @@
 	    </div>
 	
 	    <div class="span-24 section">
-	        <h2>Cheap Local Branching</h2>
-					<div class="contents">
-						<img alt='jamis twitter' src="http://twictur.es/i/1022811017.gif">
-						<div>(diagram of several parallel branches vs hg)</div>
-						<div>the branches have seperate histories</div>
+					<div class="args">
+						<span class="lang svn">svn</span>
+						<span class="lang perforce">perforce</span>
+						<span class="lang hg">hg</span>						
+						<span class="lang bzr">bzr</span>
 					</div>
-	    </div>
-
-	    <div class="span-24 section">
-	        <h2>Easy Merging</h2>
-					<div class="contents">
-						works with multiple branches easily
-					</div>
-	    </div>
-	
-	    <div class="span-24 section">
+		
 	        <h2>The Staging Area</h2>
 					<div class="contents">
 					</div>
 	    </div>
 
 	    <div class="span-24 section">
+					<div class="args">
+						<span class="lang svn">svn</span>
+						<span class="lang perforce">perforce</span>
+					</div>
+
 	        <h2>Distributed</h2>
 					<div class="contents">
 						<div>arg: CVS, SVN, PER</div> 
 					</div>
 	    </div>
+	
+	
+	    <div class="span-24 section">
+				<div class="args">
+					<span class="lang svn">svn</span>
+					<span class="lang perforce">perforce</span>
+					<span class="lang hg">hg</span>						
+					<span class="lang bzr">bzr</span>			
+				</div>
+		
+       	<h2>Any Workflow</h2>
+				<div class="contents">
+					SVN/Perforce style centralized model, or Dictator/Lieutenants, Manager, any combo
+				</div>
+	    </div>
+	
+	
+	    <div class="span-24 section">
+				<div class="args">
+					<span class="lang svn">svn</span>
+					<span class="lang perforce">perforce</span>
+					<span class="lang hg">hg</span>						
+					<span class="lang bzr">bzr</span>
+				</div>
+
+        <h2>GitHub</h2>
+				
+				<div class="contents">
+					I <em>may</em> be biased here, being as how I work for GitHub, 
+					but I add this section anyway because so many people say that
+					GitHub specifically was why they choose Git.
+					
+					There are other services, but few are user-oriented or socially
+					targeted, and none have near the user-base.  This social aspect
+					is killer.
+				</div>
+	    </div>
+	
+	
+			<!-- 
+				OTHER IDEAS:
+				* easy merging
+				* easy server setup
+				* non destructive
+			-->
+
+	
+			<!-- GIT MYTHS -->
 	
 	    <div class="span-24 section">
 	        <h2>Easy to Learn</h2>
@@ -98,33 +184,15 @@
 						didn't used to be, but now Git is as easy or easier to learn as Hg/etc
 					</div>
 	    </div>
+	
+	
+		<!-- 
+			THINGS GIT IS STILL NOT GOOD AT 
+			* windows (all)
+			* large files (svn)
+		-->
 
-	    <div class="span-24 section">
-	        <h2>Non Destructive</h2>
-					<div class="contents">
-						Git (almost) never deletes anything - you experiment without fear
-					</div>
-	    </div>
-	
-	    <div class="span-24 section">
-	        <h2>Any Workflow</h2>
-					<div class="contents">
-						SVN/Perforce style centralized model, or Dictator/Lieutenants, Manager, any combo
-					</div>
-	    </div>
 
-	    <div class="span-24 section">
-	        <h2>Easy Server Setup</h2>
-					<div class="contents">
-					</div>
-	    </div>
-	
-	
-	    <div class="span-24 section">
-	        <h2>GitHub</h2>
-					<div class="contents">
-					</div>
-	    </div>
 	</div>
 
 <script>
