@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Why Git is Better Than X</title>
+	
+	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print">    
+	<!--[if IE]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+	
+	<style type="text/css">
+		.lang { padding: 3px; font-weight: bold;}
+		.cvs { color: hsl(100,57%,24%); background: hsl(100,57%,83%) }
+		.svn { color: hsl(260,57%,24%); background: hsl(260,57%,83%) }
+		.perforce { color: hsl(0,57%,24%); background: hsl(0,57%,83%) }
+		.bzr { color: hsl(60,57%,24%); background: hsl(60,57%,83%) }
+		.hg { color: hsl(190,57%,24%); background: hsl(190,57%,83%) }
+	</style>
+	
+</head>
+
+<body>
+
+	<div class="container">
+
+			<br/>
+			
+	    <div class="span-24">
+	        <h1>Why Git is Better than X</h1>
+	    </div>
+
+	    <div class="span-24">
+	        This is an explaination about this site and why it exists.  I don't
+					want it to be too long, I just want it to work.
+	    </div>
+
+			<div class="span-24 tools">
+				<span class="lang cvs">cvs</span>
+				<span class="lang svn">svn</span>
+				<span class="lang perforce">perforce</span>
+				<span class="lang hg">hg</span>
+				<span class="lang bzr">bzr</span>
+			</div>
+				
+	    <div class="span-24 section">
+	        <h2>Everything is Local</h2>
+					<div class="contents">	
+						works with multiple branches easily
+						<div>arg: CVS, SVN, PER  some: HG</div> 
+					</div>
+	    </div>
+		
+		  <div class="span-24 section">
+	        <h2>Speed</h2>
+					<div class="contents">
+						because everything is local and the git devs are speed freaks and 
+						git is written in C - all common functions are incredibly fast
+					</div>
+	    </div>
+	
+	    <div class="span-24 section">
+	        <h2>Cheap Local Branching</h2>
+					<div class="contents">
+						<img alt='jamis twitter' src="http://twictur.es/i/1022811017.gif">
+						<div>(diagram of several parallel branches vs hg)</div>
+						<div>the branches have seperate histories</div>
+					</div>
+	    </div>
+
+	    <div class="span-24 section">
+	        <h2>Easy Merging</h2>
+					<div class="contents">
+						works with multiple branches easily
+					</div>
+	    </div>
+	
+	    <div class="span-24 section">
+	        <h2>The Staging Area</h2>
+					<div class="contents">
+					</div>
+	    </div>
+
+	    <div class="span-24 section">
+	        <h2>Distributed</h2>
+					<div class="contents">
+						<div>arg: CVS, SVN, PER</div> 
+					</div>
+	    </div>
+	
+	    <div class="span-24 section">
+	        <h2>Easy to Learn</h2>
+					<div class="contents">
+						didn't used to be, but now Git is as easy or easier to learn as Hg/etc
+					</div>
+	    </div>
+
+	    <div class="span-24 section">
+	        <h2>Non Destructive</h2>
+					<div class="contents">
+						Git (almost) never deletes anything - you experiment without fear
+					</div>
+	    </div>
+	
+	    <div class="span-24 section">
+	        <h2>Any Workflow</h2>
+					<div class="contents">
+						SVN/Perforce style centralized model, or Dictator/Lieutenants, Manager, any combo
+					</div>
+	    </div>
+
+	    <div class="span-24 section">
+	        <h2>Easy Server Setup</h2>
+					<div class="contents">
+					</div>
+	    </div>
+	
+	
+	    <div class="span-24 section">
+	        <h2>GitHub</h2>
+					<div class="contents">
+					</div>
+	    </div>
+	</div>
+
+<script>
+	$(function() {
+		$('.section > .contents').hide();
+		$('.section > h2').click(function() {
+			$(this).next().slideToggle();
+		})
+	})
+</script>
+
+</body>
+</html>
+
