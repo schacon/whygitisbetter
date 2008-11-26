@@ -14,10 +14,11 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 	
 	<style type="text/css">
-		.header h1 { 
-			font-size: 3.5em; color: #666;
-			background: #fff url('wherex.gif') no-repeat fixed center; 
-		}
+		.header h1 { font-size: 3.5em; color: #666; }
+		img { margin-bottom: 10px; }
+		.text, p { font-size: 1.2em; margin-bottom: 10px; text-align: justify;}
+		.intro { color: #444; }
+		ul li { margin-top: 10px; }
 		.section h2 { padding-left: 5px; background-color: #eee; cursor: pointer;}
 		.section { margin-bottom: 20px; }
 		.contents { padding: 0 10px; }
@@ -39,7 +40,7 @@
 			<br/>
 			
 	    <div class="span-24 header">
-				<table>
+				<table width="100%">
 					<tr><td>
         		<h1>Why Git is Better than X</h1>
 					</td><td align="right">
@@ -49,17 +50,19 @@
 							<span class="lang hg">hg</span>
 							<span class="lang bzr">bzr</span>
 						</div>
-						<img style="float: right" src="wherex.gif">
+						<img style="float: right" src="images/wherex.gif">
 					</td></tr>
 					</table>
 	    </div>
 
 	    <div class="span-24">
-	        This site is here because I evangelize Git quite a bit and I seem to
-					be spending a lot of time lately explaining why people are switching
-					to Git (defending Gitsters against charges of fanboyism, bandwagonism
-					and koolaid-thirst).  So, here is why people are switching to Git from
-					X, and why you should too.  Just click on a reason to view it.
+					<div class="text intro">
+		        This site is here because I seem to
+						be spending a lot of time lately defending Gitsters against 
+						charges of fanboyism, bandwagonism
+						and koolaid-thirst.  So, here is why people are switching to Git from
+						X, and why you should too.  Just click on a reason to view it.
+					</div>
 	    </div>
 
 			<br/>
@@ -74,9 +77,71 @@
 
 	        <h2>Cheap Local Branching</h2>
 					<div class="contents">
-						<img alt='jamis twitter' src="http://twictur.es/i/1022811017.gif">
-						<div>(diagram of several parallel branches vs hg)</div>
-						<div>the branches have seperate histories</div>
+						
+						<div class="text">
+							Probably Git's most compelling feature that really makes it stand
+							apart from nearly every other SCM out there is it's branching
+							model.  It is completely different from all of the models I'm 
+							comparing it to here, most of which recommend that the best branch
+							is basically a clone of the repository in a new directory.
+						</div>
+						
+						<div class="text">
+							Git does not work like that.  Git will allow you to have multiple
+							local branches that can be entirely independent of each other and
+							the creation, merging and deletion of those lines of development
+							take seconds.
+						</div>
+						
+						
+						<div class="text">
+							This means that you can do things like :
+							<ul>
+								<li>Create a branch to try out an idea, commit
+									a few times, switch back to where you branched from, apply a patch, 
+									switch back to where you are experimenting, then merge it in.
+								</li>
+								<li>Have a branch that always contains only what goes to production,
+									another that you merge work into for testing and several smaller
+									ones for day to day work
+								</li>
+								<li>Create new branches for each new feature you're working on, so
+									you can seamlessly switch back and forth between them, then delete
+									each branch when that feature gets merged into your main line.
+								</li>
+								<li>Create a branch to experiment in, realize it's not going to
+									work and just delete it, abandoning the work - with nobody else
+									ever seeing it (even if you've pushed other branches in the meantime)
+								</li>
+							</ul>
+						</div>
+						
+						<img src="images/branches.png">
+						
+						<div class="text">
+							Importantly, when you push to a remote repository, you do <em>not</em>
+							have to push all of your branches.  You can only share one of your
+							branches and not all of them.  This tends to free people to try
+							new ideas without worrying about having to plan how and when they
+							are going to merge it in or share it with others.
+						</div>
+						
+						<div class="text">
+							You <em>can</em> find ways to do some of this with other systems, but the work
+							involved is much more difficult and error-prone.  Git makes this
+							process incredibly easy and it changes the way most developers
+							work when they learn it.
+						</div>
+						
+						<!-- (short screencast showing the awesomeness of git branches) -->
+
+						<div class="tweets">
+							<img alt='jamis twitter' width="300" src="http://twictur.es/i/1022811017.gif">
+							<img alt='trevorturk twitter' width="300" src="http://twictur.es/i/1022886570.gif">
+							<img alt='thillerson twitter' width="300" src="http://twictur.es/i/1022842917.gif">
+							<img alt='boblmartens twitter' width="300" src="http://twictur.es/i/1022818467.gif">
+							<img alt='mathie twitter' width="300" src="http://twictur.es/i/1022816942.gif">
+						</div>
 					</div>
 	    </div>
 				
@@ -87,7 +152,28 @@
 					</div>
 	        <h2>Everything is Local</h2>
 					<div class="contents">	
-						works with multiple branches easily
+
+						<div class="text">
+							This is basically true of all the distributed SCMs, but in my
+							experience even more so with Git.  There is very little outside
+							of 'fetch', 'pull' and 'push' that communicates in any way with 
+							anything other than your hard disk.
+						</div>
+						
+						<div class="text">
+							Even in Mercurial, common commands like 'incoming' and 'outgoing' hit 
+							the server, where with Git you can 'fetch' all the servers data
+							before going offline and do comparisons, merges and logs of data
+							that is on the server but not in your local branches yet.
+						</div>
+						
+						<div class="text">
+							This means that it's very easy to have copies of not only your
+							branches, but also of everyones branches that are working with
+							you in your Git repository without having to mess your own stuff
+							up.
+						</div>
+						
 					</div>
 	    </div>
 		
@@ -98,10 +184,44 @@
 						<span class="lang bzr">bzr</span>
 					</div>
 			
-	        <h2>Speed</h2>
+	        <h2>Git is Fast</h2>
+	
 					<div class="contents">
-						because everything is local and the git devs are speed freaks and 
-						git is written in C - all common functions are incredibly fast
+						<div class="text">
+							Git is fast.  Everyone, even most of the hard core users of these
+							other systems generally give Git this title.  Compared to SVN and
+							Perforce this is somewhat because all operations are done locally.
+							However, even compared to the other DSCMs, Git it pretty fast. 
+						</div>
+					
+						<div class="text">
+							Part of this is likely because it was built to work on the Linux 
+							kernel, which means that it has had to deal effectively with large
+							repositories from day one.
+							Another reason is that Git is written in C, and yet another reason
+							is that the primary developers are, in my experience, very very 
+							preoccupied with this.
+						</div>
+					</div>
+	    </div>
+	
+		  <div class="span-24 section">
+					<div class="args">
+						<span class="lang svn">svn</span>
+						<span class="lang perforce">perforce</span>
+						<span class="lang bzr">bzr</span>
+					</div>
+			
+	        <h2>Git is Small</h2>
+	
+					<div class="contents">
+						<div class="text">
+							Git is really good at conserving space.  Your Git directory will 
+							(in general) barely be larger than an SVN checkout - in some cases
+							actually smaller (apparently a lot can go in those .svn dirs).
+						</div>
+					
+					
 					</div>
 	    </div>
 	
@@ -164,6 +284,9 @@
 					There are other services, but few are user-oriented or socially
 					targeted, and none have near the user-base.  This social aspect
 					is killer.
+					
+					<img alt='puls twitter' width="300" src="http://twictur.es/i/1022858126.gif">
+					<img alt='twitter' width="300" src="http://twictur.es/i/1022857633.gif">
 				</div>
 	    </div>
 	
@@ -198,6 +321,7 @@
 <script>
 	$(function() {
 		$('.section > .contents').hide();
+		$('.contents > .tweets').hide();
 		$('.section > h2').click(function() {
 			$(this).next().slideToggle();
 		})
