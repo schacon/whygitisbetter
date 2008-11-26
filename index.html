@@ -22,13 +22,15 @@
 		.section h2 { padding-left: 5px; background-color: #eee; cursor: pointer;}
 		.section { margin-bottom: 20px; }
 		.contents { padding: 0 10px; }
-		.args { font-size: 1.5em; float:right; }
+		.args { float:right; }
 		.lang { padding: 3px; font-weight: bold;}
 		.section .lang { font-size: 0.8em; padding: 2px; font-weight: normal;}
 		.svn { color: hsl(260,57%,24%); background: hsl(260,57%,83%) }
 		.perforce { color: hsl(0,57%,24%); background: hsl(0,57%,83%) }
 		.bzr { color: hsl(60,57%,24%); background: hsl(60,57%,83%) }
 		.hg { color: hsl(190,57%,24%); background: hsl(190,57%,83%) }
+		.sweet { color: #363; background: #beb; }
+		.compare { color: #663; background: #eeb; }
 	</style>
 	
 </head>
@@ -202,26 +204,190 @@
 							is that the primary developers are, in my experience, very very 
 							preoccupied with this.
 						</div>
+
+						<div class="text">
+							The following are a number of benchmarks that I performed on three
+							copies of the Django source code repository in 3 different SCMs:
+							Git, Mercurial and Bazaar.  I also tested some of this stuff in SVN,
+							but trust me, it's slower - basically take the Bazaar numbers and
+							then add network latency...
+						</div>
+						
+						<table>
+						<tr><td nowrap>
+							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:2,5,60&chds=0,60&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Init">
+
+							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:85,3,23&chds=0,100&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Add">
+
+							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:45,194,1474&chds=0,1474&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Status">
+						
+							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:5,21,142&chds=0,142&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Diff">
+						</td><td rowspan="2">
+							<img src="http://chart.apis.google.com/chart?cht=bvg&chs=190x275&chd=t:1,123,390|11,946,820&chds=0,1210&chxt=x&chco=4d89f9,c6d9fd&chl=git|hg|bzr&chtt=Branching">
+						</td></tr>
+						<tr><td nowrap>
+							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:5,120,189&chds=0,230&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Tag">
+
+							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:7,26,90&chds=0,90&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Log">
+
+							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:124,125,230&chds=0,230&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Commit (Lg)">
+
+							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:8,51,113&chds=0,113&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Commit (Sm)">
+						</td></tr>
+						</table>
+						
+						<div class="text">
+							The end result was that for everything but adding new files, Git
+							was fastest. (Also really large commits, which Hg was basically the
+							same at, but the commit I tested was so large that you're unlikely
+							to ever do anything like it - normal commits are much faster in Git)
+						</div>
+						
+						<table>
+							<tr>
+								<th></th>
+								<th>Git</th>
+								<th>Hg</th>
+								<th>Bzr</th>
+							</tr>
+							<tr>
+								<th>Init</th>
+								<td class="sweet">0.024s</td>
+								<td>0.059s</td>
+								<td>0.600s</td>
+							</tr>
+							<tr>
+								<th>Add</th>
+								<td>8.535s</td>
+								<td class="sweet">0.368s</td>
+								<td>2.381s</td>
+							</tr>
+							<tr>
+								<th>Status</th>
+								<td class="sweet">0.451s</td>
+								<td>1.946s</td>
+								<td>14.744s</td>
+							</tr>
+							<tr>
+								<th>Diff</th>
+								<td class="sweet">0.543s</td>
+								<td>2.189s</td>
+								<td>14.248s</td>
+							</tr>
+							<tr>
+								<th>Tag</th>
+								<td class="sweet">0.056s</td>
+								<td>1.201s</td>
+								<td>1.892s</td>
+							</tr>
+							<tr>
+								<th>Log</th>
+								<td class="sweet">0.711s</td>
+								<td>2.650s</td>
+								<td>9.055s</td>
+							</tr>
+							<tr>
+								<th>Commit (Large)</th>
+								<td class="sweet">12.480s</td>
+								<td>12.500s</td>
+								<td>23.002s</td>
+							</tr>
+							<tr>
+								<th>Commit (Small)</th>
+								<td class="sweet">0.086s</td>
+								<td>0.517s</td>
+								<td>1.139s</td>
+							</tr>
+							<tr>
+								<th>Branch (Cold)</th>
+								<td class="sweet">1.161s</td>
+								<td>94.681s</td>
+								<td>82.249s</td>
+							</tr>
+							<tr>
+								<th>Branch (Hot)</th>
+								<td class="sweet">0.070s</td>
+								<td>12.300s</td>
+								<td>39.411s</td>
+							</tr>
+						</table>
+					
+						<div class="text">
+							The cold and hot branching numbers are the numbers for the first
+							and second times that I branched a repo - the second number being
+							a branch with a hot disk cache.
+						</div>
+					
+					
+					<div class="text">
+						This is really not difficult to recreate, simply clone the Django
+						project in each of the systems and try out the same commands in each.
+						<ul>
+							<li><code>git clone git://github.com/brosner/django.git dj-git</li>
+							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</li>
+							<li><code>bzr branch lp:django dj-bzr</li>
+							<li><code>svn checkout http://code.djangoproject.com/svn/django/trunk dj-svn</li>
+						</ul>
 					</div>
+					
+				</div>
+					
+					
 	    </div>
 	
 		  <div class="span-24 section">
 					<div class="args">
 						<span class="lang svn">svn</span>
-						<span class="lang perforce">perforce</span>
-						<span class="lang bzr">bzr</span>
 					</div>
 			
 	        <h2>Git is Small</h2>
 	
-					<div class="contents">
+					<div class="contentsx">
 						<div class="text">
 							Git is really good at conserving space.  Your Git directory will 
 							(in general) barely be larger than an SVN checkout - in some cases
 							actually smaller (apparently a lot can go in those .svn dirs).
 						</div>
 					
+						<div class="text">
+							The following numbers were taken from clones of the Django project
+							in each of it's semi-official Git mirrors at the same point in 
+							it's history.
+						</div>
 					
+						<table>
+							<tr>
+								<th></th>
+								<th>Git</th>
+								<th>Hg</th>
+								<th>Bzr</th>
+								<th>Bzr*</th>
+								<th>SVN</th>
+							</tr>
+							<tr>
+								<td>Repo Alone</td>
+								<td class="sweet">24M</td>
+								<td>34M</td>
+								<td>45M</td>
+								<td>89M</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Entire Directory</td>
+								<td class="compare">43M</td>
+								<td>53M</td>
+								<td>64M</td>
+								<td>108M</td>
+								<td class="compare">61M</td>
+							</tr>
+						</table>
+						
+						<div class="text"><small>
+							* the second Bzr number is after I ran 'bzr pack', which I thought
+							would make it smaller, but ended up making it much, much larger for
+							some reason. 
+						</small></div>
+						
 					</div>
 	    </div>
 
@@ -302,10 +468,14 @@
 			<!-- GIT MYTHS -->
 	
 	    <div class="span-24 section">
-	        <h2>Easy to Learn</h2>
-					<div class="contents">
-						didn't used to be, but now Git is as easy or easier to learn as Hg/etc
-					</div>
+				<div class="args">
+					<span class="lang perforce">perforce</span>
+				</div>
+				
+        <h2>Easy to Learn</h2>
+				<div class="contents">
+					didn't used to be, but now Git is as easy or easier to learn as Hg/etc
+				</div>
 	    </div>
 	
 	
