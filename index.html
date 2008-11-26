@@ -162,13 +162,15 @@
 							anything other than your hard disk.
 						</div>
 						
+						<center><img width="500px" src="images/local-remote.png"></center>
+
 						<div class="text">
 							Even in Mercurial, common commands like 'incoming' and 'outgoing' hit 
 							the server, where with Git you can 'fetch' all the servers data
 							before going offline and do comparisons, merges and logs of data
 							that is on the server but not in your local branches yet.
 						</div>
-						
+												
 						<div class="text">
 							This means that it's very easy to have copies of not only your
 							branches, but also of everyones branches that are working with
@@ -342,7 +344,7 @@
 			
 	        <h2>Git is Small</h2>
 	
-					<div class="contentsx">
+					<div class="contents">
 						<div class="text">
 							Git is really good at conserving space.  Your Git directory will 
 							(in general) barely be larger than an SVN checkout - in some cases
@@ -401,6 +403,33 @@
 		
 	        <h2>The Staging Area</h2>
 					<div class="contents">
+						<div class="text">
+							Unlike the other systems, Git has what it calls the "staging area"
+							or "index".  This is an intermediate area that you can setup what
+							you want your commit to look like before you commit it.
+						</div>
+						<div class="text">
+							The cool thing about the staging area, and what sets Git apart 
+							from all these other tools, is that you can easily stage some of
+							your files as you finish them and then commit them without commiting
+							all the modified files in your working directory, or having to list
+							them on the command line during the commit
+						</div>
+						<center><img src="images/index1.png"></center>
+						
+						<div class="text">
+							This also allows you to stage parts of files that have been modified,
+							for example to only stage for commit the changes at the top of the
+							file you've been hacking on, but not the bottom changes.
+						</div>
+
+						<div class="text">
+							Of course, Git also makes it pretty easy to ignore this feature
+							if you don't want that kind of control - just slap a '-a' to your
+							commit command.
+						</div>
+						
+						<center><img src="images/index2.png"></center>
 					</div>
 	    </div>
 
@@ -412,7 +441,8 @@
 
 	        <h2>Distributed</h2>
 					<div class="contents">
-						<div>arg: CVS, SVN, PER</div> 
+						
+						
 					</div>
 	    </div>
 	
@@ -426,8 +456,60 @@
 				</div>
 		
        	<h2>Any Workflow</h2>
+
 				<div class="contents">
-					SVN/Perforce style centralized model, or Dictator/Lieutenants, Manager, any combo
+					
+					<div class="text">
+						One of the amazing things about Git is that because of it's distributed
+						nature and super branching system, you can easily implement pretty
+						much any workflow you can think of relatively easily.
+					</div>
+					
+					<h3>Subversion-Style Workflow</h3>
+					
+
+					<div class="text">
+						A very common Git workflow, especially from people transitioning
+						from a centralized system, is a centralized workflow.  Git will 
+						not allow you to push if someone has pushed since the last time
+						you fetched, so a centralized model where all developers push to
+						the same server works just fine.
+					</div>
+					
+					<center><img src="images/workflow-a.png"></center><br/>
+					
+					<h3>Integration Manager Workflow</h3>
+
+					<div class="text">
+						Another common Git workflow is where there is an integration 
+						manager - a single person who commits to the 'blessed' repository,
+						and then a number of developers who clone from that repository, 
+						push to thier own independant repositories and ask the integrator
+						to pull in thier changes.  This is the type of development model 
+						you often see with open source or GitHub repositories.
+					</div>
+
+					<center><img src="images/workflow-b.png"></center><br/>
+
+					<h3>Dictator and Lieutenants Workflow</h3>
+
+					<div class="text">
+						For more massive projects, you can setup your developers similar to
+						the way the Linux kernel is run, where people are in charge of a
+						specific subsystem of the project ('lieutenants') and merge in all
+						changes that have to do with that subsystem.  Then another integrator
+						(the 'dictator') can pull changes from only his/her lieutenants and
+						the push to the 'blessed' repository that everyone then clones from
+						again.
+					</div>
+
+					<center><img src="images/workflow-c.png"></center><br/>
+					
+					<div class="text">
+						Again, Git is entirely flexible about this, so you can mix and 
+						match and choose the workflow that is right for you.
+					</div>
+					
 				</div>
 	    </div>
 	
