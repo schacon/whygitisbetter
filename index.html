@@ -161,6 +161,15 @@
 							of 'fetch', 'pull' and 'push' that communicates in any way with 
 							anything other than your hard disk.
 						</div>
+
+						<div class="text">
+							This not only makes most operations much faster than you may
+              be used to, but it also allows you to work on stuff offline.
+              That may not sound like a big deal, but I'm always amazed at
+              how often I actually do work offline.  Being able to branch,
+              merge, commit and browse history of your project while on 
+              the plane or train is very productive.
+						</div>
 						
 						<center><img width="500px" src="images/local-remote.png"></center>
 
@@ -319,10 +328,19 @@
 							and second times that I branched a repo - the second number being
 							a branch with a hot disk cache.
 						</div>
+
+						<div class="text">
+							It should be noted that although the 'add' numbers are much slower,
+              this was for a massive add operation - over 2000 files.  For the
+              majority of what most people do on a daily basis, add ops in any
+              of these systems will only take a fraction of a second. All of the
+              other ops tested here (except for the large commit, possibly) are
+              more indicitive of things you might actually do day to day.
+						</div>
 					
 					
 					<div class="text">
-						This is really not difficult to recreate, simply clone the Django
+						These numbers are really not difficult to recreate, simply clone the Django
 						project in each of the systems and try out the same commands in each.
 						<ul>
 							<li><code>git clone git://github.com/brosner/django.git dj-git</li>
@@ -440,9 +458,30 @@
 					</div>
 
 	        <h2>Distributed</h2>
+
 					<div class="contents">
-						
-						
+
+					  <div class="text">
+              One of the coolest features of any of the Distributed SCMs, Git included, is that it's
+              distributed.  This means that instead of doing a "checkout" of the current tip of 
+              the source code, you do a "clone" of the entire reposititory.  
+            </div>
+            <div class="text">
+              This means that even 
+              if you're using a centralized workflow, every user has what is essentially a full
+              backup of the main server, each of which could be pushed up to replace the main server
+              in the event of a crash or corruption.  There is basically no single point of failure
+              with Git unless there is only a single point.
+            </div>
+
+            <div class="text">
+              This does not slow things down much, either.  On average, an SVN checkout is faster than
+              any of the DSCMs, but not by too much. Furthermore, of the DSCMs, Git was the fastest
+              in my tests.
+					  </div>
+
+            ( graph of download speeds )
+
 					</div>
 	    </div>
 	
@@ -525,16 +564,42 @@
         <h2>GitHub</h2>
 				
 				<div class="contents">
-					I <em>may</em> be biased here, being as how I work for GitHub, 
-					but I add this section anyway because so many people say that
-					GitHub specifically was why they choose Git.
+
+          ( octocat / logo )
+
+					<div class="text">
+						I <em>may</em> be biased here, being as how I work for GitHub, 
+						but I add this section anyway because so many people say that
+						GitHub itself was specifically why they choose Git.
+					</div>
+
+					<div class="text">					
+						GitHub is a reason to use Git for many people because it is more 
+						like a social network for code than a simple hosting site.  People
+						find other developers or projects that are similar to the things
+						they are doing, and can easily fork and contribute, creating a very
+						vibrant community around Git and the projects that people use it
+						for.
+					</div>
 					
-					There are other services, but few are user-oriented or socially
-					targeted, and none have near the user-base.  This social aspect
-					is killer.
+					<div class="text">					
+						There exist other services, both for Git and for the other SCMs,
+						but few are user-oriented or socially
+						targeted, and none have anywhere near the user-base.  
+						This social aspect of GitHub is killer, and this plus all of the above features
+						make working with Git and GitHub a great combination for rapidly 
+						developing open source projects.
+					</div>
+
+					<div class="text">					
+            This type of community is simply not available in any of the other
+            SCMs.
+          </div>
 					
-					<img alt='puls twitter' width="300" src="http://twictur.es/i/1022858126.gif">
-					<img alt='twitter' width="300" src="http://twictur.es/i/1022857633.gif">
+					<div class="tweets">
+						<img alt='puls twitter' width="300" src="http://twictur.es/i/1022858126.gif">
+						<img alt='twitter' width="300" src="http://twictur.es/i/1022857633.gif">
+					</div>
 				</div>
 	    </div>
 	
@@ -556,7 +621,10 @@
 				
         <h2>Easy to Learn</h2>
 				<div class="contents">
-					didn't used to be, but now Git is as easy or easier to learn as Hg/etc
+					This did not used to be true - early in Git's life, it was not really an SCM so much as a couple
+          of tools that let you do versioned filesystem work in a distributed manner.  However, today, the
+          command set and learning curve of Git is pretty similar to any other SCM, and even better than
+          some.
 				</div>
 	    </div>
 	
