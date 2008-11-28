@@ -31,6 +31,8 @@
 		.hg { color: hsl(190,57%,24%); background: hsl(190,57%,83%) }
 		.sweet { color: #363; background: #beb; }
 		.compare { color: #663; background: #eeb; }
+		.help pre { font-size: 12px; }
+		.help td { vertical-align: top; }
 		code { font-size: 90%; }
 		.footer { text-align: center; color: #663; background-color: #eea; padding: 10px;}
 		.footer a { color: #440; }
@@ -138,7 +140,8 @@
 							work when they learn it.
 						</div>
 						
-						<!-- (short screencast showing the awesomeness of git branches) -->
+						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
+						<!-- TODO : (show tweets somehow) -->
 
 						<div class="tweets">
 							<img alt='jamis twitter' width="300" src="http://twictur.es/i/1022811017.gif">
@@ -649,12 +652,89 @@
         <h2>Easy to Learn</h2>
 				<div class="contents">
 					<div class="text">										
-						This did not used to be true - early in Git's life, it was not really an SCM so much as a couple
-	          of tools that let you do versioned filesystem work in a distributed manner.  However, today, the
-	          command set and learning curve of Git is pretty similar to any other SCM, and even better than
-	          some.
+						This did not used to be true - early in Git's life, it was not really 
+						an SCM so much as a bunch of tools that let you do versioned filesystem 
+						work in a distributed manner.  However, today, the command set and 
+						learning curve of Git is pretty similar to any other SCM, and even 
+						better than some.
 					</div>
+
+					<div class="text">										
+						Since this is difficult to prove objectively without some sort of 
+						study, I'll just show the difference between the default 'help' menu for the
+						Mercurial and Git commands.  I've highlighted the commands that are
+						identical (or nearly) between the two systems.  (In Hg, if you type 'hg help', you 
+						get a list of 40-some commands)
+					</div>
+				
+					<table class="help">
+						<tr><td valign="top">
+							
+<h3>Mercurial Help</h3>
+<pre>
+<span class="compare">add</span>        add the specified files ...
+<span class="compare">annotate</span>   show changeset informati...
+<span class="compare">clone</span>      make a copy of an existi...
+<span class="compare">commit</span>     commit the specified fil...
+<span class="compare">diff</span>       diff repository (or sele...
+export     dump the header and diff...
+<span class="compare">init</span>       create a new repository ...
+<span class="compare">log</span>        show revision history of...
+<span class="compare">merge</span>      merge working directory ...
+parents    show the parents of the ...
+<span class="compare">pull</span>       pull changes from the sp...
+<span class="compare">push</span>       push changes to the spec...
+<span class="compare">remove</span>     remove the specified fil...
+serve      export the repository vi...
+<span class="compare">status</span>     show changed files in th...
+update     update working directory
+</pre>
+
+					</td><td valign="top">
+						
+<h3>Git Help</h3>
+<pre>
+<span class="compare">add</span>        Add file contents to the index
+<span class="compare">bisect</span>     Find the change that introduce...
+<span class="compare">branch</span>     List, create, or delete branches
+checkout   Checkout a branch or paths to ...
+<span class="compare">clone</span>      Clone a repository into a new ...
+<span class="compare">commit</span>     Record changes to the repository
+<span class="compare">diff</span>       Show changes between commits, ...
+fetch      Download objects and refs from...
+grep       Print lines matching a pattern
+<span class="compare">init</span>       Create an empty git repository
+<span class="compare">log</span>        Show commit logs
+<span class="compare">merge</span>      Join two or more development h...
+mv         Move or rename a file, a direc...
+<span class="compare">pull</span>       Fetch from and merge with anot...
+<span class="compare">push</span>       Update remote refs along with ...
+rebase     Forward-port local commits to ...
+reset      Reset current HEAD to the spec...
+<span class="compare">rm</span>         Remove files from the working ...
+show       Show various types of objects
+<span class="compare">status</span>     Show the working tree status
+<span class="compare">tag</span>        Create, list, delete or verify...
+</pre>	
+				</td></tr>
+				</table>
+				
+				<div class="text">										
+					Prior to Git 1.6, all of the Git commands used to be in the executable
+					path, which was very confusing to people.  Although Git still recognizes
+					all of those commands still, the only command in the path is now 'git'.
+					So, if you look at Mercurial and Git, Git has a nearly identical 
+					command set and help system - there is very little difference from 
+					a beginning UI perspective today.
 				</div>
+				
+				<div class="text">										
+					These days it's pretty hard to argue that Mercurial or Bazaar is any
+					easier to learn than Git is.
+				</div>
+				
+				</div>
+				
 	    </div>
 	
 	
