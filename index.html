@@ -351,7 +351,7 @@
 						These numbers are really not difficult to recreate, simply clone the Django
 						project in each of the systems and try out the same commands in each.
 						<ul>
-							<li><code>git clone git://github.com/brosner/django.git dj-git</code></li>
+							<li><code>git clone git://GitHub.com/brosner/django.git dj-git</code></li>
 							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</code></li>
 							<li><code>bzr branch lp:django dj-bzr</code></li>
 							<li><code>svn checkout http://code.djangoproject.com/svn/django/trunk dj-svn</code></li>
@@ -537,55 +537,54 @@
 				<div class="contents">
 					
 					<div class="text">
-						One of the amazing things about Git is that because of its distributed
-						nature and super branching system, you can easily implement pretty
-						much any workflow you can think of relatively easily.
+						Une des choses incroyables avec Git, gr&acirc;ce &agrave; sa nature distribu&eacute;e 
+						et &agrave; sa superbe gestion des branches,  est que vous pouvez facilement 
+						utiliser le type de workflow qui vous semble le plus naturel.
 					</div>
 					
-					<h3>Subversion-Style Workflow</h3>
+					<h3>Workflow du Style Subversion</h3>
 					
 
 					<div class="text">
-						A very common Git workflow, especially from people transitioning
-						from a centralized system, is a centralized workflow.  Git will 
-						not allow you to push if someone has pushed since the last time
-						you fetched, so a centralized model where all developers push to
-						the same server works just fine.
+						Il est tr&egrave;s commun d&#x27;utiliser un workflow centralis&eacute; avec Git, 
+						surtout pour les personnes venant juste de migrer depuis un 
+						syst&egrave;me centralis&eacute;. Git ne vous permettra pas de pousser un commit 
+						si quelqu&#x27;un a modifi&eacute; quelque chose depuis votre derni&egrave;re mise &agrave; jour, 
+						ce mod&egrave;le centralis&eacute; o&ugrave; tous les d&eacute;veloppeurs poussent sur le m&ecirc;me serveur 
+						fonctionne tr&egrave;s bien.
 					</div>
 					
 					<center><img src="images/workflow-a.png"></center><br/>
 					
-					<h3>Integration Manager Workflow</h3>
+					<h3>Workflow g&eacute;rer par un Manager d&#x27;Int&eacute;gration</h3>
 
 					<div class="text">
-						Another common Git workflow is where there is an integration 
-						manager - a single person who commits to the 'blessed' repository,
-						and then a number of developers who clone from that repository, 
-						push to their own independant repositories and ask the integrator
-						to pull in their changes.  This is the type of development model 
-						you often see with open source or GitHub repositories.
+						Un autre workflow commun &agrave; Git consiste &agrave; d&eacute;signer un manager d&#x27;int&eacute;gration - une seule 
+						personne peut faire les commits sur le &#x27;Saint-d&eacute;p&ocirc;t&#x27;. Le reste des d&eacute;veloppeurs clone ce 
+						d&eacute;p&ocirc;t pour cr&eacute;er des d&eacute;p&ocirc;ts ind&eacute;pendants sur lesquels ils pourront faire leurs commits, pour
+						ensuite demander au manager de r&eacute;cup&eacute;rer leurs changements. C&#x27;est le mod&egrave;le de d&eacute;veloppement
+						que vous verrez souvent avec les d&eacute;p&ocirc;ts open source ou sur GitHub.
 					</div>
 
 					<center><img src="images/workflow-b.png"></center><br/>
 
-					<h3>Dictator and Lieutenants Workflow</h3>
+					<h3>Workflow du Dictateur et ses Lieutenants</h3>
 
 					<div class="text">
-						For more massive projects, you can setup your developers similar to
-						the way the Linux kernel is run, where people are in charge of a
-						specific subsystem of the project ('lieutenants') and merge in all
-						changes that have to do with that subsystem.  Then another integrator
-						(the 'dictator') can pull changes from only his/her lieutenants and
-						the push to the 'blessed' repository that everyone then clones from
-						again.
+						Pour les projets de grande taille, vous pouvez organisez vos d&eacute;veloppeurs &agrave; la fa&ccedil;on 
+						du kernel Linux, o&ugrave; certaines personnes sont en charge d&#x27;un sous-syst&egrave;me sp&eacute;cifique
+						du projet (&#x27;lieutenant&#x27;) et elles combinent tous les changements de leur sous-syst&egrave;me. 
+						Puis, un autre int&eacute;grateur (&#x27;dictateur&#x27;) peut r&eacute;cup&eacute;rer seulement les changements de 
+						ses lieutenants, et pousser ces modifications sur le &#x27;Saint-d&eacute;p&ocirc;t&#x27;, que tout le monde 
+						peut cloner &agrave; nouveau.
 					</div>
 
 					<center><img src="images/workflow-c.png"></center><br/>
 					
 					<div class="text">
-						Again, Git is entirely flexible about this, so you can mix and 
-						match and choose the workflow that is right for you. 
-          </div>
+						Une fois encore, Git est enti&egrave;rement flexible avec les workflow, vous pouvez donc m&eacute;langer, reproduire 
+						et choisir le workflow qui vous convient.
+          			</div>
 
 
 				</div>
@@ -601,7 +600,7 @@
 				</div>
 
         <h2>
-        <a name="github" href="#github">GitHub</a>
+        <a name="GitHub" href="#GitHub">GitHub</a>
         </h2>
 				
 				<div class="contents">
@@ -609,11 +608,11 @@
           <img style="float:right; padding:10px" src="images/octocat.png">
 
 					<div class="text">
-						Github est &agrave; l&#x27;origine du choix de Git pour beaucoup de gens.
+						GitHub est &agrave; l&#x27;origine du choix de Git pour beaucoup de gens.
 					</div>
 
 					<div class="text">
-						Github est &agrave; l&#x27;origine du choix de Git pour beaucoup de gens car c&#x27;est plus 
+						GitHub est &agrave; l&#x27;origine du choix de Git pour beaucoup de gens car c&#x27;est plus 
 						comme un r&eacute;seau social pour du code qu&#x27;un simple h&eacute;bergeur. Le site permet de trouver 
 						d&#x27;autres d&eacute;veloppeur ou des projets qui sont similaires aux choses que vous faites, et 
 						auxquels vous pouvez facilement forker ou contribuer, en cr&eacute;ant une communaut&eacute; vibrante autour
@@ -622,14 +621,14 @@
 					</div>
 					
 					<div class="text">
-						Il y a d'autres services, pour Git ou d'autres SCM, mais peu sont tournés vers l'utilisateur ou 
-						l'usage des réseaux sociaux, et aucun n'arrive à regrouper autant de monde. L'aspect social de Github 
-						est fantastique, et cela, en plus toutes les autres fonctionnalités précédentes, fait de Git et Github 
-						une superbe combinaison pour rapidement développer des projets open source.
+						Il y a d&#x27;autres services, pour Git ou d&#x27;autres SCM, mais peu sont tourn&eacute;s vers l&#x27;utilisateur ou 
+						l&#x27;usage des r&eacute;seaux sociaux, et aucun n&#x27;arrive &agrave; regrouper autant de monde. L&#x27;aspect social de GitHub 
+						est fantastique, et cela, en plus toutes les autres fonctionnalit&eacute;s pr&eacute;c&eacute;dentes, fait de Git et GitHub 
+						une superbe combinaison pour rapidement d&eacute;velopper des projets open source.
 					</div>
 
 					<div class="text">
-						Ce type de communauté n'existe simplemen pas avec les autres SCM.
+						Ce type de communaut&eacute; n&#x27;existe simplement pas avec les autres SCM.
           			</div>
 					
 					<div class="tweets">
@@ -756,9 +755,9 @@ show       Show various types of objects
 		<br/>
 		
     <div class="span-24 footer">
-		Ce site est construit et maintenu par <a href="http://github.com/alx">Alexandre Girard</a>, un <a href="http://github.com">GitHubber</a>.<br/>
+		Ce site est construit et maintenu par <a href="http://GitHub.com/alx">Alexandre Girard</a>, un <a href="http://GitHub.com">GitHubber</a>.<br/>
 		Si vous n&#x27;&ecirc;tes pas d&#x27;accord avec certaines informations de ce site, et que vous avez de bonnes raisons, merci de <a href="mailto:alex.girard@gmail.com">m'envoyer un mail</a> pour que je puisse corriger ces erreurs.<br/>
-		Le code de ce site est disponible <a href="http://github.com/alx/whygitisbetter">sur GitHub</a> - n&#x27;h&eacute;sitez pas &agrave; envoyer vos patches si vous voulez l&#x27;am&eacute;liorer.
+		Le code de ce site est disponible <a href="http://GitHub.com/alx/whygitisbetter">sur GitHub</a> - n&#x27;h&eacute;sitez pas &agrave; envoyer vos patches si vous voulez l&#x27;am&eacute;liorer.
 		</div>
 
 	</div>
