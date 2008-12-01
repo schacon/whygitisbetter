@@ -82,7 +82,10 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 
-	        <h2>Cheap Local Branching</h2>
+	        <h2>
+	          <a name="cheap-local-branching" href="#cheap-local-branching">#</a>
+	          Cheap Local Branching
+	        </h2>
 					<div class="contents">
 						
 						<div class="text">
@@ -158,7 +161,10 @@
 						<span class="lang svn">svn</span>
 						<span class="lang perforce">perforce</span>
 					</div>
-	        <h2>Everything is Local</h2>
+	        <h2>
+	          <a name="everything-is-local" href="#everything-is-local">#</a>
+	          Everything is Local
+	        </h2>
 					<div class="contents">	
 
 						<div class="text">
@@ -203,7 +209,10 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 			
-	        <h2>Git is Fast</h2>
+	        <h2>
+	          <a name="git-is-fast" href="#git-is-fast">#</a>
+	          Git is Fast
+	        </h2>
 	
 					<div class="contents">
 						<div class="text">
@@ -366,7 +375,10 @@
 						<span class="lang svn">svn</span>
 					</div>
 			
-	        <h2>Git is Small</h2>
+	        <h2>
+	          <a name="git-is-small" href="#git-is-small">#</a>
+	          Git is Small
+	        </h2>
 	
 					<div class="contents">
 						<div class="text">
@@ -425,7 +437,10 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 		
-	        <h2>The Staging Area</h2>
+	        <h2>
+	          <a name="the-staging-area" href="#the-staging-area">#</a>
+	          The Staging Area
+	        </h2>
 					<div class="contents">
 						<div class="text">
 							Unlike the other systems, Git has what it calls the "staging area"
@@ -463,7 +478,10 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 
-	        <h2>Distributed</h2>
+	        <h2>
+	          <a name="distributed" href="#distributed">#</a>
+	          Distributed
+	        </h2>
 
 					<div class="contents">
 
@@ -523,7 +541,10 @@
 					<span class="lang perforce">perforce</span>
 				</div>
 		
-       	<h2>Any Workflow</h2>
+       	<h2>
+       	  <a name="any-workflow" href="#any-workflow">#</a>
+       	  Any Workflow
+       	</h2>
 
 				<div class="contents">
 					
@@ -599,7 +620,10 @@
 					<span class="lang perforce">perforce</span>
 				</div>
 
-        <h2>GitHub</h2>
+        <h2>
+          <a name="github" href="#github">#</a>
+          GitHub
+        </h2>
 				
 				<div class="contents">
 
@@ -658,7 +682,11 @@
 					<span class="lang perforce">perforce</span>
 				</div>
 				
-        <h2>Easy to Learn</h2>
+        <h2>
+          <a name="easy-to-learn" href="#easy-to-learn">#</a>
+          Easy to Learn
+        </h2>
+        
 				<div class="contents">
 					<div class="text">										
 						This did not used to be true - early in Git's life, it was not really 
@@ -772,6 +800,10 @@ show       Show various types of objects
 		$('.section > h2').click(function() {
 			$(this).next().slideToggle();
 		})
+		
+		if (document.location.hash) {
+		  $('.section > h2 > a[name=' + document.location.hash.substring(1) + ']').parent('h2').click()
+		}
 	})
 </script>
 
