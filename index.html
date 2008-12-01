@@ -78,43 +78,42 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 
-	        <h2>Branches Locales faciles</h2>
+	        <h2>Gestion Rapide des Branches</h2>
 					<div class="contents">
 						
 						<div class="text">
-							Probably Git's most compelling feature that really makes it stand
-							apart from nearly every other SCM out there is it's branching
-							model.  It is completely different from all of the models I'm 
-							comparing it to here, most of which recommend that the best branch
-							is basically a clone of the repository in a new directory.
+							La fonctionnalit&eacute;s majeure qui met Git &agrave; part de tous les autres SCM 
+							est le mod&egrave;le de gestion des branches. Il est cmpl&eacute;tement diff&eacute;rent 
+							de tous les mod&egrave;les que je compare ici, la plupart recommandant que la 
+							meilleure fa&ccedil;on de cr&eacute;er une branche est de cloner le dépôt dans un
+							nouveau r&eacute;pertoire.
 						</div>
 						
 						<div class="text">
-							Git does not work like that.  Git will allow you to have multiple
-							local branches that can be entirely independent of each other and
-							the creation, merging and deletion of those lines of development
-							take seconds.
+							Git ne fonctionne pas comme &ccedil;a. Git vous permettra d&#x27;avoir de multiple branches locales 
+							qui peuvent &ecirc;tre totalement ind&eacute;pendante les unes des autres, 
+							et dont la cr&eacute;ation, la fusion (merge) ou la suppression ne prend que quelaues secondes.
 						</div>
 						
 						
 						<div class="text">
-							This means that you can do things like :
+							Cela veut dire que vous pouvez faire ce genre de choses:
 							<ul>
-								<li>Create a branch to try out an idea, commit
-									a few times, switch back to where you branched from, apply a patch, 
-									switch back to where you are experimenting, then merge it in.
+								<li>Cr&eacute;er une branche pour essayer une nouvelle id&eacute;e, committer quelques fois, 
+									revenir &agrave; l&#x27;endroit o&ugrave; vous avez cr&eacute;&eacute; cette branche, appliquer un patch, 
+									retourner l&agrave; o&ugrave; vous exp&eacute;rimentez et fusionnez le avec votre branche principale.
 								</li>
-								<li>Have a branch that always contains only what goes to production,
-									another that you merge work into for testing and several smaller
-									ones for day to day work
+								<li>Avoir une branche qui contient toujours ce qui va en production,
+									une autre que vous fusionnez votre travail pour faire des test,
+									et quelques autres plus petites pour le travail au jour le jour.
 								</li>
-								<li>Create new branches for each new feature you're working on, so
-									you can seamlessly switch back and forth between them, then delete
-									each branch when that feature gets merged into your main line.
+								<li>Cr&eacute;er une nouvelle branche pour toutes les fonctionnalit&eacute;s que vous d&eacute;veloppez, 
+									comme &ccedil;a vous pourrez aller et revenir facilement entre-elles, et effacer chaque branche 
+									une foi que la fonctionnalit&eacute; sera incluse dans la branche principale.
 								</li>
-								<li>Create a branch to experiment in, realize it's not going to
-									work and just delete it, abandoning the work - with nobody else
-									ever seeing it (even if you've pushed other branches in the meantime)
+								<li>Cr&eacute;er une branche pour vos exp&eacute;rimentations, et si vous r&eacute;alisez que &ccedil;a ne 
+									fonctionnera pas, il vous suffit de la supprimer pour abandonner le travail, 
+									sans personne pour le voir (m&ecirc;me si vous poussez d&#x27;autres branches entre temps)
 								</li>
 							</ul>
 						</div>
@@ -122,18 +121,18 @@
 						<img src="images/branches.png">
 						
 						<div class="text">
-							Importantly, when you push to a remote repository, you do <em>not</em>
-							have to push all of your branches.  You can only share one of your
-							branches and not all of them.  This tends to free people to try
-							new ideas without worrying about having to plan how and when they
-							are going to merge it in or share it with others.
+							Important: quand vous poussez les modifications sur un d&eacute;p&ocirc;t distant, 
+							vous n&acute;&ecirc;tes pas oblig&eacute;s de poussez toutes vos branches. Vous pouvez 
+							partager les branches que vous d&eacute;sirez. Cela lib&egrave;re les gens pour exp&eacute;rimenter 
+							avec des nouvelles id&eacute;es sans se soucier de savoir quand et comment ils devront 
+							combiner cette id&eacute;e ou la partager avec les autres.
 						</div>
 						
 						<div class="text">
-							You <em>can</em> find ways to do some of this with other systems, but the work
-							involved is much more difficult and error-prone.  Git makes this
-							process incredibly easy and it changes the way most developers
-							work when they learn it.
+							Vous pouvez trouvez comment faire certaines de ces pratiques avec les autres syst&egrave;mes, 
+							mais le travail n&eacute;cessaire est bien plus difficile et peut amener &agrave; se tromper. Git rend 
+							ces processus incroyablement simples et &ccedil;a change la mani&egrave;re de travailler pour la plupart des 
+							d&eacute;veloppeurs qui les apprennent.
 						</div>
 						
 						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
