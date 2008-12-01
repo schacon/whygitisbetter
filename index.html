@@ -20,6 +20,7 @@
 		.intro { color: #444; }
 		ul li { margin-top: 10px; }
 		.section h2 { padding-left: 5px; background-color: #eee; cursor: pointer;}
+    .section h2 a { color: #333; text-decoration:none; display: block; }
 		.section { margin-bottom: 20px; }
 		.contents { padding: 0 10px; }
 		.args { float:right; }
@@ -78,7 +79,9 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 
-	        <h2>Gestion Rapide des Branches</h2>
+	        <h2>
+				<a name="cheap-local-branching" href="#cheap-local-branching">Gestion Rapide des Branches</a>
+			</h2>
 					<div class="contents">
 						
 						<div class="text">
@@ -153,7 +156,9 @@
 						<span class="lang svn">svn</span>
 						<span class="lang perforce">perforce</span>
 					</div>
-	        <h2>Tout est Local</h2>
+	        <h2>
+          <a name="everything-is-local" href="#everything-is-local">Tout est Local</a>
+	        </h2>
 					<div class="contents">	
 
 						<div class="text">
@@ -198,8 +203,10 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 			
-	        <h2>Git est rapide</h2>
-	
+	        <h2>
+          <a name="git-is-fast" href="#git-is-fast">Git est rapide</a>
+	        </h2>
+
 					<div class="contents">
 						<div class="text">
 							Git is fast.  Everyone, even most of the hard core users of these
@@ -361,7 +368,9 @@
 						<span class="lang svn">svn</span>
 					</div>
 			
-	        <h2>Git est L&eacute;ger</h2>
+	        <h2>
+          <a name="git-is-small" href="#git-is-small">Git est L&eacute;ger</a>
+	        </h2>
 	
 					<div class="contents">
 						<div class="text">
@@ -372,8 +381,8 @@
 					
 						<div class="text">
 							The following numbers were taken from clones of the Django project
-							in each of it's semi-official Git mirrors at the same point in 
-							it's history.
+							in each of its semi-official Git mirrors at the same point in 
+							its history.
 						</div>
 					
 						<table>
@@ -420,7 +429,10 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 		
-	        <h2>La Zone de Staging</h2>
+	        <h2>
+          <a name="the-staging-area" href="#the-staging-area">La Zone de Staging</a>
+	        </h2>
+	
 					<div class="contents">
 						<div class="text">
 							Unlike the other systems, Git has what it calls the "staging area"
@@ -458,7 +470,9 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 
-	        <h2>Distribu&eacute;</h2>
+	        <h2>
+          <a name="distributed" href="#distributed">Distribu&eacute;</a>
+	        </h2>
 
 					<div class="contents">
 
@@ -516,12 +530,14 @@
 					<span class="lang perforce">perforce</span>
 				</div>
 		
-       	<h2>N'importe quel Workflow</h2>
+       	<h2>
+        <a name="any-workflow" href="#any-workflow">Workflow Adapt&eacute;</a>
+       	</h2>
 
 				<div class="contents">
 					
 					<div class="text">
-						One of the amazing things about Git is that because of it's distributed
+						One of the amazing things about Git is that because of its distributed
 						nature and super branching system, you can easily implement pretty
 						much any workflow you can think of relatively easily.
 					</div>
@@ -545,8 +561,8 @@
 						Another common Git workflow is where there is an integration 
 						manager - a single person who commits to the 'blessed' repository,
 						and then a number of developers who clone from that repository, 
-						push to thier own independant repositories and ask the integrator
-						to pull in thier changes.  This is the type of development model 
+						push to their own independant repositories and ask the integrator
+						to pull in their changes.  This is the type of development model 
 						you often see with open source or GitHub repositories.
 					</div>
 
@@ -571,6 +587,7 @@
 						match and choose the workflow that is right for you. 
           </div>
 
+
 				</div>
 	    </div>
 	
@@ -583,7 +600,9 @@
 					<span class="lang perforce">perforce</span>
 				</div>
 
-        <h2>GitHub</h2>
+        <h2>
+        <a name="github" href="#github">GitHub</a>
+        </h2>
 				
 				<div class="contents">
 
@@ -642,13 +661,16 @@
 					<span class="lang perforce">perforce</span>
 				</div>
 				
-        <h2>Facile &agrave; Apprendre</h2>
+        <h2>
+        <a name="easy-to-learn" href="#easy-to-learn">Facile &agrave; Apprendre</a>
+        </h2>
+
 				<div class="contents">
 					<div class="text">										
 						This did not used to be true - early in Git's life, it was not really 
 						an SCM so much as a bunch of tools that let you do versioned filesystem 
 						work in a distributed manner.  However, today, the command set and 
-						learning curve of Git is pretty similar to any other SCM, and even 
+						learning curve of Git are pretty similar to any other SCM, and even 
 						better than some.
 					</div>
 
@@ -657,7 +679,7 @@
 						study, I'll just show the difference between the default 'help' menu for the
 						Mercurial and Git commands.  I've highlighted the commands that are
 						identical (or nearly) between the two systems.  (In Hg, if you type 'hg help', you 
-						get a list of 40-some commands)
+						get a list of 40-some commands.)
 					</div>
 				
 					<table class="help">
@@ -715,7 +737,7 @@ show       Show various types of objects
 				<div class="text">										
 					Prior to Git 1.6, all of the Git commands used to be in the executable
 					path, which was very confusing to people.  Although Git still recognizes
-					all of those commands still, the only command in the path is now 'git'.
+					all of those commands, the only command in the path is now 'git'.
 					So, if you look at Mercurial and Git, Git has a nearly identical 
 					command set and help system - there is very little difference from 
 					a beginning UI perspective today.
@@ -754,6 +776,10 @@ show       Show various types of objects
 		$('.section > h2').click(function() {
 			$(this).next().slideToggle();
 		})
+		
+		if (document.location.hash) {
+		  $('.section > h2 > a[name=' + document.location.hash.substring(1) + ']').parent('h2').click()
+		}
 	})
 </script>
 
