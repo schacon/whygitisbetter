@@ -207,27 +207,26 @@
 
 					<div class="contents">
 						<div class="text">
-							Git is fast.  Everyone, even most of the hard core users of these
-							other systems generally give Git this title.  Compared to SVN and
-							Perforce this is somewhat because all operations are done locally.
-							However, even compared to the other DSCMs, Git it pretty fast. 
+							Git est rapide. Tout le monde, m&ecirc;me les utilisateurs les plus hardcore 
+							des autres syst&egrave;mes, donne &agrave; Git ce titre. Compar&eacute; &agrave; SVN et Preforce, 
+							cela vient du fait que toutes les op&eacute;rations se font localement. Cependant, 
+							m&ecirc;me compar&eacute; aux autres DSCM, Git est vraiment rapide.
 						</div>
 					
 						<div class="text">
-							Part of this is likely because it was built to work on the Linux 
-							kernel, which means that it has had to deal effectively with large
-							repositories from day one.
-							Another reason is that Git is written in C, and yet another reason
-							is that the primary developers are, in my experience, very very 
-							preoccupied with this.
+							Une partie de l&#x27;origine de cette vitesse vient du fait que Git a &eacute;t&eacute; construit 
+							pour travailler sur le noyau Linux, ce qui veut dire qu&#x27;il devait g&eacute;rer efficacement 
+							un large nombre de d&eacute;p&ocirc;t d&egrave;s le premier jour.
+							Un autre raison est que Git est &eacute;crit en C, et encore une autre raison est que les 
+							d&eacute;veloppeur &agrave; l&#x27;origine de git sont, &agrave; mon exp&eacute;rience, tr&egrave;s tr&egrave;s soucieux de la rapidit&eacute; 
+							de leurs applications.
 						</div>
 
 						<div class="text">
-							The following are a number of benchmarks that I performed on three
-							copies of the Django source code repository in 3 different SCMs:
-							Git, Mercurial and Bazaar.  I also tested some of this stuff in SVN,
-							but trust me, it's slower - basically take the Bazaar numbers and
-							then add network latency...
+							Voici quelques benchmarks que j&#x27;ai effectu&eacute; sur 3 copies du d&eacute;p&ocirc;t des sources de Django 
+							avec 3 SCM diff&eacute;rents: Git, Mercurial et Bazaar. J&#x27;ai aussi test&eacute; quelques parties sur 
+							SVN, mais croyais moi, c&#x27;est plus lent - en gros prenez les chiffres de Bazaar et ajoutez 
+							le temps de latence du r&eacute;seau...
 						</div>
 						
 						<table>
@@ -254,10 +253,11 @@
 						</table>
 						
 						<div class="text">
-							The end result was that for everything but adding new files, Git
-							was fastest. (Also really large commits, which Hg was basically the
-							same at, but the commit I tested was so large that you're unlikely
-							to ever do anything like it - normal commits are much faster in Git)
+							Le r&eacute;sultat final est que pour toutes les commandes, &agrave; part l&#x27;ajout d&#x27;un fichier, 
+							Git est le plus rapide. (Aussi pour les commit tr&egrave;s larges, dans lequel Hg a des 
+							r&eacute;sultat similaires, mais le commit que j&#x27;ai test&eacute; &eacute;tait tellement grand qu&#x27;il est 
+							vraisemblable que vous tombiez sur ce genre de cas - les commit normaux sont plus rapides 
+							avec Git)
 						</div>
 						
 						<table>
@@ -310,19 +310,19 @@
 								<td>23.002s</td>
 							</tr>
 							<tr>
-								<th>Commit (Small)</th>
+								<th>Commit (Petit)</th>
 								<td class="sweet">0.086s</td>
 								<td>0.517s</td>
 								<td>1.139s</td>
 							</tr>
 							<tr>
-								<th>Branch (Cold)</th>
+								<th>Branch (Froid)</th>
 								<td class="sweet">1.161s</td>
 								<td>94.681s</td>
 								<td>82.249s</td>
 							</tr>
 							<tr>
-								<th>Branch (Hot)</th>
+								<th>Branch (Chaud)</th>
 								<td class="sweet">0.070s</td>
 								<td>12.300s</td>
 								<td>39.411s</td>
@@ -330,24 +330,23 @@
 						</table>
 					
 						<div class="text">
-							The cold and hot branching numbers are the numbers for the first
-							and second times that I branched a repo - the second number being
-							a branch with a hot disk cache.
+							Les chiffres des branches &agrave; froid et &agrave; chaud sont les chiffres de la cr&eacute;ation
+							 d&#x27;une premi&egrave;re puis d&#x27;une seconde branche sur le d&eacute;p&ocirc;t - le second chiffre 
+							&eacute;tant une branche avec un cache disque d&eacute;j&agrave; pr&ecirc;t.
 						</div>
 
 						<div class="text">
-							It should be noted that although the 'add' numbers are much slower,
-              this was for a massive add operation - over 2000 files.  For the
-              majority of what most people do on a daily basis, add ops in any
-              of these systems will only take a fraction of a second. All of the
-              other ops tested here (except for the large commit, possibly) are
-              more indicitive of things you might actually do day to day.
+							Bien que les chiffres &#x27;add&#x27; sont bien plus petit, c&#x27;&eacute;tait une op&eacute;ration d&#x27;ajout 
+							massif - plus de 2000 fichiers. Pour la majorit&eacute; des cas que les gens rencontrent 
+							chaque jour, les op&eacute;rations d&#x27;ajout ne prennent qu&#x27;une fraction de seconde. Toutes 
+							les autres op&eacute;rations test&eacute;es ici (&agrave; part peut-&ecirc;tre le l&#x27;&eacute;norme commit) son plus 
+							indicatifs des choses que vous serez amen&eacute;s &agrave; faire au jour le jour.
 						</div>
 					
 					
 					<div class="text">
-						These numbers are really not difficult to recreate, simply clone the Django
-						project in each of the systems and try out the same commands in each.
+						Ces chiffres ne sont pas difficiles &agrave; reproduire, il vous suffit de cloner le projet Django 
+						avec chaque syst&egrave;me et d&#x27;essayer la m&ecirc;me commande dans chacun.
 						<ul>
 							<li><code>git clone git://GitHub.com/brosner/django.git dj-git</code></li>
 							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</code></li>
@@ -569,7 +568,7 @@
 
 					<div class="text">
 						Pour les projets de grande taille, vous pouvez organisez vos d&eacute;veloppeurs &agrave; la fa&ccedil;on 
-						du kernel Linux, o&ugrave; certaines personnes sont en charge d&#x27;un sous-syst&egrave;me sp&eacute;cifique
+						du noyau Linux, o&ugrave; certaines personnes sont en charge d&#x27;un sous-syst&egrave;me sp&eacute;cifique
 						du projet (&#x27;lieutenant&#x27;) et elles combinent tous les changements de leur sous-syst&egrave;me. 
 						Puis, un autre int&eacute;grateur (&#x27;dictateur&#x27;) peut r&eacute;cup&eacute;rer seulement les changements de 
 						ses lieutenants, et pousser ces modifications sur le &#x27;Saint-d&eacute;p&ocirc;t&#x27;, que tout le monde 
