@@ -101,15 +101,15 @@
 						<div class="text">
 							Provavelmente a funcionalidade mais atrativa do Git que realmente a torna
 							diferente de praticamente todo outro SCM (<em>Source Control Management</em>, Sistemas de Gerenciamento de Fontes) é seu
-							modelo de <em>branches</em>. É completamente diferente de todos os outros modelos que
+							modelo de <em>branches</em> ("bifurcações", ou "galhos"). É completamente diferente de todos os outros modelos que
 							estou comparando aqui, onde a maioria recomenda que o melhor <em>branch</em> é 
 							basicamente um clone do repositório em outro diretório.
 						</div>
 						
 						<div class="text">
 							Git não funciona dessa forma. Git permite a existência de múltiplos <em>branches</em> locais
-							que podem ser inteiramente independentes de cada um e a criação, <em>merges</em> e
-							deleção dessas linhas de desenvolvimento leva segundos.
+							que podem ser inteiramente independentes de cada um e a criação, <em>merges</em> ("junções", ou "fusões") e
+							deleção dessas linhas de desenvolvimento levam segundos.
 						</div>
 						
 						
@@ -120,22 +120,22 @@
 							This means that you can do things like:
 >>>>>>> schacon/master:index.html
 							<ul>
-								<li>Criar um <em>branch</em> para testar uma idéia, fazer <em>commit</em> algumas vezes,
-									voltar para a partir de onde você fez o <em>branch</em>, aplicar um <em>patch</em>,
-									voltar para onde está experimentando, então fazer <em>merge</em>.
+								<li>Criar um branch para testar uma idéia, fazer commit algumas vezes,
+									voltar para a partir de onde você fez o branch, aplicar um <em>patch</em> (conjunto de modificações),
+									voltar para onde está experimentando, então fazer merge.
 								</li>
-								<li>Ter um <em>branch</em> que sempre contém somente o que vai para produção,
-									outro onde você faz <em>merge</em> do trabalho para testar e várias outras
+								<li>Ter um branch que sempre contém somente o que vai para produção,
+									outro onde você faz merge do trabalho para testar e várias outras
 									menores para atividades do dia a dia.
 								</li>
-								<li>Criar novas <em>branches</em> para cada nova funcionalidade que estiver
+								<li>Criar novas branches para cada nova funcionalidade que estiver
 									trabalhando, para que você possa mudar de uma para outra com
-									facilidade, então deletar cada <em>branch</em> quando essa fizer <em>merge</em>
+									facilidade, então deletar cada branch quando essa fizer merge
 									dessa funcionalidade na linha principal.
 								</li>
-								<li>Criar um <em>branch</em> para experimentar, descobrir que não vai funcionar
+								<li>Criar um branch para experimentar, descobrir que não vai funcionar
 									e somente deletá-la, abandonando o trabalho - sem que ninguém veja
-									isso (mesmo se você tiver empurrado (<em>pushed</em>) outras <em>branches</em> no meio do 
+									isso (mesmo se você tiver empurrado (pushed) outras branches no meio do 
 									caminho).
 								</li>
 							</ul>
