@@ -448,33 +448,38 @@
 					</div>
 		
 			<h2>
-		  <a name="the-staging-area" href="#the-staging-area">The Staging Area</a>
+		  <a name="the-staging-area" href="#the-staging-area">Die Staging Area</a>
 			</h2>
 					<div class="contents">
 						<div class="text">
-							Unlike the other systems, Git has what it calls the "staging area"
-							or "index".	 This is an intermediate area that you can setup what
-							you want your commit to look like before you commit it.
+						    Im Gegensatz zu anderen Systemen hat git etwas namens "staging area"
+						    oder "Index". Das ist eine Zwischenschicht in dem du deinen
+						    nächsten Commit genau so vorbereiten kannst dass er so aussieht
+						    wie du ihn haben willst.
 						</div>
 						<div class="text">
-							The cool thing about the staging area, and what sets Git apart 
-							from all these other tools, is that you can easily stage some of
-							your files as you finish them and then commit them without commiting
-							all the modified files in your working directory, or having to list
-							them on the command line during the commit
+						    <!-- TODO: Gute Übersetzung für "Staging Area" finden -->
+						    Das coole an der Staging Area, und was Git von diesen anderen
+						    Werkzeugen unterscheidet, ist dass du ganz einfach nur einzelne
+						    Dateien in die Staging Area geben und diese dann ganz
+						    einfach commiten kannst ohne die anderen modifizierten Dateien
+						    in deinem Arbeitsverzeichnis mit comitten zu müssen. Oder jede
+						    Datei einzeln auf der Kommandozeile angeben zu müssen wenn du
+						    einen Commit erstellst
 						</div>
 						<center><img src="images/index1.png"></center>
 						
 						<div class="text">
-							This also allows you to stage parts of files that have been modified,
-							for example to only stage for commit the changes at the top of the
-							file you've been hacking on, but not the bottom changes.
+						    Das erlaubt es dir auch nur Teile der Modifikationen in die Staging
+						    Area zu geben. Du kannst zum Beispiel nur die Änderungen im oberen
+						    Teil der Datei an der du gerade hackst in die Staging Area geben,
+						    aber nicht die Änderungen im unteren Teil.
 						</div>
 
 						<div class="text">
-							Of course, Git also makes it pretty easy to ignore this feature
-							if you don't want that kind of control - just slap a '-a' to your
-							commit command.
+						    Git macht es natürlich auch einfach dieses Feature zu ignorieren
+						    wenn du diese feine Kontrolle nicht benötigst - einfach ein '-a'
+						    an das Commit-Kommando anhängen.
 						</div>
 						
 						<center><img src="images/index2.png"></center>
