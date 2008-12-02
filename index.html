@@ -84,44 +84,47 @@
 					</div>
 
 			<h2>
-		  <a name="cheap-local-branching" href="#cheap-local-branching">Cheap Local Branching</a>
+		  <a name="cheap-local-branching" href="#cheap-local-branching">Leichtgewichtige lokale Branches</a>
 			</h2>
 					<div class="contents">
 						
 						<div class="text">
-							Probably Git's most compelling feature that really makes it stand
-							apart from nearly every other SCM out there is its branching
-							model.	It is completely different from all of the models I'm 
-							comparing it to here, most of which recommend that the best branch
-							is basically a clone of the repository in a new directory.
+						    Eines der wahrscheinlich am verlockendsten Features von Git,
+						    welches es auch von so ziemlich allen anderen SCMs abhebt.
+						    Es ist komplett unterschiedlich zu den anderen Modellen mit denen
+						    ich es hier vergleiche, wo meistens ein kompletter Klon des
+						    Repositories in einem neuen Verzeichnis als beste Branch-Strategie
+						    empfohlen wird.
 						</div>
 						
 						<div class="text">
-							Git does not work like that.  Git will allow you to have multiple
-							local branches that can be entirely independent of each other and
-							the creation, merging and deletion of those lines of development
-							take seconds.
+						    Git arbeitet anders. Git erlaubt es dir mehrere lokale Branches
+						    zu haben, die voneinander komplett unabhängig sein können.
+						    Erzeugen, Zusammenführen und Löschen von diesen Entwicklungssträngen
+						    geht schnell vonstatten.
 						</div>
 						
 						
 						<div class="text">
-							This means that you can do things like :
+						    Dadurch kann man Dinge machen wie :
 							<ul>
-								<li>Create a branch to try out an idea, commit
-									a few times, switch back to where you branched from, apply a patch, 
-									switch back to where you are experimenting, then merge it in.
+								<li>Eine Idee in einem eigenen Branch ausprobieren, ein paar Commits
+								    machen, zum Ursprungsbranch zurückswitchen, einen Patch einspielen,
+								    wieder zum Ideenbranch wechseln, und ihn dann mergen.
 								</li>
-								<li>Have a branch that always contains only what goes to production,
-									another that you merge work into for testing and several smaller
-									ones for day to day work
+								<li>Einen Branch haben der all das beinhaltet was in Produktion gehen
+								    soll, einen wo man neue Features zum austesten einspielt, und
+								    mehrere kleinere für die tägliche Arbeit.
 								</li>
-								<li>Create new branches for each new feature you're working on, so
-									you can seamlessly switch back and forth between them, then delete
-									each branch when that feature gets merged into your main line.
+								<li>Für jedes neue Feature an dem du arbeitest einen eigenen
+								    Branch erzeugen, damit du nahtlos zwischen ihnen wechseln
+								    kannst ohne sich ins Gehege zu kommen, und sie dann einfach
+								    zu löschen wenn sie in den Hauptbranch eingespielt wurden.
 								</li>
-								<li>Create a branch to experiment in, realize it's not going to
-									work and just delete it, abandoning the work - with nobody else
-									ever seeing it (even if you've pushed other branches in the meantime)
+								<li>Ein Experiment auf einem Branch ausprobieren, entdecken dass es
+								    nicht funktioniert, und ihn einfach zu löschen - ohne das jemand
+								    anders diesen Branch jemals zu Gesicht bekommt (auch wenn du
+								    andere Branches in der Zwischenzeit gepusht hast).
 								</li>
 							</ul>
 						</div>
@@ -129,18 +132,19 @@
 						<img src="images/branches.png">
 						
 						<div class="text">
-							Importantly, when you push to a remote repository, you do <em>not</em>
-							have to push all of your branches.	You can only share one of your
-							branches and not all of them.  This tends to free people to try
-							new ideas without worrying about having to plan how and when they
-							are going to merge it in or share it with others.
+						    Wichtig: Wenn du zu einem entfernten Repository pushst, musst du
+						    <em>nicht</em> alle deine lokalen Branches pushen. Du kannst auch
+						    nur einen Branch veröffentlichen, und die anderen lokal lassen.
+						    Das gibt dir die Freiheit neue Ideen auszuprobieren ohne dir
+						    darüber Gedanken zu machen wie und wo du sie mit anderen Branches
+						    zusammenführst, oder sie mit anderen Leuten teilst.
 						</div>
 						
 						<div class="text">
-							You <em>can</em> find ways to do some of this with other systems, but the work
-							involved is much more difficult and error-prone.  Git makes this
-							process incredibly easy and it changes the way most developers
-							work when they learn it.
+						    Du <em>kannst</em> Wege finden all das auch mit anderen Systemen zu machen,
+						    aber das bedeutet meistens mehr Arbeit und höhere Fehleranfälligkeit. Git
+						    macht diesen Prozess unglaublich einfach und es ändert die Arbeitsweise
+						    der meisten Entwickler wenn sie Git lernen.
 						</div>
 						
 						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
