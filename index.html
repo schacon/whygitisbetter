@@ -85,17 +85,17 @@
 					<div class="contents">
 						
 						<div class="text">
-							La fonctionnalit&eacute;s majeure qui met Git &agrave; part de tous les autres SCM 
-							est le mod&egrave;le de gestion des branches. Il est cmpl&eacute;tement diff&eacute;rent 
-							de tous les mod&egrave;les que je compare ici, la plupart recommandant que la 
+							La fonctionnalit&eacute; majeure qui met Git &agrave; part de tous les autres SCM 
+							est le mod&egrave;le de gestion des branches. Il est compl&eacute;tement diff&eacute;rent 
+							de tous les mod&egrave;les compar&eacute;s ici, la plupart recommandant que la 
 							meilleure fa&ccedil;on de cr&eacute;er une branche est de cloner le dépôt dans un
 							nouveau r&eacute;pertoire.
 						</div>
 						
 						<div class="text">
-							Git ne fonctionne pas comme &ccedil;a. Git vous permettra d&#x27;avoir de multiple branches locales 
+							Git ne fonctionne pas comme &ccedil;a. Git vous permettra d&#x27;avoir de multiples branches locales 
 							qui peuvent &ecirc;tre totalement ind&eacute;pendante les unes des autres, 
-							et dont la cr&eacute;ation, la fusion (merge) ou la suppression ne prend que quelaues secondes.
+							et dont la cr&eacute;ation, la fusion (merge) ou la suppression ne prennent que quelques secondes.
 						</div>
 						
 						
@@ -112,10 +112,10 @@
 								</li>
 								<li>Cr&eacute;er une nouvelle branche pour toutes les fonctionnalit&eacute;s que vous d&eacute;veloppez, 
 									comme &ccedil;a vous pourrez aller et revenir facilement entre-elles, et effacer chaque branche 
-									une foi que la fonctionnalit&eacute; sera incluse dans la branche principale.
+									une fois que la fonctionnalit&eacute; est incluse dans la branche principale.
 								</li>
 								<li>Cr&eacute;er une branche pour vos exp&eacute;rimentations, et si vous r&eacute;alisez que &ccedil;a ne 
-									fonctionnera pas, il vous suffit de la supprimer pour abandonner le travail, 
+									fonctionne pas, il vous suffit de la supprimer pour abandonner le travail, 
 									sans personne pour le voir (m&ecirc;me si vous poussez d&#x27;autres branches entre temps)
 								</li>
 							</ul>
@@ -132,8 +132,8 @@
 						</div>
 						
 						<div class="text">
-							Vous pouvez trouvez comment faire certaines de ces pratiques avec les autres syst&egrave;mes, 
-							mais le travail n&eacute;cessaire est bien plus difficile et peut amener &agrave; se tromper. Git rend 
+							Vous pouvez repliquer certaines de ces pratiques avec les autres syst&egrave;mes, 
+							mais l'effort n&eacute;cessaire est bien plus grand et peut amener &agrave; se tromper. Git rend 
 							ces processus incroyablement simples et &ccedil;a change la mani&egrave;re de travailler pour la plupart des 
 							d&eacute;veloppeurs qui les apprennent.
 						</div>
@@ -172,7 +172,7 @@
 							mais &ccedil;a vous permet aussi de travailler quand vous n&#x27;&ecirc;tes pas connect&eacute; &agrave; internet. 
 							Ca n&#x27;a pas l&#x27;air important, mais je me surprend toujours du nombre de fois o&ugrave; je 
 							travaille d&eacute;connect&eacute;. Avoir la possibilit&eacute; de cr&eacute;er des branches, de combiner, de 
-							faire des commit et parcourir l&#x27;historique de votre projet dans l&#x27;avion ou le train 
+							faire des commit et de parcourir l&#x27;historique de votre projet dans l&#x27;avion ou le train 
 							est tr&egrave;s productif.
 						</div>
 						
@@ -182,7 +182,7 @@
 							M&ecirc;me dans Mercurial, les commandes commune comme &#x27;incoming&#x27; ou &#x27;outgoing&#x27; font une 
 							requ&ecirc;te au serveur, alors qu&#x27;avec Git vous pouvez &#x27;fetch&#x27; toutes les donn&eacute;es du 
 							serveur avant de vous d&eacute;connecter et faire des comparaisons, combinaisons et des logs 
-							de donn&eacute;es qui sont sur le serveurs mais pas encore dans vos branches locales.
+							de donn&eacute;es qui sont sur les serveurs mais pas encore dans vos branches locales.
 						</div>
 												
 						<div class="text">
@@ -208,24 +208,24 @@
 					<div class="contents">
 						<div class="text">
 							Git est rapide. Tout le monde, m&ecirc;me les utilisateurs les plus hardcore 
-							des autres syst&egrave;mes, donne &agrave; Git ce titre. Compar&eacute; &agrave; SVN et Preforce, 
+							des autres syst&egrave;mes, donnent &agrave; Git ce titre. Compar&eacute; &agrave; SVN et Preforce, 
 							cela vient du fait que toutes les op&eacute;rations se font localement. Cependant, 
 							m&ecirc;me compar&eacute; aux autres DSCM, Git est vraiment rapide.
 						</div>
 					
 						<div class="text">
 							Une partie de l&#x27;origine de cette vitesse vient du fait que Git a &eacute;t&eacute; construit 
-							pour travailler sur le noyau Linux, ce qui veut dire qu&#x27;il devait g&eacute;rer efficacement 
+							pour travailler le source du noyau Linux, ce qui veut dire qu&#x27;il devait g&eacute;rer efficacement 
 							un large nombre de d&eacute;p&ocirc;t d&egrave;s le premier jour.
 							Un autre raison est que Git est &eacute;crit en C, et encore une autre raison est que les 
-							d&eacute;veloppeur &agrave; l&#x27;origine de git sont, &agrave; mon exp&eacute;rience, tr&egrave;s tr&egrave;s soucieux de la rapidit&eacute; 
+							d&eacute;veloppeurs &agrave; l&#x27;origine de git sont, &agrave; mon exp&eacute;rience, tr&egrave;s tr&egrave;s soucieux de la rapidit&eacute; 
 							de leurs applications.
 						</div>
 
 						<div class="text">
-							Voici quelques benchmarks que j&#x27;ai effectu&eacute; sur 3 copies du d&eacute;p&ocirc;t des sources de Django 
+							Voici quelques benchmarks que j&#x27;ai effectu&eacute;s sur 3 copies du d&eacute;p&ocirc;t des sources de Django 
 							avec 3 SCM diff&eacute;rents: Git, Mercurial et Bazaar. J&#x27;ai aussi test&eacute; quelques parties sur 
-							SVN, mais croyais moi, c&#x27;est plus lent - en gros prenez les chiffres de Bazaar et ajoutez 
+							SVN, mais croyez moi, c&#x27;est plus lent - en gros prenez les chiffres de Bazaar et ajoutez 
 							le temps de latence du r&eacute;seau...
 						</div>
 						
@@ -339,7 +339,7 @@
 							Bien que les chiffres &#x27;add&#x27; sont bien plus petit, c&#x27;&eacute;tait une op&eacute;ration d&#x27;ajout 
 							massif - plus de 2000 fichiers. Pour la majorit&eacute; des cas que les gens rencontrent 
 							chaque jour, les op&eacute;rations d&#x27;ajout ne prennent qu&#x27;une fraction de seconde. Toutes 
-							les autres op&eacute;rations test&eacute;es ici (&agrave; part peut-&ecirc;tre le l&#x27;&eacute;norme commit) son plus 
+							les autres op&eacute;rations test&eacute;es ici (&agrave; part peut-&ecirc;tre le l&#x27;&eacute;norme commit) sont plus 
 							indicatifs des choses que vous serez amen&eacute;s &agrave; faire au jour le jour.
 						</div>
 					
@@ -372,7 +372,7 @@
 					<div class="contents">
 						<div class="text">
 							Git est tr&egrave;s efficace pour minimiser sa taille. Votre r&eacute;pertoire Git sera 
-							(en g&eacute;n&eacute;ral) a peine plus lourd qu&#x27;un checkout SVN - et voir dans certains cas 
+							(en g&eacute;n&eacute;ral) &agrave; peine plus lourd qu&#x27;un checkout SVN - et voir dans certains cas 
 							plus l&eacute;ger (apparemment beaucoup de choses vont dans ces r&eacute;pertoires .svn).
 						</div>
 					
@@ -450,7 +450,7 @@
 						</div>
 
 						<div class="text">
-							Bien sur, Git permet aussi d&#x27;ignorer assez facilement cette fonctionnalit&eacute; si vous ne voulez pas 
+							Bien s&ucirc;r, Git permet aussi d&#x27;ignorer assez facilement cette fonctionnalit&eacute; si vous ne voulez pas 
 							de ce genre de contr&ocirc;le - ajoutez juste un &#x27;-a&#x27; &agrave; votre commande de commit.
 						</div>
 						
@@ -552,10 +552,10 @@
 					
 					<center><img src="images/workflow-a.png"></center><br/>
 					
-					<h3>Workflow g&eacute;rer par un Manager d&#x27;Int&eacute;gration</h3>
+					<h3>Workflow g&eacute;r&eacute; par un Manager d&#x27;Int&eacute;gration</h3>
 
 					<div class="text">
-						Un autre workflow commun &agrave; Git consiste &agrave; d&eacute;signer un manager d&#x27;int&eacute;gration - une seule 
+						Un autre workflow commun pour Git consiste &agrave; d&eacute;signer un manager d&#x27;int&eacute;gration - une seule 
 						personne peut faire les commits sur le &#x27;Saint-d&eacute;p&ocirc;t&#x27;. Le reste des d&eacute;veloppeurs clone ce 
 						d&eacute;p&ocirc;t pour cr&eacute;er des d&eacute;p&ocirc;ts ind&eacute;pendants sur lesquels ils pourront faire leurs commits, pour
 						ensuite demander au manager de r&eacute;cup&eacute;rer leurs changements. C&#x27;est le mod&egrave;le de d&eacute;veloppement
@@ -604,22 +604,17 @@
           <img style="float:right; padding:10px" src="images/octocat.png">
 
 					<div class="text">
-						GitHub est &agrave; l&#x27;origine du choix de Git pour beaucoup de gens.
-					</div>
-
-					<div class="text">
 						GitHub est &agrave; l&#x27;origine du choix de Git pour beaucoup de gens car c&#x27;est plus 
-						comme un r&eacute;seau social pour du code qu&#x27;un simple h&eacute;bergeur. Le site permet de trouver 
-						d&#x27;autres d&eacute;veloppeur ou des projets qui sont similaires aux choses que vous faites, et 
+						un "r&eacute;seau social pour code source" qu&#x27;un simple h&eacute;bergeur. Le site permet de trouver 
+						d&#x27;autres d&eacute;veloppeurs ou des projets qui sont similaires aux choses que vous faites, et 
 						auxquels vous pouvez facilement forker ou contribuer, en cr&eacute;ant une communaut&eacute; vibrante autour
 						de Git et des projets utilis&eacute;s avec Git.
-						for.
 					</div>
 					
 					<div class="text">
 						Il y a d&#x27;autres services, pour Git ou d&#x27;autres SCM, mais peu sont tourn&eacute;s vers l&#x27;utilisateur ou 
 						l&#x27;usage des r&eacute;seaux sociaux, et aucun n&#x27;arrive &agrave; regrouper autant de monde. L&#x27;aspect social de GitHub 
-						est fantastique, et cela, en plus toutes les autres fonctionnalit&eacute;s pr&eacute;c&eacute;dentes, fait de Git et GitHub 
+						est fantastique, et cela, en plus de toutes les autres fonctionnalit&eacute;s pr&eacute;c&eacute;dentes, fait de Git et GitHub 
 						une superbe combinaison pour rapidement d&eacute;velopper des projets open source.
 					</div>
 
@@ -656,16 +651,16 @@
 
 				<div class="contents">
 					<div class="text">
-						Ce n&#x27;a pas toujours &eacute;t&eacute; le cas - dans les premi&egrave;res version de Git, 
+						Cela n&#x27;a pas toujours &eacute;t&eacute; le cas - dans les premi&egrave;res versions de Git, 
 						ce n&#x27;&eacute;tait pas vraiment un SCM, sinon un groupe d&#x27;outils qui vous 
-						permettez de travailler avec des versions sur un syst&egrave;me de fichier, 
-						de mani&egrave;re d&eacute;centralis&eacute;. Cependant, aujourd&#x27;hui, la liste des commandes 
+						permettaient de travailler avec des versions sur un syst&egrave;me de fichier, 
+						de mani&egrave;re d&eacute;centralis&eacute;e. Cependant, aujourd&#x27;hui, la liste des commandes 
 						et la vitesse d&#x27;apprentissage de Git sont assez similaires aux autres 
-						SCM, et m&ecirc;me meilleures que certains.
+						SCM, et m&ecirc;me meilleures.
 					</div>
 
 					<div class="text">				
-						Il est difficile de prouver objectivement cela sans quelque sorte d&#x27;&eacute;tude, 
+						Il est difficile de prouver objectivement cela sans une &eacute;tude de quelque sorte;
 						je vais vous montrer la diff&eacute;rence entre le menu &#x27;help&#x27; par d&eacute;faut pour les 
 						commandes Git et Mercurial. J&#x27;ai surlign&eacute; les commandes qui sont identiques 
 						(ou presque) entre les 2 syst&egrave;mes. (avec Hg, si vous tapez &#x27;hg help&#x27;, vous 
@@ -725,15 +720,15 @@ show       Show various types of objects
 				</table>
 				
 				<div class="text">
-					Avant Git 1.6, toutes les commandes Git &eacute;taient des chemin vers des fichiers ex&eacute;cutables, 
+					Avant Git 1.6, toutes les commandes Git &eacute;taient des chemins vers des fichiers ex&eacute;cutables, 
 					cela &eacute;tait tr&egrave;s d&eacute;routant pour beaucoup de monde. Bien que Git reconnaisse toujours toutes 
 					ces commandes, &#x27;git&#x27; est maintenant la seule commande dans le path. Donc, si vous regardez 
-					Mercurial et Git, Git a maintenant une liste de commande, et un syst&egrave;me d&#x27;aide, presque 
-					identique - il y a tr&egrave;s peu de diff&eacute;rence au niveau de l&#x27;interface auourd&#x27;hui.
+					Mercurial et Git, Git a maintenant une liste de commandes, et un syst&egrave;me d&#x27;aide, presque 
+					identique - il y a tr&egrave;s peu de diff&eacute;rence au niveau de l&#x27;interface actuellement.
 				</div>
 				
 				<div class="text">
-					Ces jours-ci, il est plut&ocirc;t difficile de dire que Mercurial ou Bazaar sont plus facile &agrave; 
+					Ces jours-ci, il est plut&ocirc;t difficile de dire que Mercurial ou Bazaar sont plus simples &agrave; 
 					apprendre que Git.
 				</div>
 				
