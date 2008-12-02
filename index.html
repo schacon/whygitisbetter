@@ -71,6 +71,11 @@
 						and koolaid-thirst.  So, here is why people are switching to Git from
 						X, and why you should too.  Just click on a reason to view it.
 					</div>
+					
+					<div class="expand_collapse_links" style="display: none;">
+					  <a href="#" class="expand_all">Expand all</a> |
+					  <a href="#" class="collapse_all">Collapse all</a>
+					</div>
 	    </div>
 
 			<br/>
@@ -763,6 +768,15 @@ show       Show various types of objects
 		-->
 
 		<br/>
+
+    <div class="span-24">					
+				<div class="expand_collapse_links" style="display: none;">
+				  <a href="#" class="expand_all">Expand all</a> |
+				  <a href="#" class="collapse_all">Collapse all</a>
+				</div>
+    </div>
+    
+    <br />
 		
     <div class="span-24 footer">
 			This site is built and maintained by <a href="http://github.com/schacon">Scott Chacon</a>, a <a href="http://github.com">GitHubber</a>.<br/>
@@ -778,6 +792,13 @@ show       Show various types of objects
 	$(function() {
 		$('.section > .contents').hide();
 		$('.contents > .tweets').hide();
+		$('.expand_collapse_links').show();
+		$('.expand_collapse_links > .expand_all').click(function() {
+		  $('.section > .contents').show();
+		});
+		$('.expand_collapse_links > .collapse_all').click(function() {
+		  $('.section > .contents').hide();
+		});
 		$('.section > h2').click(function() {
 			$(this).next().slideToggle();
 		})
