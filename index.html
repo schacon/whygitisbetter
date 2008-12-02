@@ -579,11 +579,10 @@
 					<div class="text">
 					    Ein sehr gebr&auml;uchlicher Arbeitsablauf in Git, insbesondere von
 					    Leuten die gerade den Übergang von einem zentralisierten System
-					    machen, ist der zentralisierte. Git erlaubt es einem
-					    nicht seine Commits zu pushen wenn jemand anderes seit dem letzen
-					    Update gepusht hat, weshalb das zentralisierte Modell, wo alle
-					    Entwickler zu einem zentralen Server pushen, ohne Probleme
-					    funktioniert.
+					    machen, ist der zentralisierte. Git erlaubt es dir
+					    deine Commits nicht zu pushen wenn jemand anderes seit dem letzen
+					    Update gepusht hat. Deshalb funktioniert das zentralisierte Modell,
+							wo alle Entwickler zu einem zentralen Server pushen ohne Probleme
 					</div>
 					
 					<center><img src="images/workflow-a.png"></center><br/>
@@ -595,7 +594,7 @@
 					    Integrationsmanagers - einer einzelnen Person, die
 					    in ein 'geweihtes' Repository committet, von dem dann die
 					    anderen Entwickler klonen, ihre &Auml;nderungen in ihre eigenen,
-					    unabh&auml;ngigen Repositories pushen, und dann den Manager bitten
+					    unabh&auml;ngigen Repositories pushen und dann den Manager bitten
 					    ihre &Auml;nderungen zu ziehen. Diese Art von Entwicklungsmodell sieht
 					    man oft in Open Source oder GitHub Repositories.
 					</div>
@@ -607,7 +606,7 @@
 					<div class="text">
 					    F&uuml;r massive Projekte empfiehlt sich ein Arbeitsablauf wie er sich
 					    im Linux Kernel findet, wo jemand f&uuml;r ein gewisses Subsystem
-					    verantwortlich ist ('Leutnant'), und alle &Auml;nderungen, die dieses
+					    verantwortlich ist ('Leutnant') und alle &Auml;nderungen, die dieses
 					    Subsystem betreffen, in sein Repository mergt. Dann kann ein
 					    anderer Integrator (der 'Diktator') nur von seinen Leutnants
 					    &Auml;nderungen ziehen und integrieren, die er dann in sein 'geweihtes'
@@ -643,7 +642,7 @@
 					<img style="float:right; padding:10px" src="images/octocat.png">
 
 					<div class="text">
-					    Ich <em>mag</em> hier parteiisch sein, nachdem ich f&uuml;r
+					    Ich <em>mag</em> hier parteiisch sein, weil ich f&uuml;r
 					    <a href="http://github.com">GitHub</a> arbeite, aber
 					    ich habe diese Sektion dennoch hinzugef&uuml;gt nachdem so
 					    viele Leute GitHub als speziellen Grund angef&uuml;hrt haben
@@ -651,21 +650,22 @@
 					</div>
 
 					<div class="text">
-					    GitHub ist ein Grund f&uuml;r viele Leute Git zu verwenden, da es mehr
-					    wie ein soziales Netzwerk ist als eine einfache Code-Hosting Seite.
-					    Es ist leicht andere Personen oder Projekte zu finden die &auml;hnlich
-					    zu den Dingen sind die sie tuen, und k&ouml;nnen einfach forken und
-					    eigene &Auml;nderungen beitragen. Dies erzeugt eine sehr lebhafte
-					    Gemeinschaft um Git und die Projekte in denen es verwendet wird.
+					    GitHub ist ein Grund f&uuml;r viele Leute Git zu verwenden, weil es mehr
+					    ein soziales Netzwerk als eine einfache Code-Hosting Seite ist.
+					    Es ist leicht andere Personen oder Projekte zu finden die &auml;hnliche
+					    Interessen und F&auml;higkeiten haben wie du. Diese k&ouml;nnen dann
+							einfach forken und eigene &Auml;nderungen beitragen. So entsteht eine sehr
+							lebhafte Gemeinschaft um Git und die Projekte in denen es verwendet wird.
 					</div>
 					
 					<div class="text">
-					    Es gibt auch andere Services, f&uuml;r Git und die anderen SCMs,
-					    aber wenige sind so Benuzterorientiert oder sozial ausgerichtet, und keines
+					    Es gibt auch andere Services f&uuml;r Git und die anderen SCMs,
+					    aber wenige sind so Benuzterorientiert oder sozial ausgerichtet und keines
 					    hat auch nur ann&auml;hernd so viele Benutzer. Dieser soziale Aspekt
-					    von GitHub ist ein M&ouml;rderfeature, und all das plus den obigen
-					    Features machen das Arbeiten mit Git und GitHub eine grossartige
-					    Kombination zum schnellen Entwickeln von Open Source Projekten.
+					    von GitHub ist ein M&ouml;rderfeature und all das kombiniert mit den
+							m&ouml;glichen, obigen Features macht das Arbeiten mit Git und GitHub zu
+							einer gro&szlig;artigen Kombination zum schnellen Entwickeln von Open Source
+							Projekten.
 					</div>
 
 					<div class="text">
@@ -702,15 +702,15 @@
 				<div class="contents">
 					<div class="text">
 					    Dies war nicht immer wahr - in den fr&uuml;hen Lebensjahren von Git war
-					    es nicht wirklich ein SCM als eine Ansammlung von Tools die es einem
-					    erm&ouml;glichten mit einem versioniertem Dateisystem in einer verteilten
-					    Manier zu arbeiten. Heute jedoch ist der Kommando-Satz und die Lernkurve von Git
-					    ziemlich &auml;hnlich zu jedem anderen SCM, und sogar besser als manch
-					    anderes.
+					    es weniger ein SCM, als mehr eine Ansammlung von Tools die es einem
+					    erm&ouml;glichten mit einem versioniertem Dateisystem auf eine verteilte
+					    Art und Weise zu arbeiten. Heute jedoch ist der Kommando-Satz und die
+							Lernkurve von Git ziemlich &auml;hnlich zu jedem anderen SCM und sogar
+							besser als manch anderes.
 					</div>
 
 					<div class="text">
-					    Nachdem es schwer ist ohne eine Studie etwas objektiv nachzuweisen,
+					    Nachdem es schwer ist, ohne eine Studie etwas objektiv nachzuweisen,
 					    zeige ich nur die Unterschiede zwischen den Standardausgaben der
 					    Hilfekommandos von Mercurial und Git. Ich habe Kommandos hervorgehoben
 					    die in beiden Systemen gleich oder beinahe gleich funktionieren. (In
@@ -774,14 +774,14 @@ show	   Show various types of objects
 				    Vor Git 1.6 waren alle Git Kommandos im ausf&uuml;hrbaren Pfad, was
 				    f&uuml;r einige Leute sehr verwirrend war. Obwohl Git noch immer all
 				    diese Kommandos kennt, ist das einzige Kommando das noch im
-				    ausf&uuml;hrbaren Pfad ist 'git'. Also, wenn man sich Mercurial und Git
-				    ansieht, dann hat Git ein beinahe identisches Kommando-Satz und
-				    Hilfe-System - es gibt also aus der UI-Sicht f&uuml;r einen Anf&auml;ger kaum
-				    Unterschiede.
+				    ausf&uuml;hrbaren Pfad ist 'git'. Wenn man also Mercurial und Git
+						vergleicht, sieht man, dass es einen beinahe identischen Kommando-Satz
+						und ein sehr &auml;nliches Hilfe-System gibt. Es gibt also aus der
+						UI-Sicht f&uuml;r einen Anf&auml;ger kaum Unterschiede.
 				</div>
 				
 				<div class="text">
-				    Heutzutage ist es ziemlich schwer zu argumentieren das Mercurial oder
+				    Heutzutage ist es ziemlich schwer zu argumentieren, dass Mercurial oder
 				    Bazaar leichter zu lernen sind als Git.
 				</div>
 				
@@ -810,10 +810,10 @@ show	   Show various types of objects
 	<div class="span-24 footer">
 			Diese Seite ist von <a href="http://github.com/schacon">Scott Chacon</a> gebaut worden, einem <a href="http://github.com">GitHubber</a>.<br/>
 			Übersetzung ins Deutsche durch <a href="http://github.com/cypher">Markus Prinz</a> und <a href="http://github.com/lennartkoopmann">Lennart Koopmann</a>.<br/>
-			Wenn du aus gutem Grund mit irgend etwas auf dieser Seite nicht einverstanden bist, schreibe bitte eine
-			<a href="mailto:schacon@gmail.com">email an mich</a> (in Englisch) damit ich es beheben kann.<br/>
-			Der Sourcecode f&uuml;r diese Seite ist <a href="http://github.com/schacon/whygitisbetter">auf GitHub</a> -
-			Patches sind jederzeit willkommen wenn du Verbesserungen hast.
+			Wenn du aus gutem Grund mit irgendetwas auf dieser Seite nicht einverstanden bist, schreibe bitte eine
+			<a href="mailto:schacon@gmail.com">email an mich</a> (in Englisch), damit ich es beheben kann.<br/>
+			Den Sourcecode f&uuml;r diese Seite findest du <a href="http://github.com/schacon/whygitisbetter">auf GitHub</a> -
+			Patches sind jederzeit Willkommen, wenn du Verbesserungen hast.
 		</div>
 
 	</div>
