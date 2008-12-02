@@ -102,12 +102,12 @@
 							Provavelmente a funcionalidade mais atrativa do Git que realmente a torna
 							diferente de praticamente todo outro SCM (<em>Source Control Management</em>, Sistemas de Gerenciamento de Fontes) é seu
 							modelo de <em>branches</em> ("bifurcações", ou "galhos"). É completamente diferente de todos os outros modelos que
-							estou comparando aqui, onde a maioria recomenda que o melhor <em>branch</em> é 
+							estou comparando aqui, onde a maioria recomenda que o melhor branch é 
 							basicamente um clone do repositório em outro diretório.
 						</div>
 						
 						<div class="text">
-							Git não funciona dessa forma. Git permite a existência de múltiplos <em>branches</em> locais
+							Git não funciona dessa forma. Git permite a existência de múltiplos branches locais
 							que podem ser inteiramente independentes de cada um e a criação, <em>merges</em> ("junções", ou "fusões") e
 							deleção dessas linhas de desenvolvimento levam segundos.
 						</div>
@@ -145,7 +145,7 @@
 						
 						<div class="text">
 							De forma importante, quando você dá <em>push</em> ("empurra") para um repositório remoto,
-							você <em>não</em> precisa empurrar todos os seus branches. Você pode apenas
+							você <strong>não</strong> precisa empurrar todos os seus branches. Você pode apenas
 							compartilhar um de seus branches e não todos. Isso tende a liberar as pessoas
 							para testar novas idéias sem se preocupar sobre ter um plano de como eles vão
 							fazer merge ou compartilhar com os outros.
@@ -207,8 +207,8 @@
 						</div>
 												
 						<div class="text">
-							Isso significa que é muito fácil ter cópias não somente de seus <em>branches</em>, mas
-							também dos <em>branches</em> de todo mundo que está trabalhando com você em seu 
+							Isso significa que é muito fácil ter cópias não somente de seus branches, mas
+							também dos branches de todo mundo que está trabalhando com você em seu 
 							repositório Git sem ter que bagunçar suas próprias coisas.
 						</div>
 						
@@ -276,9 +276,9 @@
 						
 						<div class="text">
 							O resultado final é que para qualquer coisa, menos adicionar novos arquivos,
-							Git foi o mais rápido. (Também em <em>commits</em> grandes, foi basicamente a mesma
-							coisa que o Hg, mas o <em>commit</em> que eu testei foi tão grande que provavelmente
-							ninguém fará nada parecido - em <em>commits</em> normais o Git é muito mais rápido).
+							Git foi o mais rápido. (Também em commits grandes, foi basicamente a mesma
+							coisa que o Hg, mas o commit que eu testei foi tão grande que provavelmente
+							ninguém fará nada parecido - em commits normais o Git é muito mais rápido).
 						</div>
 						
 						<table>
@@ -351,17 +351,17 @@
 						</table>
 					
 						<div class="text">
-							Os números de <em>branches</em> frios e quentes são números da primeira e segunda
-							vez que eu fiz branch de um repo - o segundo número sendo um <em>branch</em> com um
+							Os números de branches frios e quentes são números da primeira e segunda
+							vez que eu fiz branch de um repo - o segundo número sendo um branch com um
 							cache de disco quente.
 						</div>
 
 						<div class="text">
 							Deve ser notado que embora os números de '<tt>add</tt>' sejam muito mais lentos,
 							isso foi para uma operação enorme - mais de 2000 arquivos. Para a maioria
-							das coisas que a maioria das pessoas faz no dia a dia, operações de <em>add</em>
+							das coisas que a maioria das pessoas faz no dia a dia, operações de adição (<tt>add</tt>)
 							em qualquer desses sistemas vai tomar somente uma fração de segundo. Todas
-							as outras operações testadas aqui (exceto para o grande <em>commit</em>, possivelmente)
+							as outras operações testadas aqui (exceto para o grande commit, possivelmente)
 							são mais indicativas das coisas que você realmente faz no dia a dia.
 
 						</div>
@@ -456,26 +456,26 @@
 						<div class="text">
 							Diferente de outros sistemas, Git tem o que se chama "área de <em>staging</em>" ou
 							"<em>index</em>". Essa é uma área intermediária que você pode configurar como você 
-							quer que seu <em>commit</em> fique antes de fazê-lo.
+							quer que seu commit fique antes de fazê-lo.
 						</div>
 						<div class="text">
-							A parte legal essa área de <em>staging</em>, e o que separa Git de todas as outras
-							ferramentas, é que você pode facilmente ir colocando seus arquivos no <em>staging</em>
-							à medida que for terminando e então fazer <em>commit</em> deles sem fazer <em>commit</em> de 
+							A parte legal dessa área de staging, e o que separa o Git de todas as outras
+							ferramentas, é que você pode facilmente ir colocando seus arquivos no staging
+							à medida que for terminando e então fazer commit deles sem fazer commit de 
 							todos os arquivos modificados em seu diretório de trabalho, ou ter que 
-							listá-los na linha de comando durante o <em>commit</em>.
+							listá-los na linha de comando durante o commit.
 						</div>
 						<div class="center"><img src="images/index1.png" alt="add commit workflow diagram" /></div>
 						
 						<div class="text">
-							Isso também permite colocar partes de arquivos no <em>staging</em> que foram modificadas,
-							por exemplo para deixar para <em>commit</em> as mudanças que estão no topo do arquivo
+							Isso também permite colocar partes de arquivos no staging que foram modificadas,
+							por exemplo para deixar para commit as mudanças que estão no topo do arquivo
 							que está mexendo, mas não as mudanças de baixo.
 						</div>
 
 						<div class="text">
 							Claro, Git torna muito fácil ignorar essa funcionalidade se você não quiser esse
-							tipo de controle - apenas ponha um '-a' no seu comando de <em>commit</em>.
+							tipo de controle - apenas ponha um '-a' no seu comando de commit.
 						</div>
 						
 						<div class="center"><img src="images/index2.png" alt="commit only workflow diagram" /></div>
@@ -496,18 +496,18 @@
 
 			<div class="text">
 			Uma das funcionalidades mais legais de qualquer SCM Distribuído, Git incluso, é que ele é,
-			claro, distribuído. Isso significa que em vez de fazer um "<em>checkout</em>" do topo atual do código
+			claro, distribuído. Isso significa que em vez de fazer um "checkout" do topo atual do código
 			fonte, você faz um "clone" do repositório inteiro.
             </div>
             <div class="text">
 			Isso significa que mesmo que estiver usando um fluxo de trabalho centralizado, cada usuário
-			tem o que é essencialmente um <em>backup</em> completo do servidor principal, e cada qual pode ser
+			tem o que é essencialmente um backup completo do servidor principal, e cada qual pode ser
 			empurrado para substituir o servidor principal no evento de uma queda ou corrupção dos dados.
 			Basicamente não existe ponto único de falha com Git a menos que só exista um ponto.
             </div>
 
             <div class="text">
-			Isso não torna as coisas devagar também. Na média, um <em>checkout</em> de SVN é mais rápido do que
+			Isso não torna as coisas devagar também. Na média, um checkout de SVN é mais rápido do que
 			qualquer um dos DSCMs, mas não muito. Além disso, dos DSCMs, o Git foi o mais rápido nos
 			meus testes.
 					  </div>
@@ -555,7 +555,7 @@
 					
 					<div class="text">
 						Uma das coisas fantásticas sobre Git é que por ele ser distribuído por natureza
-						e ter um super sistema de <em>branches</em>, você pode facilmente implementar praticamente
+						e ter um super sistema de branches, você pode facilmente implementar praticamente
 						qualquer fluxo de trabalho que puder pensar com facilidade.
 					</div>
 					
@@ -589,7 +589,7 @@
 					<div class="text">
 						Para projetos maiores, você pode configurar seu desenvolvimento de maneira
 						similar como a que a <em>kernel</em> do Linux roda, onde algumas pessoas são responsáveis por
-						um sub-sistema específico do projeto (os 'tenentes') e fazem <em>merge</em> de todas as mudanças
+						um sub-sistema específico do projeto (os 'tenentes') e fazem merge de todas as mudanças
 						que tem a ver com esse sub-sistema. Então outro integrador (o 'ditador') pode 
 						puxar as mudanças de seus tenentes e empurrar para o repositório 'abençoado', e
 						então todos fazem clone a partir dele novamente.
@@ -642,7 +642,7 @@
 						orientados a usuários ou com objetivos sociais, e nenhum tem nada perto da
 						quantidade de usuários. O aspecto social do GitHub é matador, e isso se soma
 						a todas as funcionalidades listadas acima, tornando trabalhar com Git e GitHub
-						uma grande combinação para desenvolvimento rápido de projetos <em>open source</em>.
+						uma grande combinação para desenvolvimento rápido de projetos open source.
 					</div>
 
 					<div class="text">		
