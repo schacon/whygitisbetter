@@ -69,7 +69,7 @@
 					    Vorw&uuml;rfe von Fanboyismus, Mitl&auml;ufertums und "koolaid-Durst" verteidigen
 					    musste. Darum hab ich eine Liste mit allen Gr&uuml;nden zusammengestellt
 					    warum Leute von X zu Git wechseln, und warum du vielleicht auch wechseln
-					    willst. Einfach auf einen Grund klicken um ihn anzuschauen.
+					    willst. Klicke einfach auf einen Grund um ihn anzuschauen.
 					</div>
 		</div>
 
@@ -91,9 +91,9 @@
 						<div class="text">
 						    Eines der wahrscheinlich am verlockendsten Features von Git,
 						    welches es auch von so ziemlich allen anderen SCMs abhebt.
-						    Es ist komplett unterschiedlich zu den anderen Modellen mit denen
+						    Es unterscheidet sich komplett von den anderen Modellen mit denen
 						    ich es hier vergleiche, wo meistens ein kompletter Klon des
-						    Repositories in einem neuen Verzeichnis als beste Branch-Strategie
+						    Repositories in einem neuen Verzeichnis als beste Branching-Strategie
 						    empfohlen wird.
 						</div>
 						
@@ -109,20 +109,21 @@
 						    Dadurch kann man Dinge machen wie :
 							<ul>
 								<li>Eine Idee in einem eigenen Branch ausprobieren, ein paar Commits
-								    machen, zum Ursprungsbranch zur&uuml;ckswitchen, einen Patch einspielen,
+								    machen, zum Ursprungsbranch zur&uuml;ck wechseln, einen Patch einspielen,
 								    wieder zum Ideenbranch wechseln, und ihn dann mergen.
 								</li>
-								<li>Einen Branch haben der all das beinhaltet was in Produktion gehen
+								<li>Einen Branch haben der alles beinhaltet was in Produktion gehen
 								    soll, einen wo man neue Features zum austesten einspielt, und
-								    mehrere kleinere f&uuml;r die t&auml;gliche Arbeit.
+								    viele kleinere f&uuml;r die t&auml;gliche Arbeit.
 								</li>
 								<li>F&uuml;r jedes neue Feature an dem du arbeitest einen eigenen
 								    Branch erzeugen, damit du nahtlos zwischen ihnen wechseln
-								    kannst ohne sich ins Gehege zu kommen, und sie dann einfach
-								    zu l&ouml;schen wenn sie in den Hauptbranch eingespielt wurden.
+								    kannst, ohne das sich die Branches ins Gehege zu kommen,
+								    und sie dann einfach zu l&ouml;schen wenn sie in den Hauptbranch
+								    eingespielt wurden.
 								</li>
-								<li>Ein Experiment auf einem Branch ausprobieren, entdecken dass es
-								    nicht funktioniert, und ihn einfach zu l&ouml;schen - ohne das jemand
+								<li>Ein Experiment in einem Branch ausprobieren, entdecken dass es
+								    nicht funktioniert, und den Branch einfach l&ouml;schen - ohne das jemand
 								    anders diesen Branch jemals zu Gesicht bekommt (auch wenn du
 								    andere Branches in der Zwischenzeit gepusht hast).
 								</li>
@@ -143,8 +144,8 @@
 						<div class="text">
 						    Du <em>kannst</em> Wege finden all das auch mit anderen Systemen zu machen,
 						    aber das bedeutet meistens mehr Arbeit und h&ouml;here Fehleranf&auml;lligkeit. Git
-						    macht diesen Prozess unglaublich einfach und es &auml;ndert die Arbeitsweise
-						    der meisten Entwickler wenn sie Git lernen.
+						    macht diesen Prozess unglaublich einfach, was die Arbeitsweise
+						    der meisten Entwickler &auml;ndert wenn sie Git lernen.
 						</div>
 						
 						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
@@ -172,7 +173,7 @@
 
 						<div class="text">
 						    Grunds&auml;tzlich arbeiten alle dezentralen SCMs lokal, aber
-						    in meiner Erfahrung ist das bei Git noch mehr der Fall.
+						    nach meiner Erfahrung ist das bei Git noch viel mehr der Fall.
 						    Nur wenige Kommandos ausser 'fetch', 'pull' und 'push'
 						    nehmen mit der Aussenwelt Kontakt auf, meistens wird nur
 						    die Festplatte beansprucht.
@@ -184,9 +185,9 @@
 						    komplett offline zu arbeiten. Das klingt jetzt vielleicht nicht
 						    sehr aufregend, aber ich bin immer wieder erstaunt wie oft ich
 						    eigentlich offline arbeiten muss. Die F&auml;higkeit neue Branches
-						    anlegen oder zusammenf&uuml;hren zu k&ouml;nnen oder die Geschichte des
+						    anlegen oder zusammenf&uuml;hren zu k&ouml;nnen, oder die History des
 						    Projektes anzusehen w&auml;hrend ich im Flugzeug oder im Zug sitze
-						    ist sehr produktiv.
+						    ist sehr praktisch.
 						</div>
 						
 						<center><img width="500px" src="images/local-remote.png"></center>
@@ -224,17 +225,17 @@
 						<div class="text">
 						    Git ist schnell. Jeder, selbst Hardcore-Benutzer anderer SCMs,
 						    geben generell Git diesen Titel. Verglichen mit SVN und Perforce
-						    ist das weil beinahe alle Operationen lokal passieren. Aber selbst
-						    verglichen mit anderen verteilten SCMs ist Git ziemlich schnell.
+						    ist Git so schnell weil beinahe alle Operationen lokal passieren.
+						    Aber selbst verglichen mit anderen verteilten SCMs ist Git ziemlich schnell.
 						</div>
 					
 						<div class="text">
-						    Ein Grund ist das Git dazu gebaut wurde um am Linux-Kernel zu
+						    Ein Grund daf&uuml;r ist das Git dazu gebaut wurde um am Linux-Kernel zu
 						    arbeiten, wodurch es von Beginn an effektiv mit grossen
 						    Repositories umgehen musste.
 						    Ein anderer Grund ist das Git in C geschrieben ist, und noch
 						    ein weiterer Grund ist dass die prim&auml;ren Entwickler in meiner
-						    Erfahrung sich sehr, sehr viel damit besch&auml;ftigen.
+						    Erfahrung sich sehr, sehr genau damit besch&auml;ftigen.
 						</div>
 
 						<div class="text">
@@ -353,8 +354,8 @@
 						</div>
 
 						<div class="text">
-						    Es sollte bemerkt werden dass obwohl die 'add'-Werte um einiges
-						    langsamer sind, dass dies f&uuml;r eine wirklich massive 'add'-Operation
+						    Es sollte angemerkt werden das, obwohl die 'add'-Werte um einiges
+						    langsamer sind, dies f&uuml;r eine wirklich massive 'add'-Operation
 						    war - &uuml;ber 2000 Dateien. F&uuml;r den Großteil was die meisten Leute
 						    t&auml;glich machen werden sind 'add'-Operationen in allen diesen Systemen
 						    innerhalb eines Bruchteils einer Sekunde erledigt. Alle anderen
@@ -392,15 +393,15 @@
 					<div class="contents">
 						<div class="text">
 						    Git ist wirklich gut darin Platz zu sparen. Dein Git-Verzeichnis
-						    wird (im Allgemeinen) kaum gr&ouml;sser als ein SVN checkout sein -
-						    in manchen F&auml;llen sogar kleiner (anscheinend kann viel in diese
-						    .svn Verzeichnisse gepackt werden).
+						    wird (im Allgemeinen) kaum gr&ouml;sser als ein SVN Checkout sein -
+						    in manchen F&auml;llen sogar kleiner (anscheinend kann ganz sch&ouml;n viel in diese
+						    .svn-Verzeichnisse gepackt werden).
 						</div>
 					
 						<div class="text">
 						    Die folgenden Zahlen wurden von den Klonen des Django-Projekts
-						    genommen, in jedem der semi-offiziellen gespiegelten Git-Repositories
-						    am gleichen Zeitpunkt in dessen History.
+						    genommen, aus jedem der semi-offiziellen gespiegelten Repositories
+						    am gleichen Punkt in dessen History.
 						</div>
 					
 						<table>
@@ -452,17 +453,17 @@
 			</h2>
 					<div class="contents">
 						<div class="text">
-						    Im Gegensatz zu anderen Systemen hat git etwas namens "staging area"
+						    Im Gegensatz zu anderen Systemen hat git etwas namens "Staging Area"
 						    oder "Index". Das ist eine Zwischenschicht in dem du deinen
 						    n&auml;chsten Commit genau so vorbereiten kannst dass er so aussieht
 						    wie du ihn haben willst.
 						</div>
 						<div class="text">
-						    <!-- TODO: Gute Übersetzung f&uuml;r "Staging Area" finden -->
+						    <!-- TODO: Gute Übersetzung für "Staging Area" finden -->
 						    Das coole an der Staging Area, und was Git von diesen anderen
 						    Werkzeugen unterscheidet, ist dass du ganz einfach nur einzelne
 						    Dateien in die Staging Area geben und diese dann ganz
-						    einfach commiten kannst ohne die anderen modifizierten Dateien
+						    einfach committen kannst ohne die anderen modifizierten Dateien
 						    in deinem Arbeitsverzeichnis mit comitten zu m&uuml;ssen. Oder jede
 						    Datei einzeln auf der Kommandozeile angeben zu m&uuml;ssen wenn du
 						    einen Commit erstellst
@@ -472,7 +473,7 @@
 						<div class="text">
 						    Das erlaubt es dir auch nur Teile der Modifikationen in die Staging
 						    Area zu geben. Du kannst zum Beispiel nur die &Auml;nderungen im oberen
-						    Teil der Datei an der du gerade hackst in die Staging Area geben,
+						    Teil der Datei an der du gerade arbeitest in die Staging Area geben,
 						    aber nicht die &Auml;nderungen im unteren Teil.
 						</div>
 
@@ -571,9 +572,9 @@
 					<div class="text">
 					    Ein sehr gebr&auml;uchlicher Arbeitsablauf in Git, insbesondere von
 					    Leuten die gerade den Übergang von einem zentralisierten System
-					    machen, ist der zentralisierte Arbeitsablauf. Git erlaubt es einem
+					    machen, ist der zentralisierte. Git erlaubt es einem
 					    nicht seine Commits zu pushen wenn jemand anderes seit dem letzen
-					    fetch gepusht hat, weshalb das zentralisierte Modell, wo alle
+					    Update gepusht hat, weshalb das zentralisierte Modell, wo alle
 					    Entwickler zu einem zentralen Server pushen, ohne Probleme
 					    funktioniert.
 					</div>
@@ -584,7 +585,7 @@
 
 					<div class="text">
 					    Ein anderer gebr&auml;uchlicher Arbeitsablauf ist der eines
-					    Integrationsmanagers - einer einzelnen Person die
+					    Integrationsmanagers - einer einzelnen Person, die
 					    in ein 'geweihtes' Repository committet, von dem dann die
 					    anderen Entwickler klonen, ihre &Auml;nderungen in ihre eigenen,
 					    unabh&auml;ngigen Repositories pushen, und dann den Manager bitten
@@ -594,16 +595,16 @@
 
 					<center><img src="images/workflow-b.png"></center><br/>
 
-					<h3>Arbeitsablauf im Diktator und Leutnant Stil</h3>
+					<h3>Arbeitsablauf im Diktator-und-Leutnant Stil</h3>
 
 					<div class="text">
-					    F&uuml;r massive Projekte empfiehlt sich ein Arbeitsablauf wie er im
-					    Linux Kernel stattfindet, wo gewisse Leute f&uuml;r gewisse Subsysteme
-					    verantwortlich sind ('Leutnants'), und alle &Auml;nderungen die dieses
-					    Subsystem betreffen in ihr Repository mergen. Dann kann ein
+					    F&uuml;r massive Projekte empfiehlt sich ein Arbeitsablauf wie er sich
+					    im Linux Kernel findet, wo jemand f&uuml;r ein gewisses Subsystem
+					    verantwortlich ist ('Leutnant'), und alle &Auml;nderungen, die dieses
+					    Subsystem betreffen, in sein Repository mergt. Dann kann ein
 					    anderer Integrator (der 'Diktator') nur von seinen Leutnants
 					    &Auml;nderungen ziehen und integrieren, die er dann in sein 'geweihtes'
-					    Repository pusht, von dem dann jeder klonen oder updaten kann.
+					    Repository pusht, von dem dann jeder andere klonen oder updaten kann.
 					</div>
 
 					<center><img src="images/workflow-c.png"></center><br/>
@@ -639,7 +640,7 @@
 					    <a href="http://github.com">GitHub</a> arbeite, aber
 					    ich habe diese Sektion dennoch hinzugef&uuml;gt nachdem so
 					    viele Leute GitHub als speziellen Grund angef&uuml;hrt haben
-					    weshalb sie Git ausgew&auml;hlt haben.
+					    weshalb sie Git ausw&auml;hlten.
 					</div>
 
 					<div class="text">
@@ -653,9 +654,9 @@
 					
 					<div class="text">
 					    Es gibt auch andere Services, f&uuml;r Git und die anderen SCMs,
-					    aber wenige sind so Benuzterorientiert oder sozial, und keines
-					    hat auch nur ann&auml;hernd soviele Benutzer. Dieser soziale Aspekt
-					    von GitHub ist ein M&ouml;rderfeature, und das alles plus den obigen
+					    aber wenige sind so Benuzterorientiert oder sozial ausgerichtet, und keines
+					    hat auch nur ann&auml;hernd so viele Benutzer. Dieser soziale Aspekt
+					    von GitHub ist ein M&ouml;rderfeature, und all das plus den obigen
 					    Features machen das Arbeiten mit Git und GitHub eine grossartige
 					    Kombination zum schnellen Entwickeln von Open Source Projekten.
 					</div>
@@ -695,8 +696,8 @@
 					<div class="text">
 					    Dies war nicht immer wahr - in den fr&uuml;hen Lebensjahren von Git war
 					    es nicht wirklich ein SCM als eine Ansammlung von Tools die es einem
-					    erm&ouml;glichten mit einem versionierten Dateisystem in einer verteilten
-					    Manier zu arbeiten. Heute ist der Kommando-Satz und Lernkurve von Git
+					    erm&ouml;glichten mit einem versioniertem Dateisystem in einer verteilten
+					    Manier zu arbeiten. Heute jedoch ist der Kommando-Satz und die Lernkurve von Git
 					    ziemlich &auml;hnlich zu jedem anderen SCM, und sogar besser als manch
 					    anderes.
 					</div>
@@ -768,7 +769,7 @@ show	   Show various types of objects
 				    diese Kommandos kennt, ist das einzige Kommando das noch im
 				    ausf&uuml;hrbaren Pfad ist 'git'. Also, wenn man sich Mercurial und Git
 				    ansieht, dann hat Git ein beinahe identisches Kommando-Satz und
-				    Hilfe-System - es gibt also von einer angehenden UI Sicht kaum
+				    Hilfe-System - es gibt also aus der UI-Sicht f&uuml;r einen Anf&auml;ger kaum
 				    Unterschiede.
 				</div>
 				
