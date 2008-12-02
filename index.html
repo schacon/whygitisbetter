@@ -14,7 +14,9 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 	
 	<style type="text/css">
-		.header h1 { font-size: 3.0em; color: #666; }
+		.header h1 { font-size: 3.5em; color: #666; }
+		.expand_collapse_links { text-align: center; }
+		.expand_collapse_links a { color: #555; }
 		img { margin-bottom: 10px; }
 		.text, p { font-size: 1.2em; margin-bottom: 10px; text-align: justify;}
 		.intro { color: #444; }
@@ -71,7 +73,12 @@
 					    warum Leute von X zu Git wechseln, und warum du vielleicht auch wechseln
 					    willst. Klicke einfach auf einen Grund um ihn anzuschauen.
 					</div>
-		</div>
+					
+					<div class="expand_collapse_links" style="display: none;">
+					  <a href="#" class="expand_all">Expand all</a> |
+					  <a href="#" class="collapse_all">Collapse all</a>
+					</div>
+	    </div>
 
 			<br/>
 
@@ -790,6 +797,15 @@ show	   Show various types of objects
 		-->
 
 		<br/>
+
+    <div class="span-24">					
+				<div class="expand_collapse_links" style="display: none;">
+				  <a href="#" class="expand_all">Expand all</a> |
+				  <a href="#" class="collapse_all">Collapse all</a>
+				</div>
+    </div>
+    
+    <br />
 		
 	<div class="span-24 footer">
 			Diese Seite ist von <a href="http://github.com/schacon">Scott Chacon</a> gebaut worden, einem <a href="http://github.com">GitHubber</a>.<br/>
@@ -806,6 +822,13 @@ show	   Show various types of objects
 	$(function() {
 		$('.section > .contents').hide();
 		$('.contents > .tweets').hide();
+		$('.expand_collapse_links').show();
+		$('.expand_collapse_links > .expand_all').click(function() {
+		  $('.section > .contents').show();
+		});
+		$('.expand_collapse_links > .collapse_all').click(function() {
+		  $('.section > .contents').hide();
+		});
 		$('.section > h2').click(function() {
 			$(this).next().slideToggle();
 		})
