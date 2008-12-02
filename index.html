@@ -193,7 +193,7 @@
 						    komplett offline zu arbeiten. Das klingt jetzt vielleicht nicht
 						    sehr aufregend, aber ich bin immer wieder erstaunt wie oft ich
 						    eigentlich offline arbeiten muss. Die F&auml;higkeit neue Branches
-						    anlegen oder zusammenf&uuml;hren zu k&ouml;nnen, oder die History des
+						    anlegen oder zusammenf&uuml;hren zu k&ouml;nnen oder die History des
 						    Projektes anzusehen w&auml;hrend ich im Flugzeug oder im Zug sitze
 						    ist sehr praktisch.
 						</div>
@@ -203,8 +203,8 @@
 						<div class="text">
 						    Selbst in Mercurial nehmen oft genutzte Kommandos wie 'incoming'
 						    und 'outgoing' Kontakt mit dem Server auf, w&auml;hrend man in Git mit
-						    einem 'fetch' alle Daten holen kann bevor man offline geht, und
-						    dann Vergleiche, Merges oder History mit den Daten machen kann,
+						    einem 'fetch' alle Daten holen kann bevor man offline geht und
+						    dann Vergleiche, Merges oder History mit den Daten macht,
 						    die schon auf dem Server sind aber noch nicht in den lokalen Branches.
 						</div>
 												
@@ -238,11 +238,11 @@
 						</div>
 					
 						<div class="text">
-						    Ein Grund daf&uuml;r ist das Git dazu gebaut wurde um am Linux-Kernel zu
+						    Ein Grund daf&uuml;r ist, dass Git dazu gebaut wurde um am Linux-Kernel zu
 						    arbeiten, wodurch es von Beginn an effektiv mit grossen
 						    Repositories umgehen musste.
-						    Ein anderer Grund ist das Git in C geschrieben ist, und noch
-						    ein weiterer Grund ist dass die prim&auml;ren Entwickler in meiner
+						    Ein anderer Grund ist, dass Git in C geschrieben ist und noch
+						    ein weiterer Grund ist, dass die prim&auml;ren Entwickler in meiner
 						    Erfahrung sich sehr, sehr genau damit besch&auml;ftigen.
 						</div>
 
@@ -278,7 +278,7 @@
 						</table>
 						
 						<div class="text">
-						    Das Endresultat war das Git in allem ausser dem Hinzuf&uuml;gen von neuen
+						    Das Endresultat war, dass Git in allem ausser dem Hinzuf&uuml;gen von neuen
 						    Dateien am schnellsten war (Mercurial liegt bei sehr grossen Commits
 						    gleichauf, aber der Commit mit dem ich getestet habe war so gross dass
 						    es unwahrscheinlich ist dass du jemals etwas &auml;hnlich grosses
@@ -356,15 +356,15 @@
 					
 						<div class="text">
 						    Die kalten und warmen Branching-Werte sind die Zahlen f&uuml;r das
-						    erste und das zweite Mal wo ich einen neuen Branch erstellte -
+						    erste und das zweite erstellen eines neuen Branches -
 						    die zweite Zahl ist ein neuer Branch mit einem warmen
 						    Festplatten-Cache.
 						</div>
 
 						<div class="text">
-						    Es sollte angemerkt werden das, obwohl die 'add'-Werte um einiges
+						    Es sollte angemerkt werden, dass, obwohl die 'add'-Werte um einiges
 						    langsamer sind, dies f&uuml;r eine wirklich massive 'add'-Operation
-						    war - &uuml;ber 2000 Dateien. F&uuml;r den Großteil was die meisten Leute
+						    war - &uuml;ber 2000 Dateien. F&uuml;r den Großteil von dem was die meisten Leute
 						    t&auml;glich machen werden sind 'add'-Operationen in allen diesen Systemen
 						    innerhalb eines Bruchteils einer Sekunde erledigt. Alle anderen
 						    Operationen die hier getestet wurden (ausser dem grossen Commit
@@ -374,7 +374,7 @@
 					
 					
 					<div class="text">
-					    Die Zahlen sind nicht wirklich schwer zum nachmachen, einfach das Django-Projekt
+					    Die Zahlen sind nicht wirklich schwer zu reproduzieren: einfach das Django-Projekt
 					    in jedem dieser Systeme klonen und die gleichen Kommandos in jedem ausprobieren.
 						<ul>
 							<li><code>git clone git://github.com/brosner/django.git dj-git</code></li>
@@ -408,7 +408,7 @@
 					
 						<div class="text">
 						    Die folgenden Zahlen wurden von den Klonen des Django-Projekts
-						    genommen, aus jedem der semi-offiziellen gespiegelten Repositories
+						    genommen: aus jedem der semi-offiziellen gespiegelten Repositories
 						    am gleichen Punkt in dessen History.
 						</div>
 					
@@ -441,8 +441,8 @@
 						
 						<div class="text"><small>
 						    * der zweite Bzr-Wert kam nach dem Ausf&uuml;hren von 'bzr pack' zustande,
-						    nachdem ich dachte dass es das Repository kleiner machen w&uuml;rde, aber
-						    aus irgend einem Grund viel, viel gr&ouml;sser machte.
+						    nachdem ich dachte, dass es das Repository kleiner machen w&uuml;rde. Aus
+								irgend einem Grund wurde es aber viel, viel gr&ouml;&szlig;er.
 						</small></div>
 						
 					</div>
@@ -463,17 +463,16 @@
 						<div class="text">
 						    Im Gegensatz zu anderen Systemen hat git etwas namens "Staging Area"
 						    oder "Index". Das ist eine Zwischenschicht in dem du deinen
-						    n&auml;chsten Commit genau so vorbereiten kannst dass er so aussieht
-						    wie du ihn haben willst.
+						    n&auml;chsten Commit genau so vorbereiten kannst, wie du ihn haben willst.
 						</div>
 						<div class="text">
 						    <!-- TODO: Gute Übersetzung für "Staging Area" finden -->
-						    Das coole an der Staging Area, und was Git von diesen anderen
-						    Werkzeugen unterscheidet, ist dass du ganz einfach nur einzelne
+						    Das coole an der Staging Area und was Git von diesen anderen
+						    Werkzeugen unterscheidet ist, dass du ganz einfach nur einzelne
 						    Dateien in die Staging Area geben und diese dann ganz
 						    einfach committen kannst ohne die anderen modifizierten Dateien
-						    in deinem Arbeitsverzeichnis mit comitten zu m&uuml;ssen. Oder jede
-						    Datei einzeln auf der Kommandozeile angeben zu m&uuml;ssen wenn du
+						    in deinem Arbeitsverzeichnis mit comitten zu m&uuml;ssen. Du musst
+								auch nicht jede Datei einzeln auf der Kommandozeile angeben, wenn du
 						    einen Commit erstellst
 						</div>
 						<center><img src="images/index1.png"></center>
@@ -508,15 +507,15 @@
 					<div class="contents">
 
 					  <div class="text">
-					    Eines der coolsten Features eines jeden verteilten SCMs, inklusive Git, ist dass es
+					    Eines der coolsten Features eines jeden verteilten SCMs, inklusive Git, ist, dass es
 					    verteilt ist. Das bedeutet dass man statt einem "checkout" des aktuellsten Stand des
 					    Source Codes einen kompletten "Klon" des ganzen Repositories macht.
 					  </div>
 					  <div class="text">
-					    Dadurch hat jeder User essentiell ein komplettes Backup des Hauptservers,
-					    selbst wenn man einen zentralisierten Arbeitsablauf verwendet, von dem 
+					    Dadurch hat jeder User, selbst wenn man einen zentralisierten Arbeitsablauf verwendet,
+							essentiell ein komplettes Backup des Hauptservers, von dem 
 					    jedes dazu verwendet kann den Hauptserver zu ersetzen falls dieser wegen eines
-					    Crash oder Korruption ausfallen sollte. Es gibt deshalb mit Git grunds&auml;tzlich
+					    Crashes oder Datenkorruption ausfallen sollte. Es gibt deshalb mit Git grunds&auml;tzlich
 					    keinen "Single Point of Failure" mehr, ausser man hat nur einen Punkt.
 					  </div>
 					  
@@ -568,7 +567,7 @@
 				<div class="contents">
 					
 					<div class="text">
-					    Eines der erstaunlichen Dinge ist dass man wegen Gits verteilter
+					    Eines der erstaunlichen Dinge ist, dass man wegen Gits verteilter
 					    Natur und tollen Branching-System relativ einfach
 					    so ziemlich jeden beliebigen Arbeitsablauf realisieren kann den
 					    man haben will.
