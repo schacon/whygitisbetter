@@ -553,60 +553,65 @@
 				</div>
 		
 		<h2>
-		<a name="any-workflow" href="#any-workflow">Any Workflow</a>
+		<a name="any-workflow" href="#any-workflow">Beliebige Arbeitsabläufe</a>
 		</h2>
 
 				<div class="contents">
 					
 					<div class="text">
-						One of the amazing things about Git is that because of its distributed
-						nature and super branching system, you can easily implement pretty
-						much any workflow you can think of relatively easily.
+					    Eines der erstaunlichen Dinge ist dass man wegen Gits verteilter
+					    Natur und tollen Branching-System relativ einfach
+					    so ziemlich jeden beliebigen Arbeitsablauf realisieren kann den
+					    man haben will.
 					</div>
 					
-					<h3>Subversion-Style Workflow</h3>
+					<h3>Arbeitsablauf im Subversion-Stil</h3>
 					
 
 					<div class="text">
-						A very common Git workflow, especially from people transitioning
-						from a centralized system, is a centralized workflow.  Git will 
-						not allow you to push if someone has pushed since the last time
-						you fetched, so a centralized model where all developers push to
-						the same server works just fine.
+					    Ein sehr gebräuchlicher Arbeitsablauf in Git, insbesondere von
+					    Leuten die gerade den Übergang von einem zentralisierten System
+					    machen, ist der zentralisierte Arbeitsablauf. Git erlaubt es einem
+					    nicht seine Commits zu pushen wenn jemand anderes seit dem letzen
+					    fetch gepusht hat, weshalb das zentralisierte Modell, wo alle
+					    Entwickler zu einem zentralen Server pushen, ohne Probleme
+					    funktioniert.
 					</div>
 					
 					<center><img src="images/workflow-a.png"></center><br/>
 					
-					<h3>Integration Manager Workflow</h3>
+					<h3>Arbeitsablauf für Integrationsmanager</h3>
 
 					<div class="text">
-						Another common Git workflow is where there is an integration 
-						manager - a single person who commits to the 'blessed' repository,
-						and then a number of developers who clone from that repository, 
-						push to their own independant repositories and ask the integrator
-						to pull in their changes.  This is the type of development model 
-						you often see with open source or GitHub repositories.
+					    Ein anderer gebräuchlicher Arbeitsablauf ist der eines
+					    Integrationsmanagers - einer einzelnen Person die
+					    in ein 'geweihtes' Repository committet, von dem dann die
+					    anderen Entwickler klonen, ihre Änderungen in ihre eigenen,
+					    unabhängigen Repositories pushen, und dann den Manager bitten
+					    ihre Änderungen zu ziehen. Diese Art von Entwicklungsmodell sieht
+					    man oft in Open Source oder GitHub Repositories.
 					</div>
 
 					<center><img src="images/workflow-b.png"></center><br/>
 
-					<h3>Dictator and Lieutenants Workflow</h3>
+					<h3>Arbeitsablauf im Diktator und Leutnant Stil</h3>
 
 					<div class="text">
-						For more massive projects, you can setup your developers similar to
-						the way the Linux kernel is run, where people are in charge of a
-						specific subsystem of the project ('lieutenants') and merge in all
-						changes that have to do with that subsystem.  Then another integrator
-						(the 'dictator') can pull changes from only his/her lieutenants and
-						the push to the 'blessed' repository that everyone then clones from
-						again.
+					    Für massive Projekte empfiehlt sich ein Arbeitsablauf wie er im
+					    Linux Kernel stattfindet, wo gewisse Leute für gewisse Subsysteme
+					    verantwortlich sind ('Leutnants'), und alle Änderungen die dieses
+					    Subsystem betreffen in ihr Repository mergen. Dann kann ein
+					    anderer Integrator (der 'Diktator') nur von seinen Leutnants
+					    Änderungen ziehen und integrieren, die er dann in sein 'geweihtes'
+					    Repository pusht, von dem dann jeder klonen oder updaten kann.
 					</div>
 
 					<center><img src="images/workflow-c.png"></center><br/>
 					
 					<div class="text">
-						Again, Git is entirely flexible about this, so you can mix and 
-						match and choose the workflow that is right for you. 
+					    Git ist sehr flexibel was den gewünschten Arbeitsablauf
+					    angeht. Man kann also seinen Arbeitsablauf ganz nach seinen
+					    Wünschen gestalten.
 					</div>
 					
 				</div>
