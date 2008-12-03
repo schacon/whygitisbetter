@@ -232,34 +232,38 @@
 					</div>
 			
 	        <h2>
-          <a name="git-is-fast" href="#git-is-fast">Git is Fast</a>
+          <a name="git-is-fast" href="#git-is-fast">Git är snabbt</a>
 	        </h2>
 	
 					<div class="contents">
 						<div class="text">
-							Git is fast.  Everyone &mdash; even most of the hard core users of these
-							other systems &mdash; generally give Git this title.  With Git, all
-							operations are performed locally giving it a bit of a leg up on
-							SVN and Perforce, both of which require network access for certain operations.
-							However, even compared to the other DSCMs that also perform operations
-							locally, Git is pretty fast. 
+              Git är snabbt. Alla &mdash; till och med de mest inbitna 
+              fansen av de andra systemen &mdash; brukar ge Git denna 
+              titel. Med Git sker alla operationer lokalt, vilket ger 
+              en klart snabbare körning än SVN och Perforce som båda 
+              kräver en anslutning till en server för många kommandon.
+
+              Men även om man jämför med de andra distribuerade SCM:arna så
+              är Git ganska snabbt.
 						</div>
 					
 						<div class="text">
-							Part of this is likely because it was built to work on the Linux 
-							kernel, which means that it has had to deal effectively with large
-							repositories from day one.  Additionally, Git is written in C, reducing the
-							overhead of runtimes associated with higher-level languages.
-							Another reason that Git is so fast is that the primary developers are,
-							have made this a design goal of the application.
+              Ett skäl till detta är antagligen eftersom Git byggdes för
+              arbete på Linuxkärnan, vilket innebär att det fanns behov
+              av att det skulle kunna hantera stora arkiv effektivt redan
+              från första början. Dessutom är Git skrivet i C, vilket 
+              minskar på allt extra resursanvändande som är associerat med 
+              att ha en applikation skriven i ett mer högnivåspråk. Ett till
+              skäl till att Git är snabbt är att utvecklarna haft detta som
+              ett mål med applikationen och därför utvecklat Git för det.
 						</div>
 
 						<div class="text">
-							The following are a number of benchmarks that I performed on three
-							copies of the Django source code repository in 3 different SCMs:
-							Git, Mercurial and Bazaar.  I also tested some of this stuff in SVN,
-							but trust me, it's slower - basically take the Bazaar numbers and
-							then add network latency...
+              Följande är ett antal mätningar jag gjorde där jag mätte 
+              hastigheten på ett antal operationer i kopior av Django-
+              arkivet i olika SCM:er, nämligen Git, Mercurial och Bazaar. Jag
+              provade också med Subversion, och tro mig: Det är långsammast
+              &endash; ta Bazaars nummer och lägg till nätverksfördröjningar.
 						</div>
 						
 						<table>
@@ -279,17 +283,18 @@
 
 							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:7,26,90&amp;chds=0,90&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Log">
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Lg)">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (St)">
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Sm)">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Li)">
 						</td></tr>
 						</table>
 						
 						<div class="text">
-							The end result was that for everything but adding new files, Git
-							was fastest. (Also really large commits, which Hg was basically the
-							same at, but the commit I tested was so large that you're unlikely
-							to ever do anything like it - normal commits are much faster in Git)
+              Slutresultatet var att för allt utom att lägga till nya filer så
+              var Git snabbast. (Även riktigt stora incheckningar, som Hg var
+              lika snabb på, men den incheckning som jag provade var så stor att
+              du antagligen aldrig kommer att göra en sådan själv &endash;
+              vanliga incheckningar är mycket snabbare än så i Git)
 						</div>
 						
 						<table>
@@ -300,13 +305,13 @@
 								<th>Bzr</th>
 							</tr>
 							<tr>
-								<th>Init</th>
+								<th>Init (Skapande)</th>
 								<td class="sweet">0.024s</td>
 								<td>0.059s</td>
 								<td>0.600s</td>
 							</tr>
 							<tr>
-								<th>Add</th>
+								<th>Add (Lägga till)</th>
 								<td>8.535s</td>
 								<td class="sweet">0.368s</td>
 								<td>2.381s</td>
@@ -318,43 +323,43 @@
 								<td>14.744s</td>
 							</tr>
 							<tr>
-								<th>Diff</th>
+								<th>Diff (Se förändringar)</th>
 								<td class="sweet">0.543s</td>
 								<td>2.189s</td>
 								<td>14.248s</td>
 							</tr>
 							<tr>
-								<th>Tag</th>
+								<th>Tag (Märka)</th>
 								<td class="sweet">0.056s</td>
 								<td>1.201s</td>
 								<td>1.892s</td>
 							</tr>
 							<tr>
-								<th>Log</th>
+								<th>Log (Historik)</th>
 								<td class="sweet">0.711s</td>
 								<td>2.650s</td>
 								<td>9.055s</td>
 							</tr>
 							<tr>
-								<th>Commit (Large)</th>
+								<th>Commit (Incheckning, stor)</th>
 								<td class="sweet">12.480s</td>
 								<td>12.500s</td>
 								<td>23.002s</td>
 							</tr>
 							<tr>
-								<th>Commit (Small)</th>
+								<th>Commit (Incheckning, liten)</th>
 								<td class="sweet">0.086s</td>
 								<td>0.517s</td>
 								<td>1.139s</td>
 							</tr>
 							<tr>
-								<th>Branch (Cold)</th>
+								<th>Branch (Skapa gren, kall)</th>
 								<td class="sweet">1.161s</td>
 								<td>94.681s</td>
 								<td>82.249s</td>
 							</tr>
 							<tr>
-								<th>Branch (Hot)</th>
+								<th>Branch (Skapa gren, varm)</th>
 								<td class="sweet">0.070s</td>
 								<td>12.300s</td>
 								<td>39.411s</td>
@@ -362,24 +367,25 @@
 						</table>
 					
 						<div class="text">
-							The cold and hot branching numbers are the numbers for the first
-							and second times that I branched a repo - the second number being
-							a branch with a hot disk cache.
+              Den varma och kalla förgreningen är de nummer som jag fick
+              första och andra gången jag gjorde en ny gren &endash; den 
+              andra är med en varm diskcache.
 						</div>
 
 						<div class="text">
-							It should be noted that although the 'add' numbers are much slower,
-              this was for a massive add operation - over 2000 files.  For the
-              majority of what most people do on a daily basis, add ops in any
-              of these systems will only take a fraction of a second. All of the
-              other ops tested here (except for the large commit, possibly) are
-              more indicative of things you might actually do day to day.
+              Det bör noteras att de höga siffrorna för att lägga till 
+              filer i arkivet trots allt var mycket stora listor med filer
+              &endash; över 2&nbsp;000 av dem. För majoriteten av allt 
+              användande så kommer alla "add" operationer köras på mycket
+              mindre listor än detta, och då tar hela operationen hundradelar
+              av en sekund i alla dessa system. Alla andra testade operationer 
+              här är mer representativa för vad dagligt användande går ut på.
 						</div>
 					
 					
 					<div class="text">
-						These numbers are really not difficult to recreate, simply clone the Django
-						project in each of the systems and try out the same commands in each.
+            Dessa nummer är inte svåra att återskapa, bara klona Django-arkiven
+            genom de olika systemen och prova samma kommandon i dem alla.
 						<ul>
 							<li><code>git clone git://github.com/brosner/django.git dj-git</code></li>
 							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</code></li>
