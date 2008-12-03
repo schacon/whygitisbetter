@@ -194,14 +194,14 @@
 
 						<div class="text">
 							Even in Mercurial, common commands like 'incoming' and 'outgoing' hit 
-							the server, where with Git you can 'fetch' all the servers data
+							the server, whereas with Git you can 'fetch' all the servers data
 							before going offline and do comparisons, merges and logs of data
 							that is on the server but not in your local branches yet.
 						</div>
 												
 						<div class="text">
 							This means that it's very easy to have copies of not only your
-							branches, but also of everyones branches that are working with
+							branches, but also of everyone's branches that are working with
 							you in your Git repository without having to mess your own stuff
 							up.
 						</div>
@@ -222,19 +222,21 @@
 	
 					<div class="contents">
 						<div class="text">
-							Git is fast.  Everyone, even most of the hard core users of these
-							other systems generally give Git this title.  Compared to SVN and
-							Perforce this is somewhat because all operations are done locally.
-							However, even compared to the other DSCMs, Git is pretty fast. 
+							Git is fast.  Everyone &mdash; even most of the hard core users of these
+							other systems &mdash; generally give Git this title.  With Git, all
+							operations are performed locally giving it a bit of a leg up on
+							SVN and Perforce, both of which require network access for certain operations.
+							However, even compared to the other DSCMs that also perform operations
+							locally, Git is pretty fast. 
 						</div>
 					
 						<div class="text">
 							Part of this is likely because it was built to work on the Linux 
 							kernel, which means that it has had to deal effectively with large
-							repositories from day one.
-							Another reason is that Git is written in C, and yet another reason
-							is that the primary developers are, in my experience, very very 
-							preoccupied with this.
+							repositories from day one.  Additionally, Git is written in C, reducing the
+							overhead of runtimes associated with higher-level languages.
+							Another reason that Git is so fast is that the primary developers are,
+							have made this a design goal of the application.
 						</div>
 
 						<div class="text">
@@ -387,8 +389,8 @@
 	
 					<div class="contents">
 						<div class="text">
-							Git is really good at conserving space.  Your Git directory will 
-							(in general) barely be larger than an SVN checkout - in some cases
+							Git is really good at conserving disk space.  Your Git directory will 
+							(in general) barely be larger than an SVN checkout &mdash; in some cases
 							actually smaller (apparently a lot can go in those .svn dirs).
 						</div>
 					
@@ -461,15 +463,18 @@
 						<center><img src="images/index1.png"></center>
 						
 						<div class="text">
-							This also allows you to stage parts of files that have been modified,
-							for example to only stage for commit the changes at the top of the
-							file you've been hacking on, but not the bottom changes.
+						  This also allows you to stage only portions of a modified file.  Gone are
+						  the days of making two logically unrelated modifications to a file before
+						  you realized that you forgot to commit one them.  Now you can just stage
+						  the change you need for the current commit and stage the other change for
+						  the next commit.  This feature scales up to as many different changes to
+						  your file as you need.
 						</div>
 
 						<div class="text">
 							Of course, Git also makes it pretty easy to ignore this feature
-							if you don't want that kind of control - just slap a '-a' to your
-							commit command.
+							if you don't want that kind of control &mdash; just slap a '-a' to your
+							commit command in order to add all changes to all files to the staging area.
 						</div>
 						
 						<center><img src="images/index2.png"></center>
@@ -502,9 +507,8 @@
             </div>
 
             <div class="text">
-              This does not slow things down much, either.  On average, an SVN checkout is faster than
-              any of the DSCMs, but not by too much. Furthermore, of the DSCMs, Git was the fastest
-              in my tests.
+              This does not slow things down much, either.  On average, an SVN checkout is only marginally
+              faster than any of the DSCMs. Of the DSCMs I tested, Git was the fastest.
 					  </div>
 
 						<table>
@@ -571,7 +575,7 @@
 
 					<div class="text">
 						Another common Git workflow is where there is an integration 
-						manager - a single person who commits to the 'blessed' repository,
+						manager &mdash; a single person who commits to the 'blessed' repository,
 						and then a number of developers who clone from that repository, 
 						push to their own independent repositories and ask the integrator
 						to pull in their changes.  This is the type of development model 
@@ -620,7 +624,7 @@
           <img style="float:right; padding:10px" src="images/octocat.png">
 
 					<div class="text">
-						I <em>may</em> be biased here, being as how I work for 
+						I <em>may</em> be biased here, given that I work for 
 						<a href="http://github.com">GitHub</a>, 
 						but I add this section anyway because so many people say that
 						GitHub itself was specifically why they choose Git.
@@ -639,14 +643,13 @@
 						There exist other services, both for Git and for the other SCMs,
 						but few are user-oriented or socially
 						targeted, and none have anywhere near the user-base.  
-						This social aspect of GitHub is killer, and this plus all of the above features
+						This social aspect of GitHub is killer, and this in combination of the above features
 						make working with Git and GitHub a great combination for rapidly 
 						developing open source projects.
 					</div>
 
 					<div class="text">					
-            This type of community is simply not available in any of the other
-            SCMs.
+            This type of community is simply not available with any of the other SCMs.
           </div>
 					
 					<div class="tweets">
@@ -678,7 +681,7 @@
         
 				<div class="contents">
 					<div class="text">										
-						This did not used to be true - early in Git's life, it was not really 
+						This did not used to be true &mdash; early in Git's life, it was not really 
 						an SCM so much as a bunch of tools that let you do versioned filesystem 
 						work in a distributed manner.  However, today, the command set and 
 						learning curve of Git are pretty similar to any other SCM, and even 
@@ -750,7 +753,7 @@ show       Show various types of objects
 					path, which was very confusing to people.  Although Git still recognizes
 					all of those commands, the only command in the path is now 'git'.
 					So, if you look at Mercurial and Git, Git has a nearly identical 
-					command set and help system - there is very little difference from 
+					command set and help system &mdash; there is very little difference from 
 					a beginning UI perspective today.
 				</div>
 				
