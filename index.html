@@ -803,7 +803,9 @@ show       Show various types of objects
 		  $('.section > .contents').hide();
 		});
 		$('.section > h2').click(function() {
+			var hidden = $(this).next().is(':hidden');
 			$(this).next().slideToggle();
+			return hidden;
 		})
 
 		$('#menu span').css('cursor', 'pointer').click(function() {
