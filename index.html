@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>Why Git is Better Than X</title>
+	<title>Varför Git är bättre än X</title>
 	
 	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection">
 	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print">    
@@ -54,7 +54,7 @@
 	    <div class="span-24 header">
 				<table width="100%">
 					<tr><td>
-        		<h1>Why Git is Better than X</h1>
+        		<h1>Varför Git är bättre än X</h1>
 					</td><td align="right">
 						<div id="menu">
 							<span class="lang hg">hg</span>
@@ -69,16 +69,19 @@
 
 	    <div class="span-24">
 					<div class="text intro">
-		        This site is here because I seem to
-						be spending a lot of time lately defending Gitsters against 
-						charges of fanboyism, bandwagonism
-						and koolaid-thirst.  So, here is why people are switching to Git from
-						X, and why you should too.  Just click on a reason to view it.
+            Denna sida är här för att jag ofta måste spendera tid
+            med att försvara Git-användare från anklagelser om att 
+            vara partiska, favoritiserande och att de bara väljer 
+            Git eftersom det är populärt att välja.
+
+            Här är de <em>riktiga</em> skälen till att folk byter 
+            till Git från X, och varför du också borde det. Klicka 
+            på ett argument för att se det.
 					</div>
 					
 					<div class="expand_collapse_links" style="display: none;">
-					  <a href="#" class="expand_all">Expand all</a> |
-					  <a href="#" class="collapse_all">Collapse all</a>
+					  <a href="#" class="expand_all">Expandera alla</a> |
+					  <a href="#" class="collapse_all">Kontrahera alla</a>
 					</div>
 	    </div>
 
@@ -93,63 +96,72 @@
 					</div>
 
 	        <h2>
-          <a name="cheap-local-branching" href="#cheap-local-branching">Cheap Local Branching</a>
+          <a name="cheap-local-branching" href="#cheap-local-branching">Billig lokal förgrening (branching)</a>
 	        </h2>
 					<div class="contents">
 						
 						<div class="text">
-							Probably Git's most compelling feature that really makes it stand
-							apart from nearly every other SCM out there is its branching
-							model.  It is completely different from all of the models I'm 
-							comparing it to here, most of which recommend that the best branch
-							is basically a clone of the repository in a new directory.
+              Antagligen är Gits mest intressanta egenskap som skiljer sig
+              från nästan alla versionhanteringssystem (SCM) dess 
+              branchingstöd. Det är helt annorlunda alla andra system som vi
+              jämför med här, där de flesta egentligen hanterar grenar som en
+              kopia av hela arkivet i en annan mapp.
 						</div>
 						
 						<div class="text">
-							Git does not work like that.  Git will allow you to have multiple
-							local branches that can be entirely independent of each other and
-							the creation, merging and deletion of those lines of development
-							take seconds.
+              Git fungerar inte på detta sätt. Git tillåter dig att ha ett 
+              flertal lokala grenar som kan vara helt oberoende av varandra
+              och att skapa, slå ihop och ta bort dem tar sekunder.
 						</div>
 						
 						
 						<div class="text">
-							This means that you can do things like :
-							<ul>
-								<li>Create a branch to try out an idea, commit
-									a few times, switch back to where you branched from, apply a patch, 
-									switch back to where you are experimenting, then merge it in.
-								</li>
-								<li>Have a branch that always contains only what goes to production,
-									another that you merge work into for testing and several smaller
-									ones for day to day work
-								</li>
-								<li>Create new branches for each new feature you're working on, so
-									you can seamlessly switch back and forth between them, then delete
-									each branch when that feature gets merged into your main line.
-								</li>
-								<li>Create a branch to experiment in, realize it's not going to
-									work and just delete it, abandoning the work - with nobody else
-									ever seeing it (even if you've pushed other branches in the meantime)
-								</li>
+              Detta betyder att du kan göra saker som att
+              <ul>
+                <li>
+                    skapa en gren för att prova en idé du har, föra in 
+                    ändringar hur mycket du vill, gå tillbaka till där 
+                    du var innan, verkställa en patch, gå tillbaka till ditt 
+                    experiment och till sist slå ihop grenen.
+                </li>
+
+                <li>
+                    ha en gren som alltid innehåller det som är 
+                    produktionssatt, en annan där du har det som skall testas
+                    och flera mindre för dagligt arbete.
+                </li>
+
+                <li>
+                    skapa en ny gren för varje ny funktionalitet du arbetar på
+                    så du kan sömlöst hoppa mellan dem, och sedan ta bort grenar
+                    som redan slagits ihop med din huvudgren.
+                </li>
+                <li>
+                    skapa en gren att experimentera i, inse att det inte ledde
+                    till något konkret och sedan ta bort den och överge ditt 
+                    arbete &endash; utan att någon annan har fått se den, trots
+                    att du kan ha tryckt ut ändringar i andra grenar under tiden.
+                </li>
 							</ul>
 						</div>
 						
 						<img src="images/branches.png">
 						
 						<div class="text">
-							Importantly, when you push to a remote repository, you do <em>not</em>
-							have to push all of your branches.  You can only share one of your
-							branches and not all of them.  This tends to free people to try
-							new ideas without worrying about having to plan how and when they
-							are going to merge it in or share it with others.
+              Viktigt att förstå är att när du trycker ut dina ändringar till
+              ett externt arkiv så måste du <em>inte</em> också trycka ut alla
+              dina grenar. Du kan bara dela med dig av en gren, inte alla.
+              Detta brukar ge många möjlighet att experimentera med saker utan
+              att direkt behöva oroa sig för hur och när de ska dela med sig av
+              experimentet till andra.
 						</div>
 						
 						<div class="text">
-							You <em>can</em> find ways to do some of this with other systems, but the work
-							involved is much more difficult and error-prone.  Git makes this
-							process incredibly easy and it changes the way most developers
-							work when they learn it.
+              Du <em>kan</em> komma på sätt att göra detta med några av de 
+              andra systemen, men arbetet som skulle vara associerat med dem
+              är mycket svårare och kan gå fel lättare. Git gör denna process
+              otroligt enkel och det förändrar hur de flesta utvecklare arbetar
+              när de lärt sig detta.
 						</div>
 						
 						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
