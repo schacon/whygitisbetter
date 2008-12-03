@@ -19,10 +19,16 @@ $(function() {
   if (document.location.hash) {
     var anchor = document.location.hash.substring(1)
     $('.section h2 a[name=' + anchor + ']').parent('h2').click()
+    showSectionsForSCM(anchor)
   }
 
   $('#menu span').css('cursor', 'pointer').click(function() {
     $('.section .contents').hide()
-    $('.section .' + this.innerHTML).parents('.section').find('.contents').show()
+    showSectionsForSCM(this.innerHTML)
+    document.location.hash = this.innerHTML
   })
+
+  function showSectionsForSCM(scm) {
+    $('.section .' + scm).parents('.section').find('.contents').show()
+  }
 })
