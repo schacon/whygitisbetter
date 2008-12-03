@@ -12,6 +12,7 @@
 	<!--[if IE]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+  <script src="javascripts/main.js" type="text/javascript"></script>
 	
 	<style type="text/css">
 		html { overflow-y: scroll; }
@@ -344,20 +345,11 @@
 						</div>
 
 						<div class="text">
-<<<<<<< HEAD:index.html
 							Bien que les chiffres &#x27;add&#x27; sont bien plus petit, c&#x27;&eacute;tait une op&eacute;ration d&#x27;ajout 
 							massif - plus de 2000 fichiers. Pour la majorit&eacute; des cas que les gens rencontrent 
 							chaque jour, les op&eacute;rations d&#x27;ajout ne prennent qu&#x27;une fraction de seconde. Toutes 
 							les autres op&eacute;rations test&eacute;es ici (&agrave; part peut-&ecirc;tre le l&#x27;&eacute;norme commit) sont plus 
 							indicatifs des choses que vous serez amen&eacute;s &agrave; faire au jour le jour.
-=======
-							It should be noted that although the 'add' numbers are much slower,
-              this was for a massive add operation - over 2000 files.  For the
-              majority of what most people do on a daily basis, add ops in any
-              of these systems will only take a fraction of a second. All of the
-              other ops tested here (except for the large commit, possibly) are
-              more indicative of things you might actually do day to day.
->>>>>>> schacon/master:index.html
 						</div>
 					
 					
@@ -453,18 +445,10 @@
 							l&#x27;effectuer.
 						</div>
 						<div class="text">
-<<<<<<< HEAD:index.html
 							La chose la plus cool gr&acirc;ce &agrave; cette zone, et ce qui fait que Git est &agrave; part des autres 
 							outils, est que vous pouvez facilement assembler certains de vos fichiers en les terminant 
 							et puis les commiter sans toucher aux autres fichiers modifi&eacute;s de votre r&eacute;pertoire de travail, 
 							ni les lister dans la ligne de commande durant le commit.
-=======
-							The cool thing about the staging area, and what sets Git apart 
-							from all these other tools, is that you can easily stage some of
-							your files as you finish them and then commit them without committing
-							all the modified files in your working directory, or having to list
-							them on the command line during the commit
->>>>>>> schacon/master:index.html
 						</div>
 						<center><img src="images/index1.png"></center>
 						
@@ -494,7 +478,6 @@
 	        </h2>
 
 					<div class="contents">
-<<<<<<< HEAD:index.html
 						<div class="text">
 							Une des fonctions les plus cool de n&#x27;importe quel SCM distribu&eacute;, 
 							Git inclus, est qu&#x27;il est distribu&eacute;. Cela veut dire qu&#x27;au lieu 
@@ -516,27 +499,6 @@
 							que n&#x27;importe quel DSCM, mas sans grande diff&eacute;rence. De plus, concernant les DSCM, Git 
 							&eacute;tait le plus rapide durant mes tests.
 					  	</div>
-=======
-
-					  <div class="text">
-              One of the coolest features of any of the Distributed SCMs, Git included, is that it's
-              distributed.  This means that instead of doing a "checkout" of the current tip of 
-              the source code, you do a "clone" of the entire repository.
-            </div>
-            <div class="text">
-              This means that even 
-              if you're using a centralized workflow, every user has what is essentially a full
-              backup of the main server, each of which could be pushed up to replace the main server
-              in the event of a crash or corruption.  There is basically no single point of failure
-              with Git unless there is only a single point.
-            </div>
-
-            <div class="text">
-              This does not slow things down much, either.  On average, an SVN checkout is faster than
-              any of the DSCMs, but not by too much. Furthermore, of the DSCMs, Git was the fastest
-              in my tests.
-					  </div>
->>>>>>> schacon/master:index.html
 
 						<table>
 							<tr><td>
@@ -602,20 +564,11 @@
 					<h3>Workflow g&eacute;r&eacute; par un Manager d&#x27;Int&eacute;gration</h3>
 
 					<div class="text">
-<<<<<<< HEAD:index.html
 						Un autre workflow commun pour Git consiste &agrave; d&eacute;signer un manager d&#x27;int&eacute;gration - une seule 
 						personne peut faire les commits sur le &#x27;Saint-d&eacute;p&ocirc;t&#x27;. Le reste des d&eacute;veloppeurs clone ce 
 						d&eacute;p&ocirc;t pour cr&eacute;er des d&eacute;p&ocirc;ts ind&eacute;pendants sur lesquels ils pourront faire leurs commits, pour
 						ensuite demander au manager de r&eacute;cup&eacute;rer leurs changements. C&#x27;est le mod&egrave;le de d&eacute;veloppement
 						que vous verrez souvent avec les d&eacute;p&ocirc;ts open source ou sur GitHub.
-=======
-						Another common Git workflow is where there is an integration 
-						manager - a single person who commits to the 'blessed' repository,
-						and then a number of developers who clone from that repository, 
-						push to their own independent repositories and ask the integrator
-						to pull in their changes.  This is the type of development model 
-						you often see with open source or GitHub repositories.
->>>>>>> schacon/master:index.html
 					</div>
 
 					<center><img src="images/workflow-b.png"></center><br/>
@@ -817,32 +770,6 @@ show       Show various types of objects
 		</div>
 
 	</div>
-
-<script>
-	$(function() {
-		$('.section > .contents').hide();
-		$('.contents > .tweets').hide();
-		$('.expand_collapse_links').show();
-		$('.expand_collapse_links > .expand_all').click(function() {
-		  $('.section > .contents').show();
-		});
-		$('.expand_collapse_links > .collapse_all').click(function() {
-		  $('.section > .contents').hide();
-		});
-		$('.section > h2').click(function() {
-			$(this).next().slideToggle();
-		})
-
-		$('#menu span').css('cursor', 'pointer').click(function() {
-			$('.section .contents').hide()
-			$('.section .' + this.innerHTML).parents('.section').find('.contents').show()
-		})
-		
-		if (document.location.hash) {
-		  $('.section > h2 > a[name=' + document.location.hash.substring(1) + ']').parent('h2').click()
-		}
-	})
-</script>
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
