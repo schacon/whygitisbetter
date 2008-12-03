@@ -7,11 +7,11 @@
 
 	<title>Why Git is Better Than X</title>
 	
-	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print">    
+	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print" />                
 	<!--[if IE]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script>
 	
 	<style type="text/css">
 		html { overflow-y: scroll; }
@@ -61,7 +61,7 @@
 							<span class="lang svn">svn</span>
 							<span class="lang perforce">perforce</span>
 						</div>
-						<img style="float: right" src="images/wherex.gif">
+						<img style="float: right" src="images/wherex.gif" alt="where x is one of"/>
 					</td></tr>
 					</table>
 	    </div>
@@ -134,7 +134,7 @@
 							</ul>
 						</div>
 						
-						<img src="images/branches.png">
+						<img src="images/branches.png" alt="branches flowchart"/>
 						
 						<div class="text">
 							Importantly, when you push to a remote repository, you do <em>not</em>
@@ -155,11 +155,11 @@
 						<!-- TODO : (show tweets somehow) -->
 
 						<div class="tweets">
-							<img alt='jamis twitter' width="300" src="http://twictur.es/i/1022811017.gif">
-							<img alt='trevorturk twitter' width="300" src="http://twictur.es/i/1022886570.gif">
-							<img alt='thillerson twitter' width="300" src="http://twictur.es/i/1022842917.gif">
-							<img alt='boblmartens twitter' width="300" src="http://twictur.es/i/1022818467.gif">
-							<img alt='mathie twitter' width="300" src="http://twictur.es/i/1022816942.gif">
+							<img alt='jamis twitter' width="300" src="http://twictur.es/i/1022811017.gif" />
+							<img alt='trevorturk twitter' width="300" src="http://twictur.es/i/1022886570.gif" />
+							<img alt='thillerson twitter' width="300" src="http://twictur.es/i/1022842917.gif" />
+							<img alt='boblmartens twitter' width="300" src="http://twictur.es/i/1022818467.gif" />
+							<img alt='mathie twitter' width="300" src="http://twictur.es/i/1022816942.gif" />
 						</div>
 					</div>
 	    </div>
@@ -190,7 +190,7 @@
               the plane or train is very productive.
 						</div>
 						
-						<center><img width="500px" src="images/local-remote.png"></center>
+						<div style='text-align: center'><img width="500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
 							Even in Mercurial, common commands like 'incoming' and 'outgoing' hit 
@@ -246,25 +246,25 @@
 						</div>
 						
 						<table>
-						<tr><td nowrap>
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:2,5,60&amp;chds=0,60&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Init">
+						<tr><td style='white-space: nowrap'>
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:2,5,60&amp;chds=0,60&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Init" alt="init benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:85,3,23&amp;chds=0,100&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Add">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:85,3,23&amp;chds=0,100&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Add" alt="add benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:45,194,1474&amp;chds=0,1474&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Status">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:45,194,1474&amp;chds=0,1474&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Status" alt="status benchmarks" />
 						
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,21,142&amp;chds=0,142&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Diff">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,21,142&amp;chds=0,142&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Diff" alt="diff benchmarks" />
 						</td><td rowspan="2">
-							<img src="http://chart.apis.google.com/chart?cht=bvg&amp;chs=190x275&amp;chd=t:1,123,390|11,946,820&amp;chds=0,1210&amp;chxt=x&amp;chco=4d89f9,c6d9fd&amp;chl=git|hg|bzr&amp;chtt=Branching">
+							<img src="http://chart.apis.google.com/chart?cht=bvg&amp;chs=190x275&amp;chd=t:1,123,390|11,946,820&amp;chds=0,1210&amp;chxt=x&amp;chco=4d89f9,c6d9fd&amp;chl=git|hg|bzr&amp;chtt=Branching" alt="branching benchmarks" />
 						</td></tr>
-						<tr><td nowrap>
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,120,189&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Tag">
+						<tr><td style='white-space: nowrap;'>
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,120,189&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Tag" alt="tag benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:7,26,90&amp;chds=0,90&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Log">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:7,26,90&amp;chds=0,90&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Log" alt="log benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Lg)">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Lg)" alt="large commit benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Sm)">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Sm)" alt="small commit benchmarks" />
 						</td></tr>
 						</table>
 						
@@ -458,7 +458,7 @@
 							all the modified files in your working directory, or having to list
 							them on the command line during the commit
 						</div>
-						<center><img src="images/index1.png"></center>
+						<div style='text-align: center'><img src="images/index1.png" alt="add commit workflow diagram" /></div>
 						
 						<div class="text">
 							This also allows you to stage parts of files that have been modified,
@@ -472,7 +472,7 @@
 							commit command.
 						</div>
 						
-						<center><img src="images/index2.png"></center>
+						<div style='text-align: center'><img src="images/index2.png" alt="commit only workflow diagram" /></div>
 					</div>
 	    </div>
 
@@ -509,8 +509,8 @@
 
 						<table>
 							<tr><td>
-								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone">
-							</td><td width="80%">
+								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone" alt="cloning benchmarks" />
+							</td><td style='width: 80%'>
 								<table>
 									<tr>
 										<th>Git</th>
@@ -565,7 +565,7 @@
 						the same server works just fine.
 					</div>
 					
-					<center><img src="images/workflow-a.png"></center><br/>
+					<div style='text-align: center'><img src="images/workflow-a.png" alt="subversion-style workflow" /></div><br/>
 					
 					<h3>Integration Manager Workflow</h3>
 
@@ -578,7 +578,7 @@
 						you often see with open source or GitHub repositories.
 					</div>
 
-					<center><img src="images/workflow-b.png"></center><br/>
+					<div style='text-align: center'><img src="images/workflow-b.png" alt="integration manager workflow" /></div><br/>
 
 					<h3>Dictator and Lieutenants Workflow</h3>
 
@@ -592,7 +592,7 @@
 						again.
 					</div>
 
-					<center><img src="images/workflow-c.png"></center><br/>
+					<div style='text-align: center'><img src="images/workflow-c.png" alt="dictator and lieutenants workflow" /></div><br/>
 					
 					<div class="text">
 						Again, Git is entirely flexible about this, so you can mix and 
@@ -617,7 +617,7 @@
 				
 				<div class="contents">
 
-          <img style="float:right; padding:10px" src="images/octocat.png">
+          <img style="float:right; padding:10px" src="images/octocat.png" alt="octocat" />
 
 					<div class="text">
 						I <em>may</em> be biased here, being as how I work for 
@@ -650,8 +650,8 @@
           </div>
 					
 					<div class="tweets">
-						<img alt='puls twitter' width="300" src="http://twictur.es/i/1022858126.gif">
-						<img alt='twitter' width="300" src="http://twictur.es/i/1022857633.gif">
+						<img alt='puls twitter' width="300" src="http://twictur.es/i/1022858126.gif" />
+						<img alt='twitter' width="300" src="http://twictur.es/i/1022857633.gif" />
 					</div>
 				</div>
 	    </div>
@@ -786,12 +786,13 @@ show       Show various types of objects
 			If you disagree with
 			anything on the site and you have a good reason, please 
 			<a href="mailto:schacon@gmail.com">email me</a> so I can fix it.<br/>
-			The source for this site is <a href="http://github.com/schacon/whygitisbetter">on GitHub</a> - feel free to send patches if you want to improve it.
+			The source for this site is <a href="http://github.com/schacon/whygitisbetter">on GitHub</a> - feel free to send patches if you want to improve it.<br />
+			<a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a>.
 		</div>
 
 	</div>
 
-<script>
+<script type="text/javascript">
 	$(function() {
 		$('.section > .contents').hide();
 		$('.contents > .tweets').hide();
