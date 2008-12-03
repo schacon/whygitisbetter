@@ -805,6 +805,11 @@ show       Show various types of objects
 		$('.section > h2').click(function() {
 			$(this).next().slideToggle();
 		})
+
+		$('#menu span').css('cursor', 'pointer').click(function() {
+			$('.section .contents').hide()
+			$('.section .' + this.innerHTML).parents('.section').find('.contents').show()
+		})
 		
 		if (document.location.hash) {
 		  $('.section > h2 > a[name=' + document.location.hash.substring(1) + ']').parent('h2').click()
