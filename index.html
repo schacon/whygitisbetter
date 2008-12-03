@@ -111,7 +111,7 @@
 						
 						
 						<div class="text">
-							This means that you can do things like :
+							This means that you can do things like:
 							<ul>
 								<li>Create a branch to try out an idea, commit
 									a few times, switch back to where you branched from, apply a patch, 
@@ -126,7 +126,7 @@
 									each branch when that feature gets merged into your main line.
 								</li>
 								<li>Create a branch to experiment in, realize it's not going to
-									work and just delete it, abandoning the work - with nobody else
+									work and just delete it, abandoning the work&mdash;with nobody else
 									ever seeing it (even if you've pushed other branches in the meantime)
 								</li>
 							</ul>
@@ -220,8 +220,8 @@
 	
 					<div class="contents">
 						<div class="text">
-							Git is fast.  Everyone &mdash; even most of the hard core users of these
-							other systems &mdash; generally give Git this title.  With Git, all
+							Git is fast.  Everyone&mdash;even most of the hard core users of these
+							other systems&mdash;generally give Git this title.  With Git, all
 							operations are performed locally giving it a bit of a leg up on
 							SVN and Perforce, both of which require network access for certain operations.
 							However, even compared to the other DSCMs that also perform operations
@@ -241,7 +241,7 @@
 							The following are a number of benchmarks that I performed on three
 							copies of the Django source code repository in 3 different SCMs:
 							Git, Mercurial and Bazaar.  I also tested some of this stuff in SVN,
-							but trust me, it's slower - basically take the Bazaar numbers and
+							but trust me, it's slower&mdash;basically take the Bazaar numbers and
 							then add network latency...
 						</div>
 						
@@ -272,7 +272,7 @@
 							The end result was that for everything but adding new files, Git
 							was fastest. (Also really large commits, which Hg was basically the
 							same at, but the commit I tested was so large that you're unlikely
-							to ever do anything like it - normal commits are much faster in Git)
+							to ever do anything like it&mdash;normal commits are much faster in Git.)
 						</div>
 						
 						<table>
@@ -346,13 +346,13 @@
 					
 						<div class="text">
 							The cold and hot branching numbers are the numbers for the first
-							and second times that I branched a repo - the second number being
+							and second times that I branched a repo&mdash;the second number being
 							a branch with a hot disk cache.
 						</div>
 
 						<div class="text">
 							It should be noted that although the 'add' numbers are much slower,
-              this was for a massive add operation - over 2000 files.  For the
+              this was for a massive add operation&mdash;over 2000 files.  For the
               majority of what most people do on a daily basis, add ops in any
               of these systems will only take a fraction of a second. All of the
               other ops tested here (except for the large commit, possibly) are
@@ -388,7 +388,7 @@
 					<div class="contents">
 						<div class="text">
 							Git is really good at conserving disk space.  Your Git directory will 
-							(in general) barely be larger than an SVN checkout &mdash; in some cases
+							(in general) barely be larger than an SVN checkout&mdash;in some cases
 							actually smaller (apparently a lot can go in those .svn dirs).
 						</div>
 					
@@ -471,7 +471,7 @@
 
 						<div class="text">
 							Of course, Git also makes it pretty easy to ignore this feature
-							if you don't want that kind of control &mdash; just slap a '-a' to your
+							if you don't want that kind of control&mdash;just slap a '-a' to your
 							commit command in order to add all changes to all files to the staging area.
 						</div>
 						
@@ -573,7 +573,7 @@
 
 					<div class="text">
 						Another common Git workflow is where there is an integration 
-						manager &mdash; a single person who commits to the 'blessed' repository,
+						manager&mdash;a single person who commits to the 'blessed' repository,
 						and then a number of developers who clone from that repository, 
 						push to their own independent repositories and ask the integrator
 						to pull in their changes.  This is the type of development model 
@@ -679,7 +679,7 @@
         
 				<div class="contents">
 					<div class="text">										
-						This did not used to be true &mdash; early in Git's life, it was not really 
+						This did not used to be true&mdash;early in Git's life, it was not really 
 						an SCM so much as a bunch of tools that let you do versioned filesystem 
 						work in a distributed manner.  However, today, the command set and 
 						learning curve of Git are pretty similar to any other SCM, and even 
@@ -751,7 +751,7 @@ show       Show various types of objects
 					path, which was very confusing to people.  Although Git still recognizes
 					all of those commands, the only command in the path is now 'git'.
 					So, if you look at Mercurial and Git, Git has a nearly identical 
-					command set and help system &mdash; there is very little difference from 
+					command set and help system&mdash;there is very little difference from 
 					a beginning UI perspective today.
 				</div>
 				
@@ -779,11 +779,14 @@ show       Show various types of objects
     </div>
     
     <div class="span-24 footer">
-			This site is built and maintained by <a href="http://github.com/schacon">Scott Chacon</a>, a <a href="http://github.com">GitHubber</a>.<br/>
-			If you disagree with
-			anything on the site and you have a good reason, please 
-			<a href="mailto:schacon@gmail.com">email me</a> so I can fix it.<br/>
-			The source for this site is <a href="http://github.com/schacon/whygitisbetter">on GitHub</a> - feel free to send patches if you want to improve it.
+			This site is built and maintained by <a href="http://github.com/schacon">Scott Chacon</a>, a
+			<a href="http://github.com">GitHubber</a>.<br />
+
+			If you disagree with anything on the site and you have a good reason, please 
+			<a href="mailto:schacon@gmail.com">email me</a> so I can fix it.<br />
+
+			The source for this site is <a href="http://github.com/schacon/whygitisbetter">on GitHub</a>&mdash;feel
+			free to send patches if you want to improve it.
 		</div>
 
 	</div>
