@@ -43,7 +43,8 @@
 		.help td { vertical-align: top; }
 		code { font-size: 90%; }
 		.footer { text-align: center; color: #663; background-color: #eea; padding: 10px;}
-		.footer a { color: #440; }
+		.footer a { color: #440; } 
+		.lang a {color: inherit; text-decoration: none;}
 	</style>
 	
 </head>
@@ -59,10 +60,10 @@
         		<h1>Why Git is Better than X</h1>
 					</td><td align="right">
 						<div id="menu">
-							<span class="lang hg">hg</span>
-							<span class="lang bzr">bzr</span>
-							<span class="lang svn">svn</span>
-							<span class="lang perforce">perforce</span>
+							<span class="lang hg"><a href="#hg">hg</a></span>
+							<span class="lang bzr"><a href="#bzr">bzr</a></span>
+							<span class="lang svn"><a href="#svn">svn</a></span>
+							<span class="lang perforce"><a href="#perforce">perforce</a></span>
 						</div>
 						<img style="float: right" alt="where &quot;x&quot; is one of" src="images/wherex.gif" />
 					</td></tr>
@@ -135,7 +136,7 @@
 							</ul>
 						</div>
 						
-						<img src="images/branches.png" />
+						<img src="images/branches.png" alt="branches flowchart"/>
 						
 						<div class="text">
 							Importantly, when you push to a remote repository, you do <em>not</em>
@@ -191,7 +192,7 @@
               the plane or train is very productive.
 						</div>
 						
-						<div class="center"><img width="500px" src="images/local-remote.png" /></div>
+						<div class="center"><img width="500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
 							Even in Mercurial, common commands like 'incoming' and 'outgoing' hit 
@@ -248,26 +249,25 @@
 							then add network latency...
 						</div>
 						
-						<table>
 						<tr><td class="nowrap">
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:2,5,60&amp;chds=0,60&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Init" />
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:2,5,60&amp;chds=0,60&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Init" alt="init benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:85,3,23&amp;chds=0,100&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Add" />
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:85,3,23&amp;chds=0,100&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Add" alt="add benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:45,194,1474&amp;chds=0,1474&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Status" />
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:45,194,1474&amp;chds=0,1474&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Status" alt="status benchmarks" />
 						
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,21,142&amp;chds=0,142&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Diff" />
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,21,142&amp;chds=0,142&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Diff" alt="diff benchmarks" />
 						</td><td rowspan="2">
-							<img src="http://chart.apis.google.com/chart?cht=bvg&amp;chs=190x275&amp;chd=t:1,123,390|11,946,820&amp;chds=0,1210&amp;chxt=x&amp;chco=4d89f9,c6d9fd&amp;chl=git|hg|bzr&amp;chtt=Branching" />
+							<img src="http://chart.apis.google.com/chart?cht=bvg&amp;chs=190x275&amp;chd=t:1,123,390|11,946,820&amp;chds=0,1210&amp;chxt=x&amp;chco=4d89f9,c6d9fd&amp;chl=git|hg|bzr&amp;chtt=Branching" alt="branching benchmarks" />
 						</td></tr>
-						<tr><td class="nowrap">
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,120,189&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Tag" />
+            <tr><td class="nowrap">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,120,189&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Tag" alt="tag benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:7,26,90&amp;chds=0,90&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Log" />
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:7,26,90&amp;chds=0,90&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Log" alt="log benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Lg)" />
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Lg)" alt="large commit benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Sm)" />
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Sm)" alt="small commit benchmarks" />
 						</td></tr>
 						</table>
 						
@@ -461,7 +461,7 @@
 							all the modified files in your working directory, or having to list
 							them on the command line during the commit
 						</div>
-						<div class="center"><img src="images/index1.png" /></div>
+						<div class="center"><img src="images/index1.png" alt="add commit workflow diagram" /></div>
 						
 						<div class="text">
 						  This also allows you to stage only portions of a modified file.  Gone are
@@ -478,7 +478,7 @@
 							commit command in order to add all changes to all files to the staging area.
 						</div>
 						
-						<div class="center"><img src="images/index2.png" /></div>
+						<div class="center"><img src="images/index2.png" alt="commit only workflow diagram" /></div>
 					</div>
 	    </div>
 
@@ -514,7 +514,7 @@
 
 						<table>
 							<tr><td>
-								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone" />
+								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone" alt="cloning benchmarks" />
 							</td><td style="width: 80%">
 								<table>
 									<tr>
@@ -570,7 +570,7 @@
 						the same server works just fine.
 					</div>
 					
-					<div class="center"><img src="images/workflow-a.png" /></div><br/>
+					<div class="center"><img src="images/workflow-a.png" alt="subversion-style workflow" /></div><br/>
 					
 					<h3>Integration Manager Workflow</h3>
 
@@ -583,7 +583,7 @@
 						you often see with open source or GitHub repositories.
 					</div>
 
-					<div class="center"><img src="images/workflow-b.png" /></div><br/>
+					<div class="center"><img src="images/workflow-b.png" alt="integration manager workflow" /></div><br/>
 
 					<h3>Dictator and Lieutenants Workflow</h3>
 
@@ -597,7 +597,7 @@
 						again.
 					</div>
 
-					<div class="center"><img src="images/workflow-c.png" /></div><br/>
+					<div class="center"><img src="images/workflow-c.png" alt="dictator and lieutenants workflow" /></div><br/>
 					
 					<div class="text">
 						Again, Git is entirely flexible about this, so you can mix and 
@@ -622,7 +622,7 @@
 				
 				<div class="contents">
 
-          <img style="float:right; padding:10px" src="images/octocat.png" />
+          <img style="float:right; padding:10px" src="images/octocat.png" alt="octocat" />
 
 					<div class="text">
 						I <em>may</em> be biased here, given that I work for 
@@ -789,7 +789,8 @@ show       Show various types of objects
 			<a href="mailto:schacon@gmail.com">email me</a> so I can fix it.<br />
 
 			The source for this site is <a href="http://github.com/schacon/whygitisbetter">on GitHub</a>&mdash;feel
-			free to send patches if you want to improve it.
+      free to send patches if you want to improve it. <br/>
+			<a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a>.
 		</div>
 
 	</div>
