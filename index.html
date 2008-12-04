@@ -57,10 +57,10 @@
         		<h1>Why Git is Better than X</h1>
 					</td><td align="right">
 						<div id="menu">
-							<span class="lang hg"><a href="#hg">hg</a></span>
-							<span class="lang bzr"><a href="#bzr">bzr</a></span>
-							<span class="lang svn"><a href="#svn">svn</a></span>
-							<span class="lang perforce"><a href="#perforce">perforce</a></span>
+							<span class="lang hg">hg</span>
+							<span class="lang bzr">bzr</span>
+							<span class="lang svn">svn</span>
+							<span class="lang perforce">perforce</span>
 						</div>
 						<img style="float: right" alt="where &quot;x&quot; is one of" src="images/wherex.gif" />
 					</td></tr>
@@ -812,17 +812,22 @@ show       Show various types of objects
         return hidden
       })
 
-      $('#menu span').css('cursor', 'pointer').find('a').click(function() {
-        $('.section .contents').hide();
-        $('.section .' + this.innerHTML).parents('.section').find('.contents').show();
+      $('#menu span').css('cursor', 'pointer').click(function() {
+        $('.section .contents').hide()
+        showSectionsForSCM(this.innerHTML)
+        document.location.hash = this.innerHTML
       }) 
 
       if (document.location.hash) {
-        $('.section > h2 > a[name=' + document.location.hash.substring(1) + ']').parent('h2').click();
-        $('.section .' + document.location.hash.substring(1)).parents('.section').find('.contents').show();
-      }    
-    })
+        var anchor = document.location.hash.substring(1)
+        $('.section h2 a[name=' + anchor + ']').parent('h2').click()
+        showSectionsForSCM(anchor)
+      }
 
+      function showSectionsForSCM(scm) {
+        $('.section .' + scm).parents('.section').find('.contents').show()
+      }
+    })
   </script>
 
 <script type="text/javascript">
