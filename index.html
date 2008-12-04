@@ -7,26 +7,28 @@
 
 	<title>Why Git is Better Than X</title>
 	
-	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print">    
+	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print" />
 	<!--[if IE]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script>
   <script src="javascripts/main.js" type="text/javascript"></script>
 	
 	<style type="text/css">
 		html { overflow-y: scroll; }
+		body { margin-top: 1.5em; }
 		.header h1 { font-size: 3.5em; color: #666; }
-		.expand_collapse_links { text-align: center; }
+		.expand_collapse_links { text-align: center; margin-bottom: 1.5em; }
 		.expand_collapse_links a { color: #555; }
 		img { margin-bottom: 10px; }
+		.center { text-align: center; }
 		.text, p { font-size: 1.2em; margin-bottom: 10px; text-align: justify;}
 		.intro { color: #444; }
 		ul li { margin-top: 10px; }
 		.section h2 { padding-left: 5px; background-color: #eee; cursor: pointer;}
     .section h2 a { color: #333; text-decoration:none; display: block; }
-		.section { margin-bottom: 20px; }
-		.contents { padding: 0 10px; }
+		.section { padding-bottom: 2px; }
+		.contents { padding: 0 10px; width: 610px; }
 		.args { float:right; }
 		.lang { padding: 3px; font-weight: bold;}
 		.section .lang { font-size: 0.8em; padding: 2px; font-weight: normal;}
@@ -34,6 +36,7 @@
 		.perforce { color: hsl(0,57%,24%); background: hsl(0,57%,83%) }
 		.bzr { color: hsl(60,57%,24%); background: hsl(60,57%,83%) }
 		.hg { color: hsl(190,57%,24%); background: hsl(190,57%,83%) }
+		.nowrap { white-space: nowrap; }
 		.sweet { color: #363; background: #beb; }
 		.compare { color: #663; background: #eeb; }
 		.help pre { font-size: 12px; }
@@ -46,11 +49,10 @@
 </head>
 
 <body>
+  <!-- TODO: all images need alt tags for valid XHTML 1.0 Strict -->
 
 	<div class="container">
 
-			<br/>
-			
 	    <div class="span-24 header">
 				<table width="100%">
 					<tr><td>
@@ -62,7 +64,7 @@
 							<span class="lang svn">svn</span>
 							<span class="lang perforce">perforce</span>
 						</div>
-						<img style="float: right" src="images/wherex.gif">
+						<img style="float: right" alt="where &quot;x&quot; is one of" src="images/wherex.gif" />
 					</td></tr>
 					</table>
 	    </div>
@@ -81,8 +83,6 @@
 					  <a href="#" class="collapse_all">Collapse all</a>
 					</div>
 	    </div>
-
-			<br/>
 
 	    <div class="span-24 section">
 					<div class="args">
@@ -114,7 +114,7 @@
 						
 						
 						<div class="text">
-							This means that you can do things like :
+							This means that you can do things like:
 							<ul>
 								<li>Create a branch to try out an idea, commit
 									a few times, switch back to where you branched from, apply a patch, 
@@ -129,13 +129,13 @@
 									each branch when that feature gets merged into your main line.
 								</li>
 								<li>Create a branch to experiment in, realize it's not going to
-									work and just delete it, abandoning the work - with nobody else
+									work and just delete it, abandoning the work&mdash;with nobody else
 									ever seeing it (even if you've pushed other branches in the meantime)
 								</li>
 							</ul>
 						</div>
 						
-						<img src="images/branches.png">
+						<img src="images/branches.png" />
 						
 						<div class="text">
 							Importantly, when you push to a remote repository, you do <em>not</em>
@@ -156,11 +156,11 @@
 						<!-- TODO : (show tweets somehow) -->
 
 						<div class="tweets">
-							<img alt='jamis twitter' width="300" src="http://twictur.es/i/1022811017.gif">
-							<img alt='trevorturk twitter' width="300" src="http://twictur.es/i/1022886570.gif">
-							<img alt='thillerson twitter' width="300" src="http://twictur.es/i/1022842917.gif">
-							<img alt='boblmartens twitter' width="300" src="http://twictur.es/i/1022818467.gif">
-							<img alt='mathie twitter' width="300" src="http://twictur.es/i/1022816942.gif">
+							<img alt='jamis twitter' width="300" src="http://twictur.es/i/1022811017.gif" />
+							<img alt='trevorturk twitter' width="300" src="http://twictur.es/i/1022886570.gif" />
+							<img alt='thillerson twitter' width="300" src="http://twictur.es/i/1022842917.gif" />
+							<img alt='boblmartens twitter' width="300" src="http://twictur.es/i/1022818467.gif" />
+							<img alt='mathie twitter' width="300" src="http://twictur.es/i/1022816942.gif" />
 						</div>
 					</div>
 	    </div>
@@ -191,7 +191,7 @@
               the plane or train is very productive.
 						</div>
 						
-						<center><img width="500px" src="images/local-remote.png"></center>
+						<div class="center"><img width="500px" src="images/local-remote.png" /></div>
 
 						<div class="text">
 							Even in Mercurial, common commands like 'incoming' and 'outgoing' hit 
@@ -223,8 +223,8 @@
 	
 					<div class="contents">
 						<div class="text">
-							Git is fast.  Everyone &mdash; even most of the hard core users of these
-							other systems &mdash; generally give Git this title.  With Git, all
+							Git is fast.  Everyone&mdash;even most of the hard core users of these
+							other systems&mdash;generally give Git this title.  With Git, all
 							operations are performed locally giving it a bit of a leg up on
 							SVN and Perforce, both of which require network access for certain operations.
 							However, even compared to the other DSCMs that also perform operations
@@ -244,30 +244,30 @@
 							The following are a number of benchmarks that I performed on three
 							copies of the Django source code repository in 3 different SCMs:
 							Git, Mercurial and Bazaar.  I also tested some of this stuff in SVN,
-							but trust me, it's slower - basically take the Bazaar numbers and
+							but trust me, it's slower&mdash;basically take the Bazaar numbers and
 							then add network latency...
 						</div>
 						
 						<table>
-						<tr><td nowrap>
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:2,5,60&amp;chds=0,60&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Init">
+						<tr><td class="nowrap">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:2,5,60&amp;chds=0,60&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Init" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:85,3,23&amp;chds=0,100&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Add">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:85,3,23&amp;chds=0,100&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Add" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:45,194,1474&amp;chds=0,1474&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Status">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:45,194,1474&amp;chds=0,1474&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Status" />
 						
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,21,142&amp;chds=0,142&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Diff">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,21,142&amp;chds=0,142&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Diff" />
 						</td><td rowspan="2">
-							<img src="http://chart.apis.google.com/chart?cht=bvg&amp;chs=190x275&amp;chd=t:1,123,390|11,946,820&amp;chds=0,1210&amp;chxt=x&amp;chco=4d89f9,c6d9fd&amp;chl=git|hg|bzr&amp;chtt=Branching">
+							<img src="http://chart.apis.google.com/chart?cht=bvg&amp;chs=190x275&amp;chd=t:1,123,390|11,946,820&amp;chds=0,1210&amp;chxt=x&amp;chco=4d89f9,c6d9fd&amp;chl=git|hg|bzr&amp;chtt=Branching" />
 						</td></tr>
-						<tr><td nowrap>
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,120,189&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Tag">
+						<tr><td class="nowrap">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,120,189&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Tag" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:7,26,90&amp;chds=0,90&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Log">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:7,26,90&amp;chds=0,90&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Log" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Lg)">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Lg)" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Sm)">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Sm)" />
 						</td></tr>
 						</table>
 						
@@ -275,7 +275,7 @@
 							The end result was that for everything but adding new files, Git
 							was fastest. (Also really large commits, which Hg was basically the
 							same at, but the commit I tested was so large that you're unlikely
-							to ever do anything like it - normal commits are much faster in Git)
+							to ever do anything like it&mdash;normal commits are much faster in Git.)
 						</div>
 						
 						<table>
@@ -349,13 +349,13 @@
 					
 						<div class="text">
 							The cold and hot branching numbers are the numbers for the first
-							and second times that I branched a repo - the second number being
+							and second times that I branched a repo&mdash;the second number being
 							a branch with a hot disk cache.
 						</div>
 
 						<div class="text">
 							It should be noted that although the 'add' numbers are much slower,
-              this was for a massive add operation - over 2000 files.  For the
+              this was for a massive add operation&mdash;over 2000 files.  For the
               majority of what most people do on a daily basis, add ops in any
               of these systems will only take a fraction of a second. All of the
               other ops tested here (except for the large commit, possibly) are
@@ -391,7 +391,7 @@
 					<div class="contents">
 						<div class="text">
 							Git is really good at conserving disk space.  Your Git directory will 
-							(in general) barely be larger than an SVN checkout &mdash; in some cases
+							(in general) barely be larger than an SVN checkout&mdash;in some cases
 							actually smaller (apparently a lot can go in those .svn dirs).
 						</div>
 					
@@ -461,7 +461,7 @@
 							all the modified files in your working directory, or having to list
 							them on the command line during the commit
 						</div>
-						<center><img src="images/index1.png"></center>
+						<div class="center"><img src="images/index1.png" /></div>
 						
 						<div class="text">
 						  This also allows you to stage only portions of a modified file.  Gone are
@@ -474,11 +474,11 @@
 
 						<div class="text">
 							Of course, Git also makes it pretty easy to ignore this feature
-							if you don't want that kind of control &mdash; just slap a '-a' to your
+							if you don't want that kind of control&mdash;just slap a '-a' to your
 							commit command in order to add all changes to all files to the staging area.
 						</div>
 						
-						<center><img src="images/index2.png"></center>
+						<div class="center"><img src="images/index2.png" /></div>
 					</div>
 	    </div>
 
@@ -514,8 +514,8 @@
 
 						<table>
 							<tr><td>
-								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone">
-							</td><td width="80%">
+								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone" />
+							</td><td style="width: 80%">
 								<table>
 									<tr>
 										<th>Git</th>
@@ -570,20 +570,20 @@
 						the same server works just fine.
 					</div>
 					
-					<center><img src="images/workflow-a.png"></center><br/>
+					<div class="center"><img src="images/workflow-a.png" /></div><br/>
 					
 					<h3>Integration Manager Workflow</h3>
 
 					<div class="text">
 						Another common Git workflow is where there is an integration 
-						manager &mdash; a single person who commits to the 'blessed' repository,
+						manager&mdash;a single person who commits to the 'blessed' repository,
 						and then a number of developers who clone from that repository, 
 						push to their own independent repositories and ask the integrator
 						to pull in their changes.  This is the type of development model 
 						you often see with open source or GitHub repositories.
 					</div>
 
-					<center><img src="images/workflow-b.png"></center><br/>
+					<div class="center"><img src="images/workflow-b.png" /></div><br/>
 
 					<h3>Dictator and Lieutenants Workflow</h3>
 
@@ -597,7 +597,7 @@
 						again.
 					</div>
 
-					<center><img src="images/workflow-c.png"></center><br/>
+					<div class="center"><img src="images/workflow-c.png" /></div><br/>
 					
 					<div class="text">
 						Again, Git is entirely flexible about this, so you can mix and 
@@ -622,7 +622,7 @@
 				
 				<div class="contents">
 
-          <img style="float:right; padding:10px" src="images/octocat.png">
+          <img style="float:right; padding:10px" src="images/octocat.png" />
 
 					<div class="text">
 						I <em>may</em> be biased here, given that I work for 
@@ -654,8 +654,8 @@
           </div>
 					
 					<div class="tweets">
-						<img alt='puls twitter' width="300" src="http://twictur.es/i/1022858126.gif">
-						<img alt='twitter' width="300" src="http://twictur.es/i/1022857633.gif">
+						<img alt='puls twitter' width="300" src="http://twictur.es/i/1022858126.gif" />
+						<img alt='twitter' width="300" src="http://twictur.es/i/1022857633.gif" />
 					</div>
 				</div>
 	    </div>
@@ -682,7 +682,7 @@
         
 				<div class="contents">
 					<div class="text">										
-						This did not used to be true &mdash; early in Git's life, it was not really 
+						This did not used to be true&mdash;early in Git's life, it was not really 
 						an SCM so much as a bunch of tools that let you do versioned filesystem 
 						work in a distributed manner.  However, today, the command set and 
 						learning curve of Git are pretty similar to any other SCM, and even 
@@ -754,7 +754,7 @@ show       Show various types of objects
 					path, which was very confusing to people.  Although Git still recognizes
 					all of those commands, the only command in the path is now 'git'.
 					So, if you look at Mercurial and Git, Git has a nearly identical 
-					command set and help system &mdash; there is very little difference from 
+					command set and help system&mdash;there is very little difference from 
 					a beginning UI perspective today.
 				</div>
 				
@@ -774,8 +774,6 @@ show       Show various types of objects
 			* large files (svn)
 		-->
 
-		<br/>
-
     <div class="span-24">					
 				<div class="expand_collapse_links" style="display: none;">
 				  <a href="#" class="expand_all">Expand all</a> |
@@ -783,14 +781,15 @@ show       Show various types of objects
 				</div>
     </div>
     
-    <br />
-		
     <div class="span-24 footer">
-			This site is built and maintained by <a href="http://github.com/schacon">Scott Chacon</a>, a <a href="http://github.com">GitHubber</a>.<br/>
-			If you disagree with
-			anything on the site and you have a good reason, please 
-			<a href="mailto:schacon@gmail.com">email me</a> so I can fix it.<br/>
-			The source for this site is <a href="http://github.com/schacon/whygitisbetter">on GitHub</a> - feel free to send patches if you want to improve it.
+			This site is built and maintained by <a href="http://github.com/schacon">Scott Chacon</a>, a
+			<a href="http://github.com">GitHubber</a>.<br />
+
+			If you disagree with anything on the site and you have a good reason, please 
+			<a href="mailto:schacon@gmail.com">email me</a> so I can fix it.<br />
+
+			The source for this site is <a href="http://github.com/schacon/whygitisbetter">on GitHub</a>&mdash;feel
+			free to send patches if you want to improve it.
 		</div>
 
 	</div>
