@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>Why Git is Better Than X</title>
+	<title>Perch&eacute; Git &egrave; meglio di X</title>
 	
 	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection" />
 	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print" />
@@ -56,7 +56,7 @@
 	    <div class="span-24 header">
 				<table width="100%">
 					<tr><td>
-        		<h1>Why Git is Better than X</h1>
+        		<h1>Perch&eacute; Git &egrave; meglio di X</h1>
 					</td><td align="right">
 						<div id="menu">
 							<span class="lang hg">hg</span>
@@ -71,16 +71,23 @@
 
 	    <div class="span-24">
 					<div class="text intro">
+					  Questo sito &egrave; qui perch&eacute; mi sembra di
+					  spendere molto tempo ultimamente difendendo gli utilizzatori di Git da
+					  accuse di fanatismo acritico, [BANDWAGONISM] e [KOOLAID-THIRS]. Cos&igrave; ecco
+					  perch&eacute; la gente sta passando a Git da X, e perch&eacute; anche
+					  tu dovresti farlo. Clicca semplicemente su una ragione per vederla.
+					  <!--
 		        This site is here because I seem to
 						be spending a lot of time lately defending Gitsters against 
 						charges of fanboyism, bandwagonism
 						and koolaid-thirst.  So, here is why people are switching to Git from
 						X, and why you should too.  Just click on a reason to view it.
+					  -->
 					</div>
 					
 					<div class="expand_collapse_links" style="display: none;">
-					  <a href="#" class="expand_all">Expand all</a> |
-					  <a href="#" class="collapse_all">Collapse all</a>
+					  <a href="#" class="expand_all">Espandi tutto</a> |
+					  <a href="#" class="collapse_all">Collassa tutto</a>
 					</div>
 	    </div>
 
@@ -93,36 +100,58 @@
 					</div>
 
 	        <h2>
-          <a name="cheap-local-branching" href="#cheap-local-branching">Cheap Local Branching</a>
+          <a name="cheap-local-branching" href="#cheap-local-branching">Branching locale economico</a>
 	        </h2>
 					<div class="contents">
 						
 						<div class="text">
+						  Probabilmente la caratteristica pi&ugrave; stimolante di Git che lo fa risaltare
+						  rispetto a quasi ogni altro SCM esistente &egrave; il suo modello di branching.
+              &Egrave; completamente differente da tutti gli altri modelli con cui lo sto
+              confrontando qui, la maggior parte dei quali raccomandano che il branch migliore
+              sia fondamentalmente un clone del repository in una nuova directory.
+              <!--
 							Probably Git's most compelling feature that really makes it stand
 							apart from nearly every other SCM out there is its branching
 							model.  It is completely different from all of the models I'm 
 							comparing it to here, most of which recommend that the best branch
 							is basically a clone of the repository in a new directory.
+						  -->
 						</div>
 						
 						<div class="text">
+						  Git non lavora cos&igrave;. Git permette di avere branch locali multipli che possono
+						  essere completamente indipendenti l'uno dall'altro e la creazione, la fusione e la
+						  cancellazione di queste linee di sviluppo &egrave; una questione di secondi.
+						  <!--
 							Git does not work like that.  Git will allow you to have multiple
 							local branches that can be entirely independent of each other and
 							the creation, merging and deletion of those lines of development
 							take seconds.
+						  -->
 						</div>
 						
 						
 						<div class="text">
-							This means that you can do things like:
+						  Questo significa che puoi fare cose come:
+						  
+							<!-- This means that you can do things like : -->
 							<ul>
-								<li>Create a branch to try out an idea, commit
-									a few times, switch back to where you branched from, apply a patch, 
-									switch back to where you are experimenting, then merge it in.
+								<li>Creare un branch per provare un'idea, fare qualche commit, tornare indietro al punto
+								  da cui avevi iniziato il branch, applicare una patch, ritornare al punto in cui
+								  stavi sperimentando, e infine fare il merge.
+								  
+								  <!-- Create a branch to try out an idea, commit
+								                    a few times, switch back to where you branched from, apply a patch, 
+								                    switch back to where you are experimenting, then merge it in. -->
 								</li>
-								<li>Have a branch that always contains only what goes to production,
-									another that you merge work into for testing and several smaller
-									ones for day to day work
+								<li>Avere un branch che contiene sempre e solo ci&ograve; che deve andare in produzione,
+								  un altro in cui fai il merge del tuo lavoro per testarlo e diversi branch pi&ugrave;
+								  piccoli per il lavoro di tutti i giorni.
+								  
+								  <!-- Have a branch that always contains only what goes to production,
+								                    another that you merge work into for testing and several smaller
+								                    ones for day to day work -->
 								</li>
 								<li>Create new branches for each new feature you're working on, so
 									you can seamlessly switch back and forth between them, then delete
