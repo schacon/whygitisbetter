@@ -199,40 +199,57 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 	        <h2>
-          <a name="everything-is-local" href="#everything-is-local">Everything is Local</a>
+          <a name="everything-is-local" href="#everything-is-local">所有東西都在本地端</a>
 	        </h2>
 					<div class="contents">	
 
 						<div class="text">
+                            <!--
 							This is basically true of all the distributed SCMs, but in my
 							experience even more so with Git.  There is very little outside
 							of 'fetch', 'pull' and 'push' that communicates in any way with 
 							anything other than your hard disk.
+                            -->
+                            這基本上對所有分散式 SCM 來說都是一樣的，但是在我的經驗中 Git 更加的符合這個特性。
+                            除了 'fetch', 'pull' 和 'push' 這些命令外，幾乎沒有其他命令會使用到硬碟之外的連線。
 						</div>
 
 						<div class="text">
+                            <!--
 							This not only makes most operations much faster than you may
               be used to, but it also allows you to work on stuff offline.
               That may not sound like a big deal, but I'm always amazed at
               how often I actually do work offline.  Being able to branch,
               merge, commit and browse history of your project while on 
               the plane or train is very productive.
+              -->
+                            這不只讓大部分操作變得比你可能習慣的還要快得多，它還讓你可以離線工作。
+                            這聽起來也許沒有什麼，但是我總是驚訝於我有多麼常離線在工作。
+                            當你在飛機上或火車上，你還可以建立分支、合併和提交工作、瀏覽專案的歷史，這是多麼的有生產力。
 						</div>
 						
 						<div class="center"><img width="500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
+                            <!--
 							Even in Mercurial, common commands like 'incoming' and 'outgoing' hit 
 							the server, whereas with Git you can 'fetch' all the servers data
 							before going offline and do comparisons, merges and logs of data
 							that is on the server but not in your local branches yet.
+                            -->
+                            就算是用 Mercurial，一些常用的指令如 'incoming' 和 'outgoing' 也需要連線伺服器，而用
+                            Git 你可以在離線前 'fetch' 伺服器上所有的資料，然後比較、合併和查看紀錄，這些資料原本是在伺服器上還沒有在你的本分支中的。
 						</div>
 												
 						<div class="text">
+                            <!--
 							This means that it's very easy to have copies of not only your
 							branches, but also of everyone's branches that are working with
 							you in your Git repository without having to mess your own stuff
 							up.
+                            -->
+                            這表示你可以很容易擁有不只你自己的分支的副本，還有其他任何和你一起工作的人的分支都可以存在你的
+                            Git 倉儲中而不打亂你原有的東西。
 						</div>
 						
 					</div>
