@@ -540,36 +540,55 @@
 					</div>
 		
 	        <h2>
-          <a name="the-staging-area" href="#the-staging-area">The Staging Area</a>
+          <a name="the-staging-area" href="#the-staging-area">暫存區域</a>
 	        </h2>
 					<div class="contents">
 						<div class="text">
+                            <!--
 							Unlike the other systems, Git has what it calls the "staging area"
 							or "index".  This is an intermediate area that you can setup what
 							you want your commit to look like before you commit it.
+                            -->
+                            和其他系統不一樣，Git 有它稱為 "staging area" 或 "index" 的東西。
+                            這是一個中間地帶讓你可以在提交前設定你想要提交什麼。
 						</div>
 						<div class="text">
+                            <!--
 							The cool thing about the staging area, and what sets Git apart 
 							from all these other tools, is that you can easily stage some of
 							your files as you finish them and then commit them without committing
 							all the modified files in your working directory, or having to list
 							them on the command line during the commit
+                            -->
+                            Staging area 最酷的地方，讓 Git 遠遠拋開其他工具的，就是你可以輕易的
+                            在工作告一段落後 stage 一些你的檔案，然後提交上去而不需要提交所有修改過的檔案，或是必須在命令列上列出所有想要提交的檔案。
 						</div>
 						<div class="center"><img src="images/index1.png" alt="add commit workflow diagram" /></div>
 						
 						<div class="text">
+                          <!--
 						  This also allows you to stage only portions of a modified file.  Gone are
 						  the days of making two logically unrelated modifications to a file before
 						  you realized that you forgot to commit one them.  Now you can just stage
 						  the change you need for the current commit and stage the other change for
 						  the next commit.  This feature scales up to as many different changes to
 						  your file as you need.
+                          -->
+                          這還允許你只 stage 修改過的檔案的一部分。
+                          想像有一天你對一個檔案做了兩項毫不相關的修改，然後你發現忘了先提交其中一個。
+                          現在你可以只 stage 你現在要提交的部份，然後在 stage 剩下的改變給下一次提交。
+                          這個功能可擴大應用到任何你對檔案的改變。
 						</div>
 
 						<div class="text">
+                            <!--
 							Of course, Git also makes it pretty easy to ignore this feature
 							if you don't want that kind of control&mdash;just slap a '-a' to your
 							commit command in order to add all changes to all files to the staging area.
+                            -->
+                            當然了，Git 也可以很簡單的略過這些特性。
+                            如果你不想要控制這麼多 &mdash; 只要加上 '-a' 到你的 commit 命令就可以一次把所有的修改都丟到
+                            staging area 去。
 						</div>
 						
 						<div class="center"><img src="images/index2.png" alt="commit only workflow diagram" /></div>
