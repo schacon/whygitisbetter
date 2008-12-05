@@ -263,34 +263,50 @@
 					</div>
 			
 	        <h2>
-          <a name="git-is-fast" href="#git-is-fast">Git is Fast</a>
+          <a name="git-is-fast" href="#git-is-fast">Git 很快</a>
 	        </h2>
 	
 					<div class="contents">
 						<div class="text">
+                            <!--
 							Git is fast.  Everyone&mdash;even most of the hard core users of these
 							other systems&mdash;generally give Git this title.  With Git, all
 							operations are performed locally giving it a bit of a leg up on
 							SVN and Perforce, both of which require network access for certain operations.
 							However, even compared to the other DSCMs that also perform operations
 							locally, Git is pretty fast. 
+                            -->
+                            Git 很快。大家都這麼說，甚至那些其他系統的死忠支持者也都會給予 Git 這個評價。
+                            使用 Git，所有的操作都是在本地端的特性讓它比 SVN 與 Perforce 跑得快許多，它們兩個都需要網路連線才能完成大部分操作。
+                            然而，就算是與其他也是在本地端操作的 DSCM 比較，Git 還是快非常多。
 						</div>
 					
 						<div class="text">
+                            <!--
 							Part of this is likely because it was built to work on the Linux 
 							kernel, which means that it has had to deal effectively with large
 							repositories from day one.  Additionally, Git is written in C, reducing the
 							overhead of runtimes associated with higher-level languages.
 							Another reason that Git is so fast is that the primary developers
 							have made this a design goal of the application.
+                            -->
+                            一部分的原因可能是因為它是建立來用在 Linux 核心上的，這表示它從一開始就必須有效率的處理非常大的倉儲。
+                            此外，因為 Git 是用 C 寫的，減少了使用其他高階語言在執行期的開銷。
+                            另外一個 Git 這麼快地原因是因為它的主要開發者們將這個列為設計的目標。
 						</div>
 
 						<div class="text">
+                            <!--
 							The following are a number of benchmarks that I performed on three
 							copies of the Django source code repository in 3 different SCMs:
 							Git, Mercurial and Bazaar.  I also tested some of this stuff in SVN,
 							but trust me, it's slower&mdash;basically take the Bazaar numbers and
 							then add network latency...
+                            -->
+                            底下是一些我測試的數據，使用 Django 的原始碼倉儲與三種不同的 SCM：
+                            Git, Mercurial 和 Bazaar。
+                            我也用 SVN 測試了一些同樣的項目，不過相信我，它慢更多 &mdash; 基本上是
+                            Bazaar 的數字再加上網路的延遲...
 						</div>
 
             <table>  
@@ -317,10 +333,15 @@
 						</table>
 						
 						<div class="text">
+                            <!--
 							The end result was that for everything but adding new files, Git
 							was fastest. (Also really large commits, which Hg was basically the
 							same at, but the commit I tested was so large that you're unlikely
 							to ever do anything like it&mdash;normal commits are much faster in Git.)
+                            -->
+                            測試的結果是所有操作，除了加新檔案之外都是 Git 最快。
+                            (還有大量的提交操作，Hg 基本上一樣快，可是我測試的提交量是如此之大，你平常不太可能有同樣的的量
+                            &mdash; 正常的提交操作在 Git 快多了。)
 						</div>
 						
 						<table>
@@ -393,24 +414,41 @@
 						</table>
 					
 						<div class="text">
+                            <!--
 							The cold and hot branching numbers are the numbers for the first
 							and second times that I branched a repo&mdash;the second number being
 							a branch with a hot disk cache.
+                            -->
+                            Cold 和 Hot 分支數字是我第一次和第二次分支一個倉儲 &mdash; 第二次分支的數據有使用磁碟快取。
 						</div>
 
 						<div class="text">
+                            <!--
 							It should be noted that although the 'add' numbers are much slower,
               this was for a massive add operation&mdash;over 2000 files.  For the
               majority of what most people do on a daily basis, add ops in any
               of these systems will only take a fraction of a second. All of the
               other ops tested here (except for the large commit, possibly) are
               more indicative of things you might actually do day to day.
+              -->
+                            要特別注意的是雖然 'add' 操作的速度慢很多，這是個很大量的新增操作 &mdash; 超過 2000 個檔案。
+                            以大部分人每天使用的情況來看，新增操作在任何系統上都只會用到幾分之一秒而已。
+                            其他有測試過的操作 (除了大量提交...大概) 都應該比你每日會用到的還明顯。
 						</div>
 					
 					
 					<div class="text">
+                        <!--
 						These numbers are really not difficult to recreate, simply clone the Django
 						project in each of the systems and try out the same commands in each.
+						<ul>
+							<li><code>git clone git://github.com/brosner/django.git dj-git</code></li>
+							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</code></li>
+							<li><code>bzr branch lp:django dj-bzr</code></li>
+							<li><code>svn checkout http://code.djangoproject.com/svn/django/trunk dj-svn</code></li>
+						</ul>
+                        -->
+                        這些數字不會很難重現，只要用不同的系統 clone 一份 Django 計劃然後試試這些指令就可以了。
 						<ul>
 							<li><code>git clone git://github.com/brosner/django.git dj-git</code></li>
 							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</code></li>
