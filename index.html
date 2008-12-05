@@ -602,27 +602,39 @@
 					</div>
 
 	        <h2>
-          <a name="distributed" href="#distributed">Distributed</a>
+          <a name="distributed" href="#distributed">它是分散式的</a>
 	        </h2>
 
 					<div class="contents">
 
 					  <div class="text">
+              <!--
               One of the coolest features of any of the Distributed SCMs, Git included, is that it's
               distributed.  This means that instead of doing a "checkout" of the current tip of 
               the source code, you do a "clone" of the entire repository.
+              -->
+              任何分散式 SCM，當然包括 Git，最酷的功能之一就是它是分散式的。
+              這表示你不是只 "checkout" 目前最新版的原始碼，而是 "clone" 整個倉儲。
             </div>
             <div class="text">
+              <!--
               This means that even 
               if you're using a centralized workflow, every user has what is essentially a full
               backup of the main server, each of which could be pushed up to replace the main server
               in the event of a crash or corruption.  There is basically no single point of failure
               with Git unless there is only a single point.
+              -->
+              這表示甚至你是使用中央集中式的工作流程，每一位使用者都有會一份主伺服器的備份，每一份都可以在主伺服器當機或損壞時推上去取代主伺服器。
+              基本上使用 Git 不會因為遺失單一的點而造成災難，除非就只有那一個點。
             </div>
 
             <div class="text">
+              <!--
               This does not slow things down much, either.  On average, an SVN checkout is only marginally
               faster than any of the DSCMs. Of the DSCMs I tested, Git was the fastest.
+              -->
+              而且這不會使得操作變慢太多。平均來說，一次 SVN 的 checkout 只比其他 DSCM 快一點。
+              當然在我測試過的 DSCM 中，Git 是最快的。
 					  </div>
 
 						<table>
