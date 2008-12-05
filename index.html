@@ -71,16 +71,19 @@
 
 	    <div class="span-24">
 					<div class="text intro">
+                <!--
 		        This site is here because I seem to
 						be spending a lot of time lately defending Gitsters against 
 						charges of fanboyism, bandwagonism
 						and koolaid-thirst.  So, here is why people are switching to Git from
 						X, and why you should too.  Just click on a reason to view it.
+                -->
+                這個站是因為我已經花了太多時間在替 Gitsters 說話，對付那些狂熱者 (fanboyism)，從眾者 (badwagonism) 還有 koolaid-thirst。所以這裡就是為什麼大家都要從 X 換成 Git，而為什麼你也應該這樣做的原因。直接點擊一個原因來瀏覽。
 					</div>
 					
 					<div class="expand_collapse_links" style="display: none;">
-					  <a href="#" class="expand_all">Expand all</a> |
-					  <a href="#" class="collapse_all">Collapse all</a>
+					  <a href="#" class="expand_all">全部展開</a> |
+					  <a href="#" class="collapse_all">全部折疊</a>
 					</div>
 	    </div>
 
@@ -93,27 +96,36 @@
 					</div>
 
 	        <h2>
-          <a name="cheap-local-branching" href="#cheap-local-branching">Cheap Local Branching</a>
+          <a name="cheap-local-branching" href="#cheap-local-branching">便宜的本地分支</a>
 	        </h2>
 					<div class="contents">
 						
 						<div class="text">
+                            <!--
 							Probably Git's most compelling feature that really makes it stand
 							apart from nearly every other SCM out there is its branching
 							model.  It is completely different from all of the models I'm 
 							comparing it to here, most of which recommend that the best branch
 							is basically a clone of the repository in a new directory.
+                            -->
+                            也許 Git 最令人讚嘆的特色，讓它可以從幾乎所有其他 SCM 中脫穎而出的就是它的分支模型了。
+                            它和其他在這裡一起比較的模型完全不同，大部分它們建議的最佳分支方法僅僅只是複製倉儲 (repository) 到新的目錄而已。
 						</div>
 						
 						<div class="text">
+                            <!--
 							Git does not work like that.  Git will allow you to have multiple
 							local branches that can be entirely independent of each other and
 							the creation, merging and deletion of those lines of development
 							take seconds.
+                            -->
+                            Git 不像那樣工作。
+                            Git 可以讓你擁有多個本地的分支，它們可能是完全獨立的，而且創建、合併和刪除這些開發的支線只需要幾秒鐘的時間。
 						</div>
 						
 						
 						<div class="text">
+                            <!--
 							This means that you can do things like:
 							<ul>
 								<li>Create a branch to try out an idea, commit
@@ -133,23 +145,39 @@
 									ever seeing it (even if you've pushed other branches in the meantime)
 								</li>
 							</ul>
+                            -->
+                            這表示你可以這樣做：
+                            <ul>
+                                <li>建立一個分支來試試新點子，提交 (commit) 個幾次然後切回你原本的分支，加上一個 patch 然後再切回剛剛實驗用的分支，把它合併進來。</li>
+                                <li>有一個分支只用來放要釋出的版本，另一個用來合併開發中的部份供測試，其他幾個小分支用來放每天的開發工作。</li>
+                                <li>替每一個你正在實做的新功能建立新的分支，然後你就可以平順的在它們之中切換，最後刪除掉每一個新功能已經合併回主線的分支。</li>
+                                <li>建立一個新的分支做實驗，結果發現這樣方向不對就刪掉這個分支，放棄一個分支而沒有任何人知道它曾經存在 (甚至同時你還可以把其他的分支公佈出去)</li>
+                            </ul>
 						</div>
 						
 						<img src="images/branches.png" alt="branches flowchart"/>
 						
 						<div class="text">
+                            <!--
 							Importantly, when you push to a remote repository, you do <em>not</em>
 							have to push all of your branches.  You can only share one of your
 							branches and not all of them.  This tends to free people to try
 							new ideas without worrying about having to plan how and when they
 							are going to merge it in or share it with others.
+                            -->
+                            最重要的是，當你要發布到一個遠端的倉儲，你<strong>不需要</strong>把你所有的分支都推出去。
+                            你可以只分享你的分支的其中一個而不是全部。這讓大家可以嘗試新的點子而不需要擔心要計劃要如何、何時合併或與其他人分享。
 						</div>
 						
 						<div class="text">
+                            <!--
 							You <em>can</em> find ways to do some of this with other systems, but the work
 							involved is much more difficult and error-prone.  Git makes this
 							process incredibly easy and it changes the way most developers
 							work when they learn it.
+                            -->
+                            你在其他系統上<strong>可以</strong>找到方法做同樣的事，但是會比較困難且容易出錯。
+                            Git 讓這個過程變得非常簡單，而且當開發人員開始學習，它常常會改變他們工作的方法。
 						</div>
 						
 						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
