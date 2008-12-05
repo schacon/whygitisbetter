@@ -673,46 +673,60 @@
 				</div>
 		
        	<h2>
-        <a name="any-workflow" href="#any-workflow">Any Workflow</a>
+        <a name="any-workflow" href="#any-workflow">適用任何工作流程</a>
        	</h2>
 
 				<div class="contents">
 					
 					<div class="text">
+                        <!--
 						One of the amazing things about Git is that because of its distributed
 						nature and super branching system, you can easily implement pretty
 						much any workflow you can think of relatively easily.
+                        -->
+                        其中一個 Git 令人驚訝的事情就是因為它的分散式設計以及超級分支系統，你可以輕易的實做出幾乎任何你想得到的工作流程。
 					</div>
 					
-					<h3>Subversion-Style Workflow</h3>
+					<h3>Subversion 式的工作流程</h3>
 					
 
 					<div class="text">
+                        <!--
 						A very common Git workflow, especially from people transitioning
 						from a centralized system, is a centralized workflow.  Git will 
 						not allow you to push if someone has pushed since the last time
 						you fetched, so a centralized model where all developers push to
 						the same server works just fine.
+                        -->
+                        這是一種很常見的 Git 工作流程，特別是那些從集中管理式系統轉換過來的人會使用的，是一種集中管理式的工作流程。
+                        如果在你最後一次 fetch 後有人發布過改變，Git
+                        不會允許你跟著發布，所以使用這種集中式的模型，所有的開發人員都發布到同一個伺服器也可以工作的很好。
 					</div>
 					
 					<div class="center"><img src="images/workflow-a.png" alt="subversion-style workflow" /></div><br/>
 					
-					<h3>Integration Manager Workflow</h3>
+					<h3>整合管理員工作流程</h3>
 
 					<div class="text">
+                        <!--
 						Another common Git workflow is where there is an integration 
 						manager&mdash;a single person who commits to the 'blessed' repository,
 						and then a number of developers who clone from that repository, 
 						push to their own independent repositories and ask the integrator
 						to pull in their changes.  This is the type of development model 
 						you often see with open source or GitHub repositories.
+                        -->
+                        另外一種常見的 Git 工作流程就是有一個整合管理員 &mdash;
+                        一個負責提交到 'blessed' 倉儲的人，然後其他數位開發人員從這個倉儲複製，發布到他們自己的獨立倉儲去，然後要求整合者 pull 他們的修改。
+                        這是在開放原始碼界或是 GitHub 倉儲上常見的開發模型。
 					</div>
 
 					<div class="center"><img src="images/workflow-b.png" alt="integration manager workflow" /></div><br/>
 
-					<h3>Dictator and Lieutenants Workflow</h3>
+					<h3>司令官與副手的工作流程</h3>
 
 					<div class="text">
+                        <!--
 						For more massive projects, you can setup your developers similar to
 						the way the Linux kernel is run, where people are in charge of a
 						specific subsystem of the project ('lieutenants') and merge in all
@@ -720,13 +734,20 @@
 						(the 'dictator') can pull changes from only his/her lieutenants and
 						the push to the 'blessed' repository that everyone then clones from
 						again.
+                        -->
+                        對於一些更複雜的專案，你可以讓你的開發人員們使用類似於 Linux 核心的開發流程，開發人員們各自負責專案中不同的子系統
+                        (副手) 然後合併所有關於此子系統的改變。另外一位整合者
+                        (司令官) 只可以從他的副手手上 pull 改變，然後發布到 'blessed' 倉儲讓所有人都可以複製回去。
 					</div>
 
 					<div class="center"><img src="images/workflow-c.png" alt="dictator and lieutenants workflow" /></div><br/>
 					
 					<div class="text">
+                        <!--
 						Again, Git is entirely flexible about this, so you can mix and 
 						match and choose the workflow that is right for you. 
+                        -->
+                        在一次的，Git 是完全非常有彈性的，所以你可以混合和取用適合你的工作流程。
           </div>
 					
 				</div>
