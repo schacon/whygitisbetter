@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>Why Git is Better Than X</title>
+	<title>Waarom Git beter is dan X</title>
 	
 	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection" />
 	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print" />
@@ -54,7 +54,7 @@
 	    <div class="span-24 header">
 				<table width="100%">
 					<tr><td>
-        		<h1>Why Git is Better than X</h1>
+        		<h1>Waarom Git beter is dan X</h1>
 					</td><td align="right">
 						<div id="menu">
 							<span class="lang hg">hg</span>
@@ -62,23 +62,23 @@
 							<span class="lang svn">svn</span>
 							<span class="lang perforce">perforce</span>
 						</div>
-						<img style="float: right" alt="where &quot;x&quot; is one of" src="images/wherex.gif" />
+						<img style="float: right" alt="met &quot;x&quot; een van" src="images/wherex.gif" />
 					</td></tr>
 					</table>
 	    </div>
 
 	    <div class="span-24">
 					<div class="text intro">
-		        This site is here because I seem to
-						be spending a lot of time lately defending Gitsters against 
-						charges of fanboyism, bandwagonism
-						and koolaid-thirst.  So, here is why people are switching to Git from
-						X, and why you should too.  Just click on a reason to view it.
+						Deze site bestaat omdat ik de laatste tijd vaak Gitsters verdedig 
+						tegenover Fanboyisme, meeloopgedag en "koolaid-dorst".  Daarom heb 
+						ik hier een lijst samengesteld met redenen waarom mensen overstappen 
+						van X naar Git, en waarom jij dat ook zou moeten doen.  Klik op 
+						een reden om hem te bekijken.
 					</div>
 					
 					<div class="expand_collapse_links">
-					  <a href="#" class="expand_all">Expand all</a> |
-					  <a href="#" class="collapse_all">Collapse all</a>
+					  <a href="#" class="expand_all">Open alle</a> |
+					  <a href="#" class="collapse_all">Sluit alle</a>
 					</div>
 	    </div>
 
@@ -91,44 +91,46 @@
 					</div>
 
 	        <h2>
-          <a name="cheap-local-branching" href="#cheap-local-branching">Cheap Local Branching</a>
+          <a name="cheap-local-branching" href="#cheap-local-branching">Goedkope Lokale Branches</a>
 	        </h2>
 					<div class="contents">
 						
 						<div class="text">
-							Probably Git's most compelling feature that really makes it stand
-							apart from nearly every other SCM out there is its branching
-							model.  It is completely different from all of the models I'm 
-							comparing it to here, most of which recommend that the best branch
-							is basically a clone of the repository in a new directory.
+							Waarschijnlijk een van de meest onderscheidende features van
+							Git is zijn branch model.  Het is volledig anders dan alle modellen
+							die ik het hier mee vergelijk; de meesten nemen het standpunt in dat
+							de beste branch min of meer een kloon van de hele repository in een
+							nieuwe map is.
 						</div>
 						
 						<div class="text">
-							Git does not work like that.  Git will allow you to have multiple
-							local branches that can be entirely independent of each other and
-							the creation, merging and deletion of those lines of development
-							take seconds.
+							Git werkt niet op die manier.  Git laat je vele lokale branches hebben, 
+							welke compleet onafhankelijk van elkaar kunnen zijn.  Het aanmaken, 
+							mergen en verwijderen van deze takken van ontwikkeling gebeurt in slechts
+							seconden.
 						</div>
 						
 						
 						<div class="text">
-							This means that you can do things like:
+							Dit betekent dat je dingen kunt doen zoals:
 							<ul>
-								<li>Create a branch to try out an idea, commit
-									a few times, switch back to where you branched from, apply a patch, 
-									switch back to where you are experimenting, then merge it in.
+								<li>Een branch maken om een idee uit te proberen,
+									een paar keer committen, terugschakelen naar waar je vanaf branchte,
+									een patch toepassen, schakelen naar je experimentele branch, en
+									vervolgens de nieuwe wijzigingen van de originele tak terugmergen.
 								</li>
-								<li>Have a branch that always contains only what goes to production,
-									another that you merge work into for testing and several smaller
-									ones for day to day work
+								<li>Een branch bijhouden met precies datgene wat in de productieomgeving
+									draait, een tweede waaruit je testomgeving werkt, en verscheidene
+									kleienere voor dagelijks werk.
 								</li>
-								<li>Create new branches for each new feature you're working on, so
-									you can seamlessly switch back and forth between them, then delete
-									each branch when that feature gets merged into your main line.
+								<li>Branches aanmaken voor elke nieuwe feature waaraan je werkt, zodat
+									je ertussen moeiteloos heen en weer kunt schakelen. Vervolgens
+									verwijder je elke branch zodra de feature in de hoofdlijn gemerged wordt.
 								</li>
-								<li>Create a branch to experiment in, realize it's not going to
-									work and just delete it, abandoning the work&mdash;with nobody else
-									ever seeing it (even if you've pushed other branches in the meantime)
+								<li>Een branch aanmaken om in te experimenteren, en zodra je erachter komt
+									dat het nooit wat wordt, de branch gewoon verwijderen, zonder dat iemand
+									hem ooit heeft gezien. Ook als je in de tussentijd andere branches hebt
+									gepushed.
 								</li>
 							</ul>
 						</div>
@@ -136,18 +138,19 @@
 						<img src="images/branches.png" alt="branches flowchart"/>
 						
 						<div class="text">
-							Importantly, when you push to a remote repository, you do <em>not</em>
-							have to push all of your branches.  You can only share one of your
-							branches and not all of them.  This tends to free people to try
-							new ideas without worrying about having to plan how and when they
-							are going to merge it in or share it with others.
+							Belangrijk is dat wanneer je naar een remote repository pushed, je niet
+							<em>al</em> je branches hoeft te pushen.  Je kunt alleen die branches delen die
+							je wilt.  Dit laat men nieuwe idee&euml;n uitproberen zonder zich te hoeven
+							bekommeren hoe dit later terug te mergen, of te delen met anderen.
 						</div>
 						
 						<div class="text">
-							You <em>can</em> find ways to do some of this with other systems, but the work
-							involved is much more difficult and error-prone.  Git makes this
-							process incredibly easy and it changes the way most developers
-							work when they learn it.
+							Je kunt manieren vinden om (delen van) dit te bereiken met andere systemen, maar
+							het kost veel meer moeite, en is foutgevoeliger.  Git maakt het proces ongelofelijk
+							gemakkelijk, en veranderd de manier waarop veel ontwikkelaars werken wanneer ze het
+							leren.
+							<!-- TODO : This last sentence now reads a little like in the expression "when will
+								they learn". While technically a correct translation, the feeling isn't right. -->
 						</div>
 						
 						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
