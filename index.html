@@ -17,7 +17,7 @@
 		html { overflow-y: scroll; }
 		body { margin-top: 1.5em; }
 		.header h1 { font-size: 3.5em; color: #666; }
-		.expand_collapse_links { text-align: center; margin-bottom: 1.5em; }
+		.expand_collapse_links { text-align: center; margin-bottom: 1.5em; display: none; }
 		.expand_collapse_links a { color: #555; }
 		img { margin-bottom: 10px; }
 		.center { text-align: center; }
@@ -49,8 +49,6 @@
 </head>
 
 <body>
-  <!-- TODO: all images need alt tags for valid XHTML 1.0 Strict -->
-
 	<div class="container">
 
 	    <div class="span-24 header">
@@ -59,10 +57,10 @@
         		<h1>Why Git is Better than X</h1>
 					</td><td align="right">
 						<div id="menu">
-							<span class="lang hg"><a href="#hg">hg</a></span>
-							<span class="lang bzr"><a href="#bzr">bzr</a></span>
-							<span class="lang svn"><a href="#svn">svn</a></span>
-							<span class="lang perforce"><a href="#perforce">perforce</a></span>
+							<span class="lang hg">hg</span>
+							<span class="lang bzr">bzr</span>
+							<span class="lang svn">svn</span>
+							<span class="lang perforce">perforce</span>
 						</div>
 						<img style="float: right" alt="where &quot;x&quot; is one of" src="images/wherex.gif" />
 					</td></tr>
@@ -81,7 +79,7 @@
                 這個站是因為我已經花了太多時間在替 Gitsters 說話，對付那些狂熱者 (fanboyism)，從眾者 (badwagonism) 還有 koolaid-thirst。所以這裡就是為什麼大家都要從 X 換成 Git，而為什麼你也應該這樣做的原因。直接點擊一個原因來瀏覽。
 					</div>
 					
-					<div class="expand_collapse_links" style="display: none;">
+					<div class="expand_collapse_links">
 					  <a href="#" class="expand_all">全部展開</a> |
 					  <a href="#" class="collapse_all">全部折疊</a>
 					</div>
@@ -228,7 +226,7 @@
                             當你在飛機上或火車上，你還可以建立分支、合併和提交工作、瀏覽專案的歷史，這是多麼的有生產力。
 						</div>
 						
-						<div class="center"><img width="500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
+						<div class="center"><img style="width: 500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
                             <!--
@@ -326,9 +324,9 @@
 
 							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:7,26,90&amp;chds=0,90&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Log" alt="log benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Lg)" alt="large commit benchmarks" />
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit+(Lg)" alt="large commit benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Sm)" alt="small commit benchmarks" />
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit+(Sm)" alt="small commit benchmarks" />
 						</td></tr>
 						</table>
 						
@@ -958,7 +956,7 @@ show       Show various types of objects
 		-->
 
     <div class="span-24">					
-				<div class="expand_collapse_links" style="display: none;">
+				<div class="expand_collapse_links">
 				  <a href="#" class="expand_all">全部展開</a> |
 				  <a href="#" class="collapse_all">全部折疊</a>
 				</div>
@@ -999,17 +997,22 @@ show       Show various types of objects
         return hidden
       })
 
-      $('#menu span').css('cursor', 'pointer').find('a').click(function() {
-        $('.section .contents').hide();
-        $('.section .' + this.innerHTML).parents('.section').find('.contents').show();
+      $('#menu span').css('cursor', 'pointer').click(function() {
+        $('.section .contents').hide()
+        showSectionsForSCM(this.innerHTML)
+        document.location.hash = this.innerHTML
       }) 
 
       if (document.location.hash) {
-        $('.section > h2 > a[name=' + document.location.hash.substring(1) + ']').parent('h2').click();
-        $('.section .' + document.location.hash.substring(1)).parents('.section').find('.contents').show();
-      }    
-    })
+        var anchor = document.location.hash.substring(1)
+        $('.section h2 a[name=' + anchor + ']').parent('h2').click()
+        showSectionsForSCM(anchor)
+      }
 
+      function showSectionsForSCM(scm) {
+        $('.section .' + scm).parents('.section').find('.contents').show()
+      }
+    })
   </script>
 
 <script type="text/javascript">
