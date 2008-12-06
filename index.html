@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>Why Git is Better Than X</title>
+	<title>Hvorfor Git er bedre enn X</title>
 	
 	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection" />
 	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print" />
@@ -54,7 +54,7 @@
 	    <div class="span-24 header">
 				<table width="100%">
 					<tr><td>
-        		<h1>Why Git is Better than X</h1>
+        		<h1>Hvorfor Git er bedre enn X</h1>
 					</td><td align="right">
 						<div id="menu">
 							<span class="lang hg">hg</span>
@@ -69,16 +69,15 @@
 
 	    <div class="span-24">
 					<div class="text intro">
-		        This site is here because I seem to
-						be spending a lot of time lately defending Gitsters against 
-						charges of fanboyism, bandwagonism
-						and koolaid-thirst.  So, here is why people are switching to Git from
-						X, and why you should too.  Just click on a reason to view it.
+						Denne siden er her fordi jeg synes å tilbringe mye tid på å forsvare Git-brukere
+						mot anklager om å være partiske, favoriserende og at de kun velger Git fordi det
+						er et populært valg. Her er de <em>virkelige</em> grunnene til at folk bytter til
+						Git fra X, og hvorfor du burde gjøre det samme. Klikk på en grunn for å lese mer.
 					</div>
 					
 					<div class="expand_collapse_links">
-					  <a href="#" class="expand_all">Expand all</a> |
-					  <a href="#" class="collapse_all">Collapse all</a>
+					  <a href="#" class="expand_all">Utvid alle</a> |
+					  <a href="#" class="collapse_all">Skjul alle</a>
 					</div>
 	    </div>
 
@@ -91,44 +90,44 @@
 					</div>
 
 	        <h2>
-          <a name="cheap-local-branching" href="#cheap-local-branching">Cheap Local Branching</a>
+          <a name="cheap-local-branching" href="#cheap-local-branching">Rask branching</a>
 	        </h2>
 					<div class="contents">
 						
 						<div class="text">
-							Probably Git's most compelling feature that really makes it stand
-							apart from nearly every other SCM out there is its branching
-							model.  It is completely different from all of the models I'm 
-							comparing it to here, most of which recommend that the best branch
-							is basically a clone of the repository in a new directory.
+							Den kanskje mest interessante egenskapen til Git er dens branching 
+							modell, og også en av årsakene til at det virkelig skiller seg ut
+							fra nesten alle andre SCM du finner der ute. Den er totalt forskjellig
+							fra alle modellene jeg sammenlikner med her, hvor de fleste mener at
+							den beste måten å branche på er å klone hele arkivet til en ny mappe.
 						</div>
 						
 						<div class="text">
-							Git does not work like that.  Git will allow you to have multiple
-							local branches that can be entirely independent of each other and
-							the creation, merging and deletion of those lines of development
-							take seconds.
+							Git fungerer ikke slik. Git tillater deg å ha mange lokale brancher
+							som kan være helt separert fra hverandre, og opprettelse, merging og
+							sletting av disse utviklingslinjene tar kun sekunder.
 						</div>
 						
 						
 						<div class="text">
-							This means that you can do things like:
+							Dette betyr at du kan gjøre ting som å:
 							<ul>
-								<li>Create a branch to try out an idea, commit
-									a few times, switch back to where you branched from, apply a patch, 
-									switch back to where you are experimenting, then merge it in.
+								<li>Opprette en branch for å prøve ut en ny ide, gjøre noen commits,
+									bytte tilbake til hvor du branchet ut fra, legg til en patch,
+									bytt tilbake til den eksperimentelle branchen og merge den inn.
 								</li>
-								<li>Have a branch that always contains only what goes to production,
-									another that you merge work into for testing and several smaller
-									ones for day to day work
+								<li>Ha en branch som alltid inneholder kun den koden som går ut i
+									produksjon, en annen du merger arbeid inn i for testing, og mange
+									mindre brancher for dag-til-dag arbeid.
 								</li>
-								<li>Create new branches for each new feature you're working on, so
-									you can seamlessly switch back and forth between them, then delete
-									each branch when that feature gets merged into your main line.
+								<li>Opprette en ny branch for hver ny ting du arbeider på, slik at du
+									sømløst kan bytte fram og tilbake mellom dem, og slette hver av disse
+									ettersom de blir merget inn i hovedbranchen din.
 								</li>
-								<li>Create a branch to experiment in, realize it's not going to
-									work and just delete it, abandoning the work&mdash;with nobody else
-									ever seeing it (even if you've pushed other branches in the meantime)
+								<li>Opprette en ny branch å eksperimentere i, oppdage at det bare blir tull
+									og koden aldri kommer til å fungere, slette branchen og forlate arbeidet
+									&mdash;uten at noen vil få se det (selv om du har pushet til andre 
+									brancher i mellomtiden).
 								</li>
 							</ul>
 						</div>
@@ -136,18 +135,18 @@
 						<img src="images/branches.png" alt="branches flowchart"/>
 						
 						<div class="text">
-							Importantly, when you push to a remote repository, you do <em>not</em>
-							have to push all of your branches.  You can only share one of your
-							branches and not all of them.  This tends to free people to try
-							new ideas without worrying about having to plan how and when they
-							are going to merge it in or share it with others.
+							Når du pusher til et fjernarkiv behøver du <em>ikke</em> pushe alle
+							branchene dine. Du kan velge å kun dele en av branchene dine, og holde
+							resten lokalt. Dette har en tendens til å gi folk spillerom til å prøve
+							ut nye ideer uten å bekymre seg over når og hvordan de skal merge det inn
+							eller dele det med andre.
 						</div>
 						
 						<div class="text">
-							You <em>can</em> find ways to do some of this with other systems, but the work
-							involved is much more difficult and error-prone.  Git makes this
-							process incredibly easy and it changes the way most developers
-							work when they learn it.
+							Du <em>kan</em> finne måter å gjøre disse tingene med andre systemer, men
+							arbeidet som er involvert er mye vanskeligere og utsatt for feil. Git gjør
+							denne prosessen utrolig enkel, og det forandrer måten de fleste utviklere
+							jobber på etter de har lært det.
 						</div>
 						
 						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
@@ -169,40 +168,39 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 	        <h2>
-          <a name="everything-is-local" href="#everything-is-local">Everything is Local</a>
+          <a name="everything-is-local" href="#everything-is-local">Alt er lokalt</a>
 	        </h2>
 					<div class="contents">	
 
 						<div class="text">
-							This is basically true of all the distributed SCMs, but in my
-							experience even more so with Git.  There is very little outside
-							of 'fetch', 'pull' and 'push' that communicates in any way with 
-							anything other than your hard disk.
+							Dette er i hovedsak sant for alle distribuerte SCM, men i min
+							erfaring enda mer sant med Git. Det er veldig lite utover
+							'fetch', 'pull', og 'push' som kommuniserer med noe annet enn
+							harddisken din.
 						</div>
 
 						<div class="text">
-							This not only makes most operations much faster than you may
-              be used to, but it also allows you to work on stuff offline.
-              That may not sound like a big deal, but I'm always amazed at
-              how often I actually do work offline.  Being able to branch,
-              merge, commit and browse history of your project while on 
-              the plane or train is very productive.
+							Dette gjør ikke bare de fleste operasjoner mye raskere enn du kanskje
+							er vant til, men det lar deg også jobbe med ting når du er offline.
+							Det høres kanskje ikke så viktig ut, men jeg blir stadig forbløffet
+							over hvor ofte jeg faktisk jobber offline. Å ha muligheten til å branche,
+							merge, gjøre commits og bla i arkivhistorien mens man sitter på flyet
+							eller toget er veldig produktivt.
 						</div>
 						
 						<div class="center"><img style="width: 500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
-							Even in Mercurial, common commands like 'incoming' and 'outgoing' hit 
-							the server, whereas with Git you can 'fetch' all the servers data
-							before going offline and do comparisons, merges and logs of data
-							that is on the server but not in your local branches yet.
+							Til og med i Mercurial, vanlige kommandoer som 'incoming' og 'outgoing'
+							snakker med serveren, mens med Git kan du 'fetch' alle data fra servere
+							før du logger av, og deretter jobbe med data som finnes på serveren, men
+							som du ennå ikke har i dine lokale brancher.
 						</div>
 												
 						<div class="text">
-							This means that it's very easy to have copies of not only your
-							branches, but also of everyone's branches that are working with
-							you in your Git repository without having to mess your own stuff
-							up.
+							Dette betyr at det er veldig enkelt å ha kopier av ikke bare dine egne
+							brancher, men også kopier av dine Git-kollegers brancher uten å behøve
+							å rote til dine egne data.
 						</div>
 						
 					</div>
@@ -216,34 +214,31 @@
 					</div>
 			
 	        <h2>
-          <a name="git-is-fast" href="#git-is-fast">Git is Fast</a>
+          <a name="git-is-fast" href="#git-is-fast">Git er Raskt</a>
 	        </h2>
 	
 					<div class="contents">
 						<div class="text">
-							Git is fast.  Everyone&mdash;even most of the hard core users of these
-							other systems&mdash;generally give Git this title.  With Git, all
-							operations are performed locally giving it a bit of a leg up on
-							SVN and Perforce, both of which require network access for certain operations.
-							However, even compared to the other DSCMs that also perform operations
-							locally, Git is pretty fast. 
+							Git er raskt. Alle&mdash;selv de fleste av kjernebrukerne av disse andre
+							systemene&mdash;innrømmer det. Med Git er alle operasjoner utført lokalt,
+							noe som gir et forsprang til SVN og Perforce som begge behøver
+							nettverkstilgang for enkelte operasjoner. Men, selv sammenliknet med DSCM som
+							også utfører operasjoner lokalt er Git raskt.
 						</div>
 					
 						<div class="text">
-							Part of this is likely because it was built to work on the Linux 
-							kernel, which means that it has had to deal effectively with large
-							repositories from day one.  Additionally, Git is written in C, reducing the
-							overhead of runtimes associated with higher-level languages.
-							Another reason that Git is so fast is that the primary developers
-							have made this a design goal of the application.
+							Dette er delvis fordi det ble bygd for å håndtere utviklingen av Linuxkjernen,
+							hvilket betyr at det helt fra dag 1 måtte kunne jobbe effektivt med store
+							kildekodearkiv. I tillegg er Git skrevet i C, noe som reduserer kodens kjøretid
+							sammenliknet med språk på høyere nivå. En annen grunn til at Git er så raskt er
+							at hovedutviklerne gjorde det til et av målene med systemet.
 						</div>
 
 						<div class="text">
-							The following are a number of benchmarks that I performed on three
-							copies of the Django source code repository in 3 different SCMs:
-							Git, Mercurial and Bazaar.  I also tested some of this stuff in SVN,
-							but trust me, it's slower&mdash;basically take the Bazaar numbers and
-							then add network latency...
+							Følgende er kjøretidtester jeg har utført på 3 kopier av Djangos kildekodearkiv
+							med 3 forskjellige SCM: Git, Mercurial og Bazaar. Jeg testet også noe av dette
+							i SVN, men tro meg, det er tregere&mdash;ta Bazaars resultater og legg på 
+							nettverksforsinkelse...
 						</div>
 
             <table>  
@@ -270,10 +265,11 @@
 						</table>
 						
 						<div class="text">
-							The end result was that for everything but adding new files, Git
-							was fastest. (Also really large commits, which Hg was basically the
-							same at, but the commit I tested was so large that you're unlikely
-							to ever do anything like it&mdash;normal commits are much faster in Git.)
+							Sluttresultatet var at for alt bortsett fra å legge til nye filer, var
+							Git raskest. (Også veldig store commits, noe Hg stort sett var lik på,
+							men den commiten jeg testet var så stor at du sannsynligvis aldri vil
+							komme borti en slik situasjon selv&mdash;normale commits er mye raskere
+							i Git.)
 						</div>
 						
 						<table>
@@ -320,25 +316,25 @@
 								<td>9.055s</td>
 							</tr>
 							<tr>
-								<th>Commit (Large)</th>
+								<th>Commit (Stor)</th>
 								<td class="sweet">12.480s</td>
 								<td>12.500s</td>
 								<td>23.002s</td>
 							</tr>
 							<tr>
-								<th>Commit (Small)</th>
+								<th>Commit (Liten)</th>
 								<td class="sweet">0.086s</td>
 								<td>0.517s</td>
 								<td>1.139s</td>
 							</tr>
 							<tr>
-								<th>Branch (Cold)</th>
+								<th>Branch (Kald)</th>
 								<td class="sweet">1.161s</td>
 								<td>94.681s</td>
 								<td>82.249s</td>
 							</tr>
 							<tr>
-								<th>Branch (Hot)</th>
+								<th>Branch (Varm)</th>
 								<td class="sweet">0.070s</td>
 								<td>12.300s</td>
 								<td>39.411s</td>
@@ -346,24 +342,24 @@
 						</table>
 					
 						<div class="text">
-							The cold and hot branching numbers are the numbers for the first
-							and second times that I branched a repo&mdash;the second number being
-							a branch with a hot disk cache.
+							Tallene for kald og varm braching er tall for den første og andre gangen
+							jeg branchet et arkiv&mdash;det andre tallet er da branching med disk
+							cache.
 						</div>
 
 						<div class="text">
-							It should be noted that although the 'add' numbers are much slower,
-              this was for a massive add operation&mdash;over 2000 files.  For the
-              majority of what most people do on a daily basis, add ops in any
-              of these systems will only take a fraction of a second. All of the
-              other ops tested here (except for the large commit, possibly) are
-              more indicative of things you might actually do day to day.
+							Det burde noteres at selv om 'add' resultatene er mye tregere, dette
+							var for en massiv add-operasjon&mdash;over 2000 filer. For de fleste
+							oppgaver folk gjør på en daglig basis, vil add-operasjoner i alle disse
+							systemene ta mindre enn et sekund. Alle andre operasjoner testet her
+							(muligens sett bort fra den store commiten) er bedre indikatorer på
+							hva du sannsynligvis vil gjøre dag til dag.
 						</div>
 					
 					
 					<div class="text">
-						These numbers are really not difficult to recreate, simply clone the Django
-						project in each of the systems and try out the same commands in each.
+						Disse tallene er ikke vanskelig å gjenskape: klon Django-prosjektet i hvert
+						av systemene og prøv ut de samme kommandoene i hvert system.
 						<ul>
 							<li><code>git clone git://github.com/brosner/django.git dj-git</code></li>
 							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</code></li>
