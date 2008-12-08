@@ -450,17 +450,17 @@
 					</div>
 		
 	        <h2>
-          <a name="the-staging-area" href="#the-staging-area">A Área de <em>Staging</em></a>
+          <a name="the-staging-area" href="#the-staging-area">A Área Intermediária</em></a>
 	        </h2>
 					<div class="contents">
 						<div class="text">
-							Diferente de outros sistemas, Git tem o que se chama "área de <em>staging</em>" ou
-							"<em>index</em>". Essa é uma área intermediária que você pode configurar como você 
+							Diferente de outros sistemas, Git tem o que se chama "área intermediária" (também conhecida como 
+							<em>staging</em> ou <em>index</em>). Essa é uma área intermediária que você pode configurar como você 
 							quer que seu commit fique antes de fazê-lo.
 						</div>
 						<div class="text">
-							A parte legal dessa área de staging, e o que separa o Git de todas as outras
-							ferramentas, é que você pode facilmente ir colocando seus arquivos no staging
+							A parte legal dessa área intermediária, e o que separa o Git de todas as outras
+							ferramentas, é que você pode facilmente ir colocando seus arquivos nela
 							à medida que for terminando e então fazer commit deles sem fazer commit de 
 							todos os arquivos modificados em seu diretório de trabalho, ou ter que 
 							listá-los na linha de comando durante o commit.
@@ -468,14 +468,14 @@
 						<div class="center"><img src="images/index1.png" alt="add commit workflow diagram" /></div>
 						
 						<div class="text">
-							Isso também permite colocar partes de arquivos no staging que foram modificadas,
+							Isso também permite colocar partes de arquivos na área intermediária que foram modificadas,
 							por exemplo para deixar para commit as mudanças que estão no topo do arquivo
 							que está mexendo, mas não as mudanças de baixo.
 						</div>
 
 						<div class="text">
 							Claro, Git torna muito fácil ignorar essa funcionalidade se você não quiser esse
-							tipo de controle - apenas ponha um '-a' no seu comando de commit.
+							tipo de controle - apenas ponha um '-a' (<em>all</em>) no seu comando de commit.
 						</div>
 						
 						<div class="center"><img src="images/index2.png" alt="commit only workflow diagram" /></div>
