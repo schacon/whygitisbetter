@@ -80,7 +80,7 @@
 						and koolaid-thirst.  So, here is why people are switching to Git from
 						X, and why you should too.  Just click on a reason to view it.
                 -->
-                這個站是因為我已經花了太多時間在替 Gitsters 說話，對付那些狂熱者 (fanboyism)，從眾者 (badwagonism) 還有 koolaid-thirst。所以這裡就是為什麼大家都要從 X 換成 Git，而為什麼你也應該這樣做的原因。直接點擊一個原因來瀏覽。
+                我會做這個網站是因為我花了很多時間在替 Gitsters 辯護，對抗那些狂熱者 (fanboyism)，從眾者 (badwagonism) 還有 koolaid-thirst。這裡要說明的就是為什麼大家都要從 X 換成 Git，而為什麼你也應該這樣做的原因。直接點擊任何一個原因來展開查看。
 					</div>
 					
 					<div class="expand_collapse_links">
@@ -110,8 +110,8 @@
 							comparing it to here, most of which recommend that the best branch
 							is basically a clone of the repository in a new directory.
                             -->
-                            也許 Git 最令人讚嘆的特色，讓它可以從幾乎所有其他 SCM 中脫穎而出的就是它的分支模型了。
-                            它和其他在這裡一起比較的模型完全不同，大部分它們建議的最佳分支方法僅僅只是複製倉儲 (repository) 到新的目錄而已。
+                            使 Git 從幾乎所有其他 SCM 中脫穎而出，最受矚目的特色，恐怕非它的分支模型莫屬。
+                            它完全不同於我在此一起比較的其他模型，大部分它們推薦的最佳分支方法僅僅只是複製倉儲 (repository) 到新的目錄而已。
 						</div>
 						
 						<div class="text">
@@ -121,8 +121,8 @@
 							the creation, merging and deletion of those lines of development
 							take seconds.
                             -->
-                            Git 不像那樣工作。
-                            Git 可以讓你擁有多個本地的分支，它們可能是完全獨立的，而且創建、合併和刪除這些開發的支線只需要幾秒鐘的時間。
+                            Git 可不這麼做。
+                            Git 讓你可以擁有多個本地的分支，它們可能是完全獨立的，而且建立、合併和刪除這些開發的支線只需要幾秒鐘的時間。
 						</div>
 						
 						
@@ -153,7 +153,7 @@
                                 <li>建立一個分支來試試新點子，提交 (commit) 個幾次然後切回你原本的分支，加上一個 patch 然後再切回剛剛實驗用的分支，把它合併進來。</li>
                                 <li>有一個分支只用來放要釋出的版本，另一個用來合併開發中的部份供測試，其他幾個小分支用來放每天的開發工作。</li>
                                 <li>替每一個你正在實做的新功能建立新的分支，然後你就可以平順的在它們之中切換，最後刪除掉每一個新功能已經合併回主線的分支。</li>
-                                <li>建立一個新的分支做實驗，結果發現這樣方向不對就刪掉這個分支，放棄一個分支而沒有任何人知道它曾經存在 (甚至同時你還可以把其他的分支公佈出去)</li>
+                                <li>建立一個新的分支做實驗，結果發現這樣行不通就刪掉這個分支；放棄一個分支，甚至沒有任何人知道它曾經存在 (同時你還可以把其他的分支公佈出去)</li>
                             </ul>
 						</div>
 						
@@ -201,7 +201,7 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 	        <h2>
-          <a name="everything-is-local" href="#everything-is-local">所有東西都在本地端</a>
+          <a name="everything-is-local" href="#everything-is-local">所有內容都在本地端</a>
 	        </h2>
 					<div class="contents">	
 
@@ -212,8 +212,8 @@
 							of 'fetch', 'pull' and 'push' that communicates in any way with 
 							anything other than your hard disk.
                             -->
-                            這基本上對所有分散式 SCM 來說都是一樣的，但是在我的經驗中 Git 更加的符合這個特性。
-                            除了 'fetch', 'pull' 和 'push' 這些命令外，幾乎沒有其他命令會使用到硬碟之外的連線。
+                            這基本上對所有分散式 SCM 來說都是一樣的，但是在我的經驗中 Git 把這個特性發揮的更好。
+                            除了 'fetch', 'pull' 和 'push' 這些命令外，幾乎沒有其他命令會需要硬碟之外的東西。
 						</div>
 
 						<div class="text">
@@ -226,7 +226,7 @@
               the plane or train is very productive.
               -->
                             這不只讓大部分操作變得比你可能習慣的還要快得多，它還讓你可以離線工作。
-                            這聽起來也許沒有什麼，但是我總是驚訝於我有多麼常離線在工作。
+                            這聽起來也許沒有什麼，但是我總是驚訝於我有多麼常離線工作。
                             當你在飛機上或火車上，你還可以建立分支、合併和提交工作、瀏覽專案的歷史，這是多麼的有生產力。
 						</div>
 						
@@ -433,9 +433,9 @@
               other ops tested here (except for the large commit, possibly) are
               more indicative of things you might actually do day to day.
               -->
-                            要特別注意的是雖然 'add' 操作的速度慢很多，這是個很大量的新增操作 &mdash; 超過 2000 個檔案。
-                            以大部分人每天使用的情況來看，新增操作在任何系統上都只會用到幾分之一秒而已。
-                            其他有測試過的操作 (除了大量提交...大概) 都應該比你每日會用到的還明顯。
+                            要特別注意的是雖然 'add' 操作的速度慢很多，但這是在大量的檔案 &mdash; 超過 2000 個 &mdash; 上進行新增操作 。
+                            對於大部分人日常使用來說，在任何系統上新增操作都只會用到幾分之一秒而已。
+                            其他測試到的操作 (除了大量提交...大概) 應該與你日常用到的差不多。
 						</div>
 					
 					
@@ -482,7 +482,7 @@
                             -->
                             Git 真的很懂得怎麼節省磁碟空間。
                             你的 Git 目錄只會 (一般來說) 比一個 SVN checkout 大一點點 &mdash;
-                            一些情況下甚至更小 (顯然很多 .svn 裡面的東西可以不要)。
+                            一些情況下甚至更小 (顯然 .svn 目錄裡面有很多東西可以丟掉)。
 						</div>
 					
 						<div class="text">
@@ -491,7 +491,7 @@
 							in each of its semi-official Git mirrors at the same point in 
 							its history.
                             -->
-                            以下數字是使用不同系統取出 Django 計劃之後得到，使用同樣的歷史紀錄點。
+                            以下數據是用不同系統使用同樣的歷史紀錄點取出 Django 之後得到。
 						</div>
 					
 						<table>
@@ -527,7 +527,7 @@
 							would make it smaller, but ended up making it much, much larger for
 							some reason. 
                             -->
-                            * 第二個 Bzr 數字是我執行 'bzr pack' 後得到，我原本以為會讓它更小，結果反而讓它變成更大許多...。
+                            * 第二個 Bzr 數字是我執行 'bzr pack' 後得到，我原本以為會讓它更小，結果反而讓它變大許多...。
 						</small></div>
 						
 					</div>
@@ -856,7 +856,7 @@
 						learning curve of Git are pretty similar to any other SCM, and even 
 						better than some.
                         -->
-                        這本來不是這樣的 &mdash; 早期 Git 不是一個真正的 SCM，比較像是一組工具讓你可以用分散式的觀點做出有版本控制的檔案系統。
+                        這本來不是真的 &mdash; 早期 Git 不是一個真正的 SCM，比較像是一組工具讓你可以用分散式的觀點做出有版本控制的檔案系統。
                         但是現在，Git 的命令集以及學習曲線已經變得和其他 SCM 類似，甚至比一些更好。
 					</div>
 
@@ -868,8 +868,8 @@
 						identical (or nearly) between the two systems.  (In Hg, if you type 'hg help', you 
 						get a list of 40-some commands.)
                         -->
-                        因為這件事沒有認真去研究的話很難去證明，我在這僅顯示出 Mercurial 與 Git 的預設 'help' 菜單之間的差異。
-                        我把兩個系統間相同 (或是近似) 的命令做了記號。
+                        不特別去做研究的話很難證明這一點，我在這僅顯示出 Mercurial 與 Git 的預設 'help' 菜單之間的差異。
+                        我把兩個系統間相同 (或是近似) 的命令做了高亮顯示。
                         (在 Hg 中，如果你輸入 'hg help'，你會得到一個 40 多個指令的清單。)
 					</div>
 				
@@ -934,10 +934,10 @@ show       Show various types of objects
 					command set and help system&mdash;there is very little difference from 
 					a beginning UI perspective today.
                     -->
-                    在 Git 1.6 之前，所有的 Git 命令都放在執行檔路徑下，造成一些人的混淆。
-                    雖然 Git 仍然認識這些指令，在路徑下的命令只剩下 'git'。
-                    所以如果你仔細比較 Mercurial 和 Git，Git 有幾乎一樣的指令集和說明系統
-                    &mdash; 以今日 UI 設計來說兩者之間只有非常小的差異。
+                    在 Git 1.6 之前，所有的 Git 命令都放在執行檔路徑下，常使一些人的感到迷惑。
+                    現在雖然 Git 仍然認識這些指令，但在執行檔路徑下的命令只剩下 'git' 一個。
+                    如果你仔細比較 Mercurial 和 Git 會發現，Git 和 Mercurial 有幾乎一樣的指令集和說明系統
+                    &mdash; 以初學者的 UI 角度來說兩者之間幾乎沒有差別。
 				</div>
 				
 				<div class="text">										
@@ -945,7 +945,7 @@ show       Show various types of objects
 					These days it's pretty hard to argue that Mercurial or Bazaar is any
 					easier to learn than Git is.
                     -->
-                    這些日子以來，你很難說 Mercurial 或 Bzr 比 Git 容易學習。
+                    現在已經很難說 Mercurial 或 Bzr 比 Git 容易學習了。
 				</div>
 				
 				</div>
@@ -975,7 +975,6 @@ show       Show various types of objects
 
 			The source for this site is <a href="http://github.com/schacon/whygitisbetter">on GitHub</a>&mdash;feel
       free to send patches if you want to improve it. <br/>
-      <br/>中文版由 <a href="http://github.com/kanru">Kanru Chen</a> 翻譯。
     </div>
 
     <div class="span-24 footer-lang">
@@ -990,6 +989,7 @@ show       Show various types of objects
       <a href="http://sv.whygitisbetterthanx.com">Swedish</a>,
       <a href="http://zh-cn.whygitisbetterthanx.com">Simplified</a> and
       <a href="http://zh-tw.whygitisbetterthanx.com">Traditional Chinese</a>
+      <br/>繁體中文版由 <a href="http://github.com/kanru">Kanru Chen</a> 翻譯。
     </div>
 
     <div class="span-24 footer-badges">
