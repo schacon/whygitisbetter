@@ -386,20 +386,20 @@
 					</div>
 			
 	        <h2>
-          <a name="git-is-small" href="#git-is-small">Git is Small</a>
+          <a name="git-is-small" href="#git-is-small">Git is Klein</a>
 	        </h2>
 	
 					<div class="contents">
 						<div class="text">
-							Git is really good at conserving disk space.  Your Git directory will 
-							(in general) barely be larger than an SVN checkout&mdash;in some cases
-							actually smaller (apparently a lot can go in those .svn dirs).
+							Git is erg goed in het conserveren van schijfruimte. Je Git directory 
+							zal (normaal gezien) nauwelijks groter zijn dan een SVN checkout&mdash;
+							in sommige gevallen zelfs kleiner (die .svn directories kunnen blijkbaar 
+							veel bevatten).
 						</div>
 					
 						<div class="text">
-							The following numbers were taken from clones of the Django project
-							in each of its semi-official Git mirrors at the same point in 
-							its history.
+							De volgende cijfers komen van klonen van het Django project uit elke 
+							semi-officiële Git mirror op hetzelfde moment in hun geschiedenis.
 						</div>
 					
 						<table>
@@ -412,7 +412,7 @@
 								<th>SVN</th>
 							</tr>
 							<tr>
-								<td>Repo Alone</td>
+								<td>Alleen de repository</td>
 								<td class="sweet">24M</td>
 								<td>34M</td>
 								<td>45M</td>
@@ -420,7 +420,7 @@
 								<td></td>
 							</tr>
 							<tr>
-								<td>Entire Directory</td>
+								<td>Gehele directory</td>
 								<td class="compare">43M</td>
 								<td>53M</td>
 								<td>64M</td>
@@ -430,9 +430,9 @@
 						</table>
 						
 						<div class="text"><small>
-							* the second Bzr number is after I ran 'bzr pack', which I thought
-							would make it smaller, but ended up making it much, much larger for
-							some reason. 
+							* het tweede Bzr cijfer is nadat ik 'bzr pack' had uitgevoerd, waardoor ik 
+							dacht dat het kleiner zou worden maar om de een of andere reden heeft dat 
+							het veel groter gemaakt.
 						</small></div>
 						
 					</div>
@@ -490,28 +490,29 @@
 					</div>
 
 	        <h2>
-          <a name="distributed" href="#distributed">Distributed</a>
+          <a name="distributed" href="#distributed">Gedistribueerd</a>
 	        </h2>
 
 					<div class="contents">
+						<div class="text">
+							Een van de coolste features van Gedistribueerde SCM's, ook Git, is dat het
+							gedistribueerd is. Dit betekent dat dat je geen "checkout" doet van het huidige 
+							topje van de source code doet, maar een "clone" van de gehele repository.
+            			</div>
 
-					  <div class="text">
-              One of the coolest features of any of the Distributed SCMs, Git included, is that it's
-              distributed.  This means that instead of doing a "checkout" of the current tip of 
-              the source code, you do a "clone" of the entire repository.
-            </div>
-            <div class="text">
-              This means that even 
-              if you're using a centralized workflow, every user has what is essentially a full
-              backup of the main server, each of which could be pushed up to replace the main server
-              in the event of a crash or corruption.  There is basically no single point of failure
-              with Git unless there is only a single point.
-            </div>
+            			<div class="text">
+							Dit betekent dat zelfs als je gebruik maakt van een gecentraliseerde workflow, 
+							elke user eigenlijk een gehele backup heeft van de hoofd server. Elke van deze 
+							zou de plaats in kunnen nemen van de hoofd server mocht daar iets bij optreden zoals 
+							een crash of corruptie. Er is dus eigenlijk geen 'single point of failure' met Git 
+							behalve als er maar één punt is.
+            			</div>
 
-            <div class="text">
-              This does not slow things down much, either.  On average, an SVN checkout is only marginally
-              faster than any of the DSCMs. Of the DSCMs I tested, Git was the fastest.
-					  </div>
+            			<div class="text">
+							Dit vertraagd alles niet veel ook. Gemiddeld gezien is een SVN checkout maar 
+							marginaal sneller dan elk van de DSCM's. Van alle DSCM's die ik getest heb was Git 
+							het snelste.
+					  	</div>
 
 						<table>
 							<tr><td>
@@ -553,57 +554,53 @@
        	</h2>
 
 				<div class="contents">
-					
-					<div class="text">
-						One of the amazing things about Git is that because of its distributed
-						nature and super branching system, you can easily implement pretty
-						much any workflow you can think of relatively easily.
-					</div>
+						<div class="text">
+							Een van de wonderbaarlijkste dingen van Git is dat door zijn gedistribueerde 
+							instelling en geavanceerd branch systeem, je gemakkelijk elke workflow kunt 
+							implementeren die je wilt met relatief gezien weinig moeite.
+						</div>
 					
 					<h3>Subversion-Style Workflow</h3>
-					
 
-					<div class="text">
-						A very common Git workflow, especially from people transitioning
-						from a centralized system, is a centralized workflow.  Git will 
-						not allow you to push if someone has pushed since the last time
-						you fetched, so a centralized model where all developers push to
-						the same server works just fine.
-					</div>
+						<div class="text">
+							Een veel voorkomende Git workflow, vooral voor mensen die vanuit een 
+							gecentraliseerd systeem komen, is een gecentraliseerde workflow. Git 
+							laat je niet toe om te pushen als iemand anders gepushed heeft sinds je 
+							voor het laatst gefetched hebt, dus een gecentraliseerd model waarbij 
+							alle ontwikkelaars naar dezelfde server pushen werkt gewoon.
+						</div>
 					
 					<div class="center"><img src="images/workflow-a.png" alt="subversion-style workflow" /></div><br/>
 					
 					<h3>Integration Manager Workflow</h3>
 
-					<div class="text">
-						Another common Git workflow is where there is an integration 
-						manager&mdash;a single person who commits to the 'blessed' repository,
-						and then a number of developers who clone from that repository, 
-						push to their own independent repositories and ask the integrator
-						to pull in their changes.  This is the type of development model 
-						you often see with open source or GitHub repositories.
-					</div>
+						<div class="text">
+							Een andere veel voorkomende Git workflow is degene waarbij er een 
+							integratie manager is&mdash;een enkel persoon die naar de 'blessed' repository 
+							commit waarna een aantal ontwikkelaars klonen vanuit die repository, pushen 
+							naar hun eigen onafhankelijke repository en de integratie maanger vragen om 
+							hun veranderingen te pullen. Dit ontwikkel model zie je vaak in open source of 
+							GitHub repositories.
+						</div>
 
 					<div class="center"><img src="images/workflow-b.png" alt="integration manager workflow" /></div><br/>
 
 					<h3>Dictator and Lieutenants Workflow</h3>
 
-					<div class="text">
-						For more massive projects, you can setup your developers similar to
-						the way the Linux kernel is run, where people are in charge of a
-						specific subsystem of the project ('lieutenants') and merge in all
-						changes that have to do with that subsystem.  Then another integrator
-						(the 'dictator') can pull changes from only his/her lieutenants and
-						the push to the 'blessed' repository that everyone then clones from
-						again.
-					</div>
+						<div class="text">
+							Voor grotere projecten kan je je developers instellen op de manier waarop 
+							de Linux kernel opereert, waarbij mensen (luitenanten) de verantwoordelijkheid 
+							hebben over een specifiek deel van het systeem. Een andere persoon (de 'dictator') 
+							kan daarna veranderingen pullen van zijn of haar luitenanten en deze door pushen 
+							naar de 'blessed' repository waar iedereen vervolgens weer vandaan kan klonen.
+						</div>
 
 					<div class="center"><img src="images/workflow-c.png" alt="dictator and lieutenants workflow" /></div><br/>
 					
-					<div class="text">
-						Again, Git is entirely flexible about this, so you can mix and 
-						match and choose the workflow that is right for you. 
-          </div>
+						<div class="text">
+							Nogmaals, Git is heel flexibel in dit geval, dus je kan verschillende onderdelen 
+							met elkaar mengen zodat je de workflow kunt kiezen die precies goed is voor jouw. 
+          				</div>
 					
 				</div>
 	    </div>
