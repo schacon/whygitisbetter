@@ -117,11 +117,11 @@
 								<li>Een branch maken om een idee uit te proberen,
 									een paar keer committen, terugschakelen naar waar je vanaf branchte,
 									een patch toepassen, schakelen naar je experimentele branch, en
-									vervolgens de nieuwe wijzigingen van de originele tak terugmergen.
+									vervolgens de nieuwe wijzigingen van de originele tak terug mergen.
 								</li>
 								<li>Een branch bijhouden met precies datgene wat in de productieomgeving
 									draait, een tweede waaruit je testomgeving werkt, en verscheidene
-									kleienere voor dagelijks werk.
+									kleinere voor dagelijks werk.
 								</li>
 								<li>Branches aanmaken voor elke nieuwe feature waaraan je werkt, zodat
 									je ertussen moeiteloos heen en weer kunt schakelen. Vervolgens
@@ -447,36 +447,37 @@
 					</div>
 		
 	        <h2>
-          <a name="the-staging-area" href="#the-staging-area">The Staging Area</a>
+          <a name="the-staging-area" href="#the-staging-area">De Staging Omgeving</a>
 	        </h2>
 					<div class="contents">
 						<div class="text">
-							Unlike the other systems, Git has what it calls the "staging area"
-							or "index".  This is an intermediate area that you can setup what
-							you want your commit to look like before you commit it.
+							Anders dan andere systeem heeft Git iets wat het graag de "Staging omgeving" 
+							noemt, of de "index". Dit is een tussenliggend gebied waarbij je de commit 
+							kan vormgeven voordat je het commit.
 						</div>
 						<div class="text">
-							The cool thing about the staging area, and what sets Git apart 
-							from all these other tools, is that you can easily stage some of
-							your files as you finish them and then commit them without committing
-							all the modified files in your working directory, or having to list
-							them on the command line during the commit
+							Het coole hiervan is, en wat Git onderscheid zet van alle andere tools, is 
+							dat je makkelijk sommige van je bestanden kunt 'stagen' terwijl je ze afmaakt 
+							en ze dan kunt committen zonder dat je alle veranderde bestanden in je working 
+							directory hoeft te committen, of dat je ze hoeft te listen op de command line 
+							tijdens de commit.
 						</div>
 						<div class="center"><img src="images/index1.png" alt="add commit workflow diagram" /></div>
 						
 						<div class="text">
-						  This also allows you to stage only portions of a modified file.  Gone are
-						  the days of making two logically unrelated modifications to a file before
-						  you realized that you forgot to commit one them.  Now you can just stage
-						  the change you need for the current commit and stage the other change for
-						  the next commit.  This feature scales up to as many different changes to
-						  your file as you need.
+							Dit zorgt er ook voor dat je gedeeltes van een veranderd bestand kunt stagen. 
+							De dagen dat je twee logisch ongerelateerde wijzigingen uitvoerde op een 
+							bestand voordat je er achter kwam dat je vergeten was &eacute;&eacute;n er van was te committen 
+							zijn voorbij. Nu kan je gewoon de verandering die je nodig hebt voor de huidige 
+							commit stagen en stage je de andere wijziging voor de volgende commit hierna. 
+							Deze feature schaalt mee zodat je zoveel mogelijk wijzigingen aan een bestand kunt 
+							stagen als je nodig hebt.
 						</div>
 
 						<div class="text">
-							Of course, Git also makes it pretty easy to ignore this feature
-							if you don't want that kind of control&mdash;just slap a '-a' to your
-							commit command in order to add all changes to all files to the staging area.
+							Natuurlijk maakt Git het ook makkelijk om deze feature te negeren als je niet zoveel 
+							controle wilt hebben&mdash;gooi gewoon een '-a' bij je commit commando om in &eacute;&eacute;n keer 
+							alle veranderingen aan al je bestanden in de staging omgeving te zetten.
 						</div>
 						
 						<div class="center"><img src="images/index2.png" alt="commit only workflow diagram" /></div>
@@ -505,7 +506,7 @@
 							elke user eigenlijk een gehele backup heeft van de hoofd server. Elke van deze 
 							zou de plaats in kunnen nemen van de hoofd server mocht daar iets bij optreden zoals 
 							een crash of corruptie. Er is dus eigenlijk geen 'single point of failure' met Git 
-							behalve als er maar één punt is.
+							behalve als er maar &eacute;&eacute;n punt is.
             			</div>
 
             			<div class="text">
