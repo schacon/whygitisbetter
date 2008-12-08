@@ -7,22 +7,27 @@
 
 	<title>Por que Git é Melhor que X</title>
 	
-	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print">    
+	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print" />
 	<!--[if IE]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script>
 	
 	<style type="text/css">
+		html { overflow-y: scroll; }
+		body { margin-top: 1.5em; }
 		.header h1 { font-size: 3.5em; color: #666; }
+		.expand_collapse_links { text-align: center; margin-bottom: 1.5em; display: none; }
+		.expand_collapse_links a { color: #555; }
 		img { margin-bottom: 10px; }
+		.center { text-align: center; }
 		.text, p { font-size: 1.2em; margin-bottom: 10px; text-align: justify;}
 		.intro { color: #444; }
 		ul li { margin-top: 10px; }
 		.section h2 { padding-left: 5px; background-color: #eee; cursor: pointer;}
     .section h2 a { color: #333; text-decoration:none; display: block; }
-		.section { margin-bottom: 20px; }
-		.contents { padding: 0 10px; }
+		.section { padding-bottom: 2px; }
+		.contents { padding: 0 10px; width: 610px; }
 		.args { float:right; }
 		.lang { padding: 3px; font-weight: bold;}
 		.section .lang { font-size: 0.8em; padding: 2px; font-weight: normal;}
@@ -30,23 +35,26 @@
 		.perforce { color: hsl(0,57%,24%); background: hsl(0,57%,83%) }
 		.bzr { color: hsl(60,57%,24%); background: hsl(60,57%,83%) }
 		.hg { color: hsl(190,57%,24%); background: hsl(190,57%,83%) }
+		.nowrap { white-space: nowrap; }
 		.sweet { color: #363; background: #beb; }
 		.compare { color: #663; background: #eeb; }
 		.help pre { font-size: 12px; }
 		.help td { vertical-align: top; }
 		code { font-size: 90%; }
 		.footer { text-align: center; color: #663; background-color: #eea; padding: 10px;}
-		.footer a { color: #440; }
+		.footer a { color: #440; } 
+		.footer-lang { text-align: center; color: #443; background-color: #dda; padding: 5px; font-size: 90%; }
+		.footer-lang a { color: #330; } 
+    .footer-badges { text-align: center; }
+    .footer-badges a { color: #777; }
+		.lang a {color: inherit; text-decoration: none;}
 	</style>
 	
 </head>
 
 <body>
-
 	<div class="container">
 
-			<br/>
-			
 	    <div class="span-24 header">
 				<table width="100%">
 					<tr><td>
@@ -58,7 +66,7 @@
 							<span class="lang svn">svn</span>
 							<span class="lang perforce">perforce</span>
 						</div>
-						<img style="float: right" src="images/wherex.gif">
+						<img style="float: right" alt="where &quot;x&quot; is one of" src="images/wherex.gif" />
 					</td></tr>
 					</table>
 	    </div>
@@ -66,13 +74,16 @@
 	    <div class="span-24">
 					<div class="text intro">
 						Este site está aqui porque parece que estou gastando muito tempo ultimamente
-						defendendo os Gitsters contra acusações de fã-clube, maria-vai-com-as-outras.
-						Então, aqui está porque as pessoas estão mudando para Git a partir de X, e 
-						porque você deveria também. Apenas clique em uma razão para visualizá-la.
+						defendendo os <em>giteiros</em> contra acusações de fazerem parte de um mero fã-clube, de serem maria-vai-com-as-outras.
+						Então, aqui está porque as pessoas estão mudando de X para Git, e 
+						porque você deveria também. Basta clicar em uma razão para visualizá-la.
+					</div>
+					
+					<div class="expand_collapse_links">
+					  <a href="#" class="expand_all">Expand all</a> |
+					  <a href="#" class="collapse_all">Collapse all</a>
 					</div>
 	    </div>
-
-			<br/>
 
 	    <div class="span-24 section">
 					<div class="args">
@@ -83,30 +94,30 @@
 					</div>
 
 	        <h2>
-          <a name="cheap-local-branching" href="#cheap-local-branching">Branches Locais Baratos</a>
+          <a name="cheap-local-branching" href="#cheap-local-branching"><em>Branches</em> Locais Baratos</a>
 	        </h2>
 					<div class="contents">
 						
 						<div class="text">
 							Provavelmente a funcionalidade mais atrativa do Git que realmente a torna
-							diferente de praticamente todo outro SCM (Source Control Management) é seu
-							modelo de branches. É completamente diferente de todos os outros modelos que
+							diferente de praticamente todo outro SCM (<em>Source Control Management</em>, Sistemas de Gerenciamento de Fontes) é seu
+							modelo de <em>branches</em> ("bifurcações", ou "galhos"). É completamente diferente de todos os outros modelos que
 							estou comparando aqui, onde a maioria recomenda que o melhor branch é 
 							basicamente um clone do repositório em outro diretório.
 						</div>
 						
 						<div class="text">
-							Git não funciona dessa forma. Git vai permitir ter múltiplos branches locais
-							que podem ser inteiramente independentes de cada um e a criação, merges e
-							deleção dessas linhas de desenvolvimento leva segundos.
+							Git não funciona dessa forma. Git permite a existência de múltiplos branches locais
+							que podem ser inteiramente independentes de cada um e a criação, <em>merges</em> ("junções", ou "fusões") e
+							deleção dessas linhas de desenvolvimento levam segundos.
 						</div>
 						
 						
 						<div class="text">
 							Isso significa que você pode fazer coisas como:
 							<ul>
-								<li>Criar um brance para testar uma idéia, fazer commit algumas vezes,
-									voltar para a partir de onde você fez o branch, aplicar o patch,
+								<li>Criar um branch para testar uma idéia, fazer commit algumas vezes,
+									voltar para a partir de onde você fez o branch, aplicar um <em>patch</em> (conjunto de modificações),
 									voltar para onde está experimentando, então fazer merge.
 								</li>
 								<li>Ter um branch que sempre contém somente o que vai para produção,
@@ -120,24 +131,24 @@
 								</li>
 								<li>Criar um branch para experimentar, descobrir que não vai funcionar
 									e somente deletá-la, abandonando o trabalho - sem que ninguém veja
-									isso (mesmo se você tiver empurrado outras branches no meio do 
+									isso (mesmo se você tiver trabalhado outras branches no meio do 
 									caminho).
 								</li>
 							</ul>
 						</div>
 						
-						<img src="images/branches.png">
+						<img src="images/branches.png" alt="branches flowchart"/>
 						
 						<div class="text">
-							De forma importante, quando você empurra (push) para um repositório remoto,
-							você <em>não</em> precisa empurrar todos os seus branches. Você pode apenas
+							De forma importante, quando você dá <em>push</em> ("empurra") para um repositório remoto,
+							você <strong>não</strong> precisa empurrar todos os seus branches. Você pode apenas
 							compartilhar um de seus branches e não todos. Isso tende a liberar as pessoas
 							para testar novas idéias sem se preocupar sobre ter um plano de como eles vão
 							fazer merge ou compartilhar com os outros.
 						</div>
 						
 						<div class="text">
-							Você <em>pode</em> encontrar maneiras de fazer alguma coisa disso em outros
+							Você pode encontrar maneiras de fazer alguma coisa disso em outros
 							sistemas, mas o trabalho envolvido é muito mais difícil e passível de erros.
 							Git torna esse processo incrivelmente fácil e muda a maneira como a maioria
 							dos desenvolvedores trabalhando quando aprendem.
@@ -147,11 +158,11 @@
 						<!-- TODO : (show tweets somehow) -->
 
 						<div class="tweets">
-							<img alt='jamis twitter' width="300" src="http://twictur.es/i/1022811017.gif">
-							<img alt='trevorturk twitter' width="300" src="http://twictur.es/i/1022886570.gif">
-							<img alt='thillerson twitter' width="300" src="http://twictur.es/i/1022842917.gif">
-							<img alt='boblmartens twitter' width="300" src="http://twictur.es/i/1022818467.gif">
-							<img alt='mathie twitter' width="300" src="http://twictur.es/i/1022816942.gif">
+							<img alt='jamis twitter' width="300" src="http://twictur.es/i/1022811017.gif" />
+							<img alt='trevorturk twitter' width="300" src="http://twictur.es/i/1022886570.gif" />
+							<img alt='thillerson twitter' width="300" src="http://twictur.es/i/1022842917.gif" />
+							<img alt='boblmartens twitter' width="300" src="http://twictur.es/i/1022818467.gif" />
+							<img alt='mathie twitter' width="300" src="http://twictur.es/i/1022816942.gif" />
 						</div>
 					</div>
 	    </div>
@@ -168,32 +179,32 @@
 
 						<div class="text">
 							Isso é basicamente verdade de todos os SCMs distribuídos, mas em minha
-							experiência muito mais com Git. Existe muito pouco fora de 'fetch', 'pull',
-							'push' que comunica de alguma maneira com qualquer coisa além do seu disco
+							experiência muito mais com Git. Existe muito pouco fora de '<tt>fetch</tt>', '<tt>pull</tt>',
+							'<tt>push</tt>' que comunica de alguma maneira com qualquer coisa além do seu disco
 							rígido.
 						</div>
 
 						<div class="text">
-							Isso não só torna a maioria das operações muito mais rápido do que você deve
+							Isso não só faz com que a maioria das operações seja mais rápida do que você deve
 							estar acostumado, mas também lhe permite trabalhar em coisas quando está 
 							desconectado. Isso pode não soar grande coisa, mas eu sempre me surpreendo
-							da frequência com que eu de fato trabalho desconectado. Ser capaz de fazer
-							branches, merge, commit e listar o histórico do seu projeto enquanto está no
+							com a frequência com que eu de fato trabalho desconectado. Ser capaz de fazer
+							branches, merges, commits e listar o histórico do seu projeto enquanto está no
 							avião ou trem é muito produtivo.
 						</div>
 						
-						<center><img width="500px" src="images/local-remote.png"></center>
+						<div class="center"><img style="width: 500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
-							Mesmo no Mercurial, comandos comuns como 'incoming' e 'outgoing' conectam
-							no servidor, onde com Git você pode fazer 'fetch' de todos os dados dos
+							Mesmo no Mercurial, comandos comuns como '<tt>incoming</tt>' e '<tt>outgoing</tt>' conectam
+							ao servidor, enquanto com o Git você pode fazer '<tt>fetch</tt>' de todos os dados dos
 							servidores antes de se desconectar e fazer comparações, merges e logs de
 							dados que estão no servidor mas não nos seus branches locais ainda.
 						</div>
 												
 						<div class="text">
 							Isso significa que é muito fácil ter cópias não somente de seus branches, mas
-							também dos branches de todo mundo que estão trabalhando com você em seu 
+							também dos branches de todo mundo que está trabalhando com você em seu 
 							repositório Git sem ter que bagunçar suas próprias coisas.
 						</div>
 						
@@ -213,56 +224,56 @@
 	
 					<div class="contents">
 						<div class="text">
-							Git é rápido. Todo mundo, mesmo os usuários mais hardcore desses outros
-							sistemas geralmente dão esse título ao Git. Comparado com SVN e Perforce
-							é óbvio porque todas as operações são locais. Entretando, mesmo comparado
+							Git é rápido. Todo mundo, mesmo os usuários mais pesados desses outros
+							sistemas geralmente dão esse título ao Git. Comparado ao SVN e Perforce
+							isso é óbvio, já que todas as operações são locais. Entretando, mesmo comparado
 							com outros DSCMs, Git é muito rápido.
 						</div>
 					
 						<div class="text">
 							Parte disso provavelmente é porque ele foi construído para trabalhar com a
-							kernel do Linux, o que significa que ele deve ter tido que lidar efetivamente
+							<em>kernel</em> do Linux, o que significa que ele teve que lidar efetivamente
 							com repositórios enormes desde o primeiro dia.
 							
-							Outra razão é que Git é escrito em C, e ainda outra razão é que os
+							Outra razão é que o Git é escrito em C, e ainda outra razão é que os
 							desenvolvedores principais são, por minha experiência, muito muito 
 							preocupados com isso.
 						</div>
 
 						<div class="text">
-							A seguir vários benchmarks que eu rodei em 3 cópias do código fonte do
+							A seguir vários <em>benchmarks</em> que eu rodei em 3 cópias do código fonte do
 							repositório do Django em 3 diferentes SCMs: Git, Mercurial e Bazaar. Eu
 							também testei algumas dessas coisas no SVN, mas acredite, é muito lento -
-							basicamente pegue os números do Bazaar e adicione a latência da rede ...
+							basicamente pegue os números do Bazaar e adicione a latência da rede...
 						</div>
-						
-						<table>
-						<tr><td nowrap>
-							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:2,5,60&chds=0,60&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Init">
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:85,3,23&chds=0,100&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Add">
+            <table>  
+						<tr><td class="nowrap">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:2,5,60&amp;chds=0,60&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Init" alt="init benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:45,194,1474&chds=0,1474&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Status">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:85,3,23&amp;chds=0,100&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Add" alt="add benchmarks" />
+
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:45,194,1474&amp;chds=0,1474&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Status" alt="status benchmarks" />
 						
-							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:5,21,142&chds=0,142&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Diff">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,21,142&amp;chds=0,142&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Diff" alt="diff benchmarks" />
 						</td><td rowspan="2">
-							<img src="http://chart.apis.google.com/chart?cht=bvg&chs=190x275&chd=t:1,123,390|11,946,820&chds=0,1210&chxt=x&chco=4d89f9,c6d9fd&chl=git|hg|bzr&chtt=Branching">
+							<img src="http://chart.apis.google.com/chart?cht=bvg&amp;chs=190x275&amp;chd=t:1,123,390|11,946,820&amp;chds=0,1210&amp;chxt=x&amp;chco=4d89f9,c6d9fd&amp;chl=git|hg|bzr&amp;chtt=Branching" alt="branching benchmarks" />
 						</td></tr>
-						<tr><td nowrap>
-							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:5,120,189&chds=0,230&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Tag">
+            <tr><td class="nowrap">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,120,189&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Tag" alt="tag benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:7,26,90&chds=0,90&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Log">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:7,26,90&amp;chds=0,90&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Log" alt="log benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:124,125,230&chds=0,230&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Commit (Lg)">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit+(Lg)" alt="large commit benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&chs=100x125&chd=t:8,51,113&chds=0,113&chxt=x&chco=4d89f9&chl=git|hg|bzr&chtt=Commit (Sm)">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit+(Sm)" alt="small commit benchmarks" />
 						</td></tr>
 						</table>
 						
 						<div class="text">
 							O resultado final é que para qualquer coisa, menos adicionar novos arquivos,
 							Git foi o mais rápido. (Também em commits grandes, foi basicamente a mesma
-							coisa que Hg, mas o commit que eu testei foi tão grande que provavelmente
+							coisa que o Hg, mas o commit que eu testei foi tão grande que provavelmente
 							ninguém fará nada parecido - em commits normais o Git é muito mais rápido).
 						</div>
 						
@@ -342,12 +353,13 @@
 						</div>
 
 						<div class="text">
-							Deve ser notado que embora os números de 'add' sejam muito mais lentos,
-							isso foi para uma operação massiva - mais de 2000 arquivos. Para a maioria
-							das coisas que a maioria das pessoas fazem no dia a dia, operações de add
+							Deve ser notado que embora os números de '<tt>add</tt>' sejam muito mais lentos,
+							isso foi para uma operação enorme - mais de 2000 arquivos. Para a maioria
+							das coisas que a maioria das pessoas faz no dia a dia, operações de adição (<tt>add</tt>)
 							em qualquer desses sistemas vai tomar somente uma fração de segundo. Todas
 							as outras operações testadas aqui (exceto para o grande commit, possivelmente)
 							são mais indicativas das coisas que você realmente faz no dia a dia.
+
 						</div>
 					
 					
@@ -380,8 +392,8 @@
 					<div class="contents">
 						<div class="text">
 							Git é realmente bom em conservar espaço. Seu diretório Git vai (em geral)
-							ser só um pouquinho maior que um checkout de SVN - em alguns casos de fato
-							menor (aparentemente aqueles diretórios .svn podem ter muita coisa).
+							ser só um pouquinho maior que um <em>checkout</em> de SVN - em alguns casos de fato
+							menor (aparentemente aqueles diretórios <tt>.svn</tt> podem ter muita coisa).
 						</div>
 					
 						<div class="text">
@@ -417,7 +429,7 @@
 						</table>
 						
 						<div class="text"><small>
-							* o segundo número de Bzr é depois de rodar 'bzr pack', que eu imaginei que
+							* o segundo número de Bzr é depois de rodar '<tt>bzr pack</tt>', que eu imaginei que
 							fosse torná-lo menor, mas acabou tornando-o muito, muito maior por alguma
 							razão.
 						</small></div>
@@ -434,35 +446,35 @@
 					</div>
 		
 	        <h2>
-          <a name="the-staging-area" href="#the-staging-area">A Área de Staging</a>
+          <a name="the-staging-area" href="#the-staging-area">A Área Intermediária</em></a>
 	        </h2>
 					<div class="contents">
 						<div class="text">
-							Diferente de outros sistemas, Git tem o que se chama "área de staging" ou
-							"index". Essa é uma área intermediária que você pode configurar como você 
-							quer que seu commit fique antes de fazer o commit.
+							Diferente de outros sistemas, Git tem o que se chama "área intermediária" (também conhecida como 
+							<em>staging</em> ou <em>index</em>). Essa é uma área intermediária que você pode configurar como você 
+							quer que seu commit fique antes de fazê-lo.
 						</div>
 						<div class="text">
-							A parte legal essa área de staging, e o que separa Git de todas as outras
-							ferramentas, é que você pode facilmente ir colocando seus arquivos no staging
+							A parte legal dessa área intermediária, e o que separa o Git de todas as outras
+							ferramentas, é que você pode facilmente ir colocando seus arquivos nela
 							à medida que for terminando e então fazer commit deles sem fazer commit de 
 							todos os arquivos modificados em seu diretório de trabalho, ou ter que 
 							listá-los na linha de comando durante o commit.
 						</div>
-						<center><img src="images/index1.png"></center>
+						<div class="center"><img src="images/index1.png" alt="add commit workflow diagram" /></div>
 						
 						<div class="text">
-							Isso também permite colocar partes de arquivos no staging que foram modificadas,
+							Isso também permite colocar partes de arquivos na área intermediária que foram modificadas,
 							por exemplo para deixar para commit as mudanças que estão no topo do arquivo
 							que está mexendo, mas não as mudanças de baixo.
 						</div>
 
 						<div class="text">
-							Claro, Git torna muito fácil ignorar essa funcionalidade se não quiser esse
-							tipo de controle - apenas atire um '-a' no seu comando de commit.
+							Claro, Git torna muito fácil ignorar essa funcionalidade se você não quiser esse
+							tipo de controle - apenas ponha um '<tt>-a</tt>' (<em>all</em>) no seu comando de commit.
 						</div>
 						
-						<center><img src="images/index2.png"></center>
+						<div class="center"><img src="images/index2.png" alt="commit only workflow diagram" /></div>
 					</div>
 	    </div>
 
@@ -486,20 +498,20 @@
             <div class="text">
 			Isso significa que mesmo que estiver usando um fluxo de trabalho centralizado, cada usuário
 			tem o que é essencialmente um backup completo do servidor principal, e cada qual pode ser
-			empurrado para substituir o servidor principal no evento de um crash ou corrupção dos dados.
+			empurrado para substituir o servidor principal no evento de uma queda ou corrupção dos dados.
 			Basicamente não existe ponto único de falha com Git a menos que só exista um ponto.
             </div>
 
             <div class="text">
 			Isso não torna as coisas devagar também. Na média, um checkout de SVN é mais rápido do que
-			qualquer um dos DSCMs, mas não muito. Além disso, dos DSCSs, o Git foi o mais rápido nos
+			qualquer um dos DSCMs, mas não muito. Além disso, dos DSCMs, o Git foi o mais rápido nos
 			meus testes.
 					  </div>
 
 						<table>
 							<tr><td>
-								<img src="http://chart.apis.google.com/chart?cht=bvs&chs=200x150&chd=t:120,144,311,64&chds=0,320&chco=4d89f9&chl=git|hg|bzr|svn&chtt=Clone">
-							</td><td width="80%">
+								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone" alt="cloning benchmarks" />
+							</td><td style="width: 80%">
 								<table>
 									<tr>
 										<th>Git</th>
@@ -549,37 +561,37 @@
 					<div class="text">
 						Um fluxo muito comum de Git, especialmente para pessoas transitando de um sistema
 						centralizado, é um fluxo centralizado. Git não vai permitir que você de empurrar
-						(push) se alguém empurrou desde a última fez que você puxou (fetch), então um 
+						(<tt>push</tt>) se alguém empurrou desde a última fez que você puxou (<tt>fetch</tt>), então um 
 						modelo centralizado onde todos os desenvolvedores empurrar para o mesmo servidor
 						funciona perfeitamente.
 					</div>
 					
-					<center><img src="images/workflow-a.png"></center><br/>
+					<div class="center"><img src="images/workflow-a.png" alt="subversion-style workflow" /></div><br/>
 					
 					<h3>Fluxo de Gerenciamento de Integração</h3>
 
 					<div class="text">
 						Outro fluxo comum de Git é onde existe uma gestão de integração - uma única pessoa
-						que faz commit ao repositório batizado ('blessed'), e vários desenvolvedores que
+						que faz <tt>commit</tt> ao repositório abençoado ('<em>blessed</em>'), e vários desenvolvedores que
 						fazem clone desse repositório, empurram para seus repositórios independentes e
 						pedem ao integrador para puxar suas mudanças. Esse é o modelo de desenvolvimento
-						que você normalmente vê com projetos open source ou repositórios Github.
+						que você normalmente vê com projetos <em>open source</em> ou repositórios no GitHub.
 					</div>
 
-					<center><img src="images/workflow-b.png"></center><br/>
+					<div class="center"><img src="images/workflow-b.png" alt="integration manager workflow" /></div><br/>
 
-					<h3>Fluxos de Ditador e Tenentes (Lieutenants)</h3>
+					<h3>Fluxos de Ditador e Tenentes</h3>
 
 					<div class="text">
-						Para projetos mais massivos, você pode configurar seus desenvolvedores de maneira
-						similar como a kernel do Linux roda, onde algumas pessoas são responsáveis por
-						um sub-sistema específico do prjeot ('tenentes') e fazem merge de todas as mudanças
+						Para projetos maiores, você pode configurar seu desenvolvimento de maneira
+						similar como a que a <em>kernel</em> do Linux roda, onde algumas pessoas são responsáveis por
+						um sub-sistema específico do projeto (os 'tenentes') e fazem merge de todas as mudanças
 						que tem a ver com esse sub-sistema. Então outro integrador (o 'ditador') pode 
-						puxar as mudanças de seus tenentes e então empurrar para o repositório 'blessed'
-						que então todos fazem clone a partir dele novamente.
+						puxar as mudanças de seus tenentes e empurrar para o repositório 'abençoado', e
+						então todos fazem clone a partir dele novamente.
 					</div>
 
-					<center><img src="images/workflow-c.png"></center><br/>
+					<div class="center"><img src="images/workflow-c.png" alt="dictator and lieutenants workflow" /></div><br/>
 					
 					<div class="text">
 						Novamente, Git é inteiramente flexível sobre isso, então você pode misturar e
@@ -604,28 +616,28 @@
 				
 				<div class="contents">
 
-          <img style="float:right; padding:10px" src="images/octocat.png">
+          <img style="float:right; padding:10px" src="images/octocat.png" alt="octocat" />
 
 					<div class="text">
-						Eu <em>posso</em> ser suspeito aqui, já que trabalho para o 
+						Eu posso ser suspeito aqui, já que trabalho para o 
 						<a href="http://github.com">GitHub</a>, 
 						mas adicionei essa seção de qualquer forma porque muitas pessoas dizem que
-						o próprio Github foi justamente porque escolheram Git.
+						o próprio GitHub foi justamente porque escolheram Git.
 					</div>
 
 					<div class="text">		
-						Github é uma razão para usar Git para muitas pessoas porque é mais como uma
-						rede social de código do que um site de hosting. As pessoas encontram outros
+						GitHub é uma razão para usar Git para muitas pessoas porque é mais como uma
+						rede social de código do que um site de hospedagem. As pessoas encontram outros
 						desenvolvedores ou projetos similares às coisas que estão fazendo, e podem
-						facilmente fazer forks (cópias dos repos) e contribuir, criando uma comunidade
+						facilmente fazer <em>forks</em> (cópias dos repositórios) e contribuir, criando uma comunidade
 						muito vibrante em torno do Git e dos projetos que as pessoas usam.
 					</div>
 					
 					<div class="text">
 						Existem outros serviços, tanto para Git quanto outros SCMs, mas poucos são
 						orientados a usuários ou com objetivos sociais, e nenhum tem nada perto da
-						quantidade de usuários. O aspecto social do Github é matador, e isso se soma
-						à todas as funcionalidades listadas acima, tornando trabalhar com Git e Github
+						quantidade de usuários. O aspecto social do GitHub é matador, e isso se soma
+						a todas as funcionalidades listadas acima, tornando trabalhar com Git e GitHub
 						uma grande combinação para desenvolvimento rápido de projetos open source.
 					</div>
 
@@ -634,8 +646,8 @@
           </div>
 					
 					<div class="tweets">
-						<img alt='puls twitter' width="300" src="http://twictur.es/i/1022858126.gif">
-						<img alt='twitter' width="300" src="http://twictur.es/i/1022857633.gif">
+						<img alt='puls twitter' width="300" src="http://twictur.es/i/1022858126.gif" />
+						<img alt='twitter' width="300" src="http://twictur.es/i/1022857633.gif" />
 					</div>
 				</div>
 	    </div>
@@ -669,11 +681,11 @@
 						melhor que alguns.
 					</div>
 
-					<div class="text">			
+					<div class="text">
 						Já que isso é difícil de provar de maneira objetiva sem algum tipo de estudo,
-						vou somente mostrar as diferenças entre o 'help' padrão do menu de comandos para
+						vou somente mostrar as diferenças entre o '<tt>help</tt>' padrão do menu de comandos para
 						Mercurial e Git. Eu grifei os comandos que são idênticos (ou quase) entre ambos.
-						(Em Hg, se você digitar 'hg help', terá uma lista de uns 40 comandos).
+						(Em Hg, se você digitar '<tt>hg help</tt>', terá uma lista de uns 40 comandos).
 					</div>
 				
 					<table class="help">
@@ -729,9 +741,9 @@ show       Show various types of objects
 				</table>
 				
 				<div class="text">										
-					Antes do Git 1.6, todos os comandos do Git costumavam ficar no path executável,
+					Antes do Git 1.6, todos os comandos do Git costumavam ficar no mesmo caminho que todos outros executávis,
 					o que era muito confuso para as pessoas. Embora o Git ainda reconheça todos eles,
-					o único comando no path agora é 'git'. Então, se você olhar para Mercurial ou Git,
+					o único comando no <em>path</em> agora é 'git'. Então, se você olhar para Mercurial ou Git,
 					o Git tem um conjunto de comandos e sistema de ajuda praticamente igual - existe
 					muito pouca diferença do ponto de vista inicial de interface hoje.
 				</div>
@@ -752,31 +764,75 @@ show       Show various types of objects
 			* large files (svn)
 		-->
 
-		<br/>
-		
+    <div class="span-24">					
+				<div class="expand_collapse_links">
+				  <a href="#" class="expand_all">Expand all</a> |
+				  <a href="#" class="collapse_all">Collapse all</a>
+				</div>
+    </div>
+    
     <div class="span-24 footer">
 			Este site foi construído e é mantido por <a href="http://github.com/schacon">Scott Chacon</a>, um <a href="http://github.com">GitHubber</a>.<br/>
-			Traduzido para Português do Brasil por <a href="http://www.akitaonrails.com/">Fabio Akita</a>.
-			Se não concorda com alguma coisa neste site e tiver uma boa razão, por favor envie
+			Traduzido para Português do Brasil por <a href="http://www.akitaonrails.com/">Fabio Akita</a>, com algumas correções por <a href="http://lixo.org">Carlos Villela</a>
+			Se você não concorda com alguma coisa neste site e tiver uma boa razão, por favor envie
 			<a href="mailto:schacon@gmail.com">e-mail</a> para o Scott para ele consertar.<br/>
 			As fontes deste site estão no <a href="http://github.com/schacon/whygitisbetter">GitHub</a> - sinta-se livre para enviar patches se quiser ajudar a melhorar.
 		</div>
 
-	</div>
+    <div class="span-24 footer-lang">
+      Also in : 
+      <a href="http://de.whygitisbetterthanx.com">German</a>, 
+      <a href="http://es.whygitisbetterthanx.com">Spanish</a>, 
+      <a href="http://fr.whygitisbetterthanx.com">French</a>, 
+      <a href="http://it.whygitisbetterthanx.com">Italian</a>, 
+      <a href="http://nl.whygitisbetterthanx.com">Dutch</a>, 
+      <a href="http://no.whygitisbetterthanx.com">Norwegian</a>, 
+      <a href="http://pt.whygitisbetterthanx.com">Portuguese</a>, 
+      <a href="http://sv.whygitisbetterthanx.com">Swedish</a>,
+      <a href="http://zh-cn.whygitisbetterthanx.com">Simplified</a> and
+      <a href="http://zh-tw.whygitisbetterthanx.com">Traditional Chinese</a>
+    </div>
 
-<script>
-	$(function() {
-		$('.section > .contents').hide();
-		$('.contents > .tweets').hide();
-		$('.section > h2').click(function() {
-			$(this).next().slideToggle();
-		})
-		
-		if (document.location.hash) {
-		  $('.section > h2 > a[name=' + document.location.hash.substring(1) + ']').parent('h2').click()
-		}
-	})
-</script>
+    <div class="span-24 footer-badges">
+      <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a>
+    </div>
+
+  <script type="text/javascript">
+    $(function() {
+      $('.section .contents').hide()
+      $('.contents .tweets').hide()
+
+      $('.expand_collapse_links').show()
+      $('.expand_collapse_links .expand_all').click(function() {
+        $('.section .contents').show()
+      })
+      $('.expand_collapse_links .collapse_all').click(function() {
+        $('.section .contents').hide()
+      })
+
+      $('.section h2').click(function() {
+        var hidden = $(this).next().is(':hidden')
+        $(this).next().slideToggle()
+        return hidden
+      })
+
+      $('#menu span').css('cursor', 'pointer').click(function() {
+        $('.section .contents').hide()
+        showSectionsForSCM(this.innerHTML)
+        document.location.hash = this.innerHTML
+      }) 
+
+      if (document.location.hash) {
+        var anchor = document.location.hash.substring(1)
+        $('.section h2 a[name=' + anchor + ']').parent('h2').click()
+        showSectionsForSCM(anchor)
+      }
+
+      function showSectionsForSCM(scm) {
+        $('.section .' + scm).parents('.section').find('.contents').show()
+      }
+    })
+  </script>
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
