@@ -172,40 +172,38 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 	        <h2>
-          <a name="everything-is-local" href="#everything-is-local">Everything is Local</a>
+          <a name="everything-is-local" href="#everything-is-local">Alles is lokaal</a>
 	        </h2>
 					<div class="contents">	
 
 						<div class="text">
-							This is basically true of all the distributed SCMs, but in my
-							experience even more so with Git.  There is very little outside
-							of 'fetch', 'pull' and 'push' that communicates in any way with 
-							anything other than your hard disk.
+							In principe geld dit voor elk gedistribueerde SCM, maar in mijn ervaring
+							gaat Git hierin het verste. Buiten 'fetch', 'pull' en 'push' zijn er weinig
+							acties die met iets anders communiceren dan je harde schijf.
 						</div>
 
 						<div class="text">
-							This not only makes most operations much faster than you may
-              be used to, but it also allows you to work on stuff offline.
-              That may not sound like a big deal, but I'm always amazed at
-              how often I actually do work offline.  Being able to branch,
-              merge, commit and browse history of your project while on 
-              the plane or train is very productive.
+							Dit zorgt er niet alleen voor dat veel operaties veel sneller gaan dan je gewend bent,
+							maar het geeft je ook de mogelijkheid om offline verder te werken. Dit klinkt niet als
+							een big deal, maar ik sta er soms van te kijken hoe vaak ik wel niet offline werk. De 
+							mogelijkheid om te branchen, mergen, commiten en geschiedenis van je project door te kunnen
+							lezen tijdens een vliegreis of treinrit is erg productief.
 						</div>
 						
 						<div class="center"><img style="width: 500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
-							Even in Mercurial, common commands like 'incoming' and 'outgoing' hit 
-							the server, whereas with Git you can 'fetch' all the servers data
-							before going offline and do comparisons, merges and logs of data
-							that is on the server but not in your local branches yet.
+							Zelfs in Mercurial wordt er met veelgebruikte commando's als 'incoming' en 
+							'outgoing' met de server gecommuniceerd, terwijl je met Git eerst alle data
+							van de server kan 'fetchen' voordat je offline gaat. Hierna kan je vergelijken,
+							mergen en logs bekijken van data die op de server staat maar nog niet in je 
+							lokale branches te vinden is.
 						</div>
 												
 						<div class="text">
-							This means that it's very easy to have copies of not only your
-							branches, but also of everyone's branches that are working with
-							you in your Git repository without having to mess your own stuff
-							up.
+							Dit betekent dat het erg makkelijk is om kopieën te hebben van niet 
+							alleen je eigen branches, maar ook die van iedereen die met je samenwerkt 
+							in je Git repistory zonder dat je eigen bestanden hierdoor in de war komen.
 						</div>
 						
 					</div>
@@ -219,34 +217,35 @@
 					</div>
 			
 	        <h2>
-          <a name="git-is-fast" href="#git-is-fast">Git is Fast</a>
+          <a name="git-is-fast" href="#git-is-fast">Git is Snel</a>
 	        </h2>
 	
 					<div class="contents">
 						<div class="text">
-							Git is fast.  Everyone&mdash;even most of the hard core users of these
-							other systems&mdash;generally give Git this title.  With Git, all
-							operations are performed locally giving it a bit of a leg up on
-							SVN and Perforce, both of which require network access for certain operations.
-							However, even compared to the other DSCMs that also perform operations
-							locally, Git is pretty fast. 
+							Git is snel. Iedereen&mdash;zelfs het grootste gedeelte van de hard core
+							users van andere systemen&mdash;geeft Git deze titel. Met Git voer je alle
+							operaties lokaal uit, wat een voorsprong geeft in vergelijking met SVN en 
+							Perforce, die allebei netwerk toegang nodig hebben voor sommige operaties. 
+							Zelfs in vergelijking met andere DCM's die operaties ook lokaal uitvoeren is
+							Git nog steeds erg snel.
 						</div>
 					
 						<div class="text">
-							Part of this is likely because it was built to work on the Linux 
-							kernel, which means that it has had to deal effectively with large
-							repositories from day one.  Additionally, Git is written in C, reducing the
-							overhead of runtimes associated with higher-level languages.
-							Another reason that Git is so fast is that the primary developers
-							have made this a design goal of the application.
+							Een gedeelte hiervan komt waarschijnlijk omdat het is gebouwd om aan de 
+							Linux kernel te werken, wat betekent dat het vanaf dag 1 effectief om moest
+							kunnen gaan met grote repositories. Hiernaast is Git geschreven in C, wat 
+							ervoor zorgt dat het minder overhead heeft dan runtimes die gebruik maken van 
+							een higher-level taal.
+							Een andere reden dat Git zo snel is, is omdat de hoofdontwikkelaars dit	als 
+							design-doelstelling hadden voor de applicatie.
 						</div>
 
 						<div class="text">
-							The following are a number of benchmarks that I performed on three
-							copies of the Django source code repository in 3 different SCMs:
-							Git, Mercurial and Bazaar.  I also tested some of this stuff in SVN,
-							but trust me, it's slower&mdash;basically take the Bazaar numbers and
-							then add network latency...
+							Wat volgt zijn een aantal benchmarks die ik op drie kopieën van de Django 
+							source code repository heb uitgevoerd in drie verschillende SCM's: Git, 
+							Mercurial en Bazaar. Ik heb ook een gedeelte getest in SVN, maar geloof me, 
+							het is langzamer&mdash;kort gezegd, neem de Bazaar uitslag en tel hier de 
+							netwerk latency bij op...
 						</div>
 
             <table>  
@@ -273,10 +272,11 @@
 						</table>
 						
 						<div class="text">
-							The end result was that for everything but adding new files, Git
-							was fastest. (Also really large commits, which Hg was basically the
-							same at, but the commit I tested was so large that you're unlikely
-							to ever do anything like it&mdash;normal commits are much faster in Git.)
+							Het eindresultaat kwam er op neer dat behalve het toevoegen van nieuwe 
+							bestanden, Git het snelste was. (Ook hele grote commits, waar Hg ongeveer
+							hetzelfde in was, maar de commit die ik getest heb was zo groot dat je die 
+							waarschijnlijk nooit iets soortgelijks zal uitvoeren&mdash;normale commits 
+							zijn veel sneller in Git.)
 						</div>
 						
 						<table>
@@ -349,24 +349,24 @@
 						</table>
 					
 						<div class="text">
-							The cold and hot branching numbers are the numbers for the first
-							and second times that I branched a repo&mdash;the second number being
-							a branch with a hot disk cache.
+							De Cold en Hot branch cijfers zijn de eerste en tweede keer dat ik een 
+							repository gebranched had&mdash;het tweede cijfer is een branch met een 
+							hot disk cache.
 						</div>
 
 						<div class="text">
-							It should be noted that although the 'add' numbers are much slower,
-              this was for a massive add operation&mdash;over 2000 files.  For the
-              majority of what most people do on a daily basis, add ops in any
-              of these systems will only take a fraction of a second. All of the
-              other ops tested here (except for the large commit, possibly) are
-              more indicative of things you might actually do day to day.
+							Het moet gezegd worden dat desondanks de 'add' cijfers veel langzamer zijn, 
+							deze voor een ontzettend grote add operatie waren&mdash;meer dan 2000 bestanden. 
+							Normaal gezien zullen voor mensen die hun normale handelingen uitvoeren add 
+							operaties een fractie van een seconde duren. Alle andere operaties die ik hier 
+							getest heb (behalve misschien die voor de grote commit) geven een beter beeld 
+							van zaken die je daadwerkelijk wel elke dag zal uitvoeren.
 						</div>
 					
 					
 					<div class="text">
-						These numbers are really not difficult to recreate, simply clone the Django
-						project in each of the systems and try out the same commands in each.
+						Het is niet moeilijk om deze cijfers na te maken, je hoeft alleen maar het Django 
+						project in elk van deze systemen te klonen en voer hierin dezelfde commando's uit.
 						<ul>
 							<li><code>git clone git://github.com/brosner/django.git dj-git</code></li>
 							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</code></li>
