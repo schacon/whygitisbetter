@@ -115,42 +115,42 @@
 						
 						
 						<div class="text">
-							This means that you can do things like:
-							<ul>
-								<li>Create a branch to try out an idea, commit
-									a few times, switch back to where you branched from, apply a patch, 
-									switch back to where you are experimenting, then merge it in.
-								</li>
-								<li>Have a branch that always contains only what goes to production,
-									another that you merge work into for testing and several smaller
-									ones for day to day work
-								</li>
-								<li>Create new branches for each new feature you're working on, so
-									you can seamlessly switch back and forth between them, then delete
-									each branch when that feature gets merged into your main line.
-								</li>
-								<li>Create a branch to experiment in, realize it's not going to
-									work and just delete it, abandoning the work&mdash;with nobody else
-									ever seeing it (even if you've pushed other branches in the meantime)
-								</li>
-							</ul>
+ 								THIZ MEANZ THAT YU CAN DO THINGZ LIKEZ: 
+									<UL> 
+										<LI>CREATE BRANCH TO TRY OUT AN IDEA, COMMIT FEW TIMEZ, 
+											SWITCH BACK 2 WHERE YOO BRANCHED FROM, APPLY PATCH,
+											 SWITCH BACK TO WHERE YOO AR EXPERIMENTINS, THEN MERGE IT IN. 
+										</LI> 
+										<LI>HAVE BRANCH THAT ALWAYZ CONTAINZ ONLY WHUT GOEZ TO PRODUCSHUN, 
+											ANUDDR THAT U MERGE WORK INTO FOR TESTINS AND SEVERAL SMALLR ONEZ
+											 FOR DAY T DAY WORK 
+										</LI> 
+										<LI>CREATE NEW BRANCHEZ FOAR EACH NEW FEACHUR YOORE WORKINS ON, 
+											SO YU CAN SEAMLESSLY SWITCH BACK AND FORTH BETWEEN THEM, 
+											THEN DELETE EACH BRANCH WHEN THAT FEACHUR GETZ MERGED INTO YUR MAIN LINE. 
+										</LI> 
+										<LI>CREATE BRANCH T EXPERIMENT IN, REALIZE ITZ NOT GOIN TO 
+											WORK AND JUS DELETE IT, ABANDONIN TEH WORK&MDASH;WITH NOBODY 
+											ELSE EVR SEEINS IT (EVEN IF YOUZVE PUSHED UDDR BRANCHEZ IN TEH MEANTIME) 
+										</LI> 
+									</UL>
 						</div>
 						
 						<img src="images/branches.png" alt="branches flowchart"/>
 						
 						<div class="text">
-							Importantly, when you push to a remote repository, you do <em>not</em>
-							have to push all of your branches.  You can only share one of your
-							branches and not all of them.  This tends to free people to try
-							new ideas without worrying about having to plan how and when they
-							are going to merge it in or share it with others.
+							IMPORTANTLY, WHEN U PUSH 2 REMOTE REPOSITORY, U DO <EM>NOT</EM>
+							HAS 2 PUSH ALL OV UR BRANCHEZ.  U CAN ONLY SHARE WAN OV UR
+							BRANCHEZ AN NOT ALL OV THEM.  DIS TENDZ 2 FREE PEEPS 2 TRY
+							NEW IDEAS WITHOUT WORRYIN BOUT HAVIN 2 PLAN HOW AN WHEN THEY
+							R GOIN 2 MERGE IT IN OR SHARE IT WIF OTHERS.
 						</div>
 						
 						<div class="text">
-							You <em>can</em> find ways to do some of this with other systems, but the work
-							involved is much more difficult and error-prone.  Git makes this
-							process incredibly easy and it changes the way most developers
-							work when they learn it.
+							U <EM>CAN</EM> FIND WAYS 2 DO SUM OV DIS WIF OTHR SISTEMS, BUT TEH WERK
+							INVOLVD IZ MUTCH MOAR DIFFICULT AN ERROR-PRONE.  GIT MAKEZ DIS
+							PROCES INCREDIBLY EASY AN IT CHANGEZ TEH WAI MOST DEVELOPERS
+							WERK WHEN THEY LERN IT.
 						</div>
 						
 						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
@@ -184,28 +184,27 @@
 						</div>
 
 						<div class="text">
-							This not only makes most operations much faster than you may
-              be used to, but it also allows you to work on stuff offline.
-              That may not sound like a big deal, but I'm always amazed at
-              how often I actually do work offline.  Being able to branch,
-              merge, commit and browse history of your project while on 
-              the plane or train is very productive.
+							DIS NOT ONLY MAKEZ MOST OPERASHUNS MUTCH FASTR THAN U CUD
+              BE USD 2, BUT IT ALSO ALLOWS U 2 WERK ON STUFF OFFLINE.
+              DAT CUD NOT SOUND LIEK HOOJ DEAL, BUT IM ALWAYS AMAZD AT
+              HOW OFTEN I AKSHULLY DO WERK OFFLINE.  BEAN ABLE 2 BRANCH,
+              MERGE, COMMIT AN BROWSE HISTORY OV UR PROJECT WHILE ON 
+              TEH PLANE OR TRAIN IZ VRY PRODUCTIV.
 						</div>
 						
 						<div class="center"><img style="width: 500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
-							Even in Mercurial, common commands like 'incoming' and 'outgoing' hit 
-							the server, whereas with Git you can 'fetch' all the servers data
-							before going offline and do comparisons, merges and logs of data
-							that is on the server but not in your local branches yet.
+							EVEN IN MERCURIAL, COMMON COMMANDZ LIEK INCOMIN AN OUTGOIN HIT 
+							TEH SERVR, WHEREAS WIF GIT U CAN FETCH ALL TEH SERVERS DATA
+							BEFORE GOIN OFFLINE AN DO COMPARISONS, MERGEZ AN LOGS OV DATA
+							DAT IZ ON TEH SERVR BUT NOT IN UR LOCAL BRANCHEZ YET.
 						</div>
 												
 						<div class="text">
-							This means that it's very easy to have copies of not only your
-							branches, but also of everyone's branches that are working with
-							you in your Git repository without having to mess your own stuff
-							up.
+							DIS MEANZ DAT IZ VRY EASY 2 HAS COPIEZ OV NOT ONLY UR
+							BRANCHEZ, BUT ALSO OV EVRYONEZ BRANCHEZ DAT R WERKIN WIF
+							U IN UR GIT REPOSITORY WITHOUT HAVIN 2 MES UR OWN STUFF UP.
 						</div>
 						
 					</div>
@@ -224,29 +223,29 @@
 	
 					<div class="contents">
 						<div class="text">
-							Git is fast.  Everyone&mdash;even most of the hard core users of these
-							other systems&mdash;generally give Git this title.  With Git, all
-							operations are performed locally giving it a bit of a leg up on
-							SVN and Perforce, both of which require network access for certain operations.
-							However, even compared to the other DSCMs that also perform operations
-							locally, Git is pretty fast. 
+							GIT IZ FAST.  EVRYONE&MDASH;EVEN MOST OV TEH HARD CORE USERS OV THEES
+							OTHR SISTEMS&MDASH;GENERALLY GIV GIT DIS TITLE.  WIF GIT, ALL
+							OPERASHUNS R PERFORMD LOCALLY GIVIN IT BIT OV LEG UP ON
+							SVN AN PERFORCE, BOTH OV WHICH REQUIRE NETWORK ACCES 4 CERTAIN OPERASHUNS.
+							HOWEVR, EVEN COMPARD 2 TEH OTHR DSCMS DAT ALSO PERFORM OPERASHUNS
+							LOCALLY, GIT IZ PRITEE FAST.
 						</div>
 					
 						<div class="text">
-							Part of this is likely because it was built to work on the Linux 
-							kernel, which means that it has had to deal effectively with large
-							repositories from day one.  Additionally, Git is written in C, reducing the
-							overhead of runtimes associated with higher-level languages.
-							Another reason that Git is so fast is that the primary developers
-							have made this a design goal of the application.
+							PART OV DIS AR TEH LIKELY CUZ IT WUZ BUILT 2 WERK ON TEH LINUX 
+							KERNEL, WHICH MEANZ DAT IT HAS HAD 2 DEAL EFFECTIVELY WIF LARGE
+							REPOSITORIEZ FRUM DAI WAN.  ADDISHUNALLY, GIT IZ WRITTEN IN C, REDUCIN TEH
+							OVERHEAD OV RUNTIMEZ ASSOCIATD WIF HIGHR-LEVEL LANGUAGEZ.
+							ANOTHR REASON DAT GIT IZ SO FAST IZ DAT TEH PRIMARY DEVELOPERS
+							HAS MADE DIS DESIGN GOAL OV TEH APPLICASHUN.
 						</div>
 
 						<div class="text">
-							The following are a number of benchmarks that I performed on three
-							copies of the Django source code repository in 3 different SCMs:
-							Git, Mercurial and Bazaar.  I also tested some of this stuff in SVN,
-							but trust me, it's slower&mdash;basically take the Bazaar numbers and
-							then add network latency...
+							TEH FOLLOWIN R NUMBR OV BENCHMARKZ DAT I PERFORMD ON 3
+							COPIEZ OV TEH DJANGO SOURCE CODE REPOSITORY IN 3 DIFFERENT SCMS:
+							GIT, MERCURIAL AN BAZAAR.  I ALSO TESTD SUM OV DIS STUFF IN SVN,
+							BUT TRUST ME, IZ SLOWR&MDASH;BASICALLY TAEK TEH BAZAAR NUMBERS AN
+							DEN ADD NETWORK LATENCY...
 						</div>
 
             <table>  
@@ -273,10 +272,10 @@
 						</table>
 						
 						<div class="text">
-							The end result was that for everything but adding new files, Git
-							was fastest. (Also really large commits, which Hg was basically the
-							same at, but the commit I tested was so large that you're unlikely
-							to ever do anything like it&mdash;normal commits are much faster in Git.)
+							TEH END RESULT WUZ DAT 4 EVRYTHIN BUT ADDIN NEW FILEZ, GIT
+							WUZ FASTEST. (ALSO RLY LARGE COMMITS, WHICH HG WUZ BASICALLY TEH
+							SAME AT, BUT TEH COMMIT I TESTD WUZ SO LARGE DAT URE UNLIKELY
+							2 EVR DO ANYTHIN LIEK IT&MDASH;NORMAL COMMITS R MUTCH FASTR IN GIT.)
 						</div>
 						
 						<table>
@@ -349,24 +348,24 @@
 						</table>
 					
 						<div class="text">
-							The cold and hot branching numbers are the numbers for the first
-							and second times that I branched a repo&mdash;the second number being
-							a branch with a hot disk cache.
+							TEH COLD AN HAWT BRANCHIN NUMBERS R TEH NUMBERS 4 DA FURST
+							AN SECOND TIEMS DAT I BRANCHD REPO&MDASH;TEH SECOND NUMBR BEAN
+							A BRANCH WIF HAWT DISK CACHE.
 						</div>
 
 						<div class="text">
-							It should be noted that although the 'add' numbers are much slower,
-              this was for a massive add operation&mdash;over 2000 files.  For the
-              majority of what most people do on a daily basis, add ops in any
-              of these systems will only take a fraction of a second. All of the
-              other ops tested here (except for the large commit, possibly) are
-              more indicative of things you might actually do day to day.
+							IT SHUD BE NOTD DAT ALTHOUGH TEH ADD NUMBERS R MUTCH SLOWR,
+              DIS WUZ 4 MASIF ADD OPERASHUN&MDASH;OVAR 2000 FILEZ.  4 DA
+              MAJORITY OV WUT MOST PEEPS DO ON DAILY BASIS, ADD OPS IN ANY
+              OV THEES SISTEMS WILL ONLY TAEK FRACSHUN OV SECOND. ALL OV TEH
+              OTHR OPS TESTD HER (EXCEPT 4 DA LARGE COMMIT, POSIBLY) R
+              MOAR INDICATIV OV THINGS U MITE AKSHULLY DO DAI 2 DAI.
 						</div>
 					
 					
 					<div class="text">
-						These numbers are really not difficult to recreate, simply clone the Django
-						project in each of the systems and try out the same commands in each.
+						THEES NUMBERS R RLY NOT DIFFICULT 2 RECREATE, SIMPLY CLONE TEH DJANGO
+						PROJECT IN EACH OV TEH SISTEMS AN TRY OUT TEH SAME COMMANDZ IN EACH.
 						<ul>
 							<li><code>git clone git://github.com/brosner/django.git dj-git</code></li>
 							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</code></li>
@@ -391,15 +390,15 @@
 	
 					<div class="contents">
 						<div class="text">
-							Git is really good at conserving disk space.  Your Git directory will 
-							(in general) barely be larger than an SVN checkout&mdash;in some cases
-							actually smaller (apparently a lot can go in those .svn dirs).
+							GIT IZ RLY GUD AT CONSERVIN DISK SPACE.  UR GIT DIRECTORY WILL 
+							(IN GENERAL) BARELY BE LARGR THAN AN SVN CHECKOUT&MDASH;IN SUM CASEZ
+							AKSHULLY SMALLR (APPARENTLY LOT CAN GO IN DOSE .SVN DIRS).
 						</div>
 					
 						<div class="text">
-							The following numbers were taken from clones of the Django project
-							in each of its semi-official Git mirrors at the same point in 
-							its history.
+							TEH FOLLOWIN NUMBERS WUZ TAKEN FRUM CLONEZ OV TEH DJANGO PROJECT
+							IN EACH OV ITZ SEMI-OFFISHUL GIT MIRRORS AT TEH SAME POINT IN 
+							ITZ HISTORY.
 						</div>
 					
 						<table>
@@ -430,9 +429,9 @@
 						</table>
 						
 						<div class="text"><small>
-							* the second Bzr number is after I ran 'bzr pack', which I thought
-							would make it smaller, but ended up making it much, much larger for
-							some reason. 
+							* TEH SECOND BZR NUMBR IZ AFTR I RAN BZR PACK, WHICH I THOT
+							WUD MAK IT SMALLR, BUT ENDD UP MAKIN IT MUTCH, MUTCH LARGR 4
+							SUM REASON.
 						</small></div>
 						
 					</div>
@@ -451,32 +450,32 @@
 	        </h2>
 					<div class="contents">
 						<div class="text">
-							Unlike the other systems, Git has what it calls the "staging area"
-							or "index".  This is an intermediate area that you can setup what
-							you want your commit to look like before you commit it.
+							UNLIKE TEH OTHR SISTEMS, GIT HAS WUT IT CALLS TEH "STAGIN AREA"
+							OR "INDEX".  DIS AR TEH AN INTERMEDIATE AREA DAT U CAN SETUP WUT
+							U WANTS UR COMMIT 2 LOOK LIEK BEFORE U COMMIT IT.
 						</div>
 						<div class="text">
-							The cool thing about the staging area, and what sets Git apart 
-							from all these other tools, is that you can easily stage some of
-							your files as you finish them and then commit them without committing
-							all the modified files in your working directory, or having to list
-							them on the command line during the commit
+							TEH KEWL TING BOUT TEH STAGIN AREA, AN WUT SETS GIT APART 
+							FRUM ALL THEES OTHR TOOLS, IZ DAT U CAN EASILY STAGE SUM OV
+							UR FILEZ AS U FINISH THEM AN DEN COMMIT THEM WITHOUT COMMITTIN
+							ALL TEH MODIFID FILEZ IN UR WERKIN DIRECTORY, OR HAVIN 2 LIST
+							THEM ON TEH COMMAND LINE DURIN TEH COMMIT
 						</div>
 						<div class="center"><img src="images/index1.png" alt="add commit workflow diagram" /></div>
 						
 						<div class="text">
-						  This also allows you to stage only portions of a modified file.  Gone are
-						  the days of making two logically unrelated modifications to a file before
-						  you realized that you forgot to commit one them.  Now you can just stage
-						  the change you need for the current commit and stage the other change for
-						  the next commit.  This feature scales up to as many different changes to
-						  your file as you need.
+						  DIS ALSO ALLOWS U 2 STAGE ONLY PORSHUNS OV MODIFID FILE.  GONE R
+						  TEH DAIS OV MAKIN 2 LOGICALLY UNRELATD MODIFICASHUNS 2 FILE BEFORE
+						  U REALIZD DAT U FORGOT 2 COMMIT WAN THEM.  NAO U CAN JUS STAGE
+						  TEH CHANGE U NED 4 DA CURRENT COMMIT AN STAGE TEH OTHR CHANGE 4
+						  TEH NEXT COMMIT.  DIS FEACHUR SCALEZ UP 2 AS LOTZ DA DIFFERENT CHANGEZ 2
+						  UR FILE AS U NED.
 						</div>
 
 						<div class="text">
-							Of course, Git also makes it pretty easy to ignore this feature
-							if you don't want that kind of control&mdash;just slap a '-a' to your
-							commit command in order to add all changes to all files to the staging area.
+							OV COURSE, GIT ALSO MAKEZ IT PRITEE EASY 2 IGNORE DIS FEACHUR
+							IF U DOAN WANTS DAT KIND OV CONTROL&MDASH;JUS SLAP -A 2 UR
+							COMMIT COMMAND IN ORDR 2 ADD ALL CHANGEZ 2 ALL FILEZ 2 TEH STAGIN AREA.
 						</div>
 						
 						<div class="center"><img src="images/index2.png" alt="commit only workflow diagram" /></div>
@@ -496,21 +495,21 @@
 					<div class="contents">
 
 					  <div class="text">
-              One of the coolest features of any of the Distributed SCMs, Git included, is that it's
-              distributed.  This means that instead of doing a "checkout" of the current tip of 
-              the source code, you do a "clone" of the entire repository.
+              WAN OV TEH COOLEST FEATUREZ OV ANY OV TEH DISTRIBUTD SCMS, GIT INCLUDD, IZ DAT IZ
+              DISTRIBUTD.  DIS MEANZ DAT INSTEAD OV DOIN "CHECKOUT" OV TEH CURRENT TIP OV 
+              TEH SOURCE CODE, U DO "CLONE" OV TEH ENTIRE REPOSITORY.
             </div>
             <div class="text">
-              This means that even 
-              if you're using a centralized workflow, every user has what is essentially a full
-              backup of the main server, each of which could be pushed up to replace the main server
-              in the event of a crash or corruption.  There is basically no single point of failure
-              with Git unless there is only a single point.
+             DIS MEANZ DAT EVEN 
+              IF URE USIN SENTRALIZD WERKFLOW, EVRY USR HAS WUT IZ ESSENTIALLY FULL
+              BAKUP OV TEH MAIN SERVR, EACH OV WHICH CUD BE PUSHD UP 2 REPLACE TEH MAIN SERVR
+              IN DA EVENT OV CRASH OR CORRUPSHUN.  THAR IZ BASICALLY NO SINGLE POINT OV FAILURE
+              WIF GIT UNLES THAR IZ ONLY SINGLE POINT.
             </div>
 
             <div class="text">
-              This does not slow things down much, either.  On average, an SVN checkout is only marginally
-              faster than any of the DSCMs. Of the DSCMs I tested, Git was the fastest.
+              DIS DOEZ NOT SLOW THINGS DOWN MUTCH, EITHR.  ON AVERAGE, AN SVN CHECKOUT IZ ONLY MARGINALLY
+              FASTR THAN ANY OV TEH DSCMS. OV TEH DSCMS I TESTD, GIT WUZ TEH FASTEST.
 					  </div>
 
 						<table>
@@ -555,33 +554,33 @@
 				<div class="contents">
 					
 					<div class="text">
-						One of the amazing things about Git is that because of its distributed
-						nature and super branching system, you can easily implement pretty
-						much any workflow you can think of relatively easily.
+						WAN OV TEH AMAZIN THINGS BOUT GIT IZ DAT CUZ OV ITZ DISTRIBUTD
+						NACHUR AN SUPR BRANCHIN SISTEM, U CAN EASILY IMPLEMENT PRITEE
+						MUTCH ANY WERKFLOW U CAN FINKZ OV RELATIVELY EASILY.
 					</div>
 					
 					<h3>Subversion-Style Workflow</h3>
 					
 
 					<div class="text">
-						A very common Git workflow, especially from people transitioning
-						from a centralized system, is a centralized workflow.  Git will 
-						not allow you to push if someone has pushed since the last time
-						you fetched, so a centralized model where all developers push to
-						the same server works just fine.
+						A VRY COMMON GIT WERKFLOW, ESPECIALLY FRUM PEEPS TRANZISHUNIN
+						FRUM SENTRALIZD SISTEM, IZ SENTRALIZD WERKFLOW.  GIT WILL 
+						NOT ALLOW U 2 PUSH IF SOMEONE HAS PUSHD SINCE TEH LAST TIEM
+						U FETCHD, SO SENTRALIZD MODEL WER ALL DEVELOPERS PUSH 2
+						TEH SAME SERVR WERKZ JUS FINE.
 					</div>
 					
 					<div class="center"><img src="images/workflow-a.png" alt="subversion-style workflow" /></div><br/>
 					
-					<h3>Integration Manager Workflow</h3>
+					<h3>INTEGRASHUN MANAGR WERKFLOW</h3>
 
 					<div class="text">
-						Another common Git workflow is where there is an integration 
-						manager&mdash;a single person who commits to the 'blessed' repository,
-						and then a number of developers who clone from that repository, 
-						push to their own independent repositories and ask the integrator
-						to pull in their changes.  This is the type of development model 
-						you often see with open source or GitHub repositories.
+						ANOTHR COMMON GIT WERKFLOW IZ WER THAR IZ AN INTEGRASHUN 
+						MANAGR&MDASH;A SINGLE PERSON HOO COMMITS 2 TEH BLESD REPOSITORY,
+						AN DEN NUMBR OV DEVELOPERS HOO CLONE FRUM DAT REPOSITORY, 
+						PUSH 2 THEIR OWN INDEPENDENT REPOSITORIEZ AN ASK TEH INTEGRATOR
+						2 PULL IN THEIR CHANGEZ.  DIS AR TEH TEH TYPE OV DEVELOPMENT MODEL 
+						U OFTEN C WIF OPEN SOURCE OR GITHUB REPOSITORIEZ.
 					</div>
 
 					<div class="center"><img src="images/workflow-b.png" alt="integration manager workflow" /></div><br/>
@@ -589,20 +588,20 @@
 					<h3>Dictator and Lieutenants Workflow</h3>
 
 					<div class="text">
-						For more massive projects, you can setup your developers similar to
-						the way the Linux kernel is run, where people are in charge of a
-						specific subsystem of the project ('lieutenants') and merge in all
-						changes that have to do with that subsystem.  Then another integrator
-						(the 'dictator') can pull changes from only his/her lieutenants and
-						the push to the 'blessed' repository that everyone then clones from
-						again.
+						4 MOAR MASIF PROJECTS, U CAN SETUP UR DEVELOPERS SIMILAR 2
+						TEH WAI TEH LINUX KERNEL IZ RUN, WER PEEPS R IN CHARGE OV A
+						SPECIFIC SUBSYSTEM OV TEH PROJECT (LIEUTENANTS) AN MERGE IN ALL
+						CHANGEZ DAT HAS 2 DO WID DAT SUBSYSTEM.  DEN ANOTHR INTEGRATOR
+						(TEH DICTATOR) CAN PULL CHANGEZ FRUM ONLY HIS/HER LIEUTENANTS AN
+						TEH PUSH 2 TEH BLESD REPOSITORY DAT EVRYONE DEN CLONEZ FRUM
+						AGAIN.
 					</div>
 
 					<div class="center"><img src="images/workflow-c.png" alt="dictator and lieutenants workflow" /></div><br/>
 					
 					<div class="text">
-						Again, Git is entirely flexible about this, so you can mix and 
-						match and choose the workflow that is right for you. 
+						AGAIN, GIT IZ ENTIRELY FLEXIBLE BOUT DIS, SO U CAN MIX AN 
+						MATCH AN CHOOSE TEH WERKFLOW DAT IZ RITE 4 U.
           </div>
 					
 				</div>
@@ -626,32 +625,32 @@
           <img style="float:right; padding:10px" src="images/octocat.png" alt="octocat" />
 
 					<div class="text">
-						I <em>may</em> be biased here, given that I work for 
-						<a href="http://github.com">GitHub</a>, 
-						but I add this section anyway because so many people say that
-						GitHub itself was specifically why they choose Git.
+						I <EM>CUD</EM> BE BIASD HER, GIVEN DAT I WERK 4 
+						<A HREF="HTTP://GITHUB.COM">GITHUB</A>, 
+						BUT I ADD DIS SECSHUN ANYWAY CUZ SO LOTZ DA PEEPS SAY DAT
+						GITHUB ITSELF WUZ SPECIFICALLY Y THEY CHOOSE GIT.
 					</div>
 
 					<div class="text">					
-						GitHub is a reason to use Git for many people because it is more 
-						like a social network for code than a simple hosting site.  People
-						find other developers or projects that are similar to the things
-						they are doing, and can easily fork and contribute, creating a very
-						vibrant community around Git and the projects that people use it
-						for.
+						GITHUB IZ REASON 2 USE GIT 4 LOTZ DA PEEPS CUZ IT MOAR 
+						LIEK SOSHUL NETWORK 4 CODE THAN SIMPLE HOSTIN SIET.  PEEPS
+						FIND OTHR DEVELOPERS OR PROJECTS DAT R SIMILAR 2 TEH THINGS
+						THEY R DOIN, AN CAN EASILY FORK AN CONTRIBUTE, CREATIN VRY
+						VIBRANT COMMUNITY AROUND GIT AN TEH PROJECTS DAT PEEPS USE IT
+						4.
 					</div>
 					
 					<div class="text">					
-						There exist other services, both for Git and for the other SCMs,
-						but few are user-oriented or socially
-						targeted, and none have anywhere near the user-base.  
-						This social aspect of GitHub is killer, and this in combination of the above features
-						make working with Git and GitHub a great combination for rapidly 
-						developing open source projects.
+						THAR EXIST OTHR SERVICEZ, BOTH 4 GIT AN 4 DA OTHR SCMS,
+						BUT FEW R USR-ORIENTD OR SOCIALLY
+						TARGETD, AN NONE HAS ANYWHERE NEAR TEH USR-BASE.  
+						DIS SOSHUL ASPECT OV GITHUB IZ KILLR, AN DIS IN COMBINASHUN OV TEH ABOOV FEATUREZ
+						MAK WERKIN WIF GIT AN GITHUB GREAT COMBINASHUN 4 RAPIDLY 
+						DEVELOPIN OPEN SOURCE PROJECTS.
 					</div>
 
 					<div class="text">					
-            This type of community is simply not available with any of the other SCMs.
+            DIS TYPE OV COMMUNITY IZ SIMPLY NOT AVAILABLE WIF ANY OV TEH OTHR SCMS.
           </div>
 					
 					<div class="tweets">
@@ -683,19 +682,19 @@
         
 				<div class="contents">
 					<div class="text">										
-						This did not used to be true&mdash;early in Git's life, it was not really 
-						an SCM so much as a bunch of tools that let you do versioned filesystem 
-						work in a distributed manner.  However, today, the command set and 
-						learning curve of Git are pretty similar to any other SCM, and even 
-						better than some.
+						DIS DID NOT USD 2 BE TRUE&MDASH;EARLY IN GITS LIFE, IT WUZ NOT RLY 
+						AN SCM SO MUTCH AS BUNCH OV TOOLS DAT LET U DO VERSHUND FILESYSTEM 
+						WERK IN DISTRIBUTD MANNR.  HOWEVR, TODAI, TEH COMMAND SET AN 
+						LERNIN CURVE OV GIT R PRITEE SIMILAR 2 ANY OTHR SCM, AN EVEN 
+						BETTR THAN SUM.
 					</div>
 
 					<div class="text">										
-						Since this is difficult to prove objectively without some sort of 
-						study, I'll just show the difference between the default 'help' menu for the
-						Mercurial and Git commands.  I've highlighted the commands that are
-						identical (or nearly) between the two systems.  (In Hg, if you type 'hg help', you 
-						get a list of 40-some commands.)
+						SINCE DIS AR TEH DIFFICULT 2 PROOV OBJECTIVELY WITHOUT SUM SORT OV 
+						STUDY, ILL JUS SHOW TEH DIFFERENCE TWEEN TEH DEFAULT HALP MENU 4 DA
+						MERCURIAL AN GIT COMMANDZ.  I HAS HIGHLIGHTD TEH COMMANDZ DAT R
+						IDENTICAL (OR NEARLY) TWEEN TEH 2 SISTEMS.  (IN HG, IF U TYPE HG HALP, U 
+						GIT LIST OV 40-SUM COMMANDZ.)
 					</div>
 				
 					<table class="help">
@@ -751,17 +750,17 @@ show       Show various types of objects
 				</table>
 				
 				<div class="text">										
-					Prior to Git 1.6, all of the Git commands used to be in the executable
-					path, which was very confusing to people.  Although Git still recognizes
-					all of those commands, the only command in the path is now 'git'.
-					So, if you look at Mercurial and Git, Git has a nearly identical 
-					command set and help system&mdash;there is very little difference from 
-					a beginning UI perspective today.
+					PRIOR 2 GIT 1.6, ALL OV TEH GIT COMMANDZ USD 2 BE IN DA EXECUTABLE
+					PATH, WHICH WUZ VRY CONFUSIN 2 PEEPS.  ALTHOUGH GIT STILL RECOGNIZEZ
+					ALL OV DOSE COMMANDZ, TEH ONLY COMMAND IN DA PATH IZ NAO GIT.
+					SO, IF U LOOK AT MERCURIAL AN GIT, GIT HAS NEARLY IDENTICAL 
+					COMMAND SET AN HALP SISTEM&MDASH;THAR IZ VRY LIL DIFFERENCE FRUM 
+					A BEGINNIN UI PERSPECTIV TODAI.
 				</div>
 				
 				<div class="text">										
-					These days it's pretty hard to argue that Mercurial or Bazaar is any
-					easier to learn than Git is.
+					THEES DAIS IZ PRITEE HARD 2 ARGUE DAT MERCURIAL OR BAZAAR IZ ANY
+					EASIR 2 LERN THAN GIT IZ.
 				</div>
 				
 				</div>
