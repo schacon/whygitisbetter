@@ -78,8 +78,8 @@
 						защищая пользователей Git от обвинений в фанатизме, 
 						стадном мышлении или сектантстве. 
 						Итак, вот почему люди переходят на использование Git вместо 
-						X (где X — это hg, bzr, svn, perforce), и почему вы тоже должны. 
-						Просто щелкните по причине, чтобы просмотреть её.
+						X, и почему вы тоже должны. 
+						Просто кликните по причине, чтобы рассмотреть её.
 					</div>
 					
 					<div class="expand_collapse_links">
@@ -102,39 +102,39 @@
 					<div class="contents">
 						
 						<div class="text">
-							Probably Git's most compelling feature that really makes it stand
-							apart from nearly every other SCM out there is its branching
-							model.  It is completely different from all of the models I'm 
-							comparing it to here, most of which recommend that the best branch
-							is basically a clone of the repository in a new directory.
+							Наверно самая значимая возможность Git, которая ставит его в сторону 
+							по сравнению почти со всеми остальными системами управлением версиями, 
+							это модель ветвления. Она полностью отличается от всех моделей, 
+							сравниваемых здесь, большинство из которых рекомендуют, 
+							что лучшая ветка, это копия репозитория в новом каталоге.
 						</div>
 						
 						<div class="text">
-							Git does not work like that.  Git will allow you to have multiple
-							local branches that can be entirely independent of each other and
-							the creation, merging and deletion of those lines of development
-							take seconds.
+							Git работает не так.  Git позволяет вам иметь множество локальных веток 
+							которые могут быть полностью независыми друг от друга,
+							а создание, слияние и удаление этих веток разработки занимает секунды.
 						</div>
 						
 						
 						<div class="text">
-							This means that you can do things like:
+							Это означает что вы можете:
 							<ul>
-								<li>Create a branch to try out an idea, commit
-									a few times, switch back to where you branched from, apply a patch, 
-									switch back to where you are experimenting, then merge it in.
+								<li>Создать ветку чтобы опробовать идею, сделать несколько коммитов, 
+									вернуться обратно откуда вы сделали ветвь, принять изменения, 
+									снова переключиться туда где вы экспериментировали, 
+									затем выполнить слияние с основной ветвью разработки.
 								</li>
-								<li>Have a branch that always contains only what goes to production,
-									another that you merge work into for testing and several smaller
-									ones for day to day work
+								<li>Иметь ветку, которая всегда содержит только то, что идёт в релиз,
+									 другую, чтобы объединять наработки для тестирования 
+									 и несколько небольших, для ежедневной работы.
 								</li>
-								<li>Create new branches for each new feature you're working on, so
-									you can seamlessly switch back and forth between them, then delete
-									each branch when that feature gets merged into your main line.
+								<li>Создавать отдельные ветки для каждого нового функционала, над которым работаете, 
+								а также беспрепятственно переключаться между ними туда и обратно, 
+								а затем удалить каждую ветку после того, как изменения попадут в основную ветвь разработки.
 								</li>
-								<li>Create a branch to experiment in, realize it's not going to
-									work and just delete it, abandoning the work&mdash;with nobody else
-									ever seeing it (even if you've pushed other branches in the meantime)
+								<li>Создать ветку для экспериментов, понять, что это не будет работать 
+								и просто удалить ветку&mdash;и никто другой это не увидит 
+								(даже если вы в это время выложили другие ветки).
 								</li>
 							</ul>
 						</div>
@@ -142,18 +142,18 @@
 						<img src="images/branches.png" alt="branches flowchart"/>
 						
 						<div class="text">
-							Importantly, when you push to a remote repository, you do <em>not</em>
-							have to push all of your branches.  You can only share one of your
-							branches and not all of them.  This tends to free people to try
-							new ideas without worrying about having to plan how and when they
-							are going to merge it in or share it with others.
+							Важно отметить, когда вы выкладываете изменения в удаленный репозиторий, 
+							вам не обязательно выкладывать все ветки. Вы можете отправить только одну из них, 
+							а не все сразу. Это, как правило, освобождает людей, 
+							которые пробуют новые идеи, от постоянного планирования как 
+							и когда они будут выполнять слияние или делится с остальными.
 						</div>
 						
 						<div class="text">
-							You <em>can</em> find ways to do some of this with other systems, but the work
-							involved is much more difficult and error-prone.  Git makes this
-							process incredibly easy and it changes the way most developers
-							work when they learn it.
+							Вы можете найти способы, как сделать подобное в других системах, 
+							однако это намного сложнее и подвержено ошибкам. 
+							Git делает этот процесс невероятно простым и освоив его, 
+							разработчик меняет свой подход к работе.
 						</div>
 						
 						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
@@ -175,40 +175,38 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 	        <h2>
-          <a name="everything-is-local" href="#everything-is-local">Everything is Local</a>
+          <a name="everything-is-local" href="#everything-is-local">Всё локально</a>
 	        </h2>
 					<div class="contents">	
 
 						<div class="text">
-							This is basically true of all the distributed SCMs, but in my
-							experience even more so with Git.  There is very little outside
-							of 'fetch', 'pull' and 'push' that communicates in any way with 
-							anything other than your hard disk.
+							В основном это верно для всех распределённых систем управления версиями, 
+							но по моему опыту, ещё более для Git.
+							Кроме 'fetch', 'pull' и 'push', все команды работают только с жёстким диском.
 						</div>
 
 						<div class="text">
-							This not only makes most operations much faster than you may
-              be used to, but it also allows you to work on stuff offline.
-              That may not sound like a big deal, but I'm always amazed at
-              how often I actually do work offline.  Being able to branch,
-              merge, commit and browse history of your project while on 
-              the plane or train is very productive.
+							Это не только делает большинство операций намного быстрее, чем вы, наверное привыкли, 
+							но и позволяет вам работать в режиме оффлайн.
+							Это может звучать как не большой плюс, но я всегда удивляюсь 
+							как я на самом деле часто работаю без доступа к сети.
+							Возможность создавать ветки, выполнять слияние, делать коммиты, 
+							просматривать историю проекта находясь в самолёте 
+							или поезде позволяет быть очень продуктивным.
 						</div>
 						
 						<div class="center"><img style="width: 500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
-							Even in Mercurial, common commands like 'incoming' and 'outgoing' hit 
-							the server, whereas with Git you can 'fetch' all the servers data
-							before going offline and do comparisons, merges and logs of data
-							that is on the server but not in your local branches yet.
+							Даже в Mercurial, команды вроде 'incoming' и 'outgoing' взаимодействуют с сервером, 
+							в то время как с Git вы можете получить ('fetch') все данные с сервера 
+							перед тем, как перейти в оффлайн-режим, и выполнять сравнения, слияния 
+							и смотреть историю данных, которые есть на сервере, но ещё не в ваших локальных ветках.
 						</div>
 												
 						<div class="text">
-							This means that it's very easy to have copies of not only your
-							branches, but also of everyone's branches that are working with
-							you in your Git repository without having to mess your own stuff
-							up.
+							Это значит, что очень просто иметь копии не только ваших веток, 
+							но и ветки всех, кто с вами работает в одном репозитории, без беспорядка в ваших материалах.
 						</div>
 						
 					</div>
@@ -222,34 +220,29 @@
 					</div>
 			
 	        <h2>
-          <a name="git-is-fast" href="#git-is-fast">Git is Fast</a>
+          <a name="git-is-fast" href="#git-is-fast">Git быстрый</a>
 	        </h2>
 	
 					<div class="contents">
 						<div class="text">
-							Git is fast.  Everyone&mdash;even most of the hard core users of these
-							other systems&mdash;generally give Git this title.  With Git, all
-							operations are performed locally giving it a bit of a leg up on
-							SVN and Perforce, both of which require network access for certain operations.
-							However, even compared to the other DSCMs that also perform operations
-							locally, Git is pretty fast. 
+							Git быстрый. Все обычно с этим согласны, даже самые преданные пользователи других систем. 
+							В Git все операции выполняются локально, что даёт ему фору перед SVN и Perforce, 
+							обеим из которых требуется подключение к сети для определенных операций.
+							Так или иначе, даже сравнивая с распределенными СУВ, которые выполняют операции локально, Git довольно быстр. 
 						</div>
 					
 						<div class="text">
-							Part of this is likely because it was built to work on the Linux 
-							kernel, which means that it has had to deal effectively with large
-							repositories from day one.  Additionally, Git is written in C, reducing the
-							overhead of runtimes associated with higher-level languages.
-							Another reason that Git is so fast is that the primary developers
-							have made this a design goal of the application.
+							Отчасти это потому, что  Git создавался для работы над ядром Linux, 
+							а значит, что нужно было справляться с большими репозиториями с первого дня. 
+							Как дополнение, Git написан на языке C, что сокращает накладные расходы выполнения, присутствующие в высокоуровневых языках.
+							Другая причина такой быстрой скорости Git в том, что его создатели поставили такую цель при разработке.
 						</div>
 
 						<div class="text">
-							The following are a number of benchmarks that I performed on three
-							copies of the Django source code repository in 3 different SCMs:
-							Git, Mercurial and Bazaar.  I also tested some of this stuff in SVN,
-							but trust me, it's slower&mdash;basically take the Bazaar numbers and
-							then add network latency...
+							Ниже приводится ряд тестов, которые я выполнил с тремя копиями исходного кода проекта Django 
+							в трёх различных СУВ: Git, Mercurial и Bazaar. 
+							Также я протестировал кое-что из этого в SVN, но поверьте мне, она медленнее&mdash;
+							возьмите показатели Bazaar и добавьте к ним задержки сети...
 						</div>
 
             <table>  
@@ -276,10 +269,11 @@
 						</table>
 						
 						<div class="text">
-							The end result was that for everything but adding new files, Git
-							was fastest. (Also really large commits, which Hg was basically the
-							same at, but the commit I tested was so large that you're unlikely
-							to ever do anything like it&mdash;normal commits are much faster in Git.)
+							В итоге, во всём, кроме добавления новых файлов, Git был самым быстрым 
+							(и на очень больших коммитах тоже, на которых Hg показал примерно такой же результат, 
+							но коммит в тесте был такой большой, какой вам вряд ли придётся делать&mdash;
+							на нормальных коммитах Git намного быстрее).
+
 						</div>
 						
 						<table>
@@ -290,61 +284,61 @@
 								<th>Bzr</th>
 							</tr>
 							<tr>
-								<th>Init</th>
+								<th>Init (Создание репозитория) </th>
 								<td class="sweet">0.024s</td>
 								<td>0.059s</td>
 								<td>0.600s</td>
 							</tr>
 							<tr>
-								<th>Add</th>
+								<th>Add (Добавление)</th>
 								<td>8.535s</td>
 								<td class="sweet">0.368s</td>
 								<td>2.381s</td>
 							</tr>
 							<tr>
-								<th>Status</th>
+								<th>Status (Состояние)</th>
 								<td class="sweet">0.451s</td>
 								<td>1.946s</td>
 								<td>14.744s</td>
 							</tr>
 							<tr>
-								<th>Diff</th>
+								<th>Diff (Отличия)</th>
 								<td class="sweet">0.543s</td>
 								<td>2.189s</td>
 								<td>14.248s</td>
 							</tr>
 							<tr>
-								<th>Tag</th>
+								<th>Tag (Метка)</th>
 								<td class="sweet">0.056s</td>
 								<td>1.201s</td>
 								<td>1.892s</td>
 							</tr>
 							<tr>
-								<th>Log</th>
+								<th>Log (История)</th>
 								<td class="sweet">0.711s</td>
 								<td>2.650s</td>
 								<td>9.055s</td>
 							</tr>
 							<tr>
-								<th>Commit (Large)</th>
+								<th>Commit (Большой коммит)</th>
 								<td class="sweet">12.480s</td>
 								<td>12.500s</td>
 								<td>23.002s</td>
 							</tr>
 							<tr>
-								<th>Commit (Small)</th>
+								<th>Commit (Маленький коммит)</th>
 								<td class="sweet">0.086s</td>
 								<td>0.517s</td>
 								<td>1.139s</td>
 							</tr>
 							<tr>
-								<th>Branch (Cold)</th>
+								<th>Branch (Холодное)</th>
 								<td class="sweet">1.161s</td>
 								<td>94.681s</td>
 								<td>82.249s</td>
 							</tr>
 							<tr>
-								<th>Branch (Hot)</th>
+								<th>Branch (Горячее)</th>
 								<td class="sweet">0.070s</td>
 								<td>12.300s</td>
 								<td>39.411s</td>
@@ -352,24 +346,21 @@
 						</table>
 					
 						<div class="text">
-							The cold and hot branching numbers are the numbers for the first
-							and second times that I branched a repo&mdash;the second number being
-							a branch with a hot disk cache.
+							Холодное и горячее ветвление&mdash;это первое и второе создание ветки в репозитории, 
+							второе создание работает с дисковых кэшем.
 						</div>
 
 						<div class="text">
-							It should be noted that although the 'add' numbers are much slower,
-              this was for a massive add operation&mdash;over 2000 files.  For the
-              majority of what most people do on a daily basis, add ops in any
-              of these systems will only take a fraction of a second. All of the
-              other ops tested here (except for the large commit, possibly) are
-              more indicative of things you might actually do day to day.
+							Следует отметить, что хотя команда 'add' выполнялась намного медленнее, она была очень массовой&mdash;
+							более 2000 файлов. Для большинства повседневных задач, операции добавления 
+							во всех этих системах займут доли секунды. Все другие операции из теста 
+							(возможно кроме большого коммита) лучше отражают то, что вы будете делать день ото дня.
 						</div>
 					
 					
 					<div class="text">
-						These numbers are really not difficult to recreate, simply clone the Django
-						project in each of the systems and try out the same commands in each.
+						Эти числа действительно не трудно воспроизвести, 
+						просто клонируйте проект Django в каждой системе и попробуйте некоторые команды в каждой.
 						<ul>
 							<li><code>git clone git://github.com/brosner/django.git dj-git</code></li>
 							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</code></li>
@@ -389,20 +380,19 @@
 					</div>
 			
 	        <h2>
-          <a name="git-is-small" href="#git-is-small">Git is Small</a>
+          <a name="git-is-small" href="#git-is-small">Git маленький</a>
 	        </h2>
 	
 					<div class="contents">
 						<div class="text">
-							Git is really good at conserving disk space.  Your Git directory will 
-							(in general) barely be larger than an SVN checkout&mdash;in some cases
-							actually smaller (apparently a lot can go in those .svn dirs).
+							Git действительно хорош в экономии дискового пространства. 
+							Ваш каталог Git (как правило) едва будет больше, чем SVN&mdash;
+							в некоторых случаях даже меньше (очевидно, много места занимают папки .svn).
 						</div>
 					
 						<div class="text">
-							The following numbers were taken from clones of the Django project
-							in each of its semi-official Git mirrors at the same point in 
-							its history.
+							Следующие числа получены из копий проекта Django в каждом из его 
+							полуофициальных Git зеркал, с одинакой точки в истории.
 						</div>
 					
 						<table>
@@ -414,14 +404,14 @@
 								<th>SVN</th>
 							</tr>
 							<tr>
-								<td>Repo Alone</td>
+								<td>Только хранилище</td>
 								<td class="sweet">24M</td>
 								<td>34M</td>
 								<td>45M</td>
 								<td></td>
 							</tr>
 							<tr>
-								<td>Entire Directory</td>
+								<td>Вся папка</td>
 								<td class="compare">43M</td>
 								<td>53M</td>
 								<td>64M</td>
@@ -441,36 +431,33 @@
 					</div>
 		
 	        <h2>
-          <a name="the-staging-area" href="#the-staging-area">The Staging Area</a>
+          <a name="the-staging-area" href="#the-staging-area">Область подготовленных файлов</a>
 	        </h2>
 					<div class="contents">
 						<div class="text">
-							Unlike the other systems, Git has what it calls the "staging area"
-							or "index".  This is an intermediate area that you can setup what
-							you want your commit to look like before you commit it.
+							В отличие от остальных систем, Git имеет так называемую область подготовленных файлов 
+							(staging area) или индекс (index). Это область, которая содержит информацию о том, 
+							что должно войти в следующий коммит, в которой вы формируете коммит перед тем как его выполнить.
 						</div>
 						<div class="text">
-							The cool thing about the staging area, and what sets Git apart 
-							from all these other tools, is that you can easily stage some of
-							your files as you finish them and then commit them without committing
-							all the modified files in your working directory, or having to list
-							them on the command line during the commit
+							Что классного в области подготовленных файлов и что отличает Git от других систем&mdash;
+							это возможность просто подготовить некоторые файлы, как только вы завершили работу с ними, 
+							а затем выполнить коммит только этих файлов, а не всех измененных файлов в рабочей директории 
+							при этом не понадобится перечислять все эти файлы во время коммита.
 						</div>
 						<div class="center"><img src="images/index1.png" alt="add commit workflow diagram" /></div>
 						
 						<div class="text">
-						  This also allows you to stage only portions of a modified file.  Gone are
-						  the days of making two logically unrelated modifications to a file before
-						  you realized that you forgot to commit one of them.  Now you can just stage
-						  the change you need for the current commit and stage the other change for
-						  the next commit.  This feature scales up to as many different changes to
-						  your file as you need.
+							Это также позволяет подготавливать только части измененного файла. Больше не будет так, 
+							что вы сделали 2 несвязанных изменения и забыли отдельно сделать коммит одного из них. 
+							Теперь можно подготовить нужное вам изменение для текущего коммита, 
+							а другое изменение подготовить для следующего коммита. Эта возможность масштабируется 
+							до любого количества различных изменений, которое вам потребуется.
 						</div>
 
 						<div class="text">
-							Of course, Git also makes it pretty easy to ignore this feature
-							if you don't want that kind of control&mdash;just slap a '-a' to your
-							commit command in order to add all changes to all files to the staging area.
+							Конечно, Git также легко позволяет игнорировать эту возможность и позволяет добавить все изменения 
+							во всех файлах в область подготовленных файлов.
 						</div>
 						
 						<div class="center"><img src="images/index2.png" alt="commit only workflow diagram" /></div>
@@ -484,7 +471,7 @@
 					</div>
 
 	        <h2>
-          <a name="distributed" href="#distributed">Distributed</a>
+          <a name="distributed" href="#distributed">Распределённость</a>
 	        </h2>
 
 					<div class="contents">
