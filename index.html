@@ -199,7 +199,7 @@
 
 						<div class="text">
 							Даже в Mercurial, команды вроде 'incoming' и 'outgoing' взаимодействуют с сервером, 
-							в то время как с Git вы можете получить ('fetch') все данные с сервера 
+							в то время как с Git вы можете получить (fetch) все данные с сервера 
 							перед тем, как перейти в оффлайн-режим, и выполнять сравнения, слияния 
 							и смотреть историю данных, которые есть на сервере, но ещё не в ваших локальных ветках.
 						</div>
@@ -437,7 +437,7 @@
 						<div class="text">
 							В отличие от остальных систем, Git имеет так называемую область подготовленных файлов 
 							(staging area) или индекс (index). Это область, которая содержит информацию о том, 
-							что должно войти в следующий коммит, в которой вы формируете коммит перед тем как его выполнить.
+							что должно войти в следующий коммит, в которую вы формируете коммит перед тем как его выполнить.
 						</div>
 						<div class="text">
 							Что классного в области подготовленных файлов и что отличает Git от других систем&mdash;
@@ -474,29 +474,29 @@
           <a name="distributed" href="#distributed">Распределённость</a>
 	        </h2>
 
-					<div class="contents">
+				<div class="contents">
 
-					  <div class="text">
-              One of the coolest features of any of the Distributed SCMs, Git included, is that it's
-              distributed.  This means that instead of doing a "checkout" of the current tip of 
-              the source code, you do a "clone" of the entire repository.
-            </div>
-            <div class="text">
-              This means that even 
-              if you're using a centralized workflow, every user has what is essentially a full
-              backup of the main server, each of which could be pushed up to replace the main server
-              in the event of a crash or corruption.  There is basically no single point of failure
-              with Git unless there is only a single point.
-            </div>
+					<div class="text">
+						Одна из лучших возможностей всех распределённых СУВ, включая Git, это распределённость. 
+						Это значит, что вместо получения (checkout) текущего последнего состояния исходников, 
+						вы получаете копию (clone) всего хранилища.
+					</div>
+					<div class="text">
+						Получается, что если даже вы будете использовать централизованный техпроцесс, 
+						каждый пользователь будет иметь полный бэкап репозитория главного сервера, 
+						который может легко заменить центральный репозиторий в случае его повреждения. 
+						В Git нет единой точки отказа, если только репозиторий не один.
+					</div>
 
-            <div class="text">
-              This does not slow things down much, either.  On average, an SVN checkout is only marginally
-              faster than any of the DSCMs. Of the DSCMs I tested, Git was the fastest.
-					  </div>
+					<div class="text">
+						Распределённость не сильно-то и замедляет работу. 
+						В среднем, один checkout из SVN лишь немного быстрее, чем из любой распределённой системы управления версиями. 
+						Из протестированных РСУВ Git был наибыстрейшим.
+					</div>
 
 						<table>
 							<tr><td>
-								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone" alt="cloning benchmarks" />
+								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Получение(clone)" alt="cloning benchmarks" />
 							</td><td style="width: 80%">
 								<table>
 									<tr>
@@ -530,60 +530,57 @@
 				</div>
 		
        	<h2>
-        <a name="any-workflow" href="#any-workflow">Any Workflow</a>
+        <a name="any-workflow" href="#any-workflow">Любая модель работы</a>
        	</h2>
 
 				<div class="contents">
 					
 					<div class="text">
-						One of the amazing things about Git is that because of its distributed
-						nature and super branching system, you can easily implement pretty
-						much any workflow you can think of relatively easily.
+						Git восхитителен тем, что благодаря его распределенной натуре и отличной системе 
+						ветвления можно внедрить практически любую модель работы, которую только можете представить.
 					</div>
 					
-					<h3>Subversion-Style Workflow</h3>
+					<h3>Централизованный рабочий процесс (в стиле Subversion)</h3>
 					
 
 					<div class="text">
-						A very common Git workflow, especially from people transitioning
-						from a centralized system, is a centralized workflow.  Git will 
-						not allow you to push if someone has pushed since the last time
-						you fetched, so a centralized model where all developers push to
-						the same server works just fine.
+						В Git весьма распространен централизованный рабочий процесс, 
+						особенно среди людей, переходящих с централизованных систем. 
+						Git не позволит вам выкладывать изменения (push), если кто-то выложил свои 
+						с момента последнего получения вами данных с сервера (fetch). Таким образом, 
+						централизованная модель, в которой все разработчики выгружают на один и тот же сервер, работает на ура.
 					</div>
 					
 					<div class="center"><img src="images/workflow-a.png" alt="subversion-style workflow" /></div><br/>
 					
-					<h3>Integration Manager Workflow</h3>
+					<h3>Рабочий процесс с менеджером по интеграции</h3>
 
 					<div class="text">
-						Another common Git workflow is where there is an integration 
-						manager&mdash;a single person who commits to the 'blessed' repository,
-						and then a number of developers who clone from that repository, 
-						push to their own independent repositories and ask the integrator
-						to pull in their changes.  This is the type of development model 
-						you often see with open source or GitHub repositories.
+						Другая распространенная модель работы с Git&mdash;когда есть менеджер интеграций, 
+						один человек, который коммитит в "священный" репозиторий, 
+						а затем несколько разработчиков клонируют, выгружают в свои собственные независимые репозитории 
+						и просят интегратора принять (pull) их изменения. Эту модель разработки вы часто можете видеть 
+						в проектах с открытыми исходными кодами или в репозитариях GitHub.
 					</div>
 
 					<div class="center"><img src="images/workflow-b.png" alt="integration manager workflow" /></div><br/>
 
-					<h3>Dictator and Lieutenants Workflow</h3>
+					<h3>Рабочий процесс с диктатором и помощниками</h3>
 
 					<div class="text">
-						For more massive projects, you can setup your developers similar to
-						the way the Linux kernel is run, where people are in charge of a
-						specific subsystem of the project ('lieutenants') and merge in all
-						changes that have to do with that subsystem.  Then another integrator
-						(the 'dictator') can pull changes from only his/her lieutenants and
-						push those to the 'blessed' repository that everyone then clones from
-						again.
+						Для более массивных проектов вы можете организовать своих разработчиков так, 
+						как работают разработчики ядра Linux. В этой модели есть люди, ответственные 
+						за отдельные подсистемы проекта (менеджеры по интеграции), и собирающие (merge) все изменения, 
+						которые необходимо делать в этой подсистеме. Затем, другой человек, (интегратор или "диктатор") может забирать 
+						изменения (pull) только от своих менеджеров, и выгружать (push) их в "священный" репозиторий, 
+						который затем снова клонируют все остальные.
 					</div>
 
 					<div class="center"><img src="images/workflow-c.png" alt="dictator and lieutenants workflow" /></div><br/>
 					
 					<div class="text">
-						Again, Git is entirely flexible about this, so you can mix and 
-						match and choose the workflow that is right for you. 
+						Повторюсь, в этом плане Git совершенно гибок, поэтому вы можете 
+						комбинировать и выбирать модели работы, которые подходят вам.
           </div>
 					
 				</div>
@@ -606,33 +603,30 @@
           <img style="float:right; padding:10px" src="images/octocat.png" alt="octocat" />
 
 					<div class="text">
-						I <em>may</em> be biased here, given that I work for 
-						<a href="http://github.com">GitHub</a>, 
-						but I added this section anyway because so many people say that
-						GitHub itself was specifically why they chose Git.
+						Я возможно субъективен, потому что сам работаю на GitHub, 
+						но я всё равно добавил этот раздел, потому многие говорят, 
+						что выбрали Git именно из-за GitHub.
 					</div>
 
-					<div class="text">					
-						GitHub is a reason to use Git for many people because it is more 
-						like a social network for code than a simple hosting site.  People
-						find other developers or projects that are similar to the things
-						they are doing, and can easily fork and contribute, creating a very
-						vibrant community around Git and the projects that people use it
-						for.
+					<div class="text">
+						GitHub&mdash;это причина пользоваться Git для многих людей, поскольку он больше 
+						похож на социальную сеть для кода, чем на простой хостинг. Люди находят 
+						других разработчиков или проекты, похожие на то, что они делают сами, 
+						и могут легко вносить вклад и заимствовать код, создавая очень живое 
+						сообщество вокруг Git и проектов, где им пользуются.
 					</div>
 					
-					<div class="text">					
-						There exist other services, both for Git and for the other SCMs,
-						but few are user-oriented or socially
-						targeted, and none have anywhere near the user-base.  
-						This social aspect of GitHub is killer, and this in combination of the above features
-						make working with Git and GitHub a great combination for rapidly 
-						developing open source projects.
+					<div class="text">
+						Есть и другие сервисы, как для Git, так и для других СУВ, но из них лишь несколько 
+						удобны для пользователя или социально направлены, и ни у одного из них нет подобного 
+						круга пользователей. Этот социальный аспект GitHub — отличная приманка, и в сочетании 
+						с вышеперечисленными возможностями, делает Git и GitHub отличным сочетанием для 
+						быстро развивающихся проектов с открытыми исходными кодами.
 					</div>
 
 					<div class="text">					
-            This type of community is simply not available with any of the other SCMs.
-          </div>
+            			Подобный тип сообщества просто не существует для других систем управления версиями.
+            		</div>
 
 				</div>
 	    </div>
@@ -654,90 +648,86 @@
 				</div>
 				
         <h2>
-        <a name="easy-to-learn" href="#easy-to-learn">Easy to Learn</a>
+        <a name="easy-to-learn" href="#easy-to-learn">Легко изучить</a>
         </h2>
         
 				<div class="contents">
-					<div class="text">										
-						This did not used to be true&mdash;early in Git's life, it was not really 
-						an SCM so much as a bunch of tools that let you do versioned filesystem 
-						work in a distributed manner.  However, today, the command set and 
-						learning curve of Git are pretty similar to any other SCM, and even 
-						better than some.
+					<div class="text">
+						Однако, так было не всегда&mdash;раньше, Git была не полноценной системой управления версиями, 
+						а скорее кучей различных утилит, позволявших реализовать работу распределенной СУВ. 
+						Однако сегодня  набор команд и скорость освоения Git очень близки к любой 
+						СУВ, и даже лучше чем у некоторых.
 					</div>
 
-					<div class="text">										
-						Since this is difficult to prove objectively without some sort of 
-						study, I'll just show the difference between the default 'help' menu for the
-						Mercurial and Git commands.  I've highlighted the commands that are
-						identical (or nearly) between the two systems.  (In Hg, if you type 'hg help', you 
-						get a list of 40-some commands.)
+					<div class="text">
+						Поскольку это трудно объективно доказать без некоторого изучения, я просто покажу 
+						разницу в меню 'help' по командам Mercurial и Git. Я выделил команды, которые 
+						одинаковы (или почти) в этих системах. (В Mercurial если вы наберете 
+						'hg help', то получите список из примерно 40 команд.)
 					</div>
 				
 					<table class="help">
 						<tr><td valign="top">
 							
-<h3>Mercurial Help</h3>
+<h3>Справка Mercurial</h3>
 <pre>
-<span class="compare">add</span>        add the specified files ...
-<span class="compare">annotate</span>   show changeset informati...
-<span class="compare">clone</span>      make a copy of an existi...
-<span class="compare">commit</span>     commit the specified fil...
-<span class="compare">diff</span>       diff repository (or sele...
-export     dump the header and diff...
-<span class="compare">init</span>       create a new repository ...
-<span class="compare">log</span>        show revision history of...
-<span class="compare">merge</span>      merge working directory ...
-parents    show the parents of the ...
-<span class="compare">pull</span>       pull changes from the sp...
-<span class="compare">push</span>       push changes to the spec...
-<span class="compare">remove</span>     remove the specified fil...
-serve      export the repository vi...
-<span class="compare">status</span>     show changed files in th...
-update     update working directory
+<span class="compare">add</span>        добавить указанные файлы...
+<span class="compare">annotate</span>   показать информацию об изменении...
+<span class="compare">clone</span>      создать копию существую...
+<span class="compare">commit</span>     коммитить указанные файлы...
+<span class="compare">diff</span>       показать разницу репозитория (или...
+export     вывести заголовок и измене...
+<span class="compare">init</span>       создать новый репозиторий...
+<span class="compare">log</span>        показать историю ревизий...
+<span class="compare">merge</span>      слияние рабочих каталогов...
+parents    показать родительские...
+<span class="compare">pull</span>       загрузить изменения с указ...
+<span class="compare">push</span>       отправить изменения на ук...
+<span class="compare">remove</span>     удаление указанного фай...
+serve      экспортировать хранилище в...
+<span class="compare">status</span>     показать измененные файлы в ...
+update     обновить рабочую директорию
 </pre>
 
 					</td><td valign="top">
 						
-<h3>Git Help</h3>
+<h3>Справка Git</h3>
 <pre>
-<span class="compare">add</span>        Add file contents to the index
-<span class="compare">bisect</span>     Find the change that introduce...
-<span class="compare">branch</span>     List, create, or delete branches
-checkout   Checkout a branch or paths to ...
-<span class="compare">clone</span>      Clone a repository into a new ...
-<span class="compare">commit</span>     Record changes to the repository
-<span class="compare">diff</span>       Show changes between commits, ...
-fetch      Download objects and refs from...
-grep       Print lines matching a pattern
-<span class="compare">init</span>       Create an empty git repository
-<span class="compare">log</span>        Show commit logs
-<span class="compare">merge</span>      Join two or more development h...
-mv         Move or rename a file, a direc...
-<span class="compare">pull</span>       Fetch from and merge with anot...
-<span class="compare">push</span>       Update remote refs along with ...
-rebase     Forward-port local commits to ...
-reset      Reset current HEAD to the spec...
-<span class="compare">rm</span>         Remove files from the working ...
-show       Show various types of objects
-<span class="compare">status</span>     Show the working tree status
-<span class="compare">tag</span>        Create, list, delete or verify...
+<span class="compare">add</span>        добавить содержимое файла в индекс
+<span class="compare">bisect</span>     ищет изменения, которые приводя...
+<span class="compare">branch</span>     Просмотр списка, создание, или удаление веток
+checkout   Получить ветку или пути...
+<span class="compare">clone</span>      клонирует хранилище в новую ...
+<span class="compare">commit</span>     записывает изменения в хранилище
+<span class="compare">diff</span>       показывает различия между фиксациями, ...
+fetch      Скачать объекты и ссылки из...
+grep       Вывод строк совпавших с шаблоном
+<span class="compare">init</span>       Создание пустого хранилища
+<span class="compare">log</span>        просмотр журнала фиксаций
+<span class="compare">merge</span>      объединяет две, или больше, разрабатываемых ве...
+mv         Перемещение или переименование файла, катал...
+<span class="compare">pull</span>       Взять ветку и слить с другой.
+<span class="compare">push</span>       Обновить удалённые ссылки вместе с...
+rebase     Отправить местные коммиты на...
+reset      сброс текущего HEAD на указ...
+<span class="compare">rm</span>         Удалить файлы из рабочего ...
+show       Показать различные типы объектов
+<span class="compare">status</span>     Показать состояние рабочей папки
+<span class="compare">tag</span>        Создать, вывести, удалить или проверить...
 </pre>	
 				</td></tr>
 				</table>
 				
-				<div class="text">										
-					Prior to Git 1.6, all of the Git commands used to be in the executable
-					path, which was very confusing to people.  Although Git still recognizes
-					all of those commands, the only command in the path is now 'git'.
-					So, if you look at Mercurial and Git, Git has a nearly identical 
-					command set and help system&mdash;there is very little difference from 
-					a beginning UI perspective today.
+				<div class="text">
+					Вплоть до Git 1.6., все команды Git были исполняемыми программами, что 
+					создавало много путаницы. Git всё ещё понимает все эти команды, но теперь 
+					единственная исполняемая команда — это 'git'. Так что если сравнить 
+					Mercurial и Git, у Git почти идентичная система команд и справки и есть 
+					лишь небольшая разница на начальном этапе с точки зрения пользовательского интерфейса.
 				</div>
 				
-				<div class="text">										
-					These days it's pretty hard to argue that Mercurial or Bazaar is any
-					easier to learn than Git is.
+				<div class="text">
+					В наши дни уже довольно сложно утверждать, что изучить Mercurial или Bazaar легче, чем Git.
 				</div>
 				
 				</div>
@@ -753,24 +743,24 @@ show       Show various types of objects
 
     <div class="span-24">					
 				<div class="expand_collapse_links">
-				  <a href="#" class="expand_all">Expand all</a> |
-				  <a href="#" class="collapse_all">Collapse all</a>
+				  <a href="#" class="expand_all">Раскрыть все</a> |
+				  <a href="#" class="collapse_all">Свернуть все</a>
 				</div>
     </div>
     
     <div class="span-24 footer">
-			This site is built and maintained by <a href="http://github.com/schacon">Scott Chacon</a>, a
-			<a href="http://github.com">GitHubber</a>.<br />
+    		Данный сайт разработан и поддерживается <a href="http://github.com/schacon">Скоттом Чаконом (Scott Chacon)</a>, пользователем 
+			<a href="http://github.com">GitHub</a>.<br />
+			Перевод на русский язык выполнил <a href="http://github.com/diimdeep">Дмитрий Вольф</a>.<br />
+			Если вы несогласны с чем-либо на этом сайте и у вас есть веские основания, пожалуйста 
+			<a href="mailto:schacon@gmail.com">напишите мне</a>, чтобы я мог это исправить.<br />
 
-			If you disagree with anything on the site and you have a good reason, please 
-			<a href="mailto:schacon@gmail.com">email me</a> so I can fix it.<br />
-
-			The source for this site is <a href="http://github.com/schacon/whygitisbetter">on GitHub</a>&mdash;feel
-      free to send patches if you want to improve it. <br/>
+			Исходные материалы данного сайта доступны <a href="http://github.com/schacon/whygitisbetter">на GitHub</a>&mdash;не стесняйтесь, присылайте патчи, если желаете его улучшить.<br/>
     </div>
 
     <div class="span-24 footer-lang">
-      Also in : 
+      Also in :
+      <a href="http://whygitisbetterthanx.com">English</a>, 
       <a href="http://de.whygitisbetterthanx.com">German</a>, 
       <a href="http://es.whygitisbetterthanx.com">Spanish</a>, 
       <a href="http://fr.whygitisbetterthanx.com">French</a>, 
