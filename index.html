@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>Why Git is Better Than X</title>
+	<title>Почему Git лучше чем X</title>
 	
 	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection" />
 	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print" />
@@ -59,7 +59,7 @@
 	    <div class="span-24 header">
 				<table width="100%">
 					<tr><td>
-        		<h1>Why Git is Better than X</h1>
+        		<h1>Почему Git лучше чем X</h1>
 					</td><td align="right">
 						<div id="menu">
 							<span class="lang hg">hg</span>
@@ -74,16 +74,17 @@
 
 	    <div class="span-24">
 					<div class="text intro">
-		        This site is here because I seem to
-						be spending a lot of time lately defending Gitsters against 
-						charges of fanboyism, bandwagonism
-						and koolaid-thirst.  So, here is why people are switching to Git from
-						X, and why you should too.  Just click on a reason to view it.
+						Этот сайт сделан потому что, по-моему, в последнее время я трачу много времени, 
+						защищая пользователей Git от обвинений в фанатизме, 
+						стадном мышлении или сектантстве. 
+						Итак, вот почему люди переходят на использование Git вместо 
+						X, и почему вы тоже должны. 
+						Просто кликните по причине, чтобы рассмотреть её.
 					</div>
 					
 					<div class="expand_collapse_links">
-					  <a href="#" class="expand_all">Expand all</a> |
-					  <a href="#" class="collapse_all">Collapse all</a>
+					  <a href="#" class="expand_all">Раскрыть все</a> |
+					  <a href="#" class="collapse_all">Свернуть все</a>
 					</div>
 	    </div>
 
@@ -96,44 +97,44 @@
 					</div>
 
 	        <h2>
-          <a name="cheap-local-branching" href="#cheap-local-branching">Cheap Local Branching</a>
+          <a name="cheap-local-branching" href="#cheap-local-branching">Простое локальное ветвление</a>
 	        </h2>
 					<div class="contents">
 						
 						<div class="text">
-							Probably Git's most compelling feature that really makes it stand
-							apart from nearly every other SCM out there is its branching
-							model.  It is completely different from all of the models I'm 
-							comparing it to here, most of which recommend that the best branch
-							is basically a clone of the repository in a new directory.
+							Наверно самая значимая возможность Git, которая ставит его в сторону 
+							по сравнению почти со всеми остальными системами управлением версиями, 
+							это модель ветвления. Она полностью отличается от всех моделей, 
+							сравниваемых здесь, большинство из которых рекомендуют, 
+							что лучшая ветка, это копия репозитория в новом каталоге.
 						</div>
 						
 						<div class="text">
-							Git does not work like that.  Git will allow you to have multiple
-							local branches that can be entirely independent of each other and
-							the creation, merging and deletion of those lines of development
-							take seconds.
+							Git работает не так.  Git позволяет вам иметь множество локальных веток 
+							которые могут быть полностью независыми друг от друга,
+							а создание, слияние и удаление этих веток разработки занимает секунды.
 						</div>
 						
 						
 						<div class="text">
-							This means that you can do things like:
+							Это означает что вы можете:
 							<ul>
-								<li>Create a branch to try out an idea, commit
-									a few times, switch back to where you branched from, apply a patch, 
-									switch back to where you are experimenting, then merge it in.
+								<li>Создать ветку чтобы опробовать идею, сделать несколько коммитов, 
+									вернуться обратно откуда вы сделали ветвь, принять изменения, 
+									снова переключиться туда где вы экспериментировали, 
+									затем выполнить слияние с основной ветвью разработки.
 								</li>
-								<li>Have a branch that always contains only what goes to production,
-									another that you merge work into for testing and several smaller
-									ones for day to day work
+								<li>Иметь ветку, которая всегда содержит только то, что идёт в релиз,
+									 другую, чтобы объединять наработки для тестирования 
+									 и несколько небольших, для ежедневной работы.
 								</li>
-								<li>Create new branches for each new feature you're working on, so
-									you can seamlessly switch back and forth between them, then delete
-									each branch when that feature gets merged into your main line.
+								<li>Создавать отдельные ветки для каждого нового функционала, над которым работаете, 
+								а также беспрепятственно переключаться между ними туда и обратно, 
+								а затем удалить каждую ветку после того, как изменения попадут в основную ветвь разработки.
 								</li>
-								<li>Create a branch to experiment in, realize it's not going to
-									work and just delete it, abandoning the work&mdash;with nobody else
-									ever seeing it (even if you've pushed other branches in the meantime)
+								<li>Создать ветку для экспериментов, понять, что это не будет работать 
+								и просто удалить ветку&mdash;и никто другой это не увидит 
+								(даже если вы в это время выложили другие ветки).
 								</li>
 							</ul>
 						</div>
@@ -141,18 +142,18 @@
 						<img src="images/branches.png" alt="branches flowchart"/>
 						
 						<div class="text">
-							Importantly, when you push to a remote repository, you do <em>not</em>
-							have to push all of your branches.  You can only share one of your
-							branches and not all of them.  This tends to free people to try
-							new ideas without worrying about having to plan how and when they
-							are going to merge it in or share it with others.
+							Важно отметить, когда вы выкладываете изменения в удаленный репозиторий, 
+							вам не обязательно выкладывать все ветки. Вы можете отправить только одну из них, 
+							а не все сразу. Это, как правило, освобождает людей, 
+							которые пробуют новые идеи, от постоянного планирования как 
+							и когда они будут выполнять слияние или делится с остальными.
 						</div>
 						
 						<div class="text">
-							You <em>can</em> find ways to do some of this with other systems, but the work
-							involved is much more difficult and error-prone.  Git makes this
-							process incredibly easy and it changes the way most developers
-							work when they learn it.
+							Вы можете найти способы, как сделать подобное в других системах, 
+							однако это намного сложнее и подвержено ошибкам. 
+							Git делает этот процесс невероятно простым и освоив его, 
+							разработчик меняет свой подход к работе.
 						</div>
 						
 						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
@@ -174,40 +175,38 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 	        <h2>
-          <a name="everything-is-local" href="#everything-is-local">Everything is Local</a>
+          <a name="everything-is-local" href="#everything-is-local">Всё локально</a>
 	        </h2>
 					<div class="contents">	
 
 						<div class="text">
-							This is basically true of all the distributed SCMs, but in my
-							experience even more so with Git.  There is very little outside
-							of 'fetch', 'pull' and 'push' that communicates in any way with 
-							anything other than your hard disk.
+							В основном это верно для всех распределённых систем управления версиями, 
+							но по моему опыту, ещё более для Git.
+							Кроме 'fetch', 'pull' и 'push', все команды работают только с жёстким диском.
 						</div>
 
 						<div class="text">
-							This not only makes most operations much faster than you may
-              be used to, but it also allows you to work on stuff offline.
-              That may not sound like a big deal, but I'm always amazed at
-              how often I actually do work offline.  Being able to branch,
-              merge, commit and browse history of your project while on 
-              the plane or train is very productive.
+							Это не только делает большинство операций намного быстрее, чем вы, наверное привыкли, 
+							но и позволяет вам работать в режиме оффлайн.
+							Это может звучать как не большой плюс, но я всегда удивляюсь 
+							как я на самом деле часто работаю без доступа к сети.
+							Возможность создавать ветки, выполнять слияние, делать коммиты, 
+							просматривать историю проекта находясь в самолёте 
+							или поезде позволяет быть очень продуктивным.
 						</div>
 						
 						<div class="center"><img style="width: 500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
-							Even in Mercurial, common commands like 'incoming' and 'outgoing' hit 
-							the server, whereas with Git you can 'fetch' all the servers data
-							before going offline and do comparisons, merges and logs of data
-							that is on the server but not in your local branches yet.
+							Даже в Mercurial, команды вроде 'incoming' и 'outgoing' взаимодействуют с сервером, 
+							в то время как с Git вы можете получить (fetch) все данные с сервера 
+							перед тем, как перейти в оффлайн-режим, и выполнять сравнения, слияния 
+							и смотреть историю данных, которые есть на сервере, но ещё не в ваших локальных ветках.
 						</div>
 												
 						<div class="text">
-							This means that it's very easy to have copies of not only your
-							branches, but also of everyone's branches that are working with
-							you in your Git repository without having to mess your own stuff
-							up.
+							Это значит, что очень просто иметь копии не только ваших веток, 
+							но и ветки всех, кто с вами работает в одном репозитории, без беспорядка в ваших материалах.
 						</div>
 						
 					</div>
@@ -221,34 +220,29 @@
 					</div>
 			
 	        <h2>
-          <a name="git-is-fast" href="#git-is-fast">Git is Fast</a>
+          <a name="git-is-fast" href="#git-is-fast">Git быстрый</a>
 	        </h2>
 	
 					<div class="contents">
 						<div class="text">
-							Git is fast.  Everyone&mdash;even most of the hard core users of these
-							other systems&mdash;generally give Git this title.  With Git, all
-							operations are performed locally giving it a bit of a leg up on
-							SVN and Perforce, both of which require network access for certain operations.
-							However, even compared to the other DSCMs that also perform operations
-							locally, Git is pretty fast. 
+							Git быстрый. Все обычно с этим согласны, даже самые преданные пользователи других систем. 
+							В Git все операции выполняются локально, что даёт ему фору перед SVN и Perforce, 
+							обеим из которых требуется подключение к сети для определенных операций.
+							Так или иначе, даже сравнивая с распределенными СУВ, которые выполняют операции локально, Git довольно быстр. 
 						</div>
 					
 						<div class="text">
-							Part of this is likely because it was built to work on the Linux 
-							kernel, which means that it has had to deal effectively with large
-							repositories from day one.  Additionally, Git is written in C, reducing the
-							overhead of runtimes associated with higher-level languages.
-							Another reason that Git is so fast is that the primary developers
-							have made this a design goal of the application.
+							Отчасти это потому, что  Git создавался для работы над ядром Linux, 
+							а значит, что нужно было справляться с большими репозиториями с первого дня. 
+							Как дополнение, Git написан на языке C, что сокращает накладные расходы выполнения, присутствующие в высокоуровневых языках.
+							Другая причина такой быстрой скорости Git в том, что его создатели поставили такую цель при разработке.
 						</div>
 
 						<div class="text">
-							The following are a number of benchmarks that I performed on three
-							copies of the Django source code repository in 3 different SCMs:
-							Git, Mercurial and Bazaar.  I also tested some of this stuff in SVN,
-							but trust me, it's slower&mdash;basically take the Bazaar numbers and
-							then add network latency...
+							Ниже приводится ряд тестов, которые я выполнил с тремя копиями исходного кода проекта Django 
+							в трёх различных СУВ: Git, Mercurial и Bazaar. 
+							Также я протестировал кое-что из этого в SVN, но поверьте мне, она медленнее&mdash;
+							возьмите показатели Bazaar и добавьте к ним задержки сети...
 						</div>
 
             <table>  
@@ -275,10 +269,11 @@
 						</table>
 						
 						<div class="text">
-							The end result was that for everything but adding new files, Git
-							was fastest. (Also really large commits, which Hg was basically the
-							same at, but the commit I tested was so large that you're unlikely
-							to ever do anything like it&mdash;normal commits are much faster in Git.)
+							В итоге, во всём, кроме добавления новых файлов, Git был самым быстрым 
+							(и на очень больших коммитах тоже, на которых Hg показал примерно такой же результат, 
+							но коммит в тесте был такой большой, какой вам вряд ли придётся делать&mdash;
+							на нормальных коммитах Git намного быстрее).
+
 						</div>
 						
 						<table>
@@ -289,61 +284,61 @@
 								<th>Bzr</th>
 							</tr>
 							<tr>
-								<th>Init</th>
+								<th>Init (Создание репозитория) </th>
 								<td class="sweet">0.024s</td>
 								<td>0.059s</td>
 								<td>0.600s</td>
 							</tr>
 							<tr>
-								<th>Add</th>
+								<th>Add (Добавление)</th>
 								<td>8.535s</td>
 								<td class="sweet">0.368s</td>
 								<td>2.381s</td>
 							</tr>
 							<tr>
-								<th>Status</th>
+								<th>Status (Состояние)</th>
 								<td class="sweet">0.451s</td>
 								<td>1.946s</td>
 								<td>14.744s</td>
 							</tr>
 							<tr>
-								<th>Diff</th>
+								<th>Diff (Отличия)</th>
 								<td class="sweet">0.543s</td>
 								<td>2.189s</td>
 								<td>14.248s</td>
 							</tr>
 							<tr>
-								<th>Tag</th>
+								<th>Tag (Метка)</th>
 								<td class="sweet">0.056s</td>
 								<td>1.201s</td>
 								<td>1.892s</td>
 							</tr>
 							<tr>
-								<th>Log</th>
+								<th>Log (История)</th>
 								<td class="sweet">0.711s</td>
 								<td>2.650s</td>
 								<td>9.055s</td>
 							</tr>
 							<tr>
-								<th>Commit (Large)</th>
+								<th>Commit (Большой коммит)</th>
 								<td class="sweet">12.480s</td>
 								<td>12.500s</td>
 								<td>23.002s</td>
 							</tr>
 							<tr>
-								<th>Commit (Small)</th>
+								<th>Commit (Маленький коммит)</th>
 								<td class="sweet">0.086s</td>
 								<td>0.517s</td>
 								<td>1.139s</td>
 							</tr>
 							<tr>
-								<th>Branch (Cold)</th>
+								<th>Branch (Холодное)</th>
 								<td class="sweet">1.161s</td>
 								<td>94.681s</td>
 								<td>82.249s</td>
 							</tr>
 							<tr>
-								<th>Branch (Hot)</th>
+								<th>Branch (Горячее)</th>
 								<td class="sweet">0.070s</td>
 								<td>12.300s</td>
 								<td>39.411s</td>
@@ -351,24 +346,21 @@
 						</table>
 					
 						<div class="text">
-							The cold and hot branching numbers are the numbers for the first
-							and second times that I branched a repo&mdash;the second number being
-							a branch with a hot disk cache.
+							Холодное и горячее ветвление&mdash;это первое и второе создание ветки в репозитории, 
+							второе создание работает с дисковых кэшем.
 						</div>
 
 						<div class="text">
-							It should be noted that although the 'add' numbers are much slower,
-              this was for a massive add operation&mdash;over 2000 files.  For the
-              majority of what most people do on a daily basis, add ops in any
-              of these systems will only take a fraction of a second. All of the
-              other ops tested here (except for the large commit, possibly) are
-              more indicative of things you might actually do day to day.
+							Следует отметить, что хотя команда 'add' выполнялась намного медленнее, она была очень массовой&mdash;
+							более 2000 файлов. Для большинства повседневных задач, операции добавления 
+							во всех этих системах займут доли секунды. Все другие операции из теста 
+							(возможно кроме большого коммита) лучше отражают то, что вы будете делать день ото дня.
 						</div>
 					
 					
 					<div class="text">
-						These numbers are really not difficult to recreate, simply clone the Django
-						project in each of the systems and try out the same commands in each.
+						Эти числа действительно не трудно воспроизвести, 
+						просто клонируйте проект Django в каждой системе и попробуйте некоторые команды в каждой.
 						<ul>
 							<li><code>git clone git://github.com/brosner/django.git dj-git</code></li>
 							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</code></li>
@@ -388,20 +380,19 @@
 					</div>
 			
 	        <h2>
-          <a name="git-is-small" href="#git-is-small">Git is Small</a>
+          <a name="git-is-small" href="#git-is-small">Git маленький</a>
 	        </h2>
 	
 					<div class="contents">
 						<div class="text">
-							Git is really good at conserving disk space.  Your Git directory will 
-							(in general) barely be larger than an SVN checkout&mdash;in some cases
-							actually smaller (apparently a lot can go in those .svn dirs).
+							Git действительно хорош в экономии дискового пространства. 
+							Ваш каталог Git (как правило) едва будет больше, чем SVN&mdash;
+							в некоторых случаях даже меньше (очевидно, много места занимают папки .svn).
 						</div>
 					
 						<div class="text">
-							The following numbers were taken from clones of the Django project
-							in each of its semi-official Git mirrors at the same point in 
-							its history.
+							Следующие числа получены из копий проекта Django в каждом из его 
+							полуофициальных Git зеркал, с одинакой точки в истории.
 						</div>
 					
 						<table>
@@ -413,14 +404,14 @@
 								<th>SVN</th>
 							</tr>
 							<tr>
-								<td>Repo Alone</td>
+								<td>Только хранилище</td>
 								<td class="sweet">24M</td>
 								<td>34M</td>
 								<td>45M</td>
 								<td></td>
 							</tr>
 							<tr>
-								<td>Entire Directory</td>
+								<td>Вся папка</td>
 								<td class="compare">43M</td>
 								<td>53M</td>
 								<td>64M</td>
@@ -440,36 +431,33 @@
 					</div>
 		
 	        <h2>
-          <a name="the-staging-area" href="#the-staging-area">The Staging Area</a>
+          <a name="the-staging-area" href="#the-staging-area">Область подготовленных файлов</a>
 	        </h2>
 					<div class="contents">
 						<div class="text">
-							Unlike the other systems, Git has what it calls the "staging area"
-							or "index".  This is an intermediate area that you can setup what
-							you want your commit to look like before you commit it.
+							В отличие от остальных систем, Git имеет так называемую область подготовленных файлов 
+							(staging area) или индекс (index). Это область, которая содержит информацию о том, 
+							что должно войти в следующий коммит, в которую вы формируете коммит перед тем как его выполнить.
 						</div>
 						<div class="text">
-							The cool thing about the staging area, and what sets Git apart 
-							from all these other tools, is that you can easily stage some of
-							your files as you finish them and then commit them without committing
-							all the modified files in your working directory, or having to list
-							them on the command line during the commit
+							Что классного в области подготовленных файлов и что отличает Git от других систем&mdash;
+							это возможность просто подготовить некоторые файлы, как только вы завершили работу с ними, 
+							а затем выполнить коммит только этих файлов, а не всех измененных файлов в рабочей директории 
+							при этом не понадобится перечислять все эти файлы во время коммита.
 						</div>
 						<div class="center"><img src="images/index1.png" alt="add commit workflow diagram" /></div>
 						
 						<div class="text">
-						  This also allows you to stage only portions of a modified file.  Gone are
-						  the days of making two logically unrelated modifications to a file before
-						  you realized that you forgot to commit one of them.  Now you can just stage
-						  the change you need for the current commit and stage the other change for
-						  the next commit.  This feature scales up to as many different changes to
-						  your file as you need.
+							Это также позволяет подготавливать только части измененного файла. Больше не будет так, 
+							что вы сделали 2 несвязанных изменения и забыли отдельно сделать коммит одного из них. 
+							Теперь можно подготовить нужное вам изменение для текущего коммита, 
+							а другое изменение подготовить для следующего коммита. Эта возможность масштабируется 
+							до любого количества различных изменений, которое вам потребуется.
 						</div>
 
 						<div class="text">
-							Of course, Git also makes it pretty easy to ignore this feature
-							if you don't want that kind of control&mdash;just slap a '-a' to your
-							commit command in order to add all changes to all files to the staging area.
+							Конечно, Git также легко позволяет игнорировать эту возможность и позволяет добавить все изменения 
+							во всех файлах в область подготовленных файлов.
 						</div>
 						
 						<div class="center"><img src="images/index2.png" alt="commit only workflow diagram" /></div>
@@ -483,32 +471,32 @@
 					</div>
 
 	        <h2>
-          <a name="distributed" href="#distributed">Distributed</a>
+          <a name="distributed" href="#distributed">Распределённость</a>
 	        </h2>
 
-					<div class="contents">
+				<div class="contents">
 
-					  <div class="text">
-              One of the coolest features of any of the Distributed SCMs, Git included, is that it's
-              distributed.  This means that instead of doing a "checkout" of the current tip of 
-              the source code, you do a "clone" of the entire repository.
-            </div>
-            <div class="text">
-              This means that even 
-              if you're using a centralized workflow, every user has what is essentially a full
-              backup of the main server, each of which could be pushed up to replace the main server
-              in the event of a crash or corruption.  There is basically no single point of failure
-              with Git unless there is only a single point.
-            </div>
+					<div class="text">
+						Одна из лучших возможностей всех распределённых СУВ, включая Git, это распределённость. 
+						Это значит, что вместо получения (checkout) текущего последнего состояния исходников, 
+						вы получаете копию (clone) всего хранилища.
+					</div>
+					<div class="text">
+						Получается, что если даже вы будете использовать централизованный техпроцесс, 
+						каждый пользователь будет иметь полный бэкап репозитория главного сервера, 
+						который может легко заменить центральный репозиторий в случае его повреждения. 
+						В Git нет единой точки отказа, если только репозиторий не один.
+					</div>
 
-            <div class="text">
-              This does not slow things down much, either.  On average, an SVN checkout is only marginally
-              faster than any of the DSCMs. Of the DSCMs I tested, Git was the fastest.
-					  </div>
+					<div class="text">
+						Распределённость не сильно-то и замедляет работу. 
+						В среднем, один checkout из SVN лишь немного быстрее, чем из любой распределённой системы управления версиями. 
+						Из протестированных РСУВ Git был наибыстрейшим.
+					</div>
 
 						<table>
 							<tr><td>
-								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone" alt="cloning benchmarks" />
+								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Получение(clone)" alt="cloning benchmarks" />
 							</td><td style="width: 80%">
 								<table>
 									<tr>
@@ -542,60 +530,57 @@
 				</div>
 		
        	<h2>
-        <a name="any-workflow" href="#any-workflow">Any Workflow</a>
+        <a name="any-workflow" href="#any-workflow">Любая модель работы</a>
        	</h2>
 
 				<div class="contents">
 					
 					<div class="text">
-						One of the amazing things about Git is that because of its distributed
-						nature and super branching system, you can easily implement pretty
-						much any workflow you can think of relatively easily.
+						Git восхитителен тем, что благодаря его распределенной натуре и отличной системе 
+						ветвления можно внедрить практически любую модель работы, которую только можете представить.
 					</div>
 					
-					<h3>Subversion-Style Workflow</h3>
+					<h3>Централизованный рабочий процесс (в стиле Subversion)</h3>
 					
 
 					<div class="text">
-						A very common Git workflow, especially from people transitioning
-						from a centralized system, is a centralized workflow.  Git will 
-						not allow you to push if someone has pushed since the last time
-						you fetched, so a centralized model where all developers push to
-						the same server works just fine.
+						В Git весьма распространен централизованный рабочий процесс, 
+						особенно среди людей, переходящих с централизованных систем. 
+						Git не позволит вам выкладывать изменения (push), если кто-то выложил свои 
+						с момента последнего получения вами данных с сервера (fetch). Таким образом, 
+						централизованная модель, в которой все разработчики выгружают на один и тот же сервер, работает на ура.
 					</div>
 					
 					<div class="center"><img src="images/workflow-a.png" alt="subversion-style workflow" /></div><br/>
 					
-					<h3>Integration Manager Workflow</h3>
+					<h3>Рабочий процесс с менеджером по интеграции</h3>
 
 					<div class="text">
-						Another common Git workflow is where there is an integration 
-						manager&mdash;a single person who commits to the 'blessed' repository,
-						and then a number of developers who clone from that repository, 
-						push to their own independent repositories and ask the integrator
-						to pull in their changes.  This is the type of development model 
-						you often see with open source or GitHub repositories.
+						Другая распространенная модель работы с Git&mdash;когда есть менеджер интеграций, 
+						один человек, который коммитит в "священный" репозиторий, 
+						а затем несколько разработчиков клонируют, выгружают в свои собственные независимые репозитории 
+						и просят интегратора принять (pull) их изменения. Эту модель разработки вы часто можете видеть 
+						в проектах с открытыми исходными кодами или в репозитариях GitHub.
 					</div>
 
 					<div class="center"><img src="images/workflow-b.png" alt="integration manager workflow" /></div><br/>
 
-					<h3>Dictator and Lieutenants Workflow</h3>
+					<h3>Рабочий процесс с диктатором и помощниками</h3>
 
 					<div class="text">
-						For more massive projects, you can setup your developers similar to
-						the way the Linux kernel is run, where people are in charge of a
-						specific subsystem of the project ('lieutenants') and merge in all
-						changes that have to do with that subsystem.  Then another integrator
-						(the 'dictator') can pull changes from only his/her lieutenants and
-						push those to the 'blessed' repository that everyone then clones from
-						again.
+						Для более массивных проектов вы можете организовать своих разработчиков так, 
+						как работают разработчики ядра Linux. В этой модели есть люди, ответственные 
+						за отдельные подсистемы проекта (менеджеры по интеграции), и собирающие (merge) все изменения, 
+						которые необходимо делать в этой подсистеме. Затем, другой человек, (интегратор или "диктатор") может забирать 
+						изменения (pull) только от своих менеджеров, и выгружать (push) их в "священный" репозиторий, 
+						который затем снова клонируют все остальные.
 					</div>
 
 					<div class="center"><img src="images/workflow-c.png" alt="dictator and lieutenants workflow" /></div><br/>
 					
 					<div class="text">
-						Again, Git is entirely flexible about this, so you can mix and 
-						match and choose the workflow that is right for you. 
+						Повторюсь, в этом плане Git совершенно гибок, поэтому вы можете 
+						комбинировать и выбирать модели работы, которые подходят вам.
           </div>
 					
 				</div>
@@ -618,33 +603,30 @@
           <img style="float:right; padding:10px" src="images/octocat.png" alt="octocat" />
 
 					<div class="text">
-						I <em>may</em> be biased here, given that I work for 
-						<a href="http://github.com">GitHub</a>, 
-						but I added this section anyway because so many people say that
-						GitHub itself was specifically why they chose Git.
+						Я возможно субъективен, потому что сам работаю на GitHub, 
+						но я всё равно добавил этот раздел, потому многие говорят, 
+						что выбрали Git именно из-за GitHub.
 					</div>
 
-					<div class="text">					
-						GitHub is a reason to use Git for many people because it is more 
-						like a social network for code than a simple hosting site.  People
-						find other developers or projects that are similar to the things
-						they are doing, and can easily fork and contribute, creating a very
-						vibrant community around Git and the projects that people use it
-						for.
+					<div class="text">
+						GitHub&mdash;это причина пользоваться Git для многих людей, поскольку он больше 
+						похож на социальную сеть для кода, чем на простой хостинг. Люди находят 
+						других разработчиков или проекты, похожие на то, что они делают сами, 
+						и могут легко вносить вклад и заимствовать код, создавая очень живое 
+						сообщество вокруг Git и проектов, где им пользуются.
 					</div>
 					
-					<div class="text">					
-						There exist other services, both for Git and for the other SCMs,
-						but few are user-oriented or socially
-						targeted, and none have anywhere near the user-base.  
-						This social aspect of GitHub is killer, and this in combination of the above features
-						make working with Git and GitHub a great combination for rapidly 
-						developing open source projects.
+					<div class="text">
+						Есть и другие сервисы, как для Git, так и для других СУВ, но из них лишь несколько 
+						удобны для пользователя или социально направлены, и ни у одного из них нет подобного 
+						круга пользователей. Этот социальный аспект GitHub — отличная приманка, и в сочетании 
+						с вышеперечисленными возможностями, делает Git и GitHub отличным сочетанием для 
+						быстро развивающихся проектов с открытыми исходными кодами.
 					</div>
 
 					<div class="text">					
-            This type of community is simply not available with any of the other SCMs.
-          </div>
+            			Подобный тип сообщества просто не существует для других систем управления версиями.
+            		</div>
 
 				</div>
 	    </div>
@@ -666,90 +648,86 @@
 				</div>
 				
         <h2>
-        <a name="easy-to-learn" href="#easy-to-learn">Easy to Learn</a>
+        <a name="easy-to-learn" href="#easy-to-learn">Легко изучить</a>
         </h2>
         
 				<div class="contents">
-					<div class="text">										
-						This did not used to be true&mdash;early in Git's life, it was not really 
-						an SCM so much as a bunch of tools that let you do versioned filesystem 
-						work in a distributed manner.  However, today, the command set and 
-						learning curve of Git are pretty similar to any other SCM, and even 
-						better than some.
+					<div class="text">
+						Однако, так было не всегда&mdash;раньше, Git была не полноценной системой управления версиями, 
+						а скорее кучей различных утилит, позволявших реализовать работу распределенной СУВ. 
+						Однако сегодня  набор команд и скорость освоения Git очень близки к любой 
+						СУВ, и даже лучше чем у некоторых.
 					</div>
 
-					<div class="text">										
-						Since this is difficult to prove objectively without some sort of 
-						study, I'll just show the difference between the default 'help' menu for the
-						Mercurial and Git commands.  I've highlighted the commands that are
-						identical (or nearly) between the two systems.  (In Hg, if you type 'hg help', you 
-						get a list of 40-some commands.)
+					<div class="text">
+						Поскольку это трудно объективно доказать без некоторого изучения, я просто покажу 
+						разницу в меню 'help' по командам Mercurial и Git. Я выделил команды, которые 
+						одинаковы (или почти) в этих системах. (В Mercurial если вы наберете 
+						'hg help', то получите список из примерно 40 команд.)
 					</div>
 				
 					<table class="help">
 						<tr><td valign="top">
 							
-<h3>Mercurial Help</h3>
+<h3>Справка Mercurial</h3>
 <pre>
-<span class="compare">add</span>        add the specified files ...
-<span class="compare">annotate</span>   show changeset informati...
-<span class="compare">clone</span>      make a copy of an existi...
-<span class="compare">commit</span>     commit the specified fil...
-<span class="compare">diff</span>       diff repository (or sele...
-export     dump the header and diff...
-<span class="compare">init</span>       create a new repository ...
-<span class="compare">log</span>        show revision history of...
-<span class="compare">merge</span>      merge working directory ...
-parents    show the parents of the ...
-<span class="compare">pull</span>       pull changes from the sp...
-<span class="compare">push</span>       push changes to the spec...
-<span class="compare">remove</span>     remove the specified fil...
-serve      export the repository vi...
-<span class="compare">status</span>     show changed files in th...
-update     update working directory
+<span class="compare">add</span>        добавить указанные файлы...
+<span class="compare">annotate</span>   показать информацию об изменении...
+<span class="compare">clone</span>      создать копию существую...
+<span class="compare">commit</span>     коммитить указанные файлы...
+<span class="compare">diff</span>       показать разницу репозитория (или...
+export     вывести заголовок и измене...
+<span class="compare">init</span>       создать новый репозиторий...
+<span class="compare">log</span>        показать историю ревизий...
+<span class="compare">merge</span>      слияние рабочих каталогов...
+parents    показать родительские...
+<span class="compare">pull</span>       загрузить изменения с указ...
+<span class="compare">push</span>       отправить изменения на ук...
+<span class="compare">remove</span>     удаление указанного фай...
+serve      экспортировать хранилище в...
+<span class="compare">status</span>     показать измененные файлы в ...
+update     обновить рабочую директорию
 </pre>
 
 					</td><td valign="top">
 						
-<h3>Git Help</h3>
+<h3>Справка Git</h3>
 <pre>
-<span class="compare">add</span>        Add file contents to the index
-<span class="compare">bisect</span>     Find the change that introduce...
-<span class="compare">branch</span>     List, create, or delete branches
-checkout   Checkout a branch or paths to ...
-<span class="compare">clone</span>      Clone a repository into a new ...
-<span class="compare">commit</span>     Record changes to the repository
-<span class="compare">diff</span>       Show changes between commits, ...
-fetch      Download objects and refs from...
-grep       Print lines matching a pattern
-<span class="compare">init</span>       Create an empty git repository
-<span class="compare">log</span>        Show commit logs
-<span class="compare">merge</span>      Join two or more development h...
-mv         Move or rename a file, a direc...
-<span class="compare">pull</span>       Fetch from and merge with anot...
-<span class="compare">push</span>       Update remote refs along with ...
-rebase     Forward-port local commits to ...
-reset      Reset current HEAD to the spec...
-<span class="compare">rm</span>         Remove files from the working ...
-show       Show various types of objects
-<span class="compare">status</span>     Show the working tree status
-<span class="compare">tag</span>        Create, list, delete or verify...
+<span class="compare">add</span>        добавить содержимое файла в индекс
+<span class="compare">bisect</span>     ищет изменения, которые приводя...
+<span class="compare">branch</span>     Просмотр списка, создание, или удаление веток
+checkout   Получить ветку или пути...
+<span class="compare">clone</span>      клонирует хранилище в новую ...
+<span class="compare">commit</span>     записывает изменения в хранилище
+<span class="compare">diff</span>       показывает различия между фиксациями, ...
+fetch      Скачать объекты и ссылки из...
+grep       Вывод строк совпавших с шаблоном
+<span class="compare">init</span>       Создание пустого хранилища
+<span class="compare">log</span>        просмотр журнала фиксаций
+<span class="compare">merge</span>      объединяет две, или больше, разрабатываемых ве...
+mv         Перемещение или переименование файла, катал...
+<span class="compare">pull</span>       Взять ветку и слить с другой.
+<span class="compare">push</span>       Обновить удалённые ссылки вместе с...
+rebase     Отправить местные коммиты на...
+reset      сброс текущего HEAD на указ...
+<span class="compare">rm</span>         Удалить файлы из рабочего ...
+show       Показать различные типы объектов
+<span class="compare">status</span>     Показать состояние рабочей папки
+<span class="compare">tag</span>        Создать, вывести, удалить или проверить...
 </pre>	
 				</td></tr>
 				</table>
 				
-				<div class="text">										
-					Prior to Git 1.6, all of the Git commands used to be in the executable
-					path, which was very confusing to people.  Although Git still recognizes
-					all of those commands, the only command in the path is now 'git'.
-					So, if you look at Mercurial and Git, Git has a nearly identical 
-					command set and help system&mdash;there is very little difference from 
-					a beginning UI perspective today.
+				<div class="text">
+					Вплоть до Git 1.6., все команды Git были исполняемыми программами, что 
+					создавало много путаницы. Git всё ещё понимает все эти команды, но теперь 
+					единственная исполняемая команда — это 'git'. Так что если сравнить 
+					Mercurial и Git, у Git почти идентичная система команд и справки и есть 
+					лишь небольшая разница на начальном этапе с точки зрения пользовательского интерфейса.
 				</div>
 				
-				<div class="text">										
-					These days it's pretty hard to argue that Mercurial or Bazaar is any
-					easier to learn than Git is.
+				<div class="text">
+					В наши дни уже довольно сложно утверждать, что изучить Mercurial или Bazaar легче, чем Git.
 				</div>
 				
 				</div>
@@ -765,24 +743,24 @@ show       Show various types of objects
 
     <div class="span-24">					
 				<div class="expand_collapse_links">
-				  <a href="#" class="expand_all">Expand all</a> |
-				  <a href="#" class="collapse_all">Collapse all</a>
+				  <a href="#" class="expand_all">Раскрыть все</a> |
+				  <a href="#" class="collapse_all">Свернуть все</a>
 				</div>
     </div>
     
     <div class="span-24 footer">
-			This site is built and maintained by <a href="http://github.com/schacon">Scott Chacon</a>, a
-			<a href="http://github.com">GitHubber</a>.<br />
+    		Данный сайт разработан и поддерживается <a href="http://github.com/schacon">Скоттом Чаконом (Scott Chacon)</a>, пользователем 
+			<a href="http://github.com">GitHub</a>.<br />
+			Перевод на русский язык выполнил <a href="http://github.com/diimdeep">Дмитрий Вольф</a>.<br />
+			Если вы несогласны с чем-либо на этом сайте и у вас есть веские основания, пожалуйста 
+			<a href="mailto:schacon@gmail.com">напишите мне</a>, чтобы я мог это исправить.<br />
 
-			If you disagree with anything on the site and you have a good reason, please 
-			<a href="mailto:schacon@gmail.com">email me</a> so I can fix it.<br />
-
-			The source for this site is <a href="http://github.com/schacon/whygitisbetter">on GitHub</a>&mdash;feel
-      free to send patches if you want to improve it. <br/>
+			Исходные материалы данного сайта доступны <a href="http://github.com/schacon/whygitisbetter">на GitHub</a>&mdash;не стесняйтесь, присылайте патчи, если желаете его улучшить.<br/>
     </div>
 
     <div class="span-24 footer-lang">
-      Also in : 
+      Also in :
+      <a href="http://whygitisbetterthanx.com">English</a>, 
       <a href="http://de.whygitisbetterthanx.com">German</a>, 
       <a href="http://es.whygitisbetterthanx.com">Spanish</a>, 
       <a href="http://fr.whygitisbetterthanx.com">French</a>, 
