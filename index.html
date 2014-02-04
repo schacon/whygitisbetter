@@ -1,6 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -25,16 +23,16 @@
 		.intro { color: #444; }
 		ul li { margin-top: 10px; }
 		.section h2 { padding-left: 5px; background-color: #eee; cursor: pointer;}
-    .section h2 a { color: #333; text-decoration:none; display: block; }
-		.section { padding-bottom: 2px; }
+    	.section h2 a { color: #333; text-decoration:none; display: block; }
+		.section { padding-bottom: 2px; outline: 0; }
 		.contents { padding: 0 10px; width: 610px; }
 		.args { float:right; }
 		.lang { padding: 3px; font-weight: bold;}
 		.section .lang { font-size: 0.8em; padding: 2px; font-weight: normal;}
-		.svn { color: hsl(260,57%,24%); background: hsl(260,57%,83%) }
-		.perforce { color: hsl(0,57%,24%); background: hsl(0,57%,83%) }
-		.bzr { color: hsl(60,57%,24%); background: hsl(60,57%,83%) }
-		.hg { color: hsl(190,57%,24%); background: hsl(190,57%,83%) }
+		.svn { color: #321A60; background: #CBBBEC; }
+		.perforce { color: #601A1A; background: #ECBBBB; }
+		.bzr { color: #60601A; background: #ECECBB; }
+		.hg { color: #1A5460; background: #BBE4EC; }
 		.nowrap { white-space: nowrap; }
 		.sweet { color: #363; background: #beb; }
 		.compare { color: #663; background: #eeb; }
@@ -45,10 +43,10 @@
 		.footer a { color: #440; } 
 		.footer-lang { text-align: center; color: #443; background-color: #dda; padding: 5px; font-size: 90%; }
 		.footer-lang a { color: #330; } 
-    .footer-badges { text-align: center; }
-    .footer-badges a { color: #777; }
+    	.footer-badges { text-align: center; }
+    	.footer-badges a { color: #777; }
 		.lang a {color: inherit; text-decoration: none;}
-    .note { text-decoration: italic; color: #666; padding: 1em; }
+    .note { font-style: italic; color: #666; padding: 1em; }
 	</style>
 	
 </head>
@@ -453,7 +451,7 @@
 							from all these other tools, is that you can easily stage some of
 							your files as you finish them and then commit them without committing
 							all the modified files in your working directory, or having to list
-							them on the command line during the commit
+							them on the command line during the commit.
 						</div>
 						<div class="center"><img src="images/index1.png" alt="add commit workflow diagram" /></div>
 						
@@ -671,7 +669,7 @@
         
 				<div class="contents">
 					<div class="text">										
-						This did not used to be true&mdash;early in Git's life, it was not really 
+						This used to be untrue&mdash;early in Git's life, it was not really 
 						an SCM so much as a bunch of tools that let you do versioned filesystem 
 						work in a distributed manner.  However, today, the command set and 
 						learning curve of Git are pretty similar to any other SCM, and even 
